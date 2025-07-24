@@ -1,0 +1,12 @@
+# Documentation generation
+mkdocs~=1.6.1
+mkdocs-click~=0.8.1
+mkdocs-awesome-nav~=3.1.2
+pymdown-extensions~=10.7
+requirements-parser~=0.11.0
+mike~=2.0.0
+griffe~=1.5.7
+mkdocs-include-dir-to-nav~=1.2.0
+mkdocs-material[imaging]~=9.6.14
+mkdocs-table-reader-plugin~=2.0.3
+mkdocs-literate-nav~=0.6.1
