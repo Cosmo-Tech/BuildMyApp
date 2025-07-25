@@ -39,8 +39,6 @@ over multiple environment in `ToolingBins`
 Docker is required for containerized deployments and development environments.
 
 A working solution requires a docker image to be built and deployed, you will need this tool for that.
-
----
 <footer markdown>
 [:octicons-arrow-right-24: docker](./docker.md)
 </footer>
@@ -56,8 +54,6 @@ The Cosmo Tech SDK is the main tool you will use to build your simulator that wi
 
 It comes embedded with the CLI `csm-cli` that will allow you to quickly interract with your project and accelerate some
 operations.
-
----
 <footer markdown>
 [:octicons-arrow-right-24: Cosmotech SDK](./cosmotech-sdk.md)
 </footer>
@@ -72,8 +68,6 @@ operations.
 Azure CLI is required for managing Azure resources from the command line.
 
 You will be using it mostly to connect to azure image repository to send your solutions there.
-
----
 <footer markdown>
 [:octicons-arrow-right-24: Azure CLI](./az-cli.md)
 </footer>
@@ -88,8 +82,6 @@ You will be using it mostly to connect to azure image repository to send your so
 npm and Node.js are required for running JavaScript tools and building web applications.
 
 You will need those if you have to do customization of the webapps.
-
----
 <footer markdown>
 [:octicons-arrow-right-24: nvm / npm / Node.js](./npm-node.md)
 </footer>
@@ -104,8 +96,6 @@ You will need those if you have to do customization of the webapps.
 Babylon is the tool made by our DevOps team to do most of the deployment operations on APIs.
 
 You will need it to update high level configuration of you application.
-
----
 <footer markdown>
 [:octicons-arrow-right-24: Babylon](./babylon.md)
 </footer>
@@ -120,8 +110,6 @@ You will need it to update high level configuration of you application.
 CoAL (CosmoTech Acceleration Library) provides a set of tools and utilities to accelerate CosmoTech solution development.
 
 Installing CoAL gives access to two CLIs: `csm-data` for data management and `csm-orc` for orchestration workflows.
-
----
 <footer markdown>
 [:octicons-arrow-right-24: CoAL](./coal.md)
 </footer>
