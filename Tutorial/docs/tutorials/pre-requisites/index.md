@@ -117,9 +117,9 @@ You will need it to update high level configuration of you application.
 :material-keyboard-return: __CoAL__
 
 ---
-CoAL (CosmoTech Acceleration Library) provides a set of tools and utilities to accelerate CosmoTech solution development.  
-Installing CoAL gives access to two CLIs: `csm-data` for data management and `csm-orc` for orchestration workflows.  
-Note: CoAL depends on the csm-orc project for full functionality.
+CoAL (CosmoTech Acceleration Library) provides a set of tools and utilities to accelerate CosmoTech solution development.
+
+Installing CoAL gives access to two CLIs: `csm-data` for data management and `csm-orc` for orchestration workflows.
 
 ---
 <footer markdown>
