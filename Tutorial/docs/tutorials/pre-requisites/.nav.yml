@@ -1,10 +1,8 @@
 nav:
   - index.md
-  - Babylon: babylon.md
-  - CoAL: coAL.md
-  - csm-orc: csm-orc.md
-  - csmcli: csmcli.md
-  - Cosmotech SDK: cosmotech-sdk.md
   - Docker: docker.md
+  - Cosmotech SDK: cosmotech-sdk.md
   - Azure CLI: az-cli.md
-  - npm / Node.js: npm-node.md
+  - nvm / npm / Node.js: npm-node.md
+  - Babylon: babylon.md
+  - CoAL: coal.md
