@@ -43,3 +43,8 @@ To update Azure CLI, run:
 sudo apt-get update
 sudo apt-get install -y azure-cli
 ```
+
+## References
+
+- [Install Azure CLI (Official Microsoft Docs)](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [Get Started with Azure CLI (Official Microsoft Docs)](https://learn.microsoft.com/en-us/cli/azure/get-started-with-azure-cli)

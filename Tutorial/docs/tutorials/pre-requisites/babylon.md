@@ -33,3 +33,11 @@ source .venv/bin/activate
 pip install .
 deactivate
 ```
+
+## References
+
+For more detailed information about Babylon, please refer to the official documentation:
+
+* [Babylon Documentation](https://cosmo-tech.github.io/Babylon/) — Developer documentation
+* [Babylon End-User Documentation](https://cosmo-tech.github.io/Babylon-End-User-Doc)
+* [Babylon GitHub Repository](https://github.com/Cosmo-Tech/Babylon)

@@ -4,30 +4,16 @@ Docker is required for containerized deployments and running many development en
 
 ## Install Docker on Debian
 
-The recommended way is to use the official Docker repository and install via apt:
+Docker can be installed using Debian's standard packages. For Debian 12 and earlier, install `docker.io`. For Debian 13 and onward, install both `docker.io` and `docker-cli`:
 
-```bash title="Install Docker"
-cd ~/Tooling
-
-# Remove old versions if any
-sudo apt-get remove docker docker-engine docker.io containerd runc
-
-# Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-
-# Add the repository to Apt sources:
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```bash title="Install Docker (Debian standard packages)"
 sudo apt-get update
 
-# Install Docker Engine
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# For Debian 12 and earlier:
+sudo apt-get install docker.io
+
+# For Debian 13 and onward:
+sudo apt-get install docker.io docker-cli
 ```
 
 ## Add Docker to ToolingBins
@@ -43,7 +29,19 @@ ln -s /usr/bin/docker docker
 
 To update Docker, run:
 
-```bash title="Update Docker"
+```bash title="Update Docker (Debian standard packages)"
 sudo apt-get update
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# For Debian 12 and earlier:
+sudo apt-get install --only-upgrade docker.io
+
+# For Debian 13 and onward:
+sudo apt-get install --only-upgrade docker.io docker-cli
 ```
+
+## References
+
+- [Docker Official Documentation](https://docs.docker.com/)
+- [Docker Getting Started Guide](https://docs.docker.com/get-started/)
+- [Docker CLI Reference](https://docs.docker.com/engine/reference/commandline/docker/)
+- [Docker Compose Documentation](https://docs.docker.com/compose/)
