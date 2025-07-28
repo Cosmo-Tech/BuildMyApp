@@ -5,7 +5,63 @@
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tags/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/api/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/api/dataset/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/api/solution/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/api/workspace/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/api/yaml-files/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/documentation/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/documentation/mike/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/documentation/mkdocs/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/packaging/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/packaging/babylon/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/packaging/docker/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/packaging/github-actions/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/packaging/jenkins/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
     <url>
@@ -42,6 +98,70 @@
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/power-bi/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/input-data/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/model/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/probing/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/rules/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/coal/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/csm-orc/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/custom-commands/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/custom-library/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/etl/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/run-templates/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/adx-database/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/frontend/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/power-bi/</loc>
          <lastmod>2025-07-28</lastmod>
     </url>
 </urlset>
