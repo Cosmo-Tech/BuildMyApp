@@ -13,7 +13,7 @@ First as some tools are required for some elements I recommend you do separate i
 To get ready to make your tooling installation folders you can do the following commands.
 
 You can also make your own system, but most tutoriels here will suppose you have made the following and that you are
-using a bash based terminal.
+using a bash based terminal. (Unix or Windows with WSL2)
 
 How to update your tooling will be added in the installation tutorial of the tools.
 
@@ -112,6 +112,20 @@ CoAL (CosmoTech Acceleration Library) provides a set of tools and utilities to a
 Installing CoAL gives access to two CLIs: `csm-data` for data management and `csm-orc` for orchestration workflows.
 <footer markdown>
 [:octicons-arrow-right-24: CoAL](./coal.md)
+</footer>
+</div>
+</article>
+
+<article markdown>
+<div class="text" markdown>
+:material-keyboard-return: __Power BI__
+
+---
+Power BI is the tool used to create dashboards embedded in the Cosmo Tech Webapp.
+
+Its installation requires you to have access to a Windows environment, either natively (if you are on Windows and used WSL for the rest of the installation) or using a Virtual Machine.
+<footer markdown>
+[:octicons-arrow-right-24: Microsoft Power BI](./power-bi.md)
 </footer>
 </div>
 </article>
