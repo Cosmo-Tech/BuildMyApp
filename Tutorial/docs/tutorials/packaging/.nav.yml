@@ -1,0 +1,6 @@
+nav:
+  - index.md
+  - Babylon: babylon.md
+  - Jenkins: jenkins.md
+  - Github Actions: github-actions.md
+  - Docker: docker.md

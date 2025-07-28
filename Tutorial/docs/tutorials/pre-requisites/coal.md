@@ -1,3 +1,9 @@
+---
+tags:
+  - Solution
+  - Bash
+  - Requirement
+---
 # CoAL
 
 You will need a working installation of CoAL (CosmoTech Acceleration Library) further in the tutorials.

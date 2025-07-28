@@ -1,3 +1,10 @@
+---
+tags:
+  - Power BI
+  - Web Application
+  - Windows
+  - Requirement
+---
 # Power BI
 
 Power BI is required for creating dashboards that are embedded in the Cosmo Tech Webapp.

@@ -1,0 +1,6 @@
+nav:
+  - index.md
+  - Model: model.md
+  - Rules: rules.md
+  - Input data: input-data.md
+  - Probing: probing.md

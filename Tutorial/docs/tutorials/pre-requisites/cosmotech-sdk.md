@@ -1,3 +1,9 @@
+---
+tags:
+  - Bash
+  - Simulator
+  - Requirement
+---
 # Cosmotech SDK
 
 ## Installation 

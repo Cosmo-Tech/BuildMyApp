@@ -1,0 +1,8 @@
+nav:
+  - index.md
+  - CSM-ORC: csm-orc.md
+  - Run templates: run-templates.md
+  - ETL: etl.md
+  - CoAL: coal.md
+  - Custom library: custom-library.md
+  - Custom commands: custom-commands.md

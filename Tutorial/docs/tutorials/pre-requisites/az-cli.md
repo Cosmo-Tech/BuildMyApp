@@ -1,3 +1,9 @@
+---
+tags:
+  - Azure
+  - Bash
+  - Requirement
+---
 # Azure CLI
 
 Azure CLI is required for managing Azure resources from the command line.

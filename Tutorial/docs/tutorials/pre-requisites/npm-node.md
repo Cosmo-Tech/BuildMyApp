@@ -1,3 +1,9 @@
+---
+tags:
+  - Bash
+  - Web Application
+  - Requirement
+---
 # npm / Node.js
 
 npm and Node.js are required for running JavaScript tools and building many web applications.

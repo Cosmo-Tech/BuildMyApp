@@ -1,3 +1,10 @@
+---
+tags:
+  - Babylon
+  - Deployment
+  - Bash
+  - Requirement
+---
 # Babylon
 
 You will need a working installation of `babylon` further in the tutorials

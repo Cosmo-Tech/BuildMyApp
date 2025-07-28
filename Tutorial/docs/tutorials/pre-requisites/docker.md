@@ -1,3 +1,10 @@
+---
+tags:
+  - Bash
+  - Packaging
+  - Solution
+  - Requirement
+---
 # Docker
 
 Docker is required for containerized deployments and running many development environments.

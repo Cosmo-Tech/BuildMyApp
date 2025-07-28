@@ -1,0 +1,5 @@
+nav:
+  - index.md
+  - Frontend: frontend.md
+  - ADX database: adx-database.md
+  - Power BI: power-bi.md

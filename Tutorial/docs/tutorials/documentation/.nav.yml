@@ -1,0 +1,4 @@
+nav:
+  - index.md
+  - mkdocs: mkdocs.md
+  - mike: mike.md

@@ -99,3 +99,4 @@ plugins:
   - table-reader
   - awesome-nav
   - literate-nav
+  - tags

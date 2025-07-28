@@ -1,3 +1,9 @@
 nav:
-   - index.md
-   - "*"
+  - index.md
+  - Pre-requisites: pre-requisites/
+  - Simulator: simulator/
+  - Solution: solution/
+  - API: api/
+  - Web App: web-app/
+  - Packaging: packaging/
+  - Documentation: documentation/
