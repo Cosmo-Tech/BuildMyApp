@@ -15,7 +15,9 @@ This section covers all aspects of building and configuring a CosmoTech Simulato
 :material-cube-outline: __Model__
 
 ---
-Master the fundamentals of conceptual modeling with CoSML - from defining entities and their relationships to creating complex hierarchical structures with environments and schedulers.
+Master the fundamentals of conceptual modeling with CoSML
+
+From defining entities and their relationships to creating complex hierarchical structures with environments and schedulers.
 <footer markdown>
 [:octicons-arrow-right-24: Model](./model.md)
 </footer>
@@ -27,7 +29,9 @@ Master the fundamentals of conceptual modeling with CoSML - from defining entiti
 :material-cog: __Rules__
 
 ---
-Deep dive into entity behaviors and dynamics - learn to implement rules, processes, meso-functions, and manage the temporal aspects of your simulations.
+Deep dive into entity behaviors and dynamics
+
+Learn to implement rules, processes, meso-functions, and manage the temporal aspects of your simulations.
 <footer markdown>
 [:octicons-arrow-right-24: Rules](./rules.md)
 </footer>
@@ -39,7 +43,9 @@ Deep dive into entity behaviors and dynamics - learn to implement rules, process
 :material-database: __Input Data__
 
 ---
-Learn to prepare, structure and manage simulation data - from model instantiation to initialization, modification, and validation files.
+Learn to prepare, structure and manage simulation data
+
+From model instantiation to initialization, modification, and validation files.
 <footer markdown>
 [:octicons-arrow-right-24: Input Data](./input-data.md)
 </footer>
@@ -51,7 +57,9 @@ Learn to prepare, structure and manage simulation data - from model instantiatio
 :material-chart-line: __Probing__
 
 ---
-Master simulation observation and analysis - configure probes to collect data and consumers to visualize and export results effectively.
+Master simulation observation and analysis
+
+Configure probes to collect data and consumers to visualize and export results effectively.
 <footer markdown>
 [:octicons-arrow-right-24: Probing](./probing.md)
 </footer>
