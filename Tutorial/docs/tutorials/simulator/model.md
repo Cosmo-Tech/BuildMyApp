@@ -260,14 +260,14 @@ Here's how all these pieces fit together in the complete model:
 
 Try adding a new entity type to the brewery model:
 
-1. **Waiter Entity**: 
-   - State: `Busy` (Boolean), `ServingCustomer` (Integer reference)
-   - Should be a sub-entity of Bar
-   - Add to the customer service process
+1. **Waiter Entity**:  
+    - State: `Busy` (Boolean), `ServingCustomer` (Integer reference)
+    - Should be a sub-entity of Bar
+    - Add to the customer service process
 
-2. **Menu Item Entity**:
-   - State: `Name` (String), `Price` (Float), `InStock` (Boolean)
-   - Create a compound entity for Menu that contains items
+2. **Menu Item Entity**:  
+    - State: `Name` (String), `Price` (Float), `InStock` (Boolean)
+    - Create a compound entity for Menu that contains items
 
 ## Next Steps
 

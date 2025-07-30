@@ -121,24 +121,12 @@ Tags control when probes execute in the simulation schedule:
 
 ```
 tag="1::1::1::0.5"
-     │  │  │   └── Position within the task block (0.5 = middle)
+     │  │  │   └── Position within the task block (0.5 = between 0 and 1)
      │  │  └────── Task block level
      │  └───────── Repeat block iteration
      └──────────── Top level position
 ```
 
-### Probe Timing Examples
-
-```xml
-<!-- Execute early in each simulation step -->
-<csmSon:ProbeInstance tag="1::1::1::0.1">
-
-<!-- Execute after main simulation logic -->
-<csmSon:ProbeInstance tag="1::1::1::0.9">
-
-<!-- Execute every 5th iteration -->
-<csmSon:ProbeInstance tag="1::5::1::0.5">
-```
 
 ### Coordinating with Simulation Schedule
 
@@ -149,9 +137,9 @@ Match probe timing to your simulation structure:
 <csmSon:RepeatTaskBlock repetitions="10">           <!-- tag: 1 -->
   <csmSon:WhileTaskBlock>                           <!-- tag: 1::1 -->
     <csmSon:SequentialTaskBlock>                    <!-- tag: 1::1::1 -->
-      <csmSon:ModelTask>Model</csmSon:ModelTask>    <!-- tag: 1::1::1::0.1 -->
-      <!-- Probe here: tag="1::1::1::0.5" -->
-      <csmSon:SimpleTask>...</csmSon:SimpleTask>    <!-- tag: 1::1::1::0.6 -->
+      <csmSon:ModelTask>Model</csmSon:ModelTask>    <!-- tag: 1::1::1::1 -->
+      <!-- Probe here: tag="1::1::1::1.5" -->
+      <csmSon:SimpleTask>...</csmSon:SimpleTask>    <!-- tag: 1::1::1::2 -->
     </csmSon:SequentialTaskBlock>
   </csmSon:WhileTaskBlock>
   <csmSon:SimpleTask>Restock</csmSon:SimpleTask>    <!-- tag: 1::2 -->
