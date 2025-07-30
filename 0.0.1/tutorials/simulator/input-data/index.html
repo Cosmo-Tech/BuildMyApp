@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#input-data" class="md-skip">
+        <a href="#input-data-and-model-instantiation" class="md-skip">
           Skip to content
         </a>
       
@@ -857,6 +857,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Input data
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -868,6 +881,444 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptual-model-vs-model-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptual Model vs Model Instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-entity-instantiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Entity Instantiation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Entity Instantiation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-bar-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Bar Instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-instance-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Instance Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-instantiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Instantiation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Instantiation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Environment Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-structure-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Structure Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-environment-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Environment Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Environment Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-grid-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Grid Environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#room-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Room Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduler Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduler Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-scheduler-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Scheduler Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-vs-sequential-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel vs Sequential Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-root-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Root Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Root Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-instance-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Instance File Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Root Scheduler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialization-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialization Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initialization Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-initial-attribute-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Initial Attribute Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialization Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modification-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modification Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#runtime-model-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Model Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Configuration Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditional-entity-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Entity Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-graph-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Graph Structures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-scheduler-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex Scheduler Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types-and-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Types and Collections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Types and Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-with-complex-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Complex Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partial-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partial Initialization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-organization-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Organization Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Organization Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended File Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming Conventions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing and Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing and Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-test-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Test Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-your-own-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise: Creating Your Own Instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1776,6 +2227,431 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptual-model-vs-model-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptual Model vs Model Instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-entity-instantiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Entity Instantiation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Entity Instantiation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-bar-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Bar Instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-instance-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Instance Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-instantiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Instantiation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Instantiation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Environment Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-structure-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Structure Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-environment-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Environment Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Environment Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-grid-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Grid Environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#room-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Room Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduler Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduler Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-scheduler-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Scheduler Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-vs-sequential-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel vs Sequential Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-root-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Root Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Root Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-instance-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Instance File Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Root Scheduler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialization-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialization Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initialization Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-initial-attribute-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Initial Attribute Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialization-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialization Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modification-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modification Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#runtime-model-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Model Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-configuration-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Configuration Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Configuration Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditional-entity-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Entity Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-graph-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Graph Structures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-scheduler-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex Scheduler Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types-and-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Types and Collections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Types and Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-with-complex-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Complex Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partial-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partial Initialization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-organization-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Organization Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Organization Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended File Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming Conventions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing and Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing and Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-test-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Test Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-creating-your-own-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise: Creating Your Own Instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1793,11 +2669,530 @@
   
 
 
-<h1 id="input-data">Input Data<a class="headerlink" href="#input-data" title="Permanent link">&para;</a></h1>
+<h1 id="input-data-and-model-instantiation">Input Data and Model Instantiation<a class="headerlink" href="#input-data-and-model-instantiation" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
-<p class="admonition-title">Tutorial Duration: 10-15 minutes</p>
+<p class="admonition-title">Tutorial Duration: 15-20 minutes</p>
 </div>
-<p>This tutorial covers how to prepare, structure, and manage simulation data in CoSMo. You'll learn to transform your conceptual model into running simulations through instantiation, initialization, and data management.</p>
+<p>This tutorial covers how to create instances of your conceptual model and configure them for simulation. You'll learn to set up entity instances, environments, schedulers, and initial conditions using the Brewery example.</p>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this tutorial, you will understand:</p>
+<ul>
+<li>The difference between conceptual models and model instances</li>
+<li>How to create entity instances and set their initial states</li>
+<li>Environment instantiation and relationship setup</li>
+<li>Scheduler configuration for controlling simulation flow</li>
+<li>Initialization and modification files for parameter setting</li>
+</ul>
+<h2 id="conceptual-model-vs-model-instance">Conceptual Model vs Model Instance<a class="headerlink" href="#conceptual-model-vs-model-instance" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Conceptual Model</th>
+<th>Model Instance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Defines entity <em>types</em> and their behaviors</td>
+<td>Creates actual <em>instances</em> of entities</td>
+</tr>
+<tr>
+<td><strong>Level</strong></td>
+<td>Abstract/Template</td>
+<td>Concrete/Specific</td>
+</tr>
+<tr>
+<td><strong>Example</strong></td>
+<td>"Customer entity with satisfaction attribute"</td>
+<td>"Customer1 with satisfaction=5, Customer2 with satisfaction=3"</td>
+</tr>
+<tr>
+<td><strong>File</strong></td>
+<td><code>.csm.xml</code></td>
+<td><code>.ist.xml</code></td>
+</tr>
+</tbody>
+</table>
+<p>Think of it like classes vs objects in programming - the conceptual model is the class definition, the instance is the actual object.</p>
+<h2 id="basic-entity-instantiation">Basic Entity Instantiation<a class="headerlink" href="#basic-entity-instantiation" title="Permanent link">&para;</a></h2>
+<h3 id="creating-the-bar-instance">Creating the Bar Instance<a class="headerlink" href="#creating-the-bar-instance" title="Permanent link">&para;</a></h3>
+<p>Our brewery simulation starts with a Bar compound entity containing customers:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csm:Bar</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyBar&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Compound&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:SubEntities&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Customer</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Customer1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Customer</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Customer2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Customer</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Customer3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Customer</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;5&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Customer4&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:SubEntities&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Environment and scheduler definitions follow --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:Compound&gt;</span>
+<span class="nt">&lt;/csm:Bar&gt;</span>
+</code></pre></div>
+<h3 id="entity-instance-components">Entity Instance Components<a class="headerlink" href="#entity-instance-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>id</strong>: Unique numeric identifier for referencing the instance</li>
+<li><strong>name</strong>: Human-readable name for debugging and display</li>
+<li><strong>Type</strong>: Defined by the XML element name (<code>csm:Customer</code>, <code>csm:Bar</code>)</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">ID Management</p>
+<p>Use systematic ID numbering:
+- Main entities: 1, 10, 100 (easy to remember)
+- Sub-entities: 2-9, 11-19, 101-109 (grouped by parent)
+- This makes debugging and referencing much easier</p>
+</div>
+<h2 id="environment-instantiation">Environment Instantiation<a class="headerlink" href="#environment-instantiation" title="Permanent link">&para;</a></h2>
+<h3 id="graph-environment-setup">Graph Environment Setup<a class="headerlink" href="#graph-environment-setup" title="Permanent link">&para;</a></h3>
+<p>The CustomerGraph environment defines how customers interact:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csm:Environment&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Define vertices (customers in the graph) --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Vertex&gt;</span>2<span class="nt">&lt;/csm:Vertex&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Vertex&gt;</span>3<span class="nt">&lt;/csm:Vertex&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Vertex&gt;</span>4<span class="nt">&lt;/csm:Vertex&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Vertex&gt;</span>5<span class="nt">&lt;/csm:Vertex&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Define arcs (directed relationships) --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Arc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Source&gt;</span>2<span class="nt">&lt;/csm:Source&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Destination&gt;</span>4<span class="nt">&lt;/csm:Destination&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:Arc&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Arc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Source&gt;</span>4<span class="nt">&lt;/csm:Source&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Destination&gt;</span>2<span class="nt">&lt;/csm:Destination&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:Arc&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Arc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Source&gt;</span>2<span class="nt">&lt;/csm:Source&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Destination&gt;</span>3<span class="nt">&lt;/csm:Destination&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:Arc&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Arc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Source&gt;</span>3<span class="nt">&lt;/csm:Source&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Destination&gt;</span>2<span class="nt">&lt;/csm:Destination&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:Arc&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- More arcs... --&gt;</span>
+<span class="nt">&lt;/csm:Environment&gt;</span>
+</code></pre></div>
+<h3 id="graph-structure-analysis">Graph Structure Analysis<a class="headerlink" href="#graph-structure-analysis" title="Permanent link">&para;</a></h3>
+<p>This creates a social network where:
+- <strong>Customer2</strong> is highly connected (central hub)
+- <strong>Customer1, 3, 4</strong> form a connected cluster
+- Information flows bidirectionally between connected customers</p>
+<h3 id="other-environment-types">Other Environment Types<a class="headerlink" href="#other-environment-types" title="Permanent link">&para;</a></h3>
+<h4 id="regular-grid-environment">Regular Grid Environment<a class="headerlink" href="#regular-grid-environment" title="Permanent link">&para;</a></h4>
+<p>For spatial positioning (2D grid example):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csm:Environment</span><span class="w"> </span><span class="na">sizeX=</span><span class="s">&quot;5&quot;</span><span class="w"> </span><span class="na">sizeY=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Entity</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">placeX=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">placeY=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Entity</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">placeX=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">placeY=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Entity</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">placeX=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">placeY=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/csm:Environment&gt;</span>
+</code></pre></div>
+<h4 id="room-environment">Room Environment<a class="headerlink" href="#room-environment" title="Permanent link">&para;</a></h4>
+<p>For global interaction (all entities can interact):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csm:Environment&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:EntityRef</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:EntityRef</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:EntityRef</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;4&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:EntityRef</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;5&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/csm:Environment&gt;</span>
+</code></pre></div>
+<h2 id="scheduler-configuration">Scheduler Configuration<a class="headerlink" href="#scheduler-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="basic-scheduler-structure">Basic Scheduler Structure<a class="headerlink" href="#basic-scheduler-structure" title="Permanent link">&para;</a></h3>
+<p>The scheduler controls when and how entity behaviors execute:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csm:Scheduler&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Parallel execution of customer Perceive/React --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:ParallelTaskBlock</span><span class="w"> </span><span class="na">concurrencyLevel=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:ParallelTask&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Entity&gt;</span>2<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:ParallelTask&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:ParallelTask&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Entity&gt;</span>3<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:ParallelTask&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:ParallelTask&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Entity&gt;</span>4<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:ParallelTask&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:ParallelTask&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Entity&gt;</span>5<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:ParallelTask&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:ParallelTaskBlock&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Sequential execution of customer updates --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:SimpleTask&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Entity&gt;</span>2<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Process&gt;</span>Update<span class="nt">&lt;/csm:Process&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:SimpleTask&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:SimpleTask&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Entity&gt;</span>3<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Process&gt;</span>Update<span class="nt">&lt;/csm:Process&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:SimpleTask&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- More update tasks... --&gt;</span>
+<span class="nt">&lt;/csm:Scheduler&gt;</span>
+</code></pre></div>
+<h3 id="task-types">Task Types<a class="headerlink" href="#task-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Task Type</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SimpleTask</strong></td>
+<td>Execute a specific rule/process</td>
+<td>Customer satisfaction update</td>
+</tr>
+<tr>
+<td><strong>ParallelTaskBlock</strong></td>
+<td>Execute multiple tasks simultaneously</td>
+<td>All customers perceive together</td>
+</tr>
+<tr>
+<td><strong>SequentialTaskBlock</strong></td>
+<td>Execute tasks in order</td>
+<td>Step-by-step process</td>
+</tr>
+<tr>
+<td><strong>RepeatTaskBlock</strong></td>
+<td>Repeat tasks multiple times</td>
+<td>Simulation loops</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parallel-vs-sequential-execution">Parallel vs Sequential Execution<a class="headerlink" href="#parallel-vs-sequential-execution" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Parallel: All customers perceive simultaneously --&gt;</span>
+<span class="nt">&lt;csm:ParallelTaskBlock&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:ParallelTask&gt;&lt;csm:Entity&gt;</span>2<span class="nt">&lt;/csm:Entity&gt;&lt;/csm:ParallelTask&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:ParallelTask&gt;&lt;csm:Entity&gt;</span>3<span class="nt">&lt;/csm:Entity&gt;&lt;/csm:ParallelTask&gt;</span>
+<span class="nt">&lt;/csm:ParallelTaskBlock&gt;</span>
+
+<span class="cm">&lt;!-- Sequential: Customers update one by one --&gt;</span>
+<span class="nt">&lt;csm:SequentialTaskBlock&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:SimpleTask&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Entity&gt;</span>2<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Process&gt;</span>Update<span class="nt">&lt;/csm:Process&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:SimpleTask&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:SimpleTask&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Entity&gt;</span>3<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Process&gt;</span>Update<span class="nt">&lt;/csm:Process&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:SimpleTask&gt;</span>
+<span class="nt">&lt;/csm:SequentialTaskBlock&gt;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Perceive/React Pattern</p>
+<p>Always use parallel tasks for Perceive and React rules to ensure all entities see the same state before updating. This prevents order-dependent simulation results.</p>
+</div>
+<h2 id="model-root-structure">Model Root Structure<a class="headerlink" href="#model-root-structure" title="Permanent link">&para;</a></h2>
+<h3 id="complete-instance-file-structure">Complete Instance File Structure<a class="headerlink" href="#complete-instance-file-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;csm:Model</span><span class="w"> </span><span class="na">xmlns:csm=</span><span class="s">&quot;http://www.cosmotech.com/csm/11.3&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Root scheduler that starts the simulation --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Scheduler&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:RunTask&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Entity&gt;</span>1<span class="nt">&lt;/csm:Entity&gt;</span><span class="w">  </span><span class="cm">&lt;!-- Start with Bar entity --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:RunTask&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:Scheduler&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Main compound entity instance --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Bar</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyBar&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Bar configuration here --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:Bar&gt;</span>
+
+<span class="nt">&lt;/csm:Model&gt;</span>
+</code></pre></div>
+<h3 id="root-scheduler">Root Scheduler<a class="headerlink" href="#root-scheduler" title="Permanent link">&para;</a></h3>
+<p>The root scheduler is essential - it tells the simulation which entity to start with:</p>
+<ul>
+<li><strong>RunTask</strong>: Executes the scheduler of a compound entity</li>
+<li><strong>Entity reference</strong>: Points to the main compound entity (Bar in our case)</li>
+</ul>
+<h2 id="initialization-files">Initialization Files<a class="headerlink" href="#initialization-files" title="Permanent link">&para;</a></h2>
+<h3 id="setting-initial-attribute-values">Setting Initial Attribute Values<a class="headerlink" href="#setting-initial-attribute-values" title="Permanent link">&para;</a></h3>
+<p>Create an initialization file (<code>.ini.xml</code>) to set specific starting conditions:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;csmIni:Model</span><span class="w"> </span><span class="na">xmlns:csmIni=</span><span class="s">&quot;http://www.cosmotech.com/csm_initialization/4.0.1&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;csmIni:Entity</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyBar&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Set bar attributes --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmIni:State&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Stock&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;csmIni:Value&gt;</span>15<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csmIni:Attribute&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;NbWaiters&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;csmIni:Value&gt;</span>3<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csmIni:Attribute&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmIni:State&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Set customer attributes --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmIni:SubEntities&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmIni:Entity</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Customer1&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;csmIni:State&gt;</span>
+<span class="w">          </span><span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Satisfaction&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;csmIni:Value&gt;</span>7<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/csmIni:Attribute&gt;</span>
+<span class="w">          </span><span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Thirsty&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;csmIni:Value&gt;</span>false<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/csmIni:Attribute&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/csmIni:State&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csmIni:Entity&gt;</span>
+
+<span class="w">      </span><span class="nt">&lt;csmIni:Entity</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Customer2&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;csmIni:State&gt;</span>
+<span class="w">          </span><span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Satisfaction&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;csmIni:Value&gt;</span>3<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/csmIni:Attribute&gt;</span>
+<span class="w">          </span><span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Thirsty&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;csmIni:Value&gt;</span>true<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/csmIni:Attribute&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/csmIni:State&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csmIni:Entity&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- More customers... --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmIni:SubEntities&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmIni:Entity&gt;</span>
+
+<span class="nt">&lt;/csmIni:Model&gt;</span>
+</code></pre></div>
+<h3 id="initialization-best-practices">Initialization Best Practices<a class="headerlink" href="#initialization-best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Realistic Values</strong>: Use domain-appropriate initial values</li>
+<li><strong>Varied States</strong>: Create interesting starting conditions</li>
+<li><strong>Boundary Testing</strong>: Include edge cases (empty stock, maximum satisfaction)</li>
+</ol>
+<h2 id="modification-files">Modification Files<a class="headerlink" href="#modification-files" title="Permanent link">&para;</a></h2>
+<h3 id="runtime-model-changes">Runtime Model Changes<a class="headerlink" href="#runtime-model-changes" title="Permanent link">&para;</a></h3>
+<p>Modification files (<code>.mod.xml</code>) allow changes during simulation:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;csmMod:Modifications</span><span class="w"> </span><span class="na">xmlns:csmMod=</span><span class="s">&quot;http://www.cosmotech.com/csm_modifications/4.0.1&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Increase stock dramatically --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmMod:DOMAttrModified</span><span class="w"> </span><span class="na">target=</span><span class="s">&quot;[Id=1]&quot;</span><span class="w"> </span>
+<span class="w">                          </span><span class="na">scope=</span><span class="s">&quot;State&quot;</span><span class="w"> </span>
+<span class="w">                          </span><span class="na">attributeName=</span><span class="s">&quot;Stock&quot;</span><span class="w"> </span>
+<span class="w">                          </span><span class="na">operator=</span><span class="s">&quot;+&quot;</span><span class="w"> </span>
+<span class="w">                          </span><span class="na">newValue=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Add a new customer --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmMod:DOMNodeInserted</span><span class="w"> </span><span class="na">target=</span><span class="s">&quot;MyBar&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmMod:Customer</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;6&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Customer5&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmMod:State&gt;</span>
+<span class="w">        </span><span class="nt">&lt;csmMod:Satisfaction&gt;</span>5<span class="nt">&lt;/csmMod:Satisfaction&gt;</span>
+<span class="w">        </span><span class="nt">&lt;csmMod:Thirsty&gt;</span>true<span class="nt">&lt;/csmMod:Thirsty&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csmMod:State&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmMod:Customer&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmMod:DOMNodeInserted&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Remove a customer --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmMod:DOMNodeRemoved</span><span class="w"> </span><span class="na">target=</span><span class="s">&quot;[Id=4]&quot;</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/csmMod:Modifications&gt;</span>
+</code></pre></div>
+<h3 id="modification-operations">Modification Operations<a class="headerlink" href="#modification-operations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DOMAttrModified</strong></td>
+<td>Change attribute values</td>
+<td>Increase stock, modify satisfaction</td>
+</tr>
+<tr>
+<td><strong>DOMNodeInserted</strong></td>
+<td>Add new entities</td>
+<td>New customers arrive</td>
+</tr>
+<tr>
+<td><strong>DOMNodeRemoved</strong></td>
+<td>Remove entities</td>
+<td>Customers leave</td>
+</tr>
+</tbody>
+</table>
+<h2 id="advanced-configuration-patterns">Advanced Configuration Patterns<a class="headerlink" href="#advanced-configuration-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="conditional-entity-creation">Conditional Entity Creation<a class="headerlink" href="#conditional-entity-creation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Create premium customers with higher initial satisfaction --&gt;</span>
+<span class="nt">&lt;csm:Customer</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PremiumCustomer1&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Will be initialized differently --&gt;</span>
+<span class="nt">&lt;/csm:Customer&gt;</span>
+</code></pre></div>
+<h3 id="dynamic-graph-structures">Dynamic Graph Structures<a class="headerlink" href="#dynamic-graph-structures" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Hub-and-spoke network --&gt;</span>
+<span class="nt">&lt;csm:Arc&gt;&lt;csm:Source&gt;</span>1<span class="nt">&lt;/csm:Source&gt;&lt;csm:Destination&gt;</span>2<span class="nt">&lt;/csm:Destination&gt;&lt;/csm:Arc&gt;</span>
+<span class="nt">&lt;csm:Arc&gt;&lt;csm:Source&gt;</span>1<span class="nt">&lt;/csm:Source&gt;&lt;csm:Destination&gt;</span>3<span class="nt">&lt;/csm:Destination&gt;&lt;/csm:Arc&gt;</span>
+<span class="nt">&lt;csm:Arc&gt;&lt;csm:Source&gt;</span>1<span class="nt">&lt;/csm:Source&gt;&lt;csm:Destination&gt;</span>4<span class="nt">&lt;/csm:Destination&gt;&lt;/csm:Arc&gt;</span>
+
+<span class="cm">&lt;!-- Ring network --&gt;</span>
+<span class="nt">&lt;csm:Arc&gt;&lt;csm:Source&gt;</span>2<span class="nt">&lt;/csm:Source&gt;&lt;csm:Destination&gt;</span>3<span class="nt">&lt;/csm:Destination&gt;&lt;/csm:Arc&gt;</span>
+<span class="nt">&lt;csm:Arc&gt;&lt;csm:Source&gt;</span>3<span class="nt">&lt;/csm:Source&gt;&lt;csm:Destination&gt;</span>4<span class="nt">&lt;/csm:Destination&gt;&lt;/csm:Arc&gt;</span>
+<span class="nt">&lt;csm:Arc&gt;&lt;csm:Source&gt;</span>4<span class="nt">&lt;/csm:Source&gt;&lt;csm:Destination&gt;</span>2<span class="nt">&lt;/csm:Destination&gt;&lt;/csm:Arc&gt;</span>
+</code></pre></div>
+<h3 id="complex-scheduler-patterns">Complex Scheduler Patterns<a class="headerlink" href="#complex-scheduler-patterns" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csm:Scheduler&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Initialization phase --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:SequentialTaskBlock&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:SimpleTask&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Entity&gt;</span>1<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Process&gt;</span>Initialize<span class="nt">&lt;/csm:Process&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:SimpleTask&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:SequentialTaskBlock&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Main simulation loop --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:RepeatTaskBlock</span><span class="w"> </span><span class="na">repetitions=</span><span class="s">&quot;100&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:SequentialTaskBlock&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- Customer interactions --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:ParallelTaskBlock&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- All customers perceive --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csm:ParallelTaskBlock&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:ParallelTaskBlock&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- All customers react --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csm:ParallelTaskBlock&gt;</span>
+
+<span class="w">      </span><span class="cm">&lt;!-- Bar operations --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:SimpleTask&gt;</span>
+<span class="w">        </span><span class="nt">&lt;csm:Entity&gt;</span>1<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">        </span><span class="nt">&lt;csm:Process&gt;</span>Serve<span class="nt">&lt;/csm:Process&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csm:SimpleTask&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:SequentialTaskBlock&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:RepeatTaskBlock&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Cleanup phase --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:SimpleTask&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Entity&gt;</span>1<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Process&gt;</span>Cleanup<span class="nt">&lt;/csm:Process&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:SimpleTask&gt;</span>
+<span class="nt">&lt;/csm:Scheduler&gt;</span>
+</code></pre></div>
+<h2 id="data-types-and-collections">Data Types and Collections<a class="headerlink" href="#data-types-and-collections" title="Permanent link">&para;</a></h2>
+<h3 id="working-with-complex-attributes">Working with Complex Attributes<a class="headerlink" href="#working-with-complex-attributes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- List of integers --&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CustomerRatings&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>[8,<span class="w"> </span>6,<span class="w"> </span>9,<span class="w"> </span>7,<span class="w"> </span>5]<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+
+<span class="cm">&lt;!-- Map of string to integer --&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MenuPrices&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>{&quot;beer&quot;:<span class="w"> </span>5,<span class="w"> </span>&quot;wine&quot;:<span class="w"> </span>8,<span class="w"> </span>&quot;cocktail&quot;:<span class="w"> </span>12}<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+
+<span class="cm">&lt;!-- Composite type --&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BarInfo&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>{&quot;name&quot;:<span class="w"> </span>&quot;CoSMo<span class="w"> </span>Brewery&quot;,<span class="w"> </span>&quot;capacity&quot;:<span class="w"> </span>50,<span class="w"> </span>&quot;isOpen&quot;:<span class="w"> </span>true}<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+</code></pre></div>
+<h3 id="partial-initialization">Partial Initialization<a class="headerlink" href="#partial-initialization" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Initialize specific list elements --&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CustomerRatings::0&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>10<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+
+<span class="cm">&lt;!-- Initialize specific map values --&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MenuPrices::beer&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>6<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+
+<span class="cm">&lt;!-- Initialize composite fields --&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BarInfo::capacity&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>75<span class="nt">&lt;/csmIni:Value&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+</code></pre></div>
+<h2 id="file-organization-best-practices">File Organization Best Practices<a class="headerlink" href="#file-organization-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="recommended-file-structure">Recommended File Structure<a class="headerlink" href="#recommended-file-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Simulation/
+├── MyBrewery.ist.xml              # Main instance file
+├── BreweryInitialization.ini.xml  # Initial values
+├── Scenarios/
+│   ├── RushHour.mod.xml          # Peak time scenario
+│   ├── StockOutage.mod.xml       # Emergency scenario
+│   └── NewCustomers.mod.xml      # Growth scenario
+└── Variations/
+    ├── SmallBar.ist.xml          # 2 customers, 1 waiter
+    ├── LargeBar.ist.xml          # 20 customers, 5 waiters
+    └── SocialHubBar.ist.xml      # Dense network
+</code></pre></div>
+<h3 id="naming-conventions">Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Descriptive Names</strong>: <code>CustomerSatisfiedHigh</code> vs <code>Customer1</code></li>
+<li><strong>Systematic IDs</strong>: Main entities (1, 10, 100), sub-entities (2-9, 11-19)</li>
+<li><strong>File Prefixes</strong>: <code>Basic_</code>, <code>Test_</code>, <code>Scenario_</code> for different purposes</li>
+</ul>
+<h2 id="testing-and-validation">Testing and Validation<a class="headerlink" href="#testing-and-validation" title="Permanent link">&para;</a></h2>
+<h3 id="create-test-scenarios">Create Test Scenarios<a class="headerlink" href="#create-test-scenarios" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Minimal test case --&gt;</span>
+<span class="nt">&lt;csm:Bar</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TestBar&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Compound&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:SubEntities&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Customer</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TestCustomer&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:SubEntities&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:Environment&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Vertex&gt;</span>2<span class="nt">&lt;/csm:Vertex&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:Environment&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:Compound&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csm:Scheduler&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csm:SimpleTask&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Entity&gt;</span>2<span class="nt">&lt;/csm:Entity&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csm:Process&gt;</span>Update<span class="nt">&lt;/csm:Process&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csm:SimpleTask&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csm:Scheduler&gt;</span>
+<span class="nt">&lt;/csm:Bar&gt;</span>
+</code></pre></div>
+<h3 id="validation-patterns">Validation Patterns<a class="headerlink" href="#validation-patterns" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Boundary value testing --&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Satisfaction&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>0<span class="nt">&lt;/csmIni:Value&gt;</span><span class="w">      </span><span class="cm">&lt;!-- Minimum --&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Satisfaction&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>10<span class="nt">&lt;/csmIni:Value&gt;</span><span class="w">     </span><span class="cm">&lt;!-- Maximum --&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+
+<span class="cm">&lt;!-- Edge cases --&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Stock&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>0<span class="nt">&lt;/csmIni:Value&gt;</span><span class="w">      </span><span class="cm">&lt;!-- Empty stock --&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+<span class="nt">&lt;csmIni:Attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;NbWaiters&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmIni:Value&gt;</span>1<span class="nt">&lt;/csmIni:Value&gt;</span><span class="w">      </span><span class="cm">&lt;!-- Minimal staff --&gt;</span>
+<span class="nt">&lt;/csmIni:Attribute&gt;</span>
+</code></pre></div>
+<h2 id="exercise-creating-your-own-instance">Exercise: Creating Your Own Instance<a class="headerlink" href="#exercise-creating-your-own-instance" title="Permanent link">&para;</a></h2>
+<p>Try creating a new bar instance with these specifications:</p>
+<ol>
+<li><strong>Sports Bar</strong>:</li>
+<li>8 customers in two groups (sports fans vs casual)</li>
+<li>Higher stock (25 units)</li>
+<li>4 waiters</li>
+<li>
+<p>Two separate customer clusters in the graph</p>
+</li>
+<li>
+<p><strong>Initialization</strong>:</p>
+</li>
+<li>Sports fans start with high satisfaction (8-9)</li>
+<li>Casual customers start with medium satisfaction (4-6)</li>
+<li>
+<p>Half the customers start thirsty</p>
+</li>
+<li>
+<p><strong>Scheduler</strong>:</p>
+</li>
+<li>Add a periodic restock task every 5 simulation steps</li>
+<li>Include meso-function updates for tracking</li>
+</ol>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>In the next tutorial, you'll learn about:</p>
+<ul>
+<li><strong>Probing and Monitoring</strong>: Collecting data during simulation</li>
+<li><strong>Consumer Configuration</strong>: Processing and visualizing results</li>
+<li><strong>Real-time Analysis</strong>: Understanding simulation behavior</li>
+<li><strong>Output Formats</strong>: CSV, charts, and custom displays</li>
+</ul>
+<p>Your model instances define the <em>initial conditions</em> - the next tutorial shows you how to <em>observe</em> what happens during simulation!</p>
 
 
 
