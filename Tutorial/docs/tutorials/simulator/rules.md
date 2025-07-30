@@ -463,24 +463,27 @@ Try implementing these additional behaviors:
 
 ### 1. Customer Loyalty System
 
-Add a `Loyalty` attribute and implement:
-- Loyalty increases with good service
-- Loyal customers are more forgiving of poor service
-- Loyalty affects tip amounts
+Add a `Loyalty` attribute and implement:  
+
+  - Loyalty increases with good service  
+  - Loyal customers are more forgiving of poor service  
+  - Loyalty affects tip amounts  
 
 ### 2. Peak Hours Simulation
 
-Implement time-based behavior:
-- More customers become thirsty during peak hours
-- Bar adjusts waiter count based on time
-- Price changes based on demand
+Implement time-based behavior:  
+
+  - More customers become thirsty during peak hours  
+  - Bar adjusts waiter count based on time  
+  - Price changes based on demand  
 
 ### 3. Social Influence Propagation
 
-Enhance the social network:
-- Extremely satisfied customers create "viral" satisfaction
-- Dissatisfied customers have stronger negative influence
-- Implement influence decay over network distance
+Enhance the social network:  
+
+  - Extremely satisfied customers create "viral" satisfaction  
+  - Dissatisfied customers have stronger negative influence  
+  - Implement influence decay over network distance  
 
 ## Next Steps
 

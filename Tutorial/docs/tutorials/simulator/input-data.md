@@ -95,6 +95,7 @@ The CustomerGraph environment defines how customers interact:
 ### Graph Structure Analysis
 
 This creates a social network where:
+
 - **Customer2** is highly connected (central hub)
 - **Customer1, 3, 4** form a connected cluster
 - Information flows bidirectionally between connected customers
@@ -502,19 +503,19 @@ Simulation/
 Try creating a new bar instance with these specifications:
 
 1. **Sports Bar**:
-   - 8 customers in two groups (sports fans vs casual)
-   - Higher stock (25 units)
-   - 4 waiters
-   - Two separate customer clusters in the graph
+    - 8 customers in two groups (sports fans vs casual)
+    - Higher stock (25 units)
+    - 4 waiters
+    - Two separate customer clusters in the graph
 
 2. **Initialization**:
-   - Sports fans start with high satisfaction (8-9)
-   - Casual customers start with medium satisfaction (4-6)
-   - Half the customers start thirsty
+    - Sports fans start with high satisfaction (8-9)
+    - Casual customers start with medium satisfaction (4-6)
+    - Half the customers start thirsty
 
 3. **Scheduler**:
-   - Add a periodic restock task every 5 simulation steps
-   - Include meso-function updates for tracking
+    - Add a periodic restock task every 5 simulation steps
+    - Include meso-function updates for tracking
 
 ## Next Steps
 
