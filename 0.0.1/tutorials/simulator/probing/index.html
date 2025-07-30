@@ -1044,15 +1044,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#probe-timing-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Probe Timing Examples
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#coordinating-with-simulation-schedule" class="md-nav__link">
     <span class="md-ellipsis">
       Coordinating with Simulation Schedule
@@ -2565,15 +2556,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#probe-timing-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Probe Timing Examples
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#coordinating-with-simulation-schedule" class="md-nav__link">
     <span class="md-ellipsis">
       Coordinating with Simulation Schedule
@@ -3204,20 +3186,10 @@
 <h3 id="understanding-tags">Understanding Tags<a class="headerlink" href="#understanding-tags" title="Permanent link">&para;</a></h3>
 <p>Tags control when probes execute in the simulation schedule:</p>
 <div class="highlight"><pre><span></span><code>tag=&quot;1::1::1::0.5&quot;
-     │  │  │   └── Position within the task block (0.5 = middle)
+     │  │  │   └── Position within the task block (0.5 = between 0 and 1)
      │  │  └────── Task block level
      │  └───────── Repeat block iteration
      └──────────── Top level position
-</code></pre></div>
-<h3 id="probe-timing-examples">Probe Timing Examples<a class="headerlink" href="#probe-timing-examples" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Execute early in each simulation step --&gt;</span>
-<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.1&quot;</span><span class="nt">&gt;</span>
-
-<span class="cm">&lt;!-- Execute after main simulation logic --&gt;</span>
-<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.9&quot;</span><span class="nt">&gt;</span>
-
-<span class="cm">&lt;!-- Execute every 5th iteration --&gt;</span>
-<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">tag=</span><span class="s">&quot;1::5::1::0.5&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
 <h3 id="coordinating-with-simulation-schedule">Coordinating with Simulation Schedule<a class="headerlink" href="#coordinating-with-simulation-schedule" title="Permanent link">&para;</a></h3>
 <p>Match probe timing to your simulation structure:</p>
@@ -3225,9 +3197,9 @@
 <span class="nt">&lt;csmSon:RepeatTaskBlock</span><span class="w"> </span><span class="na">repetitions=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span><span class="w">           </span><span class="cm">&lt;!-- tag: 1 --&gt;</span>
 <span class="w">  </span><span class="nt">&lt;csmSon:WhileTaskBlock&gt;</span><span class="w">                           </span><span class="cm">&lt;!-- tag: 1::1 --&gt;</span>
 <span class="w">    </span><span class="nt">&lt;csmSon:SequentialTaskBlock&gt;</span><span class="w">                    </span><span class="cm">&lt;!-- tag: 1::1::1 --&gt;</span>
-<span class="w">      </span><span class="nt">&lt;csmSon:ModelTask&gt;</span>Model<span class="nt">&lt;/csmSon:ModelTask&gt;</span><span class="w">    </span><span class="cm">&lt;!-- tag: 1::1::1::0.1 --&gt;</span>
-<span class="w">      </span><span class="cm">&lt;!-- Probe here: tag=&quot;1::1::1::0.5&quot; --&gt;</span>
-<span class="w">      </span><span class="nt">&lt;csmSon:SimpleTask&gt;</span>...<span class="nt">&lt;/csmSon:SimpleTask&gt;</span><span class="w">    </span><span class="cm">&lt;!-- tag: 1::1::1::0.6 --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:ModelTask&gt;</span>Model<span class="nt">&lt;/csmSon:ModelTask&gt;</span><span class="w">    </span><span class="cm">&lt;!-- tag: 1::1::1::1 --&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- Probe here: tag=&quot;1::1::1::1.5&quot; --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:SimpleTask&gt;</span>...<span class="nt">&lt;/csmSon:SimpleTask&gt;</span><span class="w">    </span><span class="cm">&lt;!-- tag: 1::1::1::2 --&gt;</span>
 <span class="w">    </span><span class="nt">&lt;/csmSon:SequentialTaskBlock&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/csmSon:WhileTaskBlock&gt;</span>
 <span class="w">  </span><span class="nt">&lt;csmSon:SimpleTask&gt;</span>Restock<span class="nt">&lt;/csmSon:SimpleTask&gt;</span><span class="w">    </span><span class="cm">&lt;!-- tag: 1::2 --&gt;</span>
