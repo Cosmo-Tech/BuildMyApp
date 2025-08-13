@@ -486,6 +486,8 @@
       
         
       
+        
+      
     
     
     
@@ -728,6 +730,29 @@
   
   <span class="md-ellipsis">
     nvm / npm / Node.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotenv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dotenv
     
   </span>
   
@@ -1970,6 +1995,10 @@ ln<span class="w"> </span>-s<span class="w"> </span>/usr/bin/git<span class="w">
 - You can set a passphrase for additional security (optional).</p>
 <p>The public key will be saved as <code>~/.ssh/id_ed25519.pub</code>.<br />
 Add this public key to your Git service (GitHub, GitLab, etc.) under SSH keys to enable SSH-based authentication.</p>
+<p>Then to allow your system to use that ssh key to connect to your services you need to add it to your <code>ssh-agent</code></p>
+<div class="highlight"><span class="filename">Add SSH key to ssh-agent</span><pre><span></span><code><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span>~/.ssh/id_ed25519
+</code></pre></div>
 <h2 id="update-git">Update Git<a class="headerlink" href="#update-git" title="Permanent link">&para;</a></h2>
 <div class="highlight"><span class="filename">Update Git</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>--only-upgrade<span class="w"> </span>git
