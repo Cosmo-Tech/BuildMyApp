@@ -1124,6 +1124,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Custom commands
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1135,6 +1148,369 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-custom-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are Custom Commands?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-vs-command-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command vs Command ID
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command vs Command ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command IDs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Custom Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Custom Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugin-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-template-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Template Definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-substitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Substitution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Loading
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-template-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Template Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Template Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-processing-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Processing Templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility Templates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exit-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exit Handlers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugin Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-plugin-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Plugin Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-vs-distributed-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local vs Distributed Plugins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-coal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with CoAL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Organization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Templates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Distribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packaging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1801,6 +2177,356 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-custom-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are Custom Commands?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-vs-command-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command vs Command ID
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command vs Command ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command IDs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Custom Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Custom Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plugin-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-template-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Template Definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-substitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable Substitution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Loading
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-template-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Template Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Template Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-processing-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Processing Templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility Templates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exit-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exit Handlers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugin Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-plugin-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Plugin Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-vs-distributed-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local vs Distributed Plugins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-coal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with CoAL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Organization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Templates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Distribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packaging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1820,6 +2546,162 @@
 
 <h1 id="custom-commands">Custom commands<a class="headerlink" href="#custom-commands" title="Permanent link">&para;</a></h1>
 <p>Define and use custom commands for advanced operations in your solution.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Custom commands allow you to create reusable command templates that can be referenced by ID instead of repeating complex command definitions. They help reduce code duplication and create standardized operations across run templates.</p>
+<h2 id="what-are-custom-commands">What are Custom Commands?<a class="headerlink" href="#what-are-custom-commands" title="Permanent link">&para;</a></h2>
+<p>Custom commands are:
+- <strong>Command Templates</strong>: Reusable command definitions with parameters
+- <strong>Command IDs</strong>: Named references instead of full command definitions
+- <strong>Plugin Extensions</strong>: Extend orchestrator functionality
+- <strong>Template System</strong>: Parameterized command structures</p>
+<h2 id="command-vs-command-id">Command vs Command ID<a class="headerlink" href="#command-vs-command-id" title="Permanent link">&para;</a></h2>
+<h3 id="direct-commands">Direct Commands<a class="headerlink" href="#direct-commands" title="Permanent link">&para;</a></h3>
+<p>Full command definition in run template:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;python&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;arguments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;script.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--param&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;VAR&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="command-ids">Command IDs<a class="headerlink" href="#command-ids" title="Permanent link">&para;</a></h3>
+<p>Reference to predefined template:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;commandId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my-custom-command&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><em>[Placeholder: JSON showing commandId vs full command comparison]</em></p>
+<h2 id="creating-custom-commands">Creating Custom Commands<a class="headerlink" href="#creating-custom-commands" title="Permanent link">&para;</a></h2>
+<h3 id="plugin-structure">Plugin Structure<a class="headerlink" href="#plugin-structure" title="Permanent link">&para;</a></h3>
+<p>Custom commands are organized in plugins:
+- <strong>Plugin Directory</strong>: <code>cosmotech/orchestrator_plugins/</code>
+- <strong>Template Files</strong>: JSON files defining command templates
+- <strong>Manifest</strong>: Plugin metadata and configuration</p>
+<p><em>[Placeholder: Plugin directory structure example]</em></p>
+<h3 id="basic-template-definition">Basic Template Definition<a class="headerlink" href="#basic-template-definition" title="Permanent link">&para;</a></h3>
+<p>A command template includes:
+- <strong>ID</strong>: Unique identifier for the command
+- <strong>Description</strong>: Human-readable description
+- <strong>Command</strong>: The actual command to execute
+- <strong>Arguments</strong>: Parameter templates
+- <strong>Environment</strong>: Environment variable definitions</p>
+<p><em>[Placeholder: Basic command template JSON structure]</em></p>
+<h2 id="template-system">Template System<a class="headerlink" href="#template-system" title="Permanent link">&para;</a></h2>
+<h3 id="variable-substitution">Variable Substitution<a class="headerlink" href="#variable-substitution" title="Permanent link">&para;</a></h3>
+<p>Templates support parameter substitution:
+- Use variables in command arguments
+- Environment variable replacement
+- Default values for parameters
+- Required vs optional parameters</p>
+<p><em>[Placeholder: Template with variable substitution example]</em></p>
+<h3 id="plugin-loading">Plugin Loading<a class="headerlink" href="#plugin-loading" title="Permanent link">&para;</a></h3>
+<p>Based on the meetings:
+- Plugins are loaded alphabetically
+- Local templates override library templates
+- Use <code>csm-orc list-templates</code> to see available templates
+- Templates can be distributed as Python packages</p>
+<h2 id="common-template-patterns">Common Template Patterns<a class="headerlink" href="#common-template-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="data-processing-templates">Data Processing Templates<a class="headerlink" href="#data-processing-templates" title="Permanent link">&para;</a></h3>
+<p>Common patterns include:
+- <strong>fetch-data</strong>: Standard data download operations
+- <strong>validate-data</strong>: Data validation steps
+- <strong>transform-data</strong>: Data transformation operations
+- <strong>send-to-storage</strong>: Export to various storage systems</p>
+<h3 id="utility-templates">Utility Templates<a class="headerlink" href="#utility-templates" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>hello-world</strong>: Simple example template</li>
+<li><strong>python-script</strong>: Execute Python scripts with parameters</li>
+<li><strong>file-operations</strong>: Common file manipulation tasks</li>
+</ul>
+<p><em>[Placeholder: Example template definitions for common patterns]</em></p>
+<h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">&para;</a></h2>
+<h3 id="exit-handlers">Exit Handlers<a class="headerlink" href="#exit-handlers" title="Permanent link">&para;</a></h3>
+<p>Templates can be marked as exit handlers:
+- Always run at the end regardless of success/failure
+- Useful for cleanup operations
+- Send notifications or status updates
+- Handle error conditions</p>
+<p><em>[Placeholder: Exit handler template example]</em></p>
+<h3 id="template-parameters">Template Parameters<a class="headerlink" href="#template-parameters" title="Permanent link">&para;</a></h3>
+<p>Templates support various parameter types:
+- <strong>Environment Variables</strong>: Runtime configuration
+- <strong>Command Arguments</strong>: Direct parameter passing
+- <strong>Optional Parameters</strong>: Parameters with defaults
+- <strong>Required Parameters</strong>: Must be provided</p>
+<h2 id="plugin-development">Plugin Development<a class="headerlink" href="#plugin-development" title="Permanent link">&para;</a></h2>
+<h3 id="creating-plugin-packages">Creating Plugin Packages<a class="headerlink" href="#creating-plugin-packages" title="Permanent link">&para;</a></h3>
+<p>Structure plugin packages for distribution:
+- <strong>Python Package</strong>: Standard package structure
+- <strong>Entry Points</strong>: Define plugin entry points
+- <strong>Installation</strong>: Install as pip package
+- <strong>Version Management</strong>: Semantic versioning</p>
+<p><em>[Placeholder: Plugin package structure example]</em></p>
+<h3 id="local-vs-distributed-plugins">Local vs Distributed Plugins<a class="headerlink" href="#local-vs-distributed-plugins" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Local Plugins</strong>: Project-specific templates</li>
+<li><strong>Distributed Plugins</strong>: Shared across projects</li>
+<li><strong>Installation Methods</strong>: pip install, local development</li>
+<li><strong>Namespace Management</strong>: Avoid naming conflicts</li>
+</ul>
+<h2 id="integration-with-coal">Integration with CoAL<a class="headerlink" href="#integration-with-coal" title="Permanent link">&para;</a></h2>
+<p>CoAL provides many standard templates:
+- <strong>CSM Data Templates</strong>: Data operation shortcuts
+- <strong>Storage Templates</strong>: Upload/download operations
+- <strong>API Templates</strong>: Platform API interactions
+- <strong>Database Templates</strong>: Database operation shortcuts</p>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="template-design">Template Design<a class="headerlink" href="#template-design" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use clear, descriptive IDs</li>
+<li>Provide comprehensive descriptions</li>
+<li>Design for reusability</li>
+<li>Handle errors gracefully</li>
+</ul>
+<h3 id="parameter-management">Parameter Management<a class="headerlink" href="#parameter-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use environment variables for configuration</li>
+<li>Provide sensible defaults</li>
+<li>Validate required parameters</li>
+<li>Document parameter usage</li>
+</ul>
+<h3 id="plugin-organization">Plugin Organization<a class="headerlink" href="#plugin-organization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Group related templates in plugins</li>
+<li>Use consistent naming conventions</li>
+<li>Maintain backward compatibility</li>
+<li>Document template APIs</li>
+</ul>
+<h2 id="development-workflow">Development Workflow<a class="headerlink" href="#development-workflow" title="Permanent link">&para;</a></h2>
+<h3 id="local-development">Local Development<a class="headerlink" href="#local-development" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create Template</strong>: Define command template JSON</li>
+<li><strong>Create Plugin</strong>: Organize in plugin structure</li>
+<li><strong>Install Locally</strong>: Install as editable package</li>
+<li><strong>Test</strong>: Use in run templates</li>
+<li><strong>Iterate</strong>: Refine and improve</li>
+</ol>
+<h3 id="testing-templates">Testing Templates<a class="headerlink" href="#testing-templates" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use <code>csm-orc list-templates</code> to verify availability</li>
+<li>Test with various parameter combinations</li>
+<li>Validate error handling</li>
+<li>Check integration with run templates</li>
+</ul>
+<h2 id="template-distribution">Template Distribution<a class="headerlink" href="#template-distribution" title="Permanent link">&para;</a></h2>
+<h3 id="packaging">Packaging<a class="headerlink" href="#packaging" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create Python package with proper structure</li>
+<li>Include manifest and metadata</li>
+<li>Use semantic versioning</li>
+<li>Provide documentation and examples</li>
+</ul>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Install from Git repositories</li>
+<li>Use pip for package management</li>
+<li>Support development installations</li>
+<li>Handle dependencies properly</li>
+</ul>
+<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
 
 
 
