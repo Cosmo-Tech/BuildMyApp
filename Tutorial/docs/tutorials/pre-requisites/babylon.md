@@ -19,13 +19,13 @@ git clone git@github.com:Cosmo-Tech/Babylon.git Babylon
 cd Babylon
 git checkout 4.2.3
 
-python -m venv .venv
+python3 -m venv .venv
 
 source .venv/bin/activate
 pip install .
 deactivate
 
-cd ~/ToolingBin
+cd ~/ToolingBins
 ln -s ~/Tooling/Babylon/.venv/bin/babylon babylon
 ```
 

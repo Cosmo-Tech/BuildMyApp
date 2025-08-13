@@ -90,6 +90,20 @@ You will need those if you have to do customization of the webapps.
 
 <article markdown>
 <div class="text" markdown>
+:material-keyboard-return: __Dotenv__
+
+---
+Dotenv CLI is a command-line tool for loading environment variables from .env files.
+
+Essential for managing configuration and environment variables in development and deployment workflows.
+<footer markdown>
+[:octicons-arrow-right-24: Dotenv](./dotenv.md)
+</footer>
+</div>
+</article>
+
+<article markdown>
+<div class="text" markdown>
 :material-keyboard-return: __Babylon__
 
 ---

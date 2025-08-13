@@ -43,6 +43,13 @@ After running the command:
 The public key will be saved as `~/.ssh/id_ed25519.pub`.  
 Add this public key to your Git service (GitHub, GitLab, etc.) under SSH keys to enable SSH-based authentication.
 
+Then to allow your system to use that ssh key to connect to your services you need to add it to your `ssh-agent`
+
+```bash title="Add SSH key to ssh-agent"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
 ## Update Git
 
 ```bash title="Update Git"

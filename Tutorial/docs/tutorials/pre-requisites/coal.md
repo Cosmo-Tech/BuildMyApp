@@ -44,6 +44,10 @@ deactivate
 
 CoAL depends on the csm-orc project for orchestration features. Make sure to install csm-orc as described in its documentation.
 
+## Requirements
+
+You can also use `CosmoTech-Acceleration-Library` in you python requirements to add a working installation of CoAl to any virtual environment using the official releases
+
 ## References
 
 For more detailed information, refer to:
