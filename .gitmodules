@@ -1,0 +1,12 @@
+[submodule "Sources/build-my-app-training-webapp"]
+	path = Sources/build-my-app-training-webapp
+	url = git@github.com:Cosmo-Tech/build-my-app-training-webapp.git
+[submodule "Sources/build-my-app-training-organization"]
+	path = Sources/build-my-app-training-organization
+	url = git@github.com:Cosmo-Tech/build-my-app-training-organization.git
+[submodule "Sources/build-my-app-training-workspaces"]
+	path = Sources/build-my-app-training-workspaces
+	url = git@github.com:Cosmo-Tech/build-my-app-training-workspaces.git
+[submodule "Sources/onboarding-brewery-solution"]
+	path = Sources/onboarding-brewery-solution
+	url = git@github.com:Cosmo-Tech/onboarding-brewery-solution.git
