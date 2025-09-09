@@ -9,6 +9,7 @@ The CosmoTech Orchestrator (CSM-ORC) is the tool that executes run templates def
 ## What is CSM-ORC?
 
 CSM-ORC allows you to:
+
 - Define workflows through JSON-based run templates
 - Execute steps in a controlled order with dependencies
 - Use environment variables for configuration
@@ -18,6 +19,7 @@ CSM-ORC allows you to:
 ## Basic Run Template Structure
 
 A run template is a JSON file that defines:
+
 - **Steps**: Individual operations to execute
 - **Precedents**: Dependencies between steps (which steps must complete before others)
 - **Environment Variables**: Configuration values
@@ -34,6 +36,7 @@ A run template is a JSON file that defines:
 
 ### Environment Variables
 The platform provides standard variables like:
+
 - `COSMOTECH_API_URL`
 - `CSM_ORGANIZATION_ID`
 - `CSM_WORKSPACE_ID`
@@ -48,6 +51,7 @@ Instead of repeating complex commands, use **command IDs** that reference predef
 ## CLI Usage
 
 ### Basic Commands
+
 - `csm-orc run template.json` - Execute a run template
 - `csm-orc run --dry-run template.json` - Validate without executing
 - `csm-orc run --display-env --gen-env-target file.env template.json` - Generate environment file
