@@ -24,30 +24,6 @@ Use Babylon for deployment operations and configuration.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Jenkins__
-
----
-Automate builds and deployments with Jenkins.
-<footer markdown>
-[:octicons-arrow-right-24: Jenkins](./jenkins.md)
-</footer>
-</div>
-</article>
-
-<article markdown>
-<div class="text" markdown>
-:material-keyboard-return: __Github Actions__
-
----
-CI/CD automation using Github Actions.
-<footer markdown>
-[:octicons-arrow-right-24: Github Actions](./github-actions.md)
-</footer>
-</div>
-</article>
-
-<article markdown>
-<div class="text" markdown>
 :material-keyboard-return: __Docker__
 
 ---

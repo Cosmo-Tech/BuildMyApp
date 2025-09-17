@@ -46,16 +46,4 @@ Workspaces and their management via API.
 </div>
 </article>
 
-<article markdown>
-<div class="text" markdown>
-:material-keyboard-return: __Dataset__
-
----
-Datasets and data management through the API.
-<footer markdown>
-[:octicons-arrow-right-24: Dataset](./dataset.md)
-</footer>
-</div>
-</article>
-
 </main>

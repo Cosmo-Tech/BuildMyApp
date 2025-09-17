@@ -83,16 +83,4 @@ Packaging, automation, and deployment tools.
 </div>
 </article>
 
-<article markdown>
-<div class="text" markdown>
-:material-keyboard-return: __Documentation__
-
----
-Documentation tools and workflows for CosmoTech solutions.
-<footer markdown>
-[:octicons-arrow-right-24: Documentation](./documentation/index.md)
-</footer>
-</div>
-</article>
-
 </main>
