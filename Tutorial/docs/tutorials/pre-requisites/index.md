@@ -23,7 +23,7 @@ cd ~
 mkdir Tooling
 mkdir ToolingBins
 
-echo "export PATH=~/ToolingBins:$PATH" >> ~/.bashrc
+echo 'export PATH=~/ToolingBins:$PATH' >> ~/.bashrc
 ```
 
 Now every tool that you install can be installed in `Tooling`, and you can add any executable or script you may need
