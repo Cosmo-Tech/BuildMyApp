@@ -2,5 +2,4 @@ nav:
   - Home: 'index.md'
   - Tutorials: tutorials/
   - On Hands Session: on_hands/
-  - Test: test/
   - Tags: tags.md
