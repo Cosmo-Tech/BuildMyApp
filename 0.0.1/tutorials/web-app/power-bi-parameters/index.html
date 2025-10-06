@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/frontend/">
+        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/power-bi-parameters/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../power-bi/">
       
       
-        <link rel="next" href="../adx-database/">
+        <link rel="next" href="../power-bi-embedding/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Frontend Architecture & Integration - Build My App</title>
+        <title>Power BI Parameters & Reuse - Build My App</title>
       
     
     
@@ -63,11 +63,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Frontend Architecture & Integration - Build My App" >
+        <meta  property="og:title"  content="Power BI Parameters & Reuse - Build My App" >
       
         <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/0.0.1/assets/images/social/tutorials/web-app/frontend.png" >
+        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/0.0.1/assets/images/social/tutorials/web-app/power-bi-parameters.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -75,15 +75,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/frontend/" >
+        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/power-bi-parameters/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Frontend Architecture & Integration - Build My App" >
+        <meta  name="twitter:title"  content="Power BI Parameters & Reuse - Build My App" >
       
         <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/0.0.1/assets/images/social/tutorials/web-app/frontend.png" >
+        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/0.0.1/assets/images/social/tutorials/web-app/power-bi-parameters.png" >
       
     
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#frontend-architecture-integration" class="md-skip">
+        <a href="#power-bi-parameters-reuse" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Frontend Architecture & Integration
+              Power BI Parameters & Reuse
             
           </span>
         </div>
@@ -1374,32 +1374,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Frontend
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../frontend/" class="md-nav__link">
         
   
   
@@ -1410,118 +1388,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-layers" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Layers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-parameter-propagation-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Parameter Propagation Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-environment-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Environment Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-fetching-embed-token" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Fetching Embed Token
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-context-synchronization" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Context Synchronization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-performance-optimizations" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Performance Optimizations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-error-handling-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Error Handling Patterns
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-observability" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Observability
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-security-hygiene" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Security Hygiene
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Next
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1634,8 +1500,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1654,11 +1522,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_4" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6_4" id="__nav_2_6_4_label" tabindex="0">
@@ -1674,7 +1542,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6_4">
             <span class="md-nav__icon md-icon"></span>
             Power BI
@@ -1708,10 +1576,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../power-bi-parameters/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Parameters & Reuse
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1722,6 +1612,124 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-parameter-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Parameter Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-creating-parameters-in-power-bi-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creating Parameters in Power BI Desktop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-using-parameters-in-kusto-m-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Using Parameters in Kusto M Query
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dynamic-binding-from-web-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Dynamic Binding from Web-App
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Dynamic Binding from Web-App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-embedding-slicers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option A: Embedding + Slicers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-query-parameters-through-directquery-preview-dependent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option B: Query Parameters Through DirectQuery (Preview-dependent)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dataset-slimming" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Dataset Slimming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-testing-reusability" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Testing Reusability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Next
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2108,90 +2116,96 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-layers" class="md-nav__link">
+  <a href="#1-parameter-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Layers
+      1. Parameter Strategy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-parameter-propagation-flow" class="md-nav__link">
+  <a href="#2-creating-parameters-in-power-bi-desktop" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Parameter Propagation Flow
+      2. Creating Parameters in Power BI Desktop
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-environment-configuration" class="md-nav__link">
+  <a href="#3-using-parameters-in-kusto-m-query" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Environment Configuration
+      3. Using Parameters in Kusto M Query
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-fetching-embed-token" class="md-nav__link">
+  <a href="#4-dynamic-binding-from-web-app" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Fetching Embed Token
+      4. Dynamic Binding from Web-App
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Dynamic Binding from Web-App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-embedding-slicers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option A: Embedding + Slicers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-query-parameters-through-directquery-preview-dependent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option B: Query Parameters Through DirectQuery (Preview-dependent)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dataset-slimming" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Dataset Slimming
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-context-synchronization" class="md-nav__link">
+  <a href="#6-testing-reusability" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Context Synchronization
+      6. Testing Reusability
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-performance-optimizations" class="md-nav__link">
+  <a href="#7-checklist" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Performance Optimizations
+      7. Checklist
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-error-handling-patterns" class="md-nav__link">
+  <a href="#8-next" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Error Handling Patterns
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-observability" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Observability
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-security-hygiene" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Security Hygiene
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Next
+      8. Next
     </span>
   </a>
   
@@ -2216,13 +2230,13 @@
       
       
       
-        <a href="../../../tags/#tag:adx" class="md-tag">adx</a>
+        <a href="../../../tags/#tag:parameters" class="md-tag">parameters</a>
       
     
       
       
       
-        <a href="../../../tags/#tag:frontend" class="md-tag">frontend</a>
+        <a href="../../../tags/#tag:performance" class="md-tag">performance</a>
       
     
       
@@ -2234,7 +2248,7 @@
       
       
       
-        <a href="../../../tags/#tag:web-app" class="md-tag">web-app</a>
+        <a href="../../../tags/#tag:reuse" class="md-tag">reuse</a>
       
     
   </nav>
@@ -2244,147 +2258,140 @@
   
 
 
-<h1 id="frontend-architecture-integration">Frontend Architecture &amp; Integration<a class="headerlink" href="#frontend-architecture-integration" title="Permanent link">&para;</a></h1>
-<p>The frontend orchestrates context (site, user, time window), passes parameters to embedded analytics, and optimizes perceived performance.</p>
-<h2 id="1-layers">1. Layers<a class="headerlink" href="#1-layers" title="Permanent link">&para;</a></h2>
+<h1 id="power-bi-parameters-reuse">Power BI Parameters &amp; Reuse<a class="headerlink" href="#power-bi-parameters-reuse" title="Permanent link">&para;</a></h1>
+<p>Parametrization lets you deploy the same <code>.pbix</code> to multiple tenants, sites, or time scopes without cloning logic. It also reduces dataset size by pushing filters down into ADX.</p>
+<h2 id="1-parameter-strategy">1. Parameter Strategy<a class="headerlink" href="#1-parameter-strategy" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Layer</th>
-<th>Responsibility</th>
-<th>Tech</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Routing</td>
-<td>Page/screen selection</td>
-<td>React Router / framework router</td>
-</tr>
-<tr>
-<td>State</td>
-<td>Global context (site, auth, feature flags)</td>
-<td>Redux / Zustand / Context API</td>
-</tr>
-<tr>
-<td>Services</td>
-<td>REST / GraphQL / ADX proxy calls</td>
-<td>Fetch / Axios</td>
-</tr>
-<tr>
-<td>Embedding</td>
-<td>Power BI iframe + SDK</td>
-<td><code>powerbi-client</code></td>
-</tr>
-<tr>
-<td>Components</td>
-<td>UI widgets / filters / charts</td>
-<td>Design system</td>
-</tr>
-</tbody>
-</table>
-<h2 id="2-parameter-propagation-flow">2. Parameter Propagation Flow<a class="headerlink" href="#2-parameter-propagation-flow" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>User selects Site -&gt; Global State update -&gt; ADX function queries (server) &amp; Embed Filters (client) -&gt; Report visuals refresh
-</code></pre></div>
-<p>Core rule: single source of truth for each parameter (avoid duplicate local state).</p>
-<h2 id="3-environment-configuration">3. Environment Configuration<a class="headerlink" href="#3-environment-configuration" title="Permanent link">&para;</a></h2>
-<p>Expose environment via <code>.env</code> or config endpoint:</p>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
+<th>Parameter</th>
 <th>Purpose</th>
+<th>Source</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>PBI_AUTH_MODE</code></td>
-<td><code>service-principal</code> / <code>user</code></td>
+<td>Site</td>
+<td>Scope data to a factory/site</td>
+<td>Web-app context / user claims</td>
+<td><code>Lyon_01</code></td>
 </tr>
 <tr>
-<td><code>PBI_BACKEND_TOKEN_URL</code></td>
-<td>Token fetch endpoint</td>
+<td>TimeWindowHours</td>
+<td>Rolling horizon</td>
+<td>UI control (slider)</td>
+<td><code>12</code></td>
 </tr>
 <tr>
-<td><code>ADX_CLUSTER_URL</code></td>
-<td>Display / debugging</td>
+<td>Product</td>
+<td>Optional product filter</td>
+<td>Slicer</td>
+<td><code>Pilsner</code></td>
 </tr>
 <tr>
-<td><code>DEFAULT_SITE</code></td>
-<td>Initial filter</td>
+<td>RefreshMode</td>
+<td>Switch raw vs aggregated</td>
+<td>Hidden toggle</td>
+<td><code>"auto"</code> / <code>"historical"</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="4-fetching-embed-token">4. Fetching Embed Token<a class="headerlink" href="#4-fetching-embed-token" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">fetchEmbedToken</span><span class="p">(</span><span class="nx">reportId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`/api/powerbi/token?reportId=</span><span class="si">${</span><span class="nx">reportId</span><span class="si">}</span><span class="sb">`</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">credentials</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;include&#39;</span><span class="w"> </span><span class="p">});</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;Token failed&#39;</span><span class="p">);</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span><span class="w"> </span><span class="c1">// { token, embedUrl, datasetId }</span>
-<span class="p">}</span>
+<p>Keep parameters minimal; prefer enumerations (domains) when possible for caching efficiency.</p>
+<h2 id="2-creating-parameters-in-power-bi-desktop">2. Creating Parameters in Power BI Desktop<a class="headerlink" href="#2-creating-parameters-in-power-bi-desktop" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Transform Data &gt; Manage Parameters &gt; New</li>
+<li>Name: <code>Site</code>; Type: Text; Suggested Values: List (optional)</li>
+<li>Default Value: <code>Lyon_01</code>; Current Value: <code>Lyon_01</code></li>
+<li>Repeat for others.</li>
+</ol>
+<blockquote>
+<p>Tip: Use Text/Number/TrueFalse types—avoid DateTime parameters if you can compute datetimes inside the query from <code>now()</code> plus duration.</p>
+</blockquote>
+<h2 id="3-using-parameters-in-kusto-m-query">3. Using Parameters in Kusto M Query<a class="headerlink" href="#3-using-parameters-in-kusto-m-query" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>let
+    Site = Text.From(Parameter_Site),
+    Hours = Number.ToText(Parameter_TimeWindowHours),
+    Product = Text.From(Parameter_Product),
+    Cluster = Parameter_ADXCluster,
+    Database = Parameter_ADXDatabase,
+    Query =
+        &quot;Dashboard_Fact(datetime(&quot; &amp; DateTimeZone.ToText(DateTimeZone.UtcNow() - #duration(0, Number.From(Hours),0,0), &quot;yyyy-MM-dd HH:mm:ss&quot;) &amp; &quot;), datetime(&quot; &amp; DateTimeZone.ToText(DateTimeZone.UtcNow(), &quot;yyyy-MM-dd HH:mm:ss&quot;) &amp; &quot;), &#39;&quot; &amp; Site &amp; &quot;&#39;, &#39;&quot; &amp; Product &amp; &quot;&#39;)&quot;
+,
+    Source = Kusto.Contents(Cluster, Database, Query)
+in
+    Source
 </code></pre></div>
-<h2 id="5-context-synchronization">5. Context Synchronization<a class="headerlink" href="#5-context-synchronization" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">site</span><span class="p">,</span><span class="w"> </span><span class="nx">setSite</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="nx">initialSite</span><span class="p">);</span>
-<span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">reportRef</span><span class="p">.</span><span class="nx">current</span><span class="o">?</span><span class="p">.</span><span class="nx">setFilters</span><span class="p">([</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">$schema</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http://powerbi.com/product/schema#basic&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">table</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;SiteFilter&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">column</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Site&#39;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nx">operator</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;In&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">site</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]);</span>
-<span class="p">},</span><span class="w"> </span><span class="p">[</span><span class="nx">site</span><span class="p">]);</span>
+<p>Abstract cluster &amp; database into parameters too for full reuse.</p>
+<h2 id="4-dynamic-binding-from-web-app">4. Dynamic Binding from Web-App<a class="headerlink" href="#4-dynamic-binding-from-web-app" title="Permanent link">&para;</a></h2>
+<p>When embedding, you can set report-level filters or parameter values via the JavaScript SDK.</p>
+<h3 id="option-a-embedding-slicers">Option A: Embedding + Slicers<a class="headerlink" href="#option-a-embedding-slicers" title="Permanent link">&para;</a></h3>
+<p>Populate hidden slicer tables with a single value coming from the web-app.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">site</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">appContext</span><span class="p">.</span><span class="nx">site</span><span class="p">;</span><span class="w"> </span><span class="c1">// e.g. from JWT</span>
+<span class="nx">report</span><span class="p">.</span><span class="nx">setFilters</span><span class="p">([</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">$schema</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http://powerbi.com/product/schema#basic&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">table</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;SiteFilter&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">column</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Site&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">operator</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;In&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">site</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]);</span>
 </code></pre></div>
-<h2 id="6-performance-optimizations">6. Performance Optimizations<a class="headerlink" href="#6-performance-optimizations" title="Permanent link">&para;</a></h2>
+<h3 id="option-b-query-parameters-through-directquery-preview-dependent">Option B: Query Parameters Through DirectQuery (Preview-dependent)<a class="headerlink" href="#option-b-query-parameters-through-directquery-preview-dependent" title="Permanent link">&para;</a></h3>
+<p>If using DirectQuery, you can rewrite queries to reference a single-row parameter table that the app updates via Push API.</p>
+<h2 id="5-dataset-slimming">5. Dataset Slimming<a class="headerlink" href="#5-dataset-slimming" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Concern</th>
-<th>Mitigation</th>
+<th>Technique</th>
+<th>Effect</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Slow initial dashboard</td>
-<td>Lazy-load Power BI SDK &amp; use skeleton loaders</td>
+<td>Parameter pushdown</td>
+<td>Smaller scans</td>
+<td>Express all filters as function parameters</td>
 </tr>
 <tr>
-<td>Excess re-renders</td>
-<td>Memoize filter components &amp; avoid prop drilling</td>
+<td>Summarize in ADX</td>
+<td>Less row transfer</td>
+<td>Provide aggregated KPIs, not raw events</td>
 </tr>
 <tr>
-<td>Network chatter</td>
-<td>Debounce user input before triggering queries</td>
+<td>Remove unused columns</td>
+<td>Better compression</td>
+<td>Audit visuals &amp; fields list</td>
 </tr>
 <tr>
-<td>Large bundle</td>
-<td>Code-split embedding feature</td>
+<td>Incremental refresh</td>
+<td>Faster partition processing</td>
+<td>Combine with time parameters</td>
 </tr>
 </tbody>
 </table>
-<h2 id="7-error-handling-patterns">7. Error Handling Patterns<a class="headerlink" href="#7-error-handling-patterns" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetchEmbedToken</span><span class="p">(</span><span class="nx">reportId</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">embedReport</span><span class="p">(</span><span class="nx">container</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">token</span><span class="p">,</span><span class="w"> </span><span class="nx">site</span><span class="w"> </span><span class="p">});</span>
-<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">logError</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">showToast</span><span class="p">(</span><span class="s1">&#39;Unable to load analytics&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+<h2 id="6-testing-reusability">6. Testing Reusability<a class="headerlink" href="#6-testing-reusability" title="Permanent link">&para;</a></h2>
+<p>Create a matrix of environment x site values and script automated validation:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span>site<span class="w"> </span><span class="k">in</span><span class="w"> </span>Lyon_01<span class="w"> </span>Berlin_02<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>pbicli<span class="w"> </span>reports<span class="w"> </span><span class="nb">export</span><span class="w"> </span>--report<span class="w"> </span><span class="s2">&quot;BrewDashboard&quot;</span><span class="w"> </span>--workspace<span class="w"> </span><span class="nv">$WS</span><span class="w"> </span>--file<span class="w"> </span>export-<span class="nv">$site</span>.pbix<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--parameter<span class="w"> </span><span class="nv">Site</span><span class="o">=</span><span class="nv">$site</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Validated </span><span class="nv">$site</span><span class="s2">&quot;</span>
+<span class="k">done</span>
 </code></pre></div>
-<p>Surface fallback UI with actionable steps (retry / contact support).</p>
-<h2 id="8-observability">8. Observability<a class="headerlink" href="#8-observability" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Custom performance marks (e.g. <code>analytics_loaded</code>)</li>
-<li>Track embed token latency</li>
-<li>Capture front-end errors (Sentry / App Insights)</li>
+<h2 id="7-checklist">7. Checklist<a class="headerlink" href="#7-checklist" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> All Power BI queries reference a single root ADX serving function</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Parameters documented &amp; minimal</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> No visual applies redundant filters already in function</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Dataset size &lt; target (e.g. 100 MB) / row count limited</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Test matrix executed for each release</li>
 </ul>
-<h2 id="9-security-hygiene">9. Security Hygiene<a class="headerlink" href="#9-security-hygiene" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Never store secrets in frontend bundle</li>
-<li>Validate all query parameter values server-side</li>
-<li>Sanitize user-entered strings passed to functions</li>
-</ul>
-<h2 id="10-next">10. Next<a class="headerlink" href="#10-next" title="Permanent link">&para;</a></h2>
-<p>Proceed to ADX or Power BI deep dives:</p>
-<ul>
-<li><a href="../adx-database/">ADX Overview</a></li>
-<li><a href="../power-bi/">Power BI Overview</a></li>
-</ul>
+<h2 id="8-next">8. Next<a class="headerlink" href="#8-next" title="Permanent link">&para;</a></h2>
+<p>Proceed to embedding details &amp; security considerations.</p>
+<blockquote>
+<p>See: <a href="../power-bi-embedding/">Embedding &amp; Security</a></p>
+</blockquote>
 
 
 
@@ -2423,7 +2430,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Web App">
+          <a href="../power-bi/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2433,20 +2440,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Web App
+                Overview
               </div>
             </div>
           </a>
         
         
           
-          <a href="../adx-database/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+          <a href="../power-bi-embedding/" class="md-footer__link md-footer__link--next" aria-label="Next: Embedding &amp; Security">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Overview
+                Embedding & Security
               </div>
             </div>
             <div class="md-footer__button md-icon">
