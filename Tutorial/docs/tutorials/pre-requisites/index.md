@@ -47,6 +47,20 @@ A working solution requires a docker image to be built and deployed, you will ne
 
 <article markdown>
 <div class="text" markdown>
+:material-keyboard-return: __Git__
+
+---
+Git is a distributed version control system essential for managing source code and collaboration.
+
+You will need Git to clone repositories, manage code versions, and collaborate with other developers throughout the development process.
+<footer markdown>
+[:octicons-arrow-right-24: Git](./git.md)
+</footer>
+</div>
+</article>
+
+<article markdown>
+<div class="text" markdown>
 :material-keyboard-return: __Cosmotech SDK__
 
 ---
