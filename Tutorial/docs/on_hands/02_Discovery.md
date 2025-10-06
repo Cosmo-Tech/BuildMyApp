@@ -6,21 +6,21 @@ In this first part we will go through the steps to deploy a pre-packaged solutio
 
 Before being able to deploy our solution we will need to configure babylon by defining a state.
 
-The babylon state will ensure that when we apply changes to our solution and workspace later we keep working on the same elements and do not duplicate everything.
+The babylon state ensures that when you apply changes to your solution and workspace later, you continue working on the same elements without creating duplicates.
 
 So for now we will work on the `build-my-app-training-workspace` repository.
 
-In that repository you have a file named `variables.yaml` it contains most of the element you will update during the hands on session.
+In that repository, you have a file named `variables.yaml` that contains most of the elements you will update during the hands-on session.
 
 You also have other files that we will come back to later.
 
-Back to the `variables.yaml` file where you will need to apply your first modifications and change the values in the first two keys `state_id` and `context_id`
+Return to the `variables.yaml` file where you need to make your first modifications by changing the values in the first two keys: `state_id` and `context_id`.
 
-You can put any other name that you want on those, because the value in `remote` is set to `False` we won't be sending the data to be synchronized so the state will be local.
+You can use any names you want for these values. Since the `remote` value is set to `False`, the data won't be synchronized remotely, keeping the state local.
 
-Once you have chosen values for those two you will be close to run your first babylon command.
+Once you have chosen values for these two settings, you will be ready to run your first babylon command.
 
-!!! warning "Chekpoint"
+!!! warning "Checkpoint"
     You will need to get the babylon environment variables to be able to run any command.
 
 Now that you have your environment variables you can run the following commands
@@ -33,13 +33,13 @@ export BABYLON_SERVICE=<Replace this>
 babylon namespace use -s <state_id> -c <context_id> -p <platform_id>
 ```
 
-You will need to replace the values in the babylon command with the values that are set in your `variables.yaml` and the environment variable by those you will be given
+You need to replace the values in the babylon command with the values from your `variables.yaml` file and set the environment variables with the values you will be provided.
 
-And once that command runs without error your configuration for babylon will be done.
+Once this command runs successfully without errors, your babylon configuration will be complete.
 
 ## Customize the Solution and Workspace template
 
-With babylon configured we can now customize the template of the solution to get our own workspace and solution.
+With babylon now configured, you can customize the solution template to create your own workspace and solution.
 
 You will need to update the following values in `variables.yaml`:
 
@@ -48,11 +48,11 @@ You will need to update the following values in `variables.yaml`:
 - `solution_description`: A description for your solution
 - `workspace_key`: A unique key for your workspace, it will be required for some resource creation
 - `workspace_name`: The name of your workspace
-- `workspace_description`: A decription of your workspace
+- `workspace_description`: A description of your workspace
 - `powerbi_workspace_name`: A unique name for your powerbi workspace that will host your dashboards
 - `security.accessControlList`: Add your mail addresses as `Admin` to ensure that you will have access to your solution
 - `powerbi_permissions`: Add your mail addresses as `Admin` to ensure that you will be able to upload and configure your power bi dashboards
-- `adx_permissions`: You will need to make use of the `gen_adx_permissions.sh` script to get your `principal_id` and then add yourself as `Admin` so that you can execute queries on ADX
+- `adx_permissions`: You need to use the `gen_adx_permissions.sh` script to obtain your `principal_id`, then add yourself as an `Admin` to execute queries on ADX.
 
 Once all those changes are made you will be able to run your second babylon command
 
@@ -68,6 +68,6 @@ babylon apply project --workspace
 
 And once those commands are finished you can go to [the Build My App Web App](https://build-my-app.app.cosmotech.com) and see your workspace ready for you.
 
-This now conclude our first subject of deploying a pre-package solution, you can play around with it if you want.
+This concludes the first section on deploying a pre-packaged solution. You can explore and experiment with it if you wish.
 
 The next subject will be to go inside of the solution and start customizing it.
