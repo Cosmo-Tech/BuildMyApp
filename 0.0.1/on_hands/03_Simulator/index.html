@@ -1755,6 +1755,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#look-up-using-the-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Look up using the Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building your simulator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-and-running-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining and running simulations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-csm-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful csm commands
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1830,6 +1866,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#look-up-using-the-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Look up using the Studio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building your simulator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-and-running-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining and running simulations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-csm-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful csm commands
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1850,17 +1922,123 @@
 
 
 <h1 id="customize-an-existing-solution">Customize an existing Solution<a class="headerlink" href="#customize-an-existing-solution" title="Permanent link">&para;</a></h1>
-<p>Now that we saw how to deploy a Solution it is time to make our own version.</p>
-<p>We will now move from the <code>build-my-app-training-workspace</code> repository to the <code>onboarding-brewery-solution</code> repository.</p>
+<p>Now that you have learned how to deploy a Solution, it's time to create your own version.</p>
+<p>You will now switch from working in the <code>build-my-app-training-workspace</code> repository to the <code>onboarding-brewery-solution</code> repository.</p>
 <h2 id="first-look-at-the-simulator">First look at the Simulator<a class="headerlink" href="#first-look-at-the-simulator" title="Permanent link">&para;</a></h2>
-<p>Let's begin our look at the simulator by going through the main files that are used to define a Simulation.</p>
-<p>In the project 4 files are of interest :</p>
+<p>Let's start by examining the simulator and reviewing the main files used to define a Simulation.</p>
+<div class="highlight"><span class="filename">Project content</span><pre><span></span><code>.
+├── code
+│   └── run_templates
+│       ├── ETL
+│       │   └── run.json
+│       ├── Example
+│       │   └── run.json
+│       └── scripts
+│           ├── display_csm_env.py
+│           ├── get_logger.py
+│           ├── __init__.py
+│           ├── run_simulator.py
+│           └── use_default_dataset.py
+├── ConceptualModel
+│   └── MyBrewery.csm.xml
+├── LICENSE
+├── project.csm
+├── README.md
+├── Simulation
+│   ├── BusinessApp_Simulation.sml.xml
+│   └── Resource
+│       ├── CSV_Brewery.ist.xml
+│       └── default_dataset
+│           ├── arc_to_Customer.csv
+│           ├── Bar.csv
+│           └── Customer.csv
+└── Simulator
+    └── Simulator.sor.xml
+</code></pre></div>
+<p>In this project, 4 files are of primary importance:</p>
 <ul>
 <li><code>ConceptualModel/MyBrewery.csm.xml</code>: This contains the actual model of the simulation, with all the model and logic of the Simulation</li>
 <li><code>Simulator/Simulator.sor.xml</code>: This defines the Simulator itself which is a combination of a Conceptual Model and probes that will be able to export data during a simulation</li>
 <li><code>Simulation/BusinessApp_Simulation.sml.xml</code>: This is the description of a simulation, that will instantiate entities and then define how the simulation runs, accompanied by the definition of Consumers that will consume the data from the probes and export them in different formats</li>
 <li><code>Simulation/Resource/CSV_Brewery.ist.xml</code>: This is an instance of a simulation that will make use of CSV files to generate entities and add them to the simulation</li>
 </ul>
+<h2 id="look-up-using-the-studio">Look up using the Studio<a class="headerlink" href="#look-up-using-the-studio" title="Permanent link">&para;</a></h2>
+<p>By opening the project in the studio, you can examine the model more closely. If you completed the Brewery modeling tutorial, you will already be familiar with this model.</p>
+<p>The first view you will encounter is the Conceptual Model Editor:</p>
+<div class="admonition info">
+<p class="admonition-title">Conceptual Model Editor</p>
+<p><img alt="CME-View" src="../../assets/on_hands/03_Simulator/CME.png" /></p>
+</div>
+<p>In this view, you can navigate through your model and examine every element that composes it. Since the model is already built in this case, we won't go into detail here.</p>
+<p>But remember, any change in this view will be reflected in the <code>ConceptualModel/MyBrewery.csm.xml</code> file.</p>
+<p>The second view is the Simulator Editor</p>
+<div class="admonition info">
+<p class="admonition-title">Simulator Editor</p>
+<p><img alt="SE-View" src="../../assets/on_hands/03_Simulator/SE.png" /></p>
+</div>
+<p>In this view, you define how your model can be executed by giving it a name and configuring probes.</p>
+<p>Probes are the primary method for accessing data outside your simulator, enabling you to retrieve results and utilize the probe data.</p>
+<p>Any change here will be reflected in the <code>Simulator/</code> directory and the <code>Simulator.sor.xml</code> file</p>
+<div class="admonition warning">
+<p class="admonition-title">Checkpoint</p>
+<p>By now you have reviewed the model. Any changes you made will be applied in further steps.
+However, for the rest of this session, we will assume no changes were made.</p>
+</div>
+<h2 id="building-your-simulator">Building your simulator<a class="headerlink" href="#building-your-simulator" title="Permanent link">&para;</a></h2>
+<p>We will continue using the Studio for the following steps. However, you can also use equivalent commands with the <code>csm</code> CLI that is installed alongside the studio. You'll find the useful commands at the end of this page.</p>
+<p>Now let's move to the third view, which is the most important one for today's work: the Solution Builder.</p>
+<div class="admonition info">
+<p class="admonition-title">Solution Builder</p>
+<p><img alt="SB-View" src="../../assets/on_hands/03_Simulator/SB.png" /></p>
+</div>
+<p>In this view, you will configure the build process for the Simulator defined in the previous views.</p>
+<p>Once the build is successful, you must restart the Studio for the changes to take effect.</p>
+<p>The content generated by the build process will be placed in a <code>Generated</code> folder by default.</p>
+<div class="admonition warning">
+<p class="admonition-title">Checkpoint</p>
+<p>By now you should have a built simulator, you can check if it is working by running <code>Generated/Build/Bin/csm-simulator --version</code>.
+This command will return you the info it has on the simulator you built.</p>
+</div>
+<h2 id="defining-and-running-simulations">Defining and running simulations<a class="headerlink" href="#defining-and-running-simulations" title="Permanent link">&para;</a></h2>
+<p>Now that you have a working simulator, it's time to define and run some simulations.</p>
+<p>To define a simulation, you need to complete 2 steps: instantiate a model, then simulate it.</p>
+<p>The 4th view will help you instantiate a model: the Instantiated Model Editor.</p>
+<div class="admonition info">
+<p class="admonition-title">Instantiated Model Editor</p>
+<p><img alt="IME-View" src="../../assets/on_hands/03_Simulator/IME.png" /></p>
+</div>
+<p>Here you will define your model instance.
+In the current state any change will be reflected in <code>Simulation/Resource/CSV_Brewery.ist.xml</code></p>
+<p>The CSV_Brewery requires CSV files in a specific folder: <code>Simulation/Resource/scenariorun-data</code>. This folder doesn't exist yet, but you can create it by copying <code>Simulation/Resource/default_dataset</code> for now.</p>
+<div class="admonition warning">
+<p class="admonition-title">Checkpoint</p>
+<p>Make sure to have created the <code>scenariorun-data</code> folder or the next step won't work.</p>
+</div>
+<p>Now that you have a model, you can simulate it. The 5th and final view of the Studio will help you with this.</p>
+<div class="admonition info">
+<p class="admonition-title">Simulation Manager</p>
+<p><img alt="SM-View" src="../../assets/on_hands/03_Simulator/SM.png" /></p>
+</div>
+<p>In this view, you will define the simulation schedule, specify which instance to use, and configure the consumers that will process the probe data.</p>
+<p>Changes in this view will be reflected in <code>Simulation/BusinessApp_Simulation.sml.xml</code></p>
+<p>If everything has worked correctly up to this point, you can run the simulation and output data should be generated in the <code>Simulation/Output</code> folder.</p>
+<p>This concludes our exploration of the model.</p>
+<h2 id="useful-csm-commands">Useful <code>csm</code> commands<a class="headerlink" href="#useful-csm-commands" title="Permanent link">&para;</a></h2>
+<div class="highlight"><span class="filename">csm commands</span><pre><span></span><code><span class="c1"># To quickly build a simulator</span>
+csm<span class="w"> </span>flow
+
+<span class="c1"># The previous command is equivalent to running the following ones</span>
+csm<span class="w"> </span>generate<span class="w">       </span><span class="c1"># Generate the code base</span>
+csm<span class="w"> </span>configure<span class="w">      </span><span class="c1"># Configure the build process</span>
+csm<span class="w"> </span>build<span class="w">          </span><span class="c1"># Run the build</span>
+
+<span class="c1"># Once you have build a simulator you can easily run it</span>
+csm<span class="w"> </span>simulate<span class="w"> </span>&lt;Simulation_name&gt;
+<span class="c1"># Simulation_name is the base name of any .sml.xml file you created, so here you could run the following command</span>
+
+csm<span class="w"> </span>simulate<span class="w"> </span>BusinessApp_Simulation
+</code></pre></div>
+<p>The next step will be to use your newly built simulator to integrate and work with external data.</p>
 
 
 
