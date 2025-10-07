@@ -43,6 +43,8 @@ Expose environment via `.env` or config endpoint:
 
 ## 4. Fetching Embed Token
 
+Note: Embedding is handled in the backend. The frontend typically calls a backend endpoint to retrieve the embed configuration; SDK handling may be abstracted already by platform components.
+
 ```ts
 async function fetchEmbedToken(reportId: string) {
   const res = await fetch(`/api/powerbi/token?reportId=${reportId}` , { credentials: 'include' });

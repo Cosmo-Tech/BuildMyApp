@@ -150,15 +150,16 @@ Enable Query Store & alerts for:
 
 ## 7. Deployment Automation
 
-Store function definitions as `.kql` files and apply idempotently:
+In this project, functions are deployed by the backend CI using the authoritative Kusto scripts. Prefer adding/altering function definitions in the backend repository and let the pipeline apply them idempotently.
 
-```bash
-#!/usr/bin/env bash
-for f in infrastructure/adx/functions/*.kql; do
-  echo "Applying $f";
-  az kusto script create --cluster-name $CLUSTER --database-name $DB --name $(basename $f .kql) --script-content "$(cat $f)" --force-update-tag $(date +%s);
-done
-```
+If you need local validation, run them against a dev database from your admin tools, but do not hand-deploy to shared environments.
+
+### CI Hints
+
+- Store each function in its own `.kql` file with `create-or-alter`
+- Group in folders by domain (e.g., `serving/brew`)
+- Add lightweight unit checks (syntax validation) in CI
+- Tag releases with a migration note
 
 ## 8. Checklist
 

@@ -33,12 +33,12 @@ ADX (Functions) -> Power BI Dataset -> Report -> Embedded in Web-App
 
 ## 4. Quick Start Checklist
 
-- [ ] Create ADX serving function `Dashboard_Fact` with parameters
+- [ ] Configure backend with Workspace/Report/Dataset IDs and AAD app
 - [ ] Define Power BI parameters (Site, TimeWindowHours, Product)
-- [ ] Build visuals from parameterized query
-- [ ] Implement embed token backend endpoint
-- [ ] Add site filter application on load
-- [ ] Validate RLS & parameter variations
+- [ ] Build visuals from parameterized ADX function
+- [ ] Validate embed token endpoint and RLS role mapping
+- [ ] Apply default site filter from frontend context
+- [ ] Validate performance (Desktop Performance Analyzer + ADX metrics)
 
 ## 5. Subpages
 
@@ -49,8 +49,8 @@ ADX (Functions) -> Power BI Dataset -> Report -> Embedded in Web-App
 
 | Issue | Mitigation |
 |-------|------------|
-| Slow initial load | Pre-warm dataset via REST refresh | 
-| Heavy visuals | Aggregate in ADX function | 
+| Slow initial load | Pre-warm dataset via scheduled refresh |
+| Heavy visuals | Aggregate in ADX function |
 | Data bloat | Remove unused columns & tables |
 
 ## 7. Next Steps

@@ -1,6 +1,6 @@
 ---
 title: Power BI Embedding & Security
-summary: Embed interactive Power BI reports securely in the web-app with governance, caching, and performance best practices.
+summary: Back-end managed embedding — configure workspaces, datasets, and RLS; validate filters and performance.
 tags:
   - power-bi
   - embedding
@@ -8,136 +8,68 @@ tags:
   - web-app
 ---
 
-# Power BI Embedding & Security
+# Power BI Embedding & Security (Backend-managed)
 
-This guide covers embedding models, authentication flows, Row Level Security (RLS), and performance tuning.
+In this solution, embedding is implemented in the backend. You do not write frontend embedding code. Instead, you configure the embedding context and validate security and performance.
 
-## 1. Embedding Models
+## 1. What’s handled by the backend
 
-| Scenario | Model | Notes |
-|----------|-------|-------|
-| Internal users (AAD) | User owns data | Uses user AAD token; per-user RLS naturally applied |
-| External / multi-tenant | Service principal | App gets embed token; enforce tenant filter via RLS |
-| Public showcase | Publish-to-web (avoid) | Not secure; never use for production |
+- Acquire AAD tokens (service principal or user)
+- Generate Power BI embed tokens for the selected report/dataset
+- Apply identity mappings (optional) for RLS
+- Expose a simplified API endpoint to the web-app
 
-Prefer service principal + embed token generation backend-side for multi-tenant.
+Your frontend only consumes the embed configuration and applies high-level report filters (e.g., site) when needed.
 
-## 2. Architecture
+## 2. Required Configuration
 
-```
-Browser -> Web-App (frontend) -> Backend (token endpoint) -> AAD -> Power BI Service
-                                           |
-                                           +--> ADX (DirectQuery via PBI service)
-```
+| Setting | Where | Example |
+|--------|-------|---------|
+| Workspace Id | Backend config/secret store | `00000000-0000-0000-0000-000000000000` |
+| Report Id | Backend config | `11111111-1111-1111-1111-111111111111` |
+| Dataset Id | Backend config | `22222222-2222-2222-2222-222222222222` |
+| AAD App (Client Id/Secret) | Secret store | Azure Key Vault |
+| Allowed Sites / Tenants | App settings | `LYON_01, BERLIN_02` |
 
-## 3. Backend: Generate Embed Token
+## 3. RLS and Identity Mapping
 
-Pseudo-code:
+- Define roles in the Power BI dataset (e.g., TenantIsolation, SiteIsolation)
+- Backend maps the calling user/tenant/site to a role or passes identities in the embed token
+- Keep the mapping source-of-truth server-side (e.g., DB or configuration)
 
-```python
-from msal import ConfidentialClientApplication
-import requests
+Checklist:
+- [ ] RLS roles exist and are tested in Desktop (View as)
+- [ ] Backend mapping enforces least privilege
+- [ ] No ability to request arbitrary site via client-only params
 
-def get_embed_token(report_id, workspace_id, dataset_id):
-    app = ConfidentialClientApplication(
-        client_id=CLIENT_ID,
-        authority=f"https://login.microsoftonline.com/{TENANT_ID}",
-        client_credential=CLIENT_SECRET
-    )
-    scope = ["https://analysis.windows.net/powerbi/api/.default"]
-    result = app.acquire_token_silent(scope, account=None)
-    if not result:
-        result = app.acquire_token_for_client(scopes=scope)
-    access_token = result['access_token']
+## 4. Frontend Responsibilities
 
-    body = {
-        "datasets": [{"id": dataset_id}],
-        "reports": [{"id": report_id}],
-        "targetWorkspaces": [{"id": workspace_id}]
-    }
-    r = requests.post(
-        "https://api.powerbi.com/v1.0/myorg/GenerateToken",
-        headers={"Authorization": f"Bearer {access_token}"},
-        json=body
-    )
-    return r.json()['token']
-```
+- Request the embed configuration from the backend endpoint
+- Render the report with the provided embed URL/token (SDK usage is abstracted by the platform)
+- Apply contextual filters (e.g., default site) via backend-approved mechanisms
+- Do NOT store secrets nor generate tokens client-side
 
-## 4. Frontend: Embed
+## 5. Operational Runbook
 
-```ts
-import * as powerbi from 'powerbi-client';
+- Rotate client secrets regularly (Key Vault)
+- Monitor token issuance failures and latency
+- Track report load times and error rates
 
-const models = powerbi.models;
+## 6. Troubleshooting
 
-function embedReport(container: HTMLElement, embedConfig: { id: string; embedUrl: string; token: string; site: string; }) {
-  const config: powerbi.IEmbedConfiguration = {
-    type: 'report',
-    id: embedConfig.id,
-    embedUrl: embedConfig.embedUrl,
-    accessToken: embedConfig.token,
-    tokenType: models.TokenType.Embed,
-    settings: { panes: { filters: { visible: false } } }
-  };
-  const report = powerbi.embed(container, config) as powerbi.Report;
-  // Apply site filter from contextual data
-  report.on('loaded', async () => {
-    await report.setFilters([
-      {
-        $schema: 'http://powerbi.com/product/schema#basic',
-        target: { table: 'SiteFilter', column: 'Site' },
-        operator: 'In',
-        values: [embedConfig.site]
-      }
-    ]);
-  });
-}
-```
+| Symptom | Likely cause | Action |
+|--------|--------------|--------|
+| Report loads but shows empty data | RLS filtering out data | Validate role mapping and site passed |
+| 403 on embed token | AAD app permission or workspace access | Re-check service principal access |
+| Slow visuals | Query heavy / dataset design | See performance section below |
 
-## 5. Security Layers
+## 7. Performance
 
-| Layer | Control | Purpose |
-|-------|---------|---------|
-| AAD App | App roles / scopes | Restrict who can call token endpoint |
-| Backend | Tenant/site validation | Prevent arbitrary site injection |
-| Power BI | RLS roles | Enforce data slice per user/tenant |
-| Dataset | Parameterization | Ensure minimal data exposure |
+- Prefer aggregated tables or ADX serving functions returning summarized data
+- Validate DirectQuery vs Import mix; consider aggregations and incremental refresh
+- Prewarm via scheduled refresh if suitable
 
-### Example RLS Role (Site Isolation)
-
-In Power BI Desktop > Modeling > Manage Roles:
-```
-[Site] = USERPRINCIPALNAME()\"s site mapping OR LOOKUPVALUE(SiteMap[Site], SiteMap[UserPrincipalName], USERPRINCIPALNAME())
-```
-(Alternatively pass site via embed token identities.)
-
-## 6. Caching & Performance
-
-| Layer | Strategy | Notes |
-|-------|----------|-------|
-| Power BI | Aggregations | Combine DirectQuery (hot) + Import (warm) |
-| Power BI | Incremental refresh | Partition large historical tables |
-| ADX | Materialized views | Pre-aggregate heavy metrics |
-| Web-App | Embed lifecycle | Reuse report instance across tabs, avoid reloading |
-
-### Measuring
-Use Performance Analyzer in Power BI Desktop and `QueryTrace` in ADX.
-
-## 7. Observability
-
-- Log token requests (timestamp, workspace, dataset, site, user/tenant)
-- Alert on unusual volume or failed token generation
-- Track report load times (frontend performance marks)
-
-## 8. Checklist
-
-- [ ] Service principal least-privilege
-- [ ] Embed token TTL minimal (e.g. 1h)
-- [ ] RLS validated per tenant
-- [ ] Site filter applied programmatically
-- [ ] No hard-coded secrets in frontend
-
-## 9. Related
+## 8. Related
 
 - [Parameters & Reuse](./power-bi-parameters.md)
 - [ADX Functions & Performance](./adx-functions-performance.md)

@@ -54,7 +54,19 @@ Partitioning automatically by ingestion time—optimize retention with policies:
 - Validate schema with a staging table before merging
 - Compress JSON payloads or prefer CSV/Parquet for large volume
 
-## 6. Serving Functions
+## 6. Schema Provisioning via Backend
+
+In this project, the ADX schema (tables, mappings, policies) is defined in the backend `Create.kql` script and deployed through backend pipelines. Do not recreate tables manually from the UI.
+
+Workflow for changes:
+1. Propose updates in `Create.kql` (new columns, policies, mappings)
+2. Run local validation against a dev cluster (optional)
+3. Open a PR; backend CI applies changes to non-prod
+4. After approval, pipeline promotes to production
+
+Keep serving function contracts stable; if breaking, version functions (e.g., `Dashboard_Fact_v2`).
+
+## 7. Serving Functions
 
 All dashboard/API queries should route via serving functions (see: [ADX Functions & Performance](./adx-functions-performance.md)).
 
@@ -63,11 +75,11 @@ Benefits:
 - Enforce parameter contracts
 - Reduce duplication across Power BI & services
 
-## 7. Governance & Source Control
+## 8. Governance & Source Control
 
 Store Kusto artifacts (`tables.kql`, `functions/*.kql`, `policies.kql`) under version control. Deploy via CI using Azure CLI or ARM scripts.
 
-## 8. Observability
+## 9. Observability
 
 Use built-in commands:
 ```kusto
@@ -76,7 +88,7 @@ Use built-in commands:
 .show operations | where StartedOn > ago(1h) and Status != 'Completed'
 ```
 
-## 9. Next
+## 10. Next
 
 Proceed to implementing reusable functions and performance tuning.
 
