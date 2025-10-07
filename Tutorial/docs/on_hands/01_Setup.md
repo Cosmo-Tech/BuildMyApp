@@ -6,10 +6,21 @@ Before you can begin working with the Build My App hands-on session, you need to
 
 The Build My App tutorial requires specific tools depending on your operating system:
 
-- **Windows Users**: WSL (Windows Subsystem for Linux) with Debian 13, Docker Desktop, and Power BI Desktop
-- **Linux/WSL Users**: Native installations of development tools
-- **All Users**: Git, Docker, CosmoTech SDK, Babylon CLI, Azure CLI, CoAL, and Dotenv CLI
-
+<div class="annotate" markdown>
+- **Windows users only**: 
+    - WSL (Windows Subsystem for Linux) with Debian 13
+    - Docker Desktop
+    - Power BI Desktop
+- **All users**: 
+    - Git
+    - Docker
+    - CosmoTech SDK
+    - Babylon
+    - Azure CLI
+    - *CoAL and Dotenv* (1)
+    - any IDE of your choice
+</div>
+1. Nice to have
 ## WSL Setup (Windows Only)
 
 If you're working on Windows, you'll need to set up Windows Subsystem for Linux with Debian 13 for the best development experience.
@@ -301,7 +312,8 @@ export CSM_API_SCOPE=<provided_value>
 ```
 
 !!! warning "Environment Variables"
-    These variables will be provided by your instructor at the beginning of the hands-on session. Do not proceed without them.
+    These variables will be provided by your instructor at the beginning of the hands-on session. 
+    Do not proceed without them.
 
 ## Verification Checklist
 
@@ -331,4 +343,6 @@ Before proceeding to the next step, verify all tools are properly installed:
 !!! info "Getting Help"
     If you encounter issues during setup, document the error messages and ask for assistance during the hands-on session.
 
-This completes the environment setup. Once all tools are installed and verified, you'll be ready to proceed with deploying your first pre-packaged solution in the next section.
+This completes the environment setup. 
+Once all tools are installed and verified, 
+you'll be ready to proceed with deploying your first pre-packaged solution in the next section.
