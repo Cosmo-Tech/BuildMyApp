@@ -352,6 +352,18 @@ Before proceeding to the next step, verify all tools are properly installed:
 !!! info "Getting Help"
     If you encounter issues during setup, document the error messages and ask for assistance during the hands-on session.
 
-This completes the environment setup. 
-Once all tools are installed and verified, 
+This completes the environment setup.
+
+Now we need to check that all permission and access needed for the formation are ready for you
+
+## Permission check
+
+Before going further you can check with your instructor that all permissions needed for the formation have been set up.
+
+- [ ] `OrganizationUser` into the Cosmo Tech API
+- [ ] Member of `BuildMyApp` team in Github
+- [ ] Have a licence for the Power BI service
+- [ ] Be part of a BuildMyApp channel in Slack (created for your training session)
+
+Once all tools are installed and verified, and you have all the required access, 
 you'll be ready to proceed with deploying your first pre-packaged solution in the next section.
