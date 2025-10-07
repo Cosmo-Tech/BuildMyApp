@@ -33,10 +33,12 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
 **Explanation of parameters:**
+
 - `-t ed25519`: Specifies the type of key to create. `ed25519` is a modern, secure algorithm recommended for most users. You can use `rsa` for compatibility, but `ed25519` is preferred.
 - `-C "your_email@example.com"`: Adds a comment to the key, typically your email address, to help identify the key later.
 
 After running the command:
+
 - You will be prompted for a file location (press Enter to accept the default: `~/.ssh/id_ed25519`).
 - You can set a passphrase for additional security (optional).
 

@@ -6,6 +6,7 @@ nav:
   - Azure CLI: az-cli.md
   - nvm / npm / Node.js: npm-node.md
   - Dotenv: dotenv.md
+  - jq: jq.md
   - Babylon: babylon.md
   - CoAL: coal.md
   - Power BI: power-bi.md

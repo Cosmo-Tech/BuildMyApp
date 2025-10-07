@@ -118,6 +118,20 @@ Essential for managing configuration and environment variables in development an
 
 <article markdown>
 <div class="text" markdown>
+:material-keyboard-return: __jq__
+
+---
+jq is a lightweight and flexible command-line JSON processor.
+
+Essential for parsing, filtering, and manipulating JSON data in shell scripts and command-line workflows.
+<footer markdown>
+[:octicons-arrow-right-24: jq](./jq.md)
+</footer>
+</div>
+</article>
+
+<article markdown>
+<div class="text" markdown>
 :material-keyboard-return: __Babylon__
 
 ---

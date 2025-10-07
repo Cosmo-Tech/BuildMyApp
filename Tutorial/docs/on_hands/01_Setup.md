@@ -17,6 +17,7 @@ The Build My App tutorial requires specific tools depending on your operating sy
     - CosmoTech SDK
     - Babylon
     - Azure CLI
+    - jq
     - *CoAL and Dotenv* (1)
     - any IDE of your choice
 </div>
@@ -241,6 +242,14 @@ Power BI Desktop is required for creating and editing dashboards that will be em
 
 ## Additional Tools
 
+### jq
+
+jq is a lightweight and flexible command-line JSON processor. It's essential for parsing, filtering, and manipulating JSON data in shell scripts and command-line workflows.
+
+```bash title="install jq"
+sudo apt-get update
+sudo apt-get install -y jq
+```
 
 ### CoAL (CosmoTech Acceleration Library)
 
