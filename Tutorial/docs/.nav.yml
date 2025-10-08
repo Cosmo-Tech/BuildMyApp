@@ -1,5 +1,5 @@
 nav:
   - Home: 'index.md'
   - Tutorials: tutorials/
-  - On Hands Session: on_hands/
+  - Hands On Session: hands_on/
   - Tags: tags.md

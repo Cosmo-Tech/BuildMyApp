@@ -53,7 +53,7 @@ By opening the project in the studio, you can examine the model more closely. If
 The first view you will encounter is the Conceptual Model Editor:
 
 !!! info "Conceptual Model Editor"
-    ![CME-View](../assets/on_hands/03_Simulator/CME.png)
+    ![CME-View](../assets/hands_on/03_Simulator/CME.png)
 
 In this view, you can navigate through your model and examine every element that composes it. Since the model is already built in this case, we won't go into detail here.
 
@@ -62,7 +62,7 @@ But remember, any change in this view will be reflected in the `ConceptualModel/
 The second view is the Simulator Editor
 
 !!! info "Simulator Editor"
-    ![SE-View](../assets/on_hands/03_Simulator/SE.png)
+    ![SE-View](../assets/hands_on/03_Simulator/SE.png)
 
 In this view, you define how your model can be executed by giving it a name and configuring probes.
 
@@ -81,7 +81,7 @@ We will continue using the Studio for the following steps. However, you can also
 Now let's move to the third view, which is the most important one for today's work: the Solution Builder.
 
 !!! info "Solution Builder"
-    ![SB-View](../assets/on_hands/03_Simulator/SB.png)
+    ![SB-View](../assets/hands_on/03_Simulator/SB.png)
 
 In this view, you will configure the build process for the Simulator defined in the previous views.
 
@@ -102,7 +102,7 @@ To define a simulation, you need to complete 2 steps: instantiate a model, then 
 The 4th view will help you instantiate a model: the Instantiated Model Editor.
 
 !!! info "Instantiated Model Editor"
-    ![IME-View](../assets/on_hands/03_Simulator/IME.png)
+    ![IME-View](../assets/hands_on/03_Simulator/IME.png)
 
 Here you will define your model instance.
 In the current state any change will be reflected in `Simulation/Resource/CSV_Brewery.ist.xml`
@@ -115,7 +115,7 @@ The CSV_Brewery requires CSV files in a specific folder: `Simulation/Resource/sc
 Now that you have a model, you can simulate it. The 5th and final view of the Studio will help you with this.
 
 !!! info "Simulation Manager"
-    ![SM-View](../assets/on_hands/03_Simulator/SM.png)
+    ![SM-View](../assets/hands_on/03_Simulator/SM.png)
 
 In this view, you will define the simulation schedule, specify which instance to use, and configure the consumers that will process the probe data.
 

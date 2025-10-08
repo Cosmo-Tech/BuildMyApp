@@ -1,6 +1,6 @@
-# On Hands Build My App - Preparation session
+# Hands On Build My App - Preparation session
 
-During this On Hands session you will be working with a minimal Simulator Cosmo Tech Project and will get it to be a fully deployed Solution.
+During this Hands On session you will be working with a minimal Simulator Cosmo Tech Project and will get it to be a fully deployed Solution.
 
 ## Resources
 
