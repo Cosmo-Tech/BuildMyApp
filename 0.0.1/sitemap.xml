@@ -2,170 +2,178 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tags/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/hands_on/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/on_hands/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/hands_on/00_Objectives/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/on_hands/00_Objectives/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/hands_on/01_Setup/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/on_hands/01_Setup/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/hands_on/02_Discovery/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/on_hands/02_Discovery/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/hands_on/03_Simulator/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/on_hands/03_Simulator/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/api/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/api/solution/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/api/workspace/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/api/yaml-files/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/packaging/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/packaging/babylon/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/packaging/docker/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/az-cli/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/babylon/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/coal/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/cosmotech-sdk/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/docker/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/dotenv/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/git/</loc>
-         <lastmod>2025-10-08</lastmod>
-    </url>
-    <url>
-         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/jq/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/npm-node/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/pre-requisites/power-bi/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/input-data/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/model/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/probing/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/simulator/rules/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/coal/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/csm-orc/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/custom-commands/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/custom-library/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/etl/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/solution/run-templates/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/adx-database/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/adx-functions-performance/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/frontend/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/power-bi-embedding/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/power-bi-parameters/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/power-bi/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
 </urlset>
