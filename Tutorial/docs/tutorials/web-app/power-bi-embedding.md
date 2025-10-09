@@ -12,7 +12,13 @@ tags:
 
 In this solution, embedding is implemented in the backend. You do not write frontend embedding code. Instead, you configure the embedding context and validate security and performance.
 
-## 1. What’s handled by the backend
+## 0. Onboarding Flow Snapshot
+
+```
+Clone repos → Verify permissions (variables.yaml / gen_adx_permissions.sh) → ADX bootstrap (00-Initialization.kql via backend) → Publish Example.pbix → Backend embed endpoint test → Open web-app → Validate RLS & filters
+```
+
+## 1. What’s handled by the backend (Recap)
 
 - Acquire AAD tokens (service principal or user)
 - Generate Power BI embed tokens for the selected report/dataset
@@ -21,55 +27,79 @@ In this solution, embedding is implemented in the backend. You do not write fron
 
 Your frontend only consumes the embed configuration and applies high-level report filters (e.g., site) when needed.
 
-## 2. Required Configuration
+## 2. Required Configuration (From `variables.yaml`, `workspace.yaml`, `solution.yaml`)
 
-| Setting | Where | Example |
-|--------|-------|---------|
-| Workspace Id | Backend config/secret store | `00000000-0000-0000-0000-000000000000` |
-| Report Id | Backend config | `11111111-1111-1111-1111-111111111111` |
-| Dataset Id | Backend config | `22222222-2222-2222-2222-222222222222` |
-| AAD App (Client Id/Secret) | Secret store | Azure Key Vault |
-| Allowed Sites / Tenants | App settings | `LYON_01, BERLIN_02` |
+| Setting / Element | Source File | YAML Path | Notes |
+|-------------------|-------------|-----------|-------|
+| Power BI Workspace Name | `variables.yaml` | `powerbi_workspace_name` | Target workspace for Example report |
+| Report binding | `workspace.yaml` | `sidecars.azure.powerbi.workspace.reports` | Ensures Example.pbix deployed with parameters |
+| Report parameters (ADX cluster/db) | `workspace.yaml` | `reports[].parameters` | Provide `ADX_Cluster`, `ADX_Database` values |
+| ADX init script | `workspace.yaml` | `sidecars.azure.adx.scripts` | Executes `00-Initialization.kql` |
+| Event Hub connectors | `workspace.yaml` | `sidecars.azure.eventhub.connectors` | Stream simulation outputs into ADX tables |
+| Dynamic Filters | `workspace.yaml` | `webApp.options.charts.scenarioView.dynamicFilters` | Auto apply `LastSimulationRun` |
+| Run Templates | `solution.yaml` | `spec.runTemplates` | Provide simulation & ETL context for data feeding report |
 
-## 3. RLS and Identity Mapping
+If a principal is missing, update `variables.yaml` in a PR and re-run provisioning scripts.
 
-- Define roles in the Power BI dataset (e.g., TenantIsolation, SiteIsolation)
-- Backend maps the calling user/tenant/site to a role or passes identities in the embed token
-- Keep the mapping source-of-truth server-side (e.g., DB or configuration)
+## 3. Permission Bootstrap
 
-Checklist:
-- [ ] RLS roles exist and are tested in Desktop (View as)
-- [ ] Backend mapping enforces least privilege
-- [ ] No ability to request arbitrary site via client-only params
+Use (if provided) `gen_adx_permissions.sh` and backend automation to ensure ADX and Power BI roles are applied. Confirm in ADX:
+```kusto
+.show database principals
+```
+And in Power BI workspace (Admin portal) that the service principal has Admin rights.
 
-## 4. Frontend Responsibilities
+## 4. RLS & Identity Mapping (Dataset)
 
-- Request the embed configuration from the backend endpoint
-- Render the report with the provided embed URL/token (SDK usage is abstracted by the platform)
-- Apply contextual filters (e.g., default site) via backend-approved mechanisms
-- Do NOT store secrets nor generate tokens client-side
+If the Example PBIX includes RLS roles (e.g., SiteIsolation), verify them in Desktop: Modeling > Manage Roles. If not present yet, coordinate with analytics engineer to add roles BEFORE wide distribution.
 
-## 5. Operational Runbook
+Recommended role pattern:
+- `TenantIsolation` (filters organization/workspace id if multi-tenant)
+- `ScenarioScope` (limits to allowed scenario set)
 
-- Rotate client secrets regularly (Key Vault)
-- Monitor token issuance failures and latency
-- Track report load times and error rates
+Backend maps user/app context → role(s) when generating embed token (or injects effective identity).
 
-## 6. Troubleshooting
+## 5. Validation Steps
 
-| Symptom | Likely cause | Action |
-|--------|--------------|--------|
-| Report loads but shows empty data | RLS filtering out data | Validate role mapping and site passed |
-| 403 on embed token | AAD app permission or workspace access | Re-check service principal access |
-| Slow visuals | Query heavy / dataset design | See performance section below |
+1. Publish `Example.pbix` to workspace (`powerbi_workspace_name`).
+2. Call embed endpoint (e.g., `GET /api/analytics/embed/report/{id}`) and capture JSON (id, embedUrl, token expiry).
+3. Open web-app dashboard; verify:
+   - Data loads without manual sign-in (service principal path)
+   - Only allowed scenarios/probes appear
+   - Switching TimeWindowHours (if parameterized) re-queries ADX
+4. In ADX, list recent queries:
+```kusto
+.show queries | where StartedOn > ago(10m) | where Text has "GetMeasures" or Text has "GetScenarios"
+```
+Confirm calls originate with expected principal.
+5. Measure render time (<5s for main visuals) using browser dev tools.
 
-## 7. Performance
+## 6. Troubleshooting (Extended)
 
-- Prefer aggregated tables or ADX serving functions returning summarized data
-- Validate DirectQuery vs Import mix; consider aggregations and incremental refresh
-- Prewarm via scheduled refresh if suitable
+| Symptom | Likely Cause | Diagnostic | Fix |
+|---------|--------------|-----------|-----|
+| Empty visuals | RLS over-filtering | View as role in Desktop | Adjust role filter / identity mapping |
+| 403 embed call | Missing workspace permission | Power BI workspace access panel | Add service principal / user |
+| Slow queries | Function expanding large dynamic fields | Inspect ADX query text | Add selective projection / MV |
+| Token expires too soon | Short TTL | Backend token config | Increase within security guidelines |
+| Wrong dataset | Misconfigured IDs | Compare variables.yaml vs embed response | Correct backend config |
 
-## 8. Related
+## 7. Performance (Applied)
+
+- Monitor `GetMeasures` query duration distribution (p50 < 2s target in dev) using `.show queries`.
+- If dynamic expansion (bag_unpack) dominates cost, pre-flatten heavy fields in a materialized view and reference that in functions.
+- Schedule dataset refresh only if Import mode; for DirectQuery ensure aggregations are defined before scaling.
+
+## 8. Operational Runbook (Daily / Release)
+
+| Task | Frequency | Owner |
+|------|-----------|-------|
+| Check failed embed calls (5xx / 4xx) | Daily | Backend Ops |
+| Review ADX heavy queries (>10s) | Daily | Data Eng |
+| Validate RLS after adding new users | On change | Platform Admin |
+| Refresh Example PBIX (if Import) | Release / Data change | BI Dev |
+
+## 9. Related
 
 - [Parameters & Reuse](./power-bi-parameters.md)
 - [ADX Functions & Performance](./adx-functions-performance.md)

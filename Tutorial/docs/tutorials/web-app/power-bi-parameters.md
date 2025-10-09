@@ -12,98 +12,104 @@ tags:
 
 Parametrization lets you deploy the same `.pbix` to multiple tenants, sites, or time scopes without cloning logic. It also reduces dataset size by pushing filters down into ADX.
 
-## 1. Parameter Strategy
+## 1. Parameter Strategy (Project Context)
 
-| Parameter | Purpose | Source | Example |
-|-----------|---------|--------|---------|
-| Site | Scope data to a factory/site | Web-app context / user claims | `Lyon_01` |
-| TimeWindowHours | Rolling horizon | UI control (slider) | `12` |
-| Product | Optional product filter | Slicer | `Pilsner` |
-| RefreshMode | Switch raw vs aggregated | Hidden toggle | `"auto"` / `"historical"` |
+In this training setup, parameters align with serving functions created in `00-Initialization.kql` (e.g., `GetScenarios`, `GetMeasures`). Rather than many separate filters, we focus on a small stable set:
 
-Keep parameters minimal; prefer enumerations (domains) when possible for caching efficiency.
+| Parameter | Purpose | Backing Function Usage | Source |
+|-----------|---------|------------------------|--------|
+| Site (or Workspace scope) | Narrow scenario / probe data | Filters Scenario/Probe tables (if multi-site) | Derived from workspace / user claim |
+| TimeWindowHours | Limit recency for probe facts | Compute datetime range in Kusto (`ago(TimeWindowHours * 1h)`) | Frontend control |
+| ProbeType | Focus a specific measure set | Passed to `GetMeasures(Probe)` | Report slicer |
+| ScenarioState (optional) | Filter scenarios by validation state | Filter in `GetScenarios()` pipeline | Report slicer |
 
-## 2. Creating Parameters in Power BI Desktop
+Keep parameters minimal; they must map cleanly to function parameters or filters without post-processing.
 
-1. Transform Data > Manage Parameters > New
-2. Name: `Site`; Type: Text; Suggested Values: List (optional)
-3. Default Value: `Lyon_01`; Current Value: `Lyon_01`
-4. Repeat for others.
+### Mapping to Configuration Files
 
-> Tip: Use Text/Number/TrueFalse types—avoid DateTime parameters if you can compute datetimes inside the query from `now()` plus duration.
+| Concept | Declared In | How It Appears In Report |
+|---------|-------------|--------------------------|
+| Run template parameters (e.g., CustomersCount) | `project/solution.yaml` (`parameters` & `parameterGroups`) | May influence simulation outputs surfaced via `GetScenarios()` |
+| Dynamic filter (last run) | `project/workspace.yaml` (`dynamicFilters`) | Automatically filters report to latest simulation run (no manual parameter) |
+| ADX connection parameters | `workspace.yaml` powerbi.workspace.reports.parameters (`ADX_Cluster`, `ADX_Database`) | M parameters bound during deployment |
+| Probe / scenario functions | `00-Initialization.kql` | Data sources in Power BI queries |
 
-## 3. Using Parameters in Kusto M Query
+## 2. Creating Parameters in Power BI Desktop (Applied)
+
+Use only parameters required for query shaping. Example minimal set: `TimeWindowHours`.
+If Site is handled via RLS or embedding context, skip exposing it as a manual parameter.
+
+Steps:
+1. Transform Data > Manage Parameters > New > `TimeWindowHours` (Number, default 12)
+2. (Optional) Add `ProbeType` as Text if you want a configurable default instead of a slicer.
+3. If cluster/database differ per environment, add `ADXCluster` & `ADXDatabase` parameters; populate from deployment script or Power BI deployment pipeline rules.
+
+## 3. Using Parameters in Kusto M Query (GetMeasures)
 
 ```m
 let
-    Site = Text.From(Parameter_Site),
-    Hours = Number.ToText(Parameter_TimeWindowHours),
-    Product = Text.From(Parameter_Product),
     Cluster = Parameter_ADXCluster,
     Database = Parameter_ADXDatabase,
+    Hours = Number.ToText(Parameter_TimeWindowHours),
+    // Example: restrict to last N hours then expand probes
     Query =
-        "Dashboard_Fact(datetime(" & DateTimeZone.ToText(DateTimeZone.UtcNow() - #duration(0, Number.From(Hours),0,0), "yyyy-MM-dd HH:mm:ss") & "), datetime(" & DateTimeZone.ToText(DateTimeZone.UtcNow(), "yyyy-MM-dd HH:mm:ss") & "), '" & Site & "', '" & Product & "')"
+        "GetMeasures('LatencyProbe') | where ProbeDate > ago(" & Hours & "h)"
 ,
     Source = Kusto.Contents(Cluster, Database, Query)
 in
     Source
 ```
 
-Abstract cluster & database into parameters too for full reuse.
-
-## 4. Dynamic Binding from Web-App
-
-When embedding, you can set report-level filters or parameter values via the JavaScript SDK.
-
-### Option A: Embedding + Slicers
-Populate hidden slicer tables with a single value coming from the web-app.
-
-```ts
-const site = appContext.site; // e.g. from JWT
-report.setFilters([
-  {
-    $schema: "http://powerbi.com/product/schema#basic",
-    target: { table: "SiteFilter", column: "Site" },
-    operator: "In",
-    values: [site]
-  }
-]);
+For scenarios list:
+```m
+let
+    Cluster = Parameter_ADXCluster,
+    Database = Parameter_ADXDatabase,
+    Query = "GetScenarios()"
+,
+    Source = Kusto.Contents(Cluster, Database, Query)
+in
+    Source
 ```
 
-### Option B: Query Parameters Through DirectQuery (Preview-dependent)
-If using DirectQuery, you can rewrite queries to reference a single-row parameter table that the app updates via Push API.
+## 4. Dynamic Binding (Embedding Context)
 
-## 5. Dataset Slimming
+In this platform the backend embedding already injects user/workspace context. Frontend may only adjust slicers (e.g., ProbeType). Avoid duplicating Site/Workspace filters if RLS or function logic already enforces them.
 
-| Technique | Effect | Notes |
-|-----------|--------|-------|
-| Parameter pushdown | Smaller scans | Express all filters as function parameters |
-| Summarize in ADX | Less row transfer | Provide aggregated KPIs, not raw events |
-| Remove unused columns | Better compression | Audit visuals & fields list |
-| Incremental refresh | Faster partition processing | Combine with time parameters |
+## 5. Dataset Slimming (Project-Specific)
+
+| Technique | Application Here | Notes |
+|-----------|------------------|-------|
+| Function parameters | Limit probe window | Use `ago()` in function or query |
+| Pre-aggregation | Add MV on `ProbesMeasures` if performance degrades | Requires backend PR |
+| Column pruning | Remove unused dynamic fields | Avoid expanding entire `FactsRaw` unless needed |
+| Incremental refresh | If converting to Import mode for large history | Partition by `ProbeDate` |
 
 ## 6. Testing Reusability
 
-Create a matrix of environment x site values and script automated validation:
+Instead of exporting PBIX per site, validate across workspace contexts (if multi-workspace deployment) and time windows:
 
 ```bash
-for site in Lyon_01 Berlin_02; do
-  pbicli reports export --report "BrewDashboard" --workspace $WS --file export-$site.pbix \
-    --parameter Site=$site || exit 1
-  echo "Validated $site"
+for hours in 6 12 24; do
+  echo "Testing TimeWindowHours=$hours"
+  # Use pbicli or REST to rebind parameter (pseudo-example)
+  pbicli datasets update-params --dataset-id $DATASET --parameters TimeWindowHours=$hours || exit 1
+  sleep 5
+  # Optionally trigger a refresh if Import mode
+  echo "OK"
 done
 ```
 
-## 7. Checklist
+## 7. Checklist (Adapted)
 
-- [ ] All Power BI queries reference a single root ADX serving function
-- [ ] Parameters documented & minimal
-- [ ] No visual applies redundant filters already in function
-- [ ] Dataset size < target (e.g. 100 MB) / row count limited
-- [ ] Test matrix executed for each release
+- [ ] Queries call only approved serving functions (GetMeasures/GetScenarios)
+- [ ] Parameter list minimal & documented
+- [ ] No duplicated filter logic in visuals and functions
+- [ ] Dataset refresh / DirectQuery latency within targets
+- [ ] Performance test across TimeWindowHours values
 
 ## 8. Next
 
-Proceed to embedding details & security considerations.
+Proceed to backend embedding & security validation.
 
 > See: [Embedding & Security](./power-bi-embedding.md)
