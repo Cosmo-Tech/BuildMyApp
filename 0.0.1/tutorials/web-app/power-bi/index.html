@@ -13,22 +13,22 @@
         <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/0.0.1/tutorials/web-app/power-bi/">
       
       
-        <link rel="prev" href="../adx-functions-performance/">
+        <link rel="prev" href="../adx-database/">
       
       
-        <link rel="next" href="../power-bi-parameters/">
+        <link rel="next" href="../../packaging/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
-        <title>Power BI Overview - Build My App</title>
+        <title>Power BI - Build My App</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -63,7 +63,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Power BI Overview - Build My App" >
+        <meta  property="og:title"  content="Power BI - Build My App" >
       
         <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Power BI Overview - Build My App" >
+        <meta  name="twitter:title"  content="Power BI - Build My App" >
       
         <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#power-bi-overview" class="md-skip">
+        <a href="#power-bi" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Power BI Overview
+              Power BI
             
           </span>
         </div>
@@ -228,7 +228,7 @@
         <a href="https://github.com/Cosmo-Tech/BuildMyApp" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     Cosmo-Tech/BuildMyApp
@@ -295,13 +295,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../on_hands/" class="md-tabs__link">
+        <a href="../../../hands_on/" class="md-tabs__link">
           
   
   
     
   
-  On Hands Session
+  Hands On Session
 
         </a>
       </li>
@@ -368,7 +368,7 @@
       <a href="https://github.com/Cosmo-Tech/BuildMyApp" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     Cosmo-Tech/BuildMyApp
@@ -486,6 +486,8 @@
       
         
           
+        
+      
         
       
         
@@ -682,6 +684,29 @@
   
   <span class="md-ellipsis">
     Dotenv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/jq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    jq
     
   </span>
   
@@ -1399,62 +1424,13 @@
   
   
   
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    ADX
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6_3">
-            <span class="md-nav__icon md-icon"></span>
-            ADX
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
       <a href="../adx-database/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overview
+    ADX database
     
   </span>
   
@@ -1464,90 +1440,6 @@
   
 
               
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../adx-functions-performance/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Functions & Performance
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2_6_4" id="__nav_2_6_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Power BI
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_6_4">
-            <span class="md-nav__icon md-icon"></span>
-            Power BI
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -1565,186 +1457,17 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Overview
+    Power BI
     
   </span>
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Objectives
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-architecture-snapshot" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Architecture Snapshot
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-key-building-blocks-extended" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Key Building Blocks (Extended)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-quick-start-checklist-onboarding-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Quick Start Checklist (Onboarding Flow)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-key-building-blocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Key Building Blocks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-performance-tips-contextual" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Performance Tips (Contextual)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Next Steps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-unified-onboarding-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Unified Onboarding Checklist
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Next Steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../power-bi-parameters/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Parameters & Reuse
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../power-bi-embedding/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Embedding & Security
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1923,12 +1646,12 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../on_hands/" class="md-nav__link ">
+            <a href="../../../hands_on/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
-    On Hands Session
+    Hands On Session
     
   </span>
   
@@ -1945,7 +1668,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            On Hands Session
+            Hands On Session
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1958,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../on_hands/00_Objectives/" class="md-nav__link">
+      <a href="../../../hands_on/00_Objectives/" class="md-nav__link">
         
   
   
@@ -1981,7 +1704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../on_hands/01_Setup/" class="md-nav__link">
+      <a href="../../../hands_on/01_Setup/" class="md-nav__link">
         
   
   
@@ -2004,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../on_hands/02_Discovery/" class="md-nav__link">
+      <a href="../../../hands_on/02_Discovery/" class="md-nav__link">
         
   
   
@@ -2027,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../on_hands/03_Simulator/" class="md-nav__link">
+      <a href="../../../hands_on/03_Simulator/" class="md-nav__link">
         
   
   
@@ -2094,95 +1817,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Objectives
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-architecture-snapshot" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Architecture Snapshot
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-key-building-blocks-extended" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Key Building Blocks (Extended)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-quick-start-checklist-onboarding-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Quick Start Checklist (Onboarding Flow)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-key-building-blocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Key Building Blocks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-performance-tips-contextual" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Performance Tips (Contextual)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Next Steps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-unified-onboarding-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Unified Onboarding Checklist
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Next Steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2195,269 +1829,13 @@
                 
                   
 
-  <nav class="md-tags" >
-    
-      
-      
-      
-        <a href="../../../tags/#tag:power-bi" class="md-tag">power-bi</a>
-      
-    
-      
-      
-      
-        <a href="../../../tags/#tag:web-app" class="md-tag">web-app</a>
-      
-    
-  </nav>
-
 
   
   
 
 
-<h1 id="power-bi-overview">Power BI Overview<a class="headerlink" href="#power-bi-overview" title="Permanent link">&para;</a></h1>
-<p>This section introduces how Power BI integrates with the solution for interactive analytics.</p>
-<h2 id="1-objectives">1. Objectives<a class="headerlink" href="#1-objectives" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Reuse the same report across environments &amp; sites</li>
-<li>Keep dashboards performant (&lt; 5s load for key visuals)</li>
-<li>Enforce data security &amp; isolation</li>
-</ul>
-<h2 id="2-architecture-snapshot">2. Architecture Snapshot<a class="headerlink" href="#2-architecture-snapshot" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>ADX (Functions) -&gt; Power BI Dataset -&gt; Report -&gt; Embedded in Web-App
-</code></pre></div>
-<h2 id="3-key-building-blocks-extended">3. Key Building Blocks (Extended)<a class="headerlink" href="#3-key-building-blocks-extended" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Source File</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Solution metadata</td>
-<td><code>project/solution.yaml</code></td>
-<td>Declares run templates (Example, ETL) &amp; parameters feeding scenarios</td>
-</tr>
-<tr>
-<td>Workspace definition</td>
-<td><code>project/workspace.yaml</code></td>
-<td>Defines Power BI workspace, ADX scripts, Event Hub connectors, webApp embedding options</td>
-</tr>
-<tr>
-<td>ADX Init Script</td>
-<td><code>project/adx/scripts/00-Initialization.kql</code></td>
-<td>Creates tables &amp; functions consumed by report</td>
-</tr>
-<tr>
-<td>Power BI Report</td>
-<td><code>project/powerbi/Example.pbix</code></td>
-<td>Visualization layer referencing serving functions</td>
-</tr>
-<tr>
-<td>Permissions</td>
-<td><code>variables.yaml</code> (<code>powerbi_permissions</code>, <code>adx_permissions</code>)</td>
-<td>Grants principals access</td>
-</tr>
-<tr>
-<td>Dynamic Filters</td>
-<td><code>workspace.yaml</code> (<code>webApp.options.charts.scenarioView.dynamicFilters</code>)</td>
-<td>Auto-apply context filters (e.g., last simulation run)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="4-quick-start-checklist-onboarding-flow">4. Quick Start Checklist (Onboarding Flow)<a class="headerlink" href="#4-quick-start-checklist-onboarding-flow" title="Permanent link">&para;</a></h2>
-<p>Follow these in order when onboarding:</p>
-<ol>
-<li>Clone repos:</li>
-<li><code>onboarding-brewery-solution</code> (simulation + ETL templates)</li>
-<li><code>build-my-app-training-workspaces</code> (workspace/Power BI + ADX bootstrap scripts)</li>
-<li>Review <code>build-my-app-training-workspaces/variables.yaml</code> and note:</li>
-<li><code>organization_id</code>, <code>workspace_key</code>, <code>powerbi_workspace_name</code></li>
-<li>Power BI &amp; ADX principal entries (<code>powerbi_permissions</code>, <code>adx_permissions</code>)</li>
-<li>Ensure your user (or service principal) has been added under <code>powerbi_permissions</code> and <code>adx_permissions</code> (if not, submit a PR or request an admin update and re-run provisioning scripts).</li>
-<li>Run ADX initialization (if dev environment is fresh):</li>
-<li>Execute <code>project/adx/scripts/00-Initialization.kql</code> via the approved backend pipeline or Kusto Script deployment job (never hand-edit prod).</li>
-<li>Import / verify <code>Example.pbix</code> into the Power BI workspace named in <code>variables.yaml</code> if not already published. (Admins only; otherwise just confirm it's present.)</li>
-<li>Open the report and validate required dataset parameters (Site, TimeWindowHours, etc.) exist or are represented via filters / serving functions (e.g., <code>GetMeasures</code>, <code>GetScenarios</code>).</li>
-<li>Confirm backend embedding endpoint returns an embed token for the report (use internal API doc / curl if available).</li>
-<li>Load the web-app; verify visuals render for default site and switch site/time context successfully.</li>
-<li>Capture performance: measure first visual load (&lt;5s target) &amp; check ADX query durations for <code>GetMeasures</code> and <code>GetScenarios</code> functions.</li>
-<li>Log findings in onboarding notes (successes, missing permissions, performance outliers).</li>
-</ol>
-<h2 id="5-key-building-blocks">5. Key Building Blocks<a class="headerlink" href="#5-key-building-blocks" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Repository / File</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Workspace Variables</td>
-<td><code>build-my-app-training-workspaces/variables.yaml</code></td>
-<td>IDs, permissions, workspace naming</td>
-</tr>
-<tr>
-<td>ADX Bootstrap</td>
-<td><code>project/adx/scripts/00-Initialization.kql</code></td>
-<td>Tables, mappings, baseline functions</td>
-</tr>
-<tr>
-<td>Example Report</td>
-<td><code>project/powerbi/Example.pbix</code></td>
-<td>Starter visuals tied to functions</td>
-</tr>
-<tr>
-<td>Serving Functions</td>
-<td>Defined in KQL bootstrap</td>
-<td><code>GetScenarios</code>, <code>GetMeasures</code>, etc.</td>
-</tr>
-<tr>
-<td>ETL Templates</td>
-<td><code>onboarding-brewery-solution/code/run_templates/*</code></td>
-<td>Populate dataset / scenario data</td>
-</tr>
-</tbody>
-</table>
-<h2 id="6-performance-tips-contextual">6. Performance Tips (Contextual)<a class="headerlink" href="#6-performance-tips-contextual" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Issue</th>
-<th>Mitigation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Slow <code>GetMeasures</code></td>
-<td>Pre-aggregate or reduce <code>mv-expand</code> usage</td>
-</tr>
-<tr>
-<td>Large dataset refresh</td>
-<td>Limit time window in parameters (TimeWindowHours)</td>
-</tr>
-<tr>
-<td>Permission errors</td>
-<td>Re-check <code>variables.yaml</code> and re-run permission scripts</td>
-</tr>
-</tbody>
-</table>
-<h2 id="7-next-steps">7. Next Steps<a class="headerlink" href="#7-next-steps" title="Permanent link">&para;</a></h2>
-<p>Continue with parameter configuration: see <a href="../power-bi-parameters/">Parameters &amp; Reuse</a></p>
-<blockquote>
-<p>After parameters and embedding validation, proceed to RLS &amp; operational governance in <a href="../power-bi-embedding/">Embedding &amp; Security</a></p>
-</blockquote>
-<h2 id="8-unified-onboarding-checklist">8. Unified Onboarding Checklist<a class="headerlink" href="#8-unified-onboarding-checklist" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Action</th>
-<th>File / Command</th>
-<th>Done</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Clone repos</td>
-<td>git clone both repos</td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Inspect variables</td>
-<td>Open <code>variables.yaml</code></td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Confirm PB workspace name</td>
-<td><code>powerbi_workspace_name</code> in <code>variables.yaml</code></td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Check solution run templates</td>
-<td><code>solution.yaml</code> runTemplates section</td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Review workspace report binding</td>
-<td><code>workspace.yaml</code> powerbi.workspace.reports</td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Verify ADX scripts referenced</td>
-<td><code>workspace.yaml</code> adx.scripts + <code>00-Initialization.kql</code></td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Ensure principals present</td>
-<td><code>powerbi_permissions</code> / <code>adx_permissions</code></td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Provision / sync backend</td>
-<td>Run pipeline / deployment process</td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Publish or confirm <code>Example.pbix</code></td>
-<td>Power BI Service</td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Test embed endpoint</td>
-<td>API call (embed token)</td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Open web-app &amp; validate visuals</td>
-<td>Browser</td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Run ADX sanity queries</td>
-<td><code>.show tables</code>, <code>GetScenarios()</code></td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Check dynamic filter (last run)</td>
-<td><code>workspace.yaml</code> dynamicFilters config</td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>14</td>
-<td>Performance sanity</td>
-<td>Measure load &amp; ADX query p50</td>
-<td>[ ]</td>
-</tr>
-<tr>
-<td>15</td>
-<td>Document findings</td>
-<td>Onboarding notes</td>
-<td>[ ]</td>
-</tr>
-</tbody>
-</table>
-<h2 id="9-next-steps">9. Next Steps<a class="headerlink" href="#9-next-steps" title="Permanent link">&para;</a></h2>
-<p>Proceed to parameter specifics: <a href="../power-bi-parameters/">Parameters &amp; Reuse</a> and embedding governance: <a href="../power-bi-embedding/">Embedding &amp; Security</a></p>
+<h1 id="power-bi">Power BI<a class="headerlink" href="#power-bi" title="Permanent link">&para;</a></h1>
+<p>Embed and use Power BI dashboards in your web application.</p>
 
 
 
@@ -2496,7 +1874,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../adx-functions-performance/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Functions &amp; Performance">
+          <a href="../adx-database/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ADX database">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2506,20 +1884,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Functions & Performance
+                ADX database
               </div>
             </div>
           </a>
         
         
           
-          <a href="../power-bi-parameters/" class="md-footer__link md-footer__link--next" aria-label="Next: Parameters &amp; Reuse">
+          <a href="../../packaging/" class="md-footer__link md-footer__link--next" aria-label="Next: Packaging">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Parameters & Reuse
+                Packaging
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2619,7 +1997,7 @@
       <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tooltips", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
