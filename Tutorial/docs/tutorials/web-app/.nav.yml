@@ -1,5 +1,10 @@
 nav:
   - index.md
   - Frontend: frontend.md
-  - ADX database: adx-database.md
-  - Power BI: power-bi.md
+  - ADX:
+    - Overview: adx-database.md
+    - Functions & Performance: adx-functions-performance.md
+  - Power BI:
+    - Overview: power-bi.md
+    - Parameters & Reuse: power-bi-parameters.md
+    - Embedding & Security: power-bi-embedding.md
