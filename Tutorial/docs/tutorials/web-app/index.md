@@ -12,6 +12,18 @@ This section covers all aspects of working with the CosmoTech Web Application.
 
 <article markdown>
 <div class="text" markdown>
+:material-keyboard-return: __Web App Integration__
+
+---
+Configure your web application integration using workspace.yaml settings.
+<footer markdown>
+[:octicons-arrow-right-24: Web App Integration](./webapp-integration.md)
+</footer>
+</div>
+</article>
+
+<article markdown>
+<div class="text" markdown>
 :material-keyboard-return: __Frontend__
 
 ---

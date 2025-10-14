@@ -1,5 +1,6 @@
 nav:
   - index.md
+  - Web App Integration: webapp-integration.md
   - Frontend: frontend.md
   - ADX:
     - Overview: adx-database.md
