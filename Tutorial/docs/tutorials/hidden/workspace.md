@@ -1,7 +1,9 @@
 # Workspace
+
 The `workspace.yaml` file declares the elements used to deploy a Cosmo Tech workspace and manages it through the Cosmo Tech API.
 
 ## Workspace elements
+
 Several elements and parameters are to be declared in the `workspace.yaml` file, in order to configure the solution properly:
 
 ```yaml
@@ -47,9 +49,11 @@ spec:
     The elements in the `namespace` and `metadata` categories are configured in previous Babylon uses and are configured as such.
 
 ### Sidecars
+
 `sidecars` enable the configuration of external services for the workspace, such as Event Hub, Power BI, etc.
 
 ### Payload
+
 The following elements require user input:
 
 - **`key`**: the name the workspace will have in subprocesses such as Azure use.
@@ -58,10 +62,12 @@ The following elements require user input:
 - **`version`**: the workspace version `MAJOR.MINOR.PATCH`.
 - **`tags`**: the list of tags.
 - **`solution`**: the solution has three parts:
+
   - `solutionId`: the ID of the linked solution,
   - `runTemplateFilter`: the list of solution's run template IDs to filter,
   - `defaultRunTemplateDataset`: a map of RunTemplate/DatasetID to set a default dataset for a run template.
 - **`webapp`**: the web application has three parts:
+
   - `url`: the URL of the web application,
   - `iframes`: a map of iframeKey/iframeURL,
   - `options`: free-form options for the web application.
