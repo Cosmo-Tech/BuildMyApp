@@ -19,12 +19,20 @@ Two commands exist:
 - `list-templates`: used to show a list of pre-available command templates.
 
 Hereinbelow is an table of the most commonly used commands:
+
 | Command                                                                | Description                          |
 | ---------------------------------------------------------------------- | ------------------------------------ |
 | `csm-orc run <JSON file>`                                              | To execute a run template            |
 | `csm-orc run --dry-run <JSON file>`                                    | To validate without executing        |
 | `csm-orc run --display-env --gen-env-target <env file> <JSON file>`    | To generate an environment file      |
 | `csm-orc list-templates`                                               | To show available command templates  |
+
+| Environment Type | Usage | Example |
+|-----------------|-------|---------|
+| **Graph** | Network relationships | Social networks, communication |
+| **Regular Grid** | Spatial positioning | Geographic locations, cellular automata |
+| **Room** | Global interaction | Shared spaces where all entities interact |
+| **No Environment** | No spatial relationships | Independent entities |
 
 ## Basic run template structure
 The main elements of a JSON run template file are:
