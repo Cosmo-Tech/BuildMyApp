@@ -1839,19 +1839,23 @@
 
 <h1 id="etl">ETL<a class="headerlink" href="#etl" title="Permanent link">&para;</a></h1>
 <p>ETL (<strong>E</strong>xtract, <strong>T</strong>ransform, <strong>L</strong>oad) run templates handle data processing workflows. They differ from simulation templates by focusing on data ingestion, transformation and output to various storage systems rather than running simulations.</p>
-<p>The Cosmo Tech Platform can store multiple ETL scripts, developed by system integrators, per solution and run them to manipulate the twin data layer (dataset, results, graph, etc.) and to perform any data processing needed by system integrators such as follows:
-- Create and populate datasets with customer format input data
-- Refresh/update a full dataset with customer format input data
-- Modify/update a part of a dataset with customer format input data
-- Validate a complete dataset
-- Create business KPIs that are based on a scenario run results (probes, etc.) and an existing dataset,
-- Create a new dataset based on an existing dataset or external data.</p>
+<p>The Cosmo Tech Platform can store multiple ETL scripts, developed by system integrators, per solution and run them to manipulate the twin data layer (dataset, results, graph, etc.) and to perform any data processing needed by system integrators such as follows:</p>
+<ul>
+<li>Create and populate datasets with customer format input data</li>
+<li>Refresh/update a full dataset with customer format input data</li>
+<li>Modify/update a part of a dataset with customer format input data</li>
+<li>Validate a complete dataset</li>
+<li>Create business KPIs that are based on a scenario run results (probes, etc.) and an existing dataset,</li>
+<li>Create a new dataset based on an existing dataset or external data.</li>
+</ul>
 <h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h2>
-<p>The typical workflow of an ETL is the following:
-1. <strong>Download data</strong>: using <code>csm-data api run-load-data</code> or a custom code.
-2. <strong>Transform</strong>: converting Excel/CSV formats to a standardized format.
-3. <strong>Validate</strong>: checking the data quality and its structure.
-4. <strong>Load</strong>: sending data to different storages such as Twin Data Layer (to create flowcharts, etc.), PostgreSQL (if you want an SQL database), workspaces files, ADX, S3, etc.</p>
+<p>The typical workflow of an ETL is the following:</p>
+<ol>
+<li><strong>Download data</strong>: using <code>csm-data api run-load-data</code> or a custom code.</li>
+<li><strong>Transform</strong>: converting Excel/CSV formats to a standardized format.</li>
+<li><strong>Validate</strong>: checking the data quality and its structure.</li>
+<li><strong>Load</strong>: sending data to different storages such as Twin Data Layer (to create flowcharts, etc.), PostgreSQL (if you want an SQL database), workspaces files, ADX, S3, etc.</li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a href="https://cosmo-tech.github.io/CosmoTech-Acceleration-Library/latest/">CoAL</a> can be used for common operations, for intermediate processing, etc.</p>
@@ -1898,9 +1902,11 @@
 ]</code></p>
 </div>
 <h2 id="integration-in-the-web-application">Integration in the web application<a class="headerlink" href="#integration-in-the-web-application" title="Permanent link">&para;</a></h2>
-<p>ETLs can be integrated into the web application in two different ways:
-- If an ETL is tagged <code>["datasource"]</code>, it appears in the Dataset Manager view.
-- If an ETL is not tagged, it appears in the Scenario view.</p>
+<p>ETLs can be integrated into the web application in two different ways:</p>
+<ul>
+<li>If an ETL is tagged <code>["datasource"]</code>, it appears in the Dataset Manager view.</li>
+<li>If an ETL is not tagged, it appears in the Scenario view.</li>
+</ul>
 <h2 id="best-pratices">Best pratices<a class="headerlink" href="#best-pratices" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Test your ETL templates locally (use the same environment variables as the production, test with sample data files, validate the output formats, etc.).</li>
@@ -1909,8 +1915,10 @@
 <li>Use intermediate storage (data store) for complex transformations.</li>
 </ul>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>For more detailed information about CSM-ORC, please refer to the official documentation :
-- <a href="https://portal.cosmotech.com/docs//documentation/platform_help/3.3/Content/Platform%20Help/Data%20Integration/ETL/ETL.htm">Chapter "ETL", in the Platform Doc</a></p>
+<p>For more detailed information about CSM-ORC, please refer to the official documentation:</p>
+<ul>
+<li><a href="https://portal.cosmotech.com/docs//documentation/platform_help/3.3/Content/Platform%20Help/Data%20Integration/ETL/ETL.htm">Chapter "ETL", in the Platform Doc</a></li>
+</ul>
 
 
 
