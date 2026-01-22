@@ -1862,13 +1862,64 @@ Thus, with CSM-ORC, you can:
 <ul>
 <li><code>list-templates</code>: used to show a list of pre-available command templates.</li>
 </ul>
-<p>Hereinbelow is an table of the most commonly used commands:
-| Command                                                                | Description                          |
-| ---------------------------------------------------------------------- | ------------------------------------ |
-| <code>csm-orc run &lt;JSON file&gt;</code>                                              | To execute a run template            |
-| <code>csm-orc run --dry-run &lt;JSON file&gt;</code>                                    | To validate without executing        |
-| <code>csm-orc run --display-env --gen-env-target &lt;env file&gt; &lt;JSON file&gt;</code>    | To generate an environment file      |
-| <code>csm-orc list-templates</code>                                               | To show available command templates  |</p>
+<p>Hereinbelow is an table of the most commonly used commands:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>csm-orc run &lt;JSON file&gt;</code></td>
+<td>To execute a run template</td>
+</tr>
+<tr>
+<td><code>csm-orc run --dry-run &lt;JSON file&gt;</code></td>
+<td>To validate without executing</td>
+</tr>
+<tr>
+<td><code>csm-orc run --display-env --gen-env-target &lt;env file&gt; &lt;JSON file&gt;</code></td>
+<td>To generate an environment file</td>
+</tr>
+<tr>
+<td><code>csm-orc list-templates</code></td>
+<td>To show available command templates</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Environment Type</th>
+<th>Usage</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Graph</strong></td>
+<td>Network relationships</td>
+<td>Social networks, communication</td>
+</tr>
+<tr>
+<td><strong>Regular Grid</strong></td>
+<td>Spatial positioning</td>
+<td>Geographic locations, cellular automata</td>
+</tr>
+<tr>
+<td><strong>Room</strong></td>
+<td>Global interaction</td>
+<td>Shared spaces where all entities interact</td>
+</tr>
+<tr>
+<td><strong>No Environment</strong></td>
+<td>No spatial relationships</td>
+<td>Independent entities</td>
+</tr>
+</tbody>
+</table>
 <h2 id="basic-run-template-structure">Basic run template structure<a class="headerlink" href="#basic-run-template-structure" title="Permanent link">&para;</a></h2>
 <p>The main elements of a JSON run template file are:
 - <code>commandTemplates</code>
