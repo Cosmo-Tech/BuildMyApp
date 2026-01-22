@@ -1871,14 +1871,14 @@ Thus, with CSM-ORC, you can:
 | <code>csm-orc list-templates</code>                                               | To show available command templates  |</p>
 <h2 id="basic-run-template-structure">Basic run template structure<a class="headerlink" href="#basic-run-template-structure" title="Permanent link">&para;</a></h2>
 <p>The main elements of a JSON run template file are:
-- commandTemplates
-- object
-- steps
-- identifier
-- argument
-- environment variables</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+- <code>commandTemplates</code>
+- <code>object</code>
+- <code>steps</code>
+- <code>identifier</code>
+- <code>argument</code>
+- <code>environment variables</code></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <p><div class="highlight"><pre><span></span><code>csm-orc run run.json
 </code></pre></div>
 <div class="highlight"><span class="filename">run.json</span><pre><span></span><code>{
