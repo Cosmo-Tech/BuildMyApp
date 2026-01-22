@@ -1,6 +1,7 @@
 # Solution
 
 The `solution.yaml` file is the core of a Cosmo Tech solution, as it declares the elements used to deploy a solution and manages it through the Cosmo Tech API. It describes:
+
 - Where the simulator is found,
 - Which parameters are accessible for modification by the user,
 - The run templates for all the run types associated with the solution.
