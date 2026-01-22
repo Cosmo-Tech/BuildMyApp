@@ -62,13 +62,11 @@ The following elements require user input:
 - **`version`**: the workspace version `MAJOR.MINOR.PATCH`.
 - **`tags`**: the list of tags.
 - **`solution`**: the solution has three parts:
-
   - `solutionId`: the ID of the linked solution,
   - `runTemplateFilter`: the list of solution's run template IDs to filter,
   - `defaultRunTemplateDataset`: a map of RunTemplate/DatasetID to set a default dataset for a run template.
 
 - **`webapp`**: the web application has three parts:
-
   - `url`: the URL of the web application,
   - `iframes`: a map of iframeKey/iframeURL,
   - `options`: free-form options for the web application.
@@ -83,5 +81,7 @@ The following elements require user input:
 - **`security`**: Constituted of a default security role for non-specified users and a list of specified users with their relative security roles. If no security was provided at creation, the default role for the workspace will be `none` and the only user in the access control list (ACL) will be the user who created the workspace with the role `admin`.
 
 ## References
+
 For more detailed information about the `workspace.yaml` file, please refer to:
+
 - [Cosmo Tech API 3.X](https://chocolatine.api.cosmotech.com/cosmotech-api/supplychain-demo/v3-2/swagger-ui/index.html)
