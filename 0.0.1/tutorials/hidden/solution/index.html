@@ -1785,40 +1785,14 @@
         <li class="md-nav__item">
   <a href="#solution-elements" class="md-nav__link">
     <span class="md-ellipsis">
-      Solution Elements
+      Solution elements
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#namespace" class="md-nav__link">
-    <span class="md-ellipsis">
-      Namespace
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metadata
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spec" class="md-nav__link">
-    <span class="md-ellipsis">
-      Spec
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Solution elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#sidecars" class="md-nav__link">
     <span class="md-ellipsis">
       Sidecars
@@ -1826,13 +1800,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#user-provided-elements" class="md-nav__link">
     <span class="md-ellipsis">
-      User-Provided Elements
+      User-provided elements
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1856,8 +1835,12 @@
 
 
 <h1 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h1>
-<p>Manage solutions through the CosmoTech API.</p>
-<h2 id="solution-elements">Solution Elements<a class="headerlink" href="#solution-elements" title="Permanent link">&para;</a></h2>
+<p>The <code>solution.yaml</code> file is the core of a Cosmo Tech solution; as it declares the elements to deploy a solution and manages it through the Cosmo Tech API. It describes:
+- Where the simulator is found,
+- Which parameters are accessible for modification by the user,
+- The run templates for all the run types associated with the solution.</p>
+<h2 id="solution-elements">Solution elements<a class="headerlink" href="#solution-elements" title="Permanent link">&para;</a></h2>
+<p>Several elements and parameters are to be declared in the <code>solution.yaml</code> file, in order to configure the solution properly:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Solution</span>
 <span class="nt">namespace</span><span class="p">:</span><span class="w"> </span>
 <span class="w">  </span><span class="nt">remote</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">remote</span><span class="p p-Indicator">}}</span>
@@ -1885,33 +1868,34 @@
 <span class="w">    </span><span class="nt">runTemplates</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 <span class="w">    </span><span class="nt">security</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">security</span><span class="p p-Indicator">}}</span>
 </code></pre></div>
-<h2 id="namespace">Namespace<a class="headerlink" href="#namespace" title="Permanent link">&para;</a></h2>
-<p>The elements in this category have configured on previous Babylon uses and are configuered as such</p>
-<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
-<p>The elements in this category have configured on previous Babylon uses and are configuered as such</p>
-<h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">&para;</a></h2>
-<h2 id="sidecars">Sidecars<a class="headerlink" href="#sidecars" title="Permanent link">&para;</a></h2>
-<p>In this part, you will be able to enter the different side elements for Solution such as the Azure run templates.</p>
-<h2 id="user-provided-elements">User-Provided Elements<a class="headerlink" href="#user-provided-elements" title="Permanent link">&para;</a></h2>
-<p>In Namespace, all the elements were inputed earlier and can be referenced by using the variables in the example</p>
-<p>In Metadata, we only need to reference the organizationId used earlier.</p>
-<p>In Spec, we can input the azure run templates the workspace will use.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The elements in the <code>namespace</code> and <code>metadata</code> categories are configured in previous Babylon uses and are configured as such.</p>
+</div>
+<h3 id="sidecars">Sidecars<a class="headerlink" href="#sidecars" title="Permanent link">&para;</a></h3>
+<p><code>sidecars</code> enable the configuration of external services for the solution, such as the Azure run templates, ADX, etc.</p>
+<h3 id="user-provided-elements">User-provided elements<a class="headerlink" href="#user-provided-elements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In <code>namespace</code>, all the elements were inputed previously and can be referenced by using the variables in the example.</li>
+<li>In <code>metadata</code>, only the <code>organizationId</code> previously used must be referenced.</li>
+<li>In <code>spec</code>, the Azure run templates that the workspace will use can be inputed.</li>
+</ul>
 <p>The following elements require user input:</p>
 <ul>
-<li><strong><code>key</code></strong> - The name the solution will have in subprocesses such as Azure use</li>
-<li><strong><code>name</code></strong> - The name the solution will have displayed in the WebApp</li>
-<li><strong><code>description</code></strong> - A description of the solution</li>
-<li><strong><code>repository</code></strong> - The container registry where the solution image is stored</li>
-<li><strong><code>alwaysPull</code></strong> - Whether or not the run template should always pull the image</li>
-<li><strong><code>csmSimulator</code></strong> - The main Cosmo Tech simulator name used in standard Run Templates</li>
-<li><strong><code>version</code></strong> - The solution version in <code>MAJOR.MINOR.PATCH</code> format; it must be aligned with an existing repository tag</li>
-<li><strong><code>sdkVersion</code></strong> - The SDK version in <code>MAJOR.MINOR</code> format used to build this solution</li>
-<li><strong><code>url</code></strong> - An optional URL link to the solution page</li>
-<li><strong><code>tags</code></strong> - The solution tags</li>
-<li><strong><code>parameters</code></strong> - The parameters defined on scenario creation</li>
-<li><strong><code>parameterGroups</code></strong> - The grouped parameters used in the run templates</li>
-<li><strong><code>runTemplates</code></strong> - The run templates for the scenario</li>
-<li><strong><code>security</code></strong> - Constituted of a default security role for non-specified users and a list of specified users with their relative security roles. If no security was provided at creation, the default role for the solution will be <code>none</code> and the only user in the access control list will be the user who created the solution with the role <code>admin</code> </li>
+<li><strong><code>key</code></strong>: the name the solution will have in subprocesses such as Azure use.</li>
+<li><strong><code>name</code></strong>: the name the solution will have displayed in the web application.</li>
+<li><strong><code>description</code></strong>: a description of the solution.</li>
+<li><strong><code>repository</code></strong>: the container registry where the solution image is stored.</li>
+<li><strong><code>alwaysPull</code></strong>: whether or not the run template should always pull the image.</li>
+<li><strong><code>csmSimulator</code></strong>: the main Cosmo Tech simulator name used in standard run templates.</li>
+<li><strong><code>version</code></strong>: the solution version in <code>MAJOR.MINOR.PATCH</code> format; it must be aligned with an existing repository tag.</li>
+<li><strong><code>sdkVersion</code></strong>: the SDK version in <code>MAJOR.MINOR</code> format used to build this solution.</li>
+<li><strong><code>url</code></strong>: an optional URL link to the solution page.</li>
+<li><strong><code>tags</code></strong>: the solution tags.</li>
+<li><strong><code>parameters</code></strong>: the parameters defined for scenario creation.</li>
+<li><strong><code>parameterGroups</code></strong>: the grouped parameters used in the run templates.</li>
+<li><strong><code>runTemplates</code></strong>: the run templates for the scenario.</li>
+<li><strong><code>security</code></strong>: constituted of a default security role for non-specified users and a list of specified users with their relative security roles. If no security was provided at creation, the default role for the solution will be <code>none</code> and the only user in the access control list (ACL) will be the user who created the solution with the role <code>admin</code>.</li>
 </ul>
 
 
