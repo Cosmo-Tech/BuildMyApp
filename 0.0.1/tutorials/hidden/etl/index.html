@@ -1860,46 +1860,46 @@
 <p class="admonition-title">Note</p>
 <p><a href="https://cosmo-tech.github.io/CosmoTech-Acceleration-Library/latest/">CoAL</a> can be used for common operations, for intermediate processing, etc.</p>
 </div>
-<div class="highlight"><span class="filename">Example of an ETL in a solution.json file</span><pre><span></span><code>    &quot;runTemplates&quot;: [
-        {
-            &quot;id&quot;: &quot;what_if&quot;,
-            &quot;name&quot;: &quot;Basic what-if run type&quot;,
-            &quot;description&quot;: &quot;Basic what-if run type with a default Run step.&quot;,
-            &quot;tags&quot;: [
-                &quot;basic_simulation&quot;,
-                &quot;CoMETS&quot;
-            ],
-            &quot;parameterGroups&quot;: [
-                &quot;bar_parameters&quot;
-            ],
-            &quot;fetchDatasets&quot;: true,
-            &quot;fetchScenarioParameters&quot;: true,
-            &quot;applyParameters&quot;: true,
-            &quot;parametersJson&quot;: true,
-            &quot;parametersHandlerSource&quot;: &quot;local&quot;,
-            &quot;csmSimulation&quot;: &quot;BusinessApp_Simulation&quot;
-        },
-        {
-            &quot;id&quot;: &quot;etl_with_local_file&quot;,
-            &quot;tags&quot;: [
-                &quot;datasource&quot;
-            ],
-            &quot;parameterGroups&quot;: [
-                &quot;bar_parameters&quot;,
-                &quot;local_file&quot;
-            ]
-        },
-        {
-            &quot;id&quot;: &quot;etl_with_azure_storage&quot;,
-            &quot;tags&quot;: [
-                &quot;datasource&quot;
-            ],
-            &quot;parameterGroups&quot;: [
-                &quot;bar_parameters&quot;,
-                &quot;azure_storage&quot;
-            ]
-        }
-    ]
+<div class="highlight"><span class="filename">Example of an ETL in a solution.json file</span><pre><span></span><code><span class="w">    </span><span class="nt">&quot;runTemplates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;what_if&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Basic what-if run type&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Basic what-if run type with a default Run step.&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;basic_simulation&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;CoMETS&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;parameterGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;bar_parameters&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;fetchDatasets&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fetchScenarioParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;applyParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;parametersJson&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;parametersHandlerSource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;csmSimulation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BusinessApp_Simulation&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;etl_with_local_file&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;datasource&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;parameterGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;bar_parameters&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;local_file&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;etl_with_azure_storage&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;datasource&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;parameterGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;bar_parameters&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;azure_storage&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
 </code></pre></div>
 <h2 id="integration-in-the-web-application">Integration in the web application<a class="headerlink" href="#integration-in-the-web-application" title="Permanent link">&para;</a></h2>
 <p>ETLs can be integrated into the web application in two different ways:</p>
