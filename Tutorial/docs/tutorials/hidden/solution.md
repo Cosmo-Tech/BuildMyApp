@@ -44,7 +44,7 @@ spec:
 
 ### Sidecars
 
-`sidecars` enable the configuration of external services for the solution, such as the Azure run templates, ADX, etc.
+`sidecars` enable the configuration of external services for the solution, such as the Azure run templates, etc.
 
 ### User-provided elements
 
