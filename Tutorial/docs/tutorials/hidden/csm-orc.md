@@ -1,11 +1,11 @@
 # CSM-ORC
 The **Cosmo Tech Orchestrator** (called **CSM-ORC** or **Run Orchestrator**) is a command line interface (CLI) used to execute run templates defined in JSON format. It enables the user to define commands and how they interact with each other (in which order they are executed, how they interact with the environment, etc.) in order to orchestrate the different steps in your solution workflow, from data fetching to simulation execution and result processing.
 Thus, with CSM-ORC, you can:
-- Define workflows through JSON-based run templates,
-- Execute steps in a controlled order with dependencies,
-- Use environment variables for configuration,
-- Create reusable command templates,
-- Run the same workflow locally and in production.
+* Define workflows through JSON-based run templates,
+* Execute steps in a controlled order with dependencies,
+* Use environment variables for configuration,
+* Create reusable command templates,
+* Run the same workflow locally and in production.
 
 ## CLI usage
 ### Basic commands
