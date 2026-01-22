@@ -1904,7 +1904,9 @@
 <p><code>solutionId</code>: the ID of the linked solution,</p>
 </li>
 <li><code>runTemplateFilter</code>: the list of solution's run template IDs to filter,</li>
-<li><code>defaultRunTemplateDataset</code>: a map of RunTemplate/DatasetID to set a default dataset for a run template.</li>
+<li>
+<p><code>defaultRunTemplateDataset</code>: a map of RunTemplate/DatasetID to set a default dataset for a run template.</p>
+</li>
 <li>
 <p><strong><code>webapp</code></strong>: the web application has three parts:</p>
 </li>
@@ -1912,8 +1914,12 @@
 <p><code>url</code>: the URL of the web application,</p>
 </li>
 <li><code>iframes</code>: a map of iframeKey/iframeURL,</li>
-<li><code>options</code>: free-form options for the web application.</li>
-<li><strong><code>sendInputToDataWarehouse</code></strong>: whether or not the dataset values and the input parameter values are sent to the DataWarehouse prior to the ScenarioRun.</li>
+<li>
+<p><code>options</code>: free-form options for the web application.</p>
+</li>
+<li>
+<p><strong><code>sendInputToDataWarehouse</code></strong>: whether or not the dataset values and the input parameter values are sent to the DataWarehouse prior to the ScenarioRun.</p>
+</li>
 <li><strong><code>useDedicatedEventHubNamespace</code></strong>: whether or not a dedicated Azure Event Hub Namespace is used. The name must be <code>&lt;organization_id&gt;-&lt;workspace_id&gt;</code> (in lowercase). The Namespace must contain two Event Hubs named <code>probesmeasures</code> and <code>scenariorun</code>.</li>
 <li><strong><code>dedicatedEventHubSasKeyName</code></strong>: the dedicated Event Hub SAS key name, defaults to <code>RootManageSharedAccessKey</code>.</li>
 <li><strong><code>dedicatedEventHubAuthenticationStrategy</code></strong>: the Event Hub authentication strategy: <code>SHARED_ACCESS_POLICY</code> or <code>TENANT_CLIENT_CREDENTIALS</code>.</li>
