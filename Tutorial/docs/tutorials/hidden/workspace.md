@@ -66,11 +66,13 @@ The following elements require user input:
   - `solutionId`: the ID of the linked solution,
   - `runTemplateFilter`: the list of solution's run template IDs to filter,
   - `defaultRunTemplateDataset`: a map of RunTemplate/DatasetID to set a default dataset for a run template.
+
 - **`webapp`**: the web application has three parts:
 
   - `url`: the URL of the web application,
   - `iframes`: a map of iframeKey/iframeURL,
   - `options`: free-form options for the web application.
+
 - **`sendInputToDataWarehouse`**: whether or not the dataset values and the input parameter values are sent to the DataWarehouse prior to the ScenarioRun.
 - **`useDedicatedEventHubNamespace`**: whether or not a dedicated Azure Event Hub Namespace is used. The name must be `<organization_id>-<workspace_id>` (in lowercase). The Namespace must contain two Event Hubs named `probesmeasures` and `scenariorun`.
 - **`dedicatedEventHubSasKeyName`**: the dedicated Event Hub SAS key name, defaults to `RootManageSharedAccessKey`.
