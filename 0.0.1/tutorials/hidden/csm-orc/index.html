@@ -1844,17 +1844,21 @@
 
 
 <h1 id="csm-orc">CSM-ORC<a class="headerlink" href="#csm-orc" title="Permanent link">&para;</a></h1>
-<p>The <strong>Cosmo Tech Orchestrator</strong> (called <strong>CSM-ORC</strong> or <strong>Run Orchestrator</strong>) is a command line interface (CLI) used to execute run templates defined in JSON format. It enables the user to define commands and how they interact with each other (in which order they are executed, how they interact with the environment, etc.) in order to orchestrate the different steps in your solution workflow, from data fetching to simulation execution and result processing.
-Thus, with CSM-ORC, you can:
-* Define workflows through JSON-based run templates,
-* Execute steps in a controlled order with dependencies,
-* Use environment variables for configuration,
-* Create reusable command templates,
-* Run the same workflow locally and in production.</p>
+<p>The <strong>Cosmo Tech Orchestrator</strong> (called <strong>CSM-ORC</strong> or <strong>Run Orchestrator</strong>) is a command line interface (CLI) used to execute run templates defined in JSON format. It enables the user to define commands and how they interact with each other (in which order they are executed, how they interact with the environment, etc.) in order to orchestrate the different steps in your solution workflow, from data fetching to simulation execution and result processing.</p>
+<p>Thus, with CSM-ORC, you can:</p>
+<ul>
+<li>Define workflows through JSON-based run templates,</li>
+<li>Execute steps in a controlled order with dependencies,</li>
+<li>Use environment variables for configuration,</li>
+<li>Create reusable command templates,</li>
+<li>Run the same workflow locally and in production.</li>
+</ul>
 <h2 id="cli-usage">CLI usage<a class="headerlink" href="#cli-usage" title="Permanent link">&para;</a></h2>
 <h3 id="basic-commands">Basic commands<a class="headerlink" href="#basic-commands" title="Permanent link">&para;</a></h3>
-<p>Two commands exist:
-- <code>run</code>: used to run the given template file by reading said file, interpreting it and executing the associated contents. It is the main usage of CSM-ORC.</p>
+<p>Two commands exist:</p>
+<ul>
+<li><code>run</code>: used to run the given template file by reading said file, interpreting it and executing the associated contents. It is the main usage of CSM-ORC.</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In case you are in a Python venv, the venv is activated before any command is run.</p>
@@ -1889,45 +1893,16 @@ Thus, with CSM-ORC, you can:
 </tr>
 </tbody>
 </table>
-<table>
-<thead>
-<tr>
-<th>Environment Type</th>
-<th>Usage</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Graph</strong></td>
-<td>Network relationships</td>
-<td>Social networks, communication</td>
-</tr>
-<tr>
-<td><strong>Regular Grid</strong></td>
-<td>Spatial positioning</td>
-<td>Geographic locations, cellular automata</td>
-</tr>
-<tr>
-<td><strong>Room</strong></td>
-<td>Global interaction</td>
-<td>Shared spaces where all entities interact</td>
-</tr>
-<tr>
-<td><strong>No Environment</strong></td>
-<td>No spatial relationships</td>
-<td>Independent entities</td>
-</tr>
-</tbody>
-</table>
 <h2 id="basic-run-template-structure">Basic run template structure<a class="headerlink" href="#basic-run-template-structure" title="Permanent link">&para;</a></h2>
-<p>The main elements of a JSON run template file are:
-- <code>commandTemplates</code>
-- <code>object</code>
-- <code>steps</code>
-- <code>identifier</code>
-- <code>argument</code>
-- <code>environment variables</code></p>
+<p>The main elements of a JSON run template file are:</p>
+<ul>
+<li><code>commandTemplates</code></li>
+<li><code>object</code></li>
+<li><code>steps</code></li>
+<li><code>identifier</code></li>
+<li><code>argument</code></li>
+<li><code>environment variables</code></li>
+</ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><div class="highlight"><pre><span></span><code>csm-orc run run.json
@@ -1950,8 +1925,10 @@ Thus, with CSM-ORC, you can:
 </code></pre></div></p>
 </div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>For more detailed information about CSM-ORC, please refer to the official documentation :
-- <a href="https://cosmo-tech.github.io/run-orchestrator/latest/">Run Template Orchestrator</a></p>
+<p>For more detailed information about CSM-ORC, please refer to the official documentation:</p>
+<ul>
+<li><a href="https://cosmo-tech.github.io/run-orchestrator/latest/">Run Template Orchestrator</a></li>
+</ul>
 
 
 
