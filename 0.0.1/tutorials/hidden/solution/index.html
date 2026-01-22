@@ -1815,6 +1815,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1835,7 +1844,7 @@
 
 
 <h1 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h1>
-<p>The <code>solution.yaml</code> file is the core of a Cosmo Tech solution, as it declares the elements to deploy a solution and manages it through the Cosmo Tech API. It describes:
+<p>The <code>solution.yaml</code> file is the core of a Cosmo Tech solution, as it declares the elements used to deploy a solution and manages it through the Cosmo Tech API. It describes:
 - Where the simulator is found,
 - Which parameters are accessible for modification by the user,
 - The run templates for all the run types associated with the solution.</p>
@@ -1897,6 +1906,9 @@
 <li><strong><code>runTemplates</code></strong>: the run templates for the scenario.</li>
 <li><strong><code>security</code></strong>: constituted of a default security role for non-specified users and a list of specified users with their relative security roles. If no security was provided at creation, the default role for the solution will be <code>none</code> and the only user in the access control list (ACL) will be the user who created the solution with the role <code>admin</code>.</li>
 </ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>For more detailed information about the <code>solution.yaml</code> file, please refer to:
+- <a href="https://chocolatine.api.cosmotech.com/cosmotech-api/supplychain-demo/v3-2/swagger-ui/index.html">Cosmo Tech API 3.X</a></p>
 
 
 
