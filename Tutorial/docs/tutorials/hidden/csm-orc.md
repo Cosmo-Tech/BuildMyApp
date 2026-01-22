@@ -48,7 +48,7 @@ The main elements of a JSON run template file are:
     ```
     csm-orc run run.json
     ```
-    ``` title="run.json"
+    ``` json title="run.json"
     {
      "steps": [
       {
