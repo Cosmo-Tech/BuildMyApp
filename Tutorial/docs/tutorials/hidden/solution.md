@@ -1,8 +1,13 @@
 # Solution
 
-Manage solutions through the CosmoTech API.
+The `solution.yaml` file is the core of a Cosmo Tech solution; as it declares the elements to deploy a solution and manages it through the Cosmo Tech API. It describes:
+- Where the simulator is found,
+- Which parameters are accessible for modification by the user,
+- The run templates for all the run types associated with the solution.
 
-## Solution Elements
+## Solution elements
+
+Several elements and parameters are to be declared in the `solution.yaml` file, in order to configure the solution properly:
 
 ```yaml
 kind: Solution
@@ -33,41 +38,33 @@ spec:
     security: {{security}}
 ```
 
-## Namespace
+!!! note
 
-The elements in this category have configured on previous Babylon uses and are configuered as such
+    The elements in the `namespace` and `metadata` categories are configured in previous Babylon uses and are configured as such.
 
-## Metadata
+### Sidecars
 
-The elements in this category have configured on previous Babylon uses and are configuered as such
+`sidecars` enable the configuration of external services for the solution, such as the Azure run templates, ADX, etc.
 
-## Spec
-## Sidecars
+### User-provided elements
 
-In this part, you will be able to enter the different side elements for Solution such as the Azure run templates.
-
-## User-Provided Elements
-
-In Namespace, all the elements were inputed earlier and can be referenced by using the variables in the example
-
-In Metadata, we only need to reference the organizationId used earlier.
-
-In Spec, we can input the azure run templates the workspace will use.
+- In `namespace`, all the elements were inputed previously and can be referenced by using the variables in the example.
+- In `metadata`, only the `organizationId` previously used must be referenced.
+- In `spec`, the Azure run templates that the workspace will use can be inputed.
 
 The following elements require user input:
 
-- **`key`** - The name the solution will have in subprocesses such as Azure use
-- **`name`** - The name the solution will have displayed in the WebApp
-- **`description`** - A description of the solution
-- **`repository`** - The container registry where the solution image is stored
-- **`alwaysPull`** - Whether or not the run template should always pull the image
-- **`csmSimulator`** - The main Cosmo Tech simulator name used in standard Run Templates
-- **`version`** - The solution version in `MAJOR.MINOR.PATCH` format; it must be aligned with an existing repository tag
-- **`sdkVersion`** - The SDK version in `MAJOR.MINOR` format used to build this solution
-- **`url`** - An optional URL link to the solution page
-- **`tags`** - The solution tags
-- **`parameters`** - The parameters defined on scenario creation
-- **`parameterGroups`** - The grouped parameters used in the run templates
-- **`runTemplates`** - The run templates for the scenario
-- **`security`** - Constituted of a default security role for non-specified users and a list of specified users with their relative security roles. If no security was provided at creation, the default role for the solution will be `none` and the only user in the access control list will be the user who created the solution with the role `admin` 
-
+- **`key`**: the name the solution will have in subprocesses such as Azure use.
+- **`name`**: the name the solution will have displayed in the web application.
+- **`description`**: a description of the solution.
+- **`repository`**: the container registry where the solution image is stored.
+- **`alwaysPull`**: whether or not the run template should always pull the image.
+- **`csmSimulator`**: the main Cosmo Tech simulator name used in standard run templates.
+- **`version`**: the solution version in `MAJOR.MINOR.PATCH` format; it must be aligned with an existing repository tag.
+- **`sdkVersion`**: the SDK version in `MAJOR.MINOR` format used to build this solution.
+- **`url`**: an optional URL link to the solution page.
+- **`tags`**: the solution tags.
+- **`parameters`**: the parameters defined for scenario creation.
+- **`parameterGroups`**: the grouped parameters used in the run templates.
+- **`runTemplates`**: the run templates for the scenario.
+- **`security`**: constituted of a default security role for non-specified users and a list of specified users with their relative security roles. If no security was provided at creation, the default role for the solution will be `none` and the only user in the access control list (ACL) will be the user who created the solution with the role `admin`.
