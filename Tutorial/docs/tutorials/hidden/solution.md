@@ -1,6 +1,6 @@
 # Solution
 
-The `solution.yaml` file is the core of a Cosmo Tech solution, as it declares the elements to deploy a solution and manages it through the Cosmo Tech API. It describes:
+The `solution.yaml` file is the core of a Cosmo Tech solution, as it declares the elements used to deploy a solution and manages it through the Cosmo Tech API. It describes:
 - Where the simulator is found,
 - Which parameters are accessible for modification by the user,
 - The run templates for all the run types associated with the solution.
@@ -68,3 +68,7 @@ The following elements require user input:
 - **`parameterGroups`**: the grouped parameters used in the run templates.
 - **`runTemplates`**: the run templates for the scenario.
 - **`security`**: constituted of a default security role for non-specified users and a list of specified users with their relative security roles. If no security was provided at creation, the default role for the solution will be `none` and the only user in the access control list (ACL) will be the user who created the solution with the role `admin`.
+
+## References
+For more detailed information about the `solution.yaml` file, please refer to:
+- [Cosmo Tech API 3.X](https://chocolatine.api.cosmotech.com/cosmotech-api/supplychain-demo/v3-2/swagger-ui/index.html)
