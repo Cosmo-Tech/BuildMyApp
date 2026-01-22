@@ -1,6 +1,9 @@
 # CSM-ORC
+
 The **Cosmo Tech Orchestrator** (called **CSM-ORC** or **Run Orchestrator**) is a command line interface (CLI) used to execute run templates defined in JSON format. It enables the user to define commands and how they interact with each other (in which order they are executed, how they interact with the environment, etc.) in order to orchestrate the different steps in your solution workflow, from data fetching to simulation execution and result processing.
+
 Thus, with CSM-ORC, you can:
+
 * Define workflows through JSON-based run templates,
 * Execute steps in a controlled order with dependencies,
 * Use environment variables for configuration,
@@ -9,7 +12,9 @@ Thus, with CSM-ORC, you can:
 
 ## CLI usage
 ### Basic commands
+
 Two commands exist:
+
 - `run`: used to run the given template file by reading said file, interpreting it and executing the associated contents. It is the main usage of CSM-ORC.
 
 !!! note
@@ -27,15 +32,10 @@ Hereinbelow is an table of the most commonly used commands:
 | `csm-orc run --display-env --gen-env-target <env file> <JSON file>`    | To generate an environment file      |
 | `csm-orc list-templates`                                               | To show available command templates  |
 
-| Environment Type | Usage | Example |
-|-----------------|-------|---------|
-| **Graph** | Network relationships | Social networks, communication |
-| **Regular Grid** | Spatial positioning | Geographic locations, cellular automata |
-| **Room** | Global interaction | Shared spaces where all entities interact |
-| **No Environment** | No spatial relationships | Independent entities |
-
 ## Basic run template structure
+
 The main elements of a JSON run template file are:
+
 - `commandTemplates`
 - `object`
 - `steps`
@@ -67,5 +67,6 @@ The main elements of a JSON run template file are:
     ```
 
 ## References
-For more detailed information about CSM-ORC, please refer to the official documentation :
+For more detailed information about CSM-ORC, please refer to the official documentation:
+
 - [Run Template Orchestrator](https://cosmo-tech.github.io/run-orchestrator/latest/)
