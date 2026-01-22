@@ -35,7 +35,7 @@ The main elements of a JSON run template file are:
 - argument
 - environment variables
 
-!!! note
+!!! example
 
     ```
     csm-orc run run.json
