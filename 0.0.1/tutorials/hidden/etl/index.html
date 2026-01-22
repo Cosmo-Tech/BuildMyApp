@@ -1859,48 +1859,48 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a href="https://cosmo-tech.github.io/CosmoTech-Acceleration-Library/latest/">CoAL</a> can be used for common operations, for intermediate processing, etc.</p>
-<p><code>json Example of an ETL in a solution.json file
-"runTemplates": [
-    {
-        "id": "what_if",
-        "name": "Basic what-if run type",
-        "description": "Basic what-if run type with a default Run step.",
-        "tags": [
-            "basic_simulation",
-            "CoMETS"
-        ],
-        "parameterGroups": [
-            "bar_parameters"
-        ],
-        "fetchDatasets": true,
-        "fetchScenarioParameters": true,
-        "applyParameters": true,
-        "parametersJson": true,
-        "parametersHandlerSource": "local",
-        "csmSimulation": "BusinessApp_Simulation"
-    },
-    {
-        "id": "etl_with_local_file",
-        "tags": [
-            "datasource"
-        ],
-        "parameterGroups": [
-            "bar_parameters",
-            "local_file"
-        ]
-    },
-    {
-        "id": "etl_with_azure_storage",
-        "tags": [
-            "datasource"
-        ],
-        "parameterGroups": [
-            "bar_parameters",
-            "azure_storage"
-        ]
-    }
-]</code></p>
 </div>
+<div class="highlight"><span class="filename">Example of an ETL in a solution.json file</span><pre><span></span><code>    &quot;runTemplates&quot;: [
+        {
+            &quot;id&quot;: &quot;what_if&quot;,
+            &quot;name&quot;: &quot;Basic what-if run type&quot;,
+            &quot;description&quot;: &quot;Basic what-if run type with a default Run step.&quot;,
+            &quot;tags&quot;: [
+                &quot;basic_simulation&quot;,
+                &quot;CoMETS&quot;
+            ],
+            &quot;parameterGroups&quot;: [
+                &quot;bar_parameters&quot;
+            ],
+            &quot;fetchDatasets&quot;: true,
+            &quot;fetchScenarioParameters&quot;: true,
+            &quot;applyParameters&quot;: true,
+            &quot;parametersJson&quot;: true,
+            &quot;parametersHandlerSource&quot;: &quot;local&quot;,
+            &quot;csmSimulation&quot;: &quot;BusinessApp_Simulation&quot;
+        },
+        {
+            &quot;id&quot;: &quot;etl_with_local_file&quot;,
+            &quot;tags&quot;: [
+                &quot;datasource&quot;
+            ],
+            &quot;parameterGroups&quot;: [
+                &quot;bar_parameters&quot;,
+                &quot;local_file&quot;
+            ]
+        },
+        {
+            &quot;id&quot;: &quot;etl_with_azure_storage&quot;,
+            &quot;tags&quot;: [
+                &quot;datasource&quot;
+            ],
+            &quot;parameterGroups&quot;: [
+                &quot;bar_parameters&quot;,
+                &quot;azure_storage&quot;
+            ]
+        }
+    ]
+</code></pre></div>
 <h2 id="integration-in-the-web-application">Integration in the web application<a class="headerlink" href="#integration-in-the-web-application" title="Permanent link">&para;</a></h2>
 <p>ETLs can be integrated into the web application in two different ways:</p>
 <ul>
