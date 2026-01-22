@@ -1907,21 +1907,21 @@
 <p class="admonition-title">Example</p>
 <p><div class="highlight"><pre><span></span><code>csm-orc run run.json
 </code></pre></div>
-<div class="highlight"><span class="filename">run.json</span><pre><span></span><code>{
- &quot;steps&quot;: [
-  {
-    &quot;id&quot;: &quot;Run&quot;,
-    &quot;description&quot;: &quot;Simple Run of a Cosmo Tech Simulator&quot;,
-    &quot;command&quot;: &quot;main&quot;,
-    &quot;arguments&quot;: [&quot;-i&quot;,&quot;$CSM_SIMULATION&quot;],
-      &quot;environment&quot;: {
-        &quot;CSM_SIMULATION&quot;: {
-          &quot;description&quot;: &quot;The simulation file that will be run&quot;
-        }
-      }
-    }
-  ]
-}
+<div class="highlight"><span class="filename">run.json</span><pre><span></span><code><span class="p">{</span>
+<span class="w"> </span><span class="nt">&quot;steps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Run&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Simple Run of a Cosmo Tech Simulator&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;arguments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-i&quot;</span><span class="p">,</span><span class="s2">&quot;$CSM_SIMULATION&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;CSM_SIMULATION&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The simulation file that will be run&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div></p>
 </div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
