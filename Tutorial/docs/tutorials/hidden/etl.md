@@ -24,7 +24,7 @@ The typical workflow of an ETL is the following:
 
     [CoAL](https://cosmo-tech.github.io/CosmoTech-Acceleration-Library/latest/) can be used for common operations, for intermediate processing, etc.
 
-``` title="Example of an ETL in a solution.json file"
+``` json title="Example of an ETL in a solution.json file"
     "runTemplates": [
         {
             "id": "what_if",
