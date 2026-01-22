@@ -28,12 +28,12 @@ Hereinbelow is an table of the most commonly used commands:
 
 ## Basic run template structure
 The main elements of a JSON run template file are:
-- commandTemplates
-- object
-- steps
-- identifier
-- argument
-- environment variables
+- `commandTemplates`
+- `object`
+- `steps`
+- `identifier`
+- `argument`
+- `environment variables`
 
 !!! example
 
