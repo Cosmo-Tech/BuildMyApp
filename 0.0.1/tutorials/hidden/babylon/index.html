@@ -1783,24 +1783,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#why-babylon" class="md-nav__link">
     <span class="md-ellipsis">
       Why Babylon?
@@ -1836,11 +1818,11 @@
         <li class="md-nav__item">
   <a href="#core-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Concepts
+      Core concepts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Core Concepts">
+    <nav class="md-nav" aria-label="Core concepts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1869,11 +1851,11 @@
         <li class="md-nav__item">
   <a href="#resource-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Resource Types
+      Resource types
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Resource Types">
+    <nav class="md-nav" aria-label="Resource types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1911,17 +1893,17 @@
         <li class="md-nav__item">
   <a href="#using-templates-and-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Using Templates and Variables
+      Using templates and variables
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using Templates and Variables">
+    <nav class="md-nav" aria-label="Using templates and variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#variable-substitution" class="md-nav__link">
     <span class="md-ellipsis">
-      Variable Substitution
+      Variable substitution
     </span>
   </a>
   
@@ -1930,7 +1912,7 @@
           <li class="md-nav__item">
   <a href="#variable-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Variable Files
+      Variable files
     </span>
   </a>
   
@@ -1939,7 +1921,7 @@
           <li class="md-nav__item">
   <a href="#environment-specific-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment-Specific Variables
+      Environment-specific variables
     </span>
   </a>
   
@@ -1953,17 +1935,17 @@
         <li class="md-nav__item">
   <a href="#state-management" class="md-nav__link">
     <span class="md-ellipsis">
-      State Management
+      State management
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="State Management">
+    <nav class="md-nav" aria-label="State management">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#state-files" class="md-nav__link">
     <span class="md-ellipsis">
-      State Files
+      State files
     </span>
   </a>
   
@@ -1972,7 +1954,7 @@
           <li class="md-nav__item">
   <a href="#state-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      State Commands
+      State commands
     </span>
   </a>
   
@@ -2045,46 +2027,49 @@
 
 
 <h1 id="babylon">Babylon<a class="headerlink" href="#babylon" title="Permanent link">&para;</a></h1>
-<p>Babylon is CosmoTech's proprietary command-line tool for deploying, configuring, and managing platform resources.</p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Babylon is a deployment orchestration tool developed by CosmoTech that simplifies the process of creating and managing solutions, workspaces, datasets, and other platform resources. It uses declarative YAML manifests to define infrastructure and configurations, similar to Kubernetes.</p>
-<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<p>Babylon is Cosmo Tech's proprietary command-line tool for deploying, configuring, and managing platform resources.</p>
+<p>It is a deployment orchestration tool developed by Cosmo Tech that simplifies the process of creating and managing solutions, workspaces, datasets, and other platform resources. It uses declarative YAML manifests to define infrastructure and configurations, similar to Kubernetes.</p>
+<p>Its key features are:</p>
 <ul>
-<li><strong>Declarative Configuration</strong> - Define resources in YAML manifests</li>
-<li><strong>State Management</strong> - Track and manage resource states across environments</li>
-<li><strong>Idempotent Operations</strong> - Apply configurations multiple times safely</li>
-<li><strong>Multi-Environment Support</strong> - Manage dev, staging, and production environments</li>
-<li><strong>Version Control Friendly</strong> - Store configurations in Git repositories</li>
-<li><strong>Template Support</strong> - Use variables and templates for reusable configurations</li>
-<li><strong>Dependency Management</strong> - Handle relationships between resources automatically</li>
+<li><strong>Declarative configuration</strong>: define resources in YAML manifests.</li>
+<li><strong>State management</strong>: track and manage resource states across environments.</li>
+<li><strong>Idempotent operations</strong>: apply configurations multiple times safely.</li>
+<li><strong>Multi-environment support</strong>: manage dev, staging, and production environments.</li>
+<li><strong>Version control friendly</strong>: store configurations in Git repositories.</li>
+<li><strong>Template support</strong>: use variables and templates for reusable configurations.</li>
+<li><strong>Dependency management</strong>: handle relationships between resources automatically.</li>
 </ul>
 <h2 id="why-babylon">Why Babylon?<a class="headerlink" href="#why-babylon" title="Permanent link">&para;</a></h2>
 <h3 id="before-babylon">Before Babylon<a class="headerlink" href="#before-babylon" title="Permanent link">&para;</a></h3>
-<p>Without Babylon, deploying CosmoTech resources required:
-- Manual API calls for each resource
-- Complex scripts to coordinate deployments
-- Difficult tracking of resource states
-- Error-prone configuration management
-- No easy way to replicate environments</p>
+<p>Without Babylon, deploying Cosmo Tech resources required:</p>
+<ul>
+<li>Manual API calls for each resource,</li>
+<li>Complex scripts to coordinate deployments,</li>
+<li>Difficult tracking of resource states,</li>
+<li>Error-prone configuration management,</li>
+<li>No easy way to replicate environments.</li>
+</ul>
 <h3 id="with-babylon">With Babylon<a class="headerlink" href="#with-babylon" title="Permanent link">&para;</a></h3>
-<p>Babylon provides:
-- Single command deployment of entire environments
-- Automatic handling of resource dependencies
-- Consistent configuration across environments
-- Easy rollback and version management
-- Template-based configuration for reusability</p>
-<h2 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h2>
+<p>Babylon provides:</p>
+<ul>
+<li>Single command deployment of entire environments,</li>
+<li>Automatic handling of resource dependencies,</li>
+<li>Consistent configuration across environments,</li>
+<li>Easy rollback and version management,</li>
+<li>Template-based configuration for reusability.</li>
+</ul>
+<h2 id="core-concepts">Core concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h2>
 <h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
 <p>Namespaces organize and isolate resources:</p>
 <ul>
-<li><strong><code>remote</code></strong> - Environment identifier (dev, staging, production)</li>
-<li><strong><code>state_id</code></strong> - Unique identifier for this deployment state</li>
-<li><strong><code>context</code></strong> - Logical grouping of related resources</li>
-<li><strong><code>platform</code></strong> - Target CosmoTech platform URL</li>
+<li><strong><code>remote</code></strong>: environment identifier (dev, staging, production).</li>
+<li><strong><code>state_id</code></strong>: unique identifier for this deployment state.</li>
+<li><strong><code>context</code></strong>: logical grouping of related resources.</li>
+<li><strong><code>platform</code></strong>: target CosmoTech platform URL.</li>
 </ul>
 <h3 id="payload">Payload<a class="headerlink" href="#payload" title="Permanent link">&para;</a></h3>
-<p>The payload contains the actual resource configuration that will be sent to the CosmoTech API.</p>
-<h2 id="resource-types">Resource Types<a class="headerlink" href="#resource-types" title="Permanent link">&para;</a></h2>
+<p>The payload contains the actual resource configuration that will be sent to the Cosmo Tech API.</p>
+<h2 id="resource-types">Resource types<a class="headerlink" href="#resource-types" title="Permanent link">&para;</a></h2>
 <h3 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h3>
 <p>Define and deploy solutions:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Solution</span>
@@ -2165,8 +2150,8 @@
 <span class="w">      </span><span class="nt">parametersValues</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">AZURE_DIGITAL_TWINS_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://myadt.api.weu.digitaltwins.azure.net</span>
 </code></pre></div>
-<h2 id="using-templates-and-variables">Using Templates and Variables<a class="headerlink" href="#using-templates-and-variables" title="Permanent link">&para;</a></h2>
-<h3 id="variable-substitution">Variable Substitution<a class="headerlink" href="#variable-substitution" title="Permanent link">&para;</a></h3>
+<h2 id="using-templates-and-variables">Using templates and variables<a class="headerlink" href="#using-templates-and-variables" title="Permanent link">&para;</a></h2>
+<h3 id="variable-substitution">Variable substitution<a class="headerlink" href="#variable-substitution" title="Permanent link">&para;</a></h3>
 <p>Babylon supports Jinja2-style variable substitution:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">payload</span><span class="p">:</span>
@@ -2176,7 +2161,7 @@
 <span class="w">    </span><span class="nt">solution</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">solutionId</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">services</span><span class="p p-Indicator">[</span><span class="s">&#39;api.solution_id&#39;</span><span class="p p-Indicator">]}}</span>
 </code></pre></div>
-<h3 id="variable-files">Variable Files<a class="headerlink" href="#variable-files" title="Permanent link">&para;</a></h3>
+<h3 id="variable-files">Variable files<a class="headerlink" href="#variable-files" title="Permanent link">&para;</a></h3>
 <p>Define variables in separate files:</p>
 <p><strong>variables.yaml:</strong>
 <div class="highlight"><pre><span></span><code><span class="nt">workspace_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production-workspace</span>
@@ -2185,7 +2170,7 @@
 <span class="nt">organization_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">o-a1b2c3d4e5f6g7</span>
 <span class="nt">powerbi_workspace_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analytics Workspace</span>
 </code></pre></div></p>
-<h3 id="environment-specific-variables">Environment-Specific Variables<a class="headerlink" href="#environment-specific-variables" title="Permanent link">&para;</a></h3>
+<h3 id="environment-specific-variables">Environment-specific variables<a class="headerlink" href="#environment-specific-variables" title="Permanent link">&para;</a></h3>
 <p>Organize variables by environment:</p>
 <div class="highlight"><pre><span></span><code>config/
 ├── common.yaml
@@ -2196,8 +2181,8 @@
 └── production/
     └── variables.yaml
 </code></pre></div>
-<h2 id="state-management">State Management<a class="headerlink" href="#state-management" title="Permanent link">&para;</a></h2>
-<h3 id="state-files">State Files<a class="headerlink" href="#state-files" title="Permanent link">&para;</a></h3>
+<h2 id="state-management">State management<a class="headerlink" href="#state-management" title="Permanent link">&para;</a></h2>
+<h3 id="state-files">State files<a class="headerlink" href="#state-files" title="Permanent link">&para;</a></h3>
 <p>Babylon maintains state files to track deployed resources:</p>
 <div class="highlight"><pre><span></span><code>.babylon/
 ├── states/
@@ -2208,7 +2193,7 @@
 │       ├── solution-v1.state
 │       └── workspace-dev.state
 </code></pre></div>
-<h3 id="state-commands">State Commands<a class="headerlink" href="#state-commands" title="Permanent link">&para;</a></h3>
+<h3 id="state-commands">State commands<a class="headerlink" href="#state-commands" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># List states</span>
 babylon<span class="w"> </span>state<span class="w"> </span>list
 
