@@ -1,42 +1,42 @@
-# Azure Data Explorer (ADX)
+# Azure Data Explorer
 
 Azure Data Explorer (ADX) is a fast, fully managed data analytics service optimized for real-time analysis of large volumes of data.
 
-## Purpose in CosmoTech Platform
+## Purpose in the Cosmo Tech Platform
 
-ADX serves as the **data warehouse** for CosmoTech simulation results, storing:
+ADX serves as the **data warehouse** for Cosmo Tech simulation results, storing:
 
-- **ProbesMeasures** - Time-series data from simulation probes
-- **ScenarioRun** - Execution details and run metadata
-- **ScenarioMetadata** - Scenario configurations and parameters
-- **SimulationTotalFacts** - Aggregated metrics and KPIs
+- **ProbesMeasures**: time-series data from simulation probes.
+- **ScenarioRun**: execution details and run metadata.
+- **ScenarioMetadata**: scenario configurations and parameters.
+- **SimulationTotalFacts**: aggregated metrics and KPIs.
 
-## Key Benefits
+## Key kenefits
 
-- **High Performance** - Query billions of records in seconds
-- **Real-time Ingestion** - Data flows from Event Hub to ADX automatically
-- **Time-Series Optimized** - Built for temporal data analysis
-- **KQL Language** - Powerful Kusto Query Language for data exploration
-- **Power BI Integration** - Direct connection for visualization
-- **Scalability** - Handles massive simulation datasets efficiently
+- **High Performance**: query billions of records in seconds.
+- **Real-time Ingestion**: data flows from Event Hub to ADX automatically.
+- **Time-Series Optimized**: built for temporal data analysis.
+- **KQL Language**: powerful Kusto Query Language for data exploration.
+- **Power BI Integration**: direct connection for visualization.
+- **Scalability**: handles massive simulation datasets efficiently.
 
-## Data Flow
+## Data flow
 
-1. **Simulation runs** and generates output data
-2. **Event Hub** receives and streams the data
-3. **ADX** ingests data in real-time via connectors
-4. **Data is stored** in structured tables with compression
-5. **Users query** the data using KQL or visualize in Power BI
+1. **Simulation runs** and generates output data.
+2. **Event Hub** receives and streams the data.
+3. **ADX** ingests data in real-time via connectors.
+4. **Data is stored** in structured tables with compression.
+5. **Users query** the data using KQL or visualize in Power BI.
 
-## Common Use Cases
+## Common use cases
 
-1. **Analyze Simulation Results** - Query and compare scenario outcomes
-2. **Track Metrics Over Time** - Monitor KPIs across multiple runs
-3. **Generate Reports** - Create custom analytics dashboards
-4. **Data Exploration** - Investigate simulation behavior and patterns
-5. **Performance Analysis** - Identify bottlenecks and optimization opportunities
+1. **Analyze Simulation Results**: query and compare scenario outcomes.
+2. **Track Metrics Over Time**: monitor KPIs across multiple runs.
+3. **Generate Reports**: create custom analytics dashboards.
+4. **Data Exploration**: investigate simulation behavior and patterns.
+5. **Performance Analysis**: identify bottlenecks and optimization opportunities.
 
-## Example Query
+## Example query
 
 ```kql
 ProbesMeasures
@@ -46,9 +46,11 @@ ProbesMeasures
 | render timechart
 ```
 
-This query retrieves probe measurements from the last hour and displays average values in a time chart.
+!!! note
 
-## Database Configuration
+    This query retrieves probe measurements from the last hour and displays average values in a time chart.
+
+## Database configuration
 
 ADX databases are automatically created when a workspace is deployed with the following naming convention:
 
@@ -57,17 +59,21 @@ ADX databases are automatically created when a workspace is deployed with the fo
 ```
 
 Configuration includes:
-- **Retention policies** - Default 365 days
-- **Permissions** - User access controls
-- **Initialization scripts** - Table schemas and mappings
-- **Event Hub connectors** - Automatic data ingestion
+
+- **Retention policies**: Default 365 days.
+- **Permissions** - User access controls.
+- **Initialization scripts** - Table schemas and mappings.
+- **Event Hub connectors** - Automatic data ingestion.
 
 ## Integration with Power BI
 
 ADX connects directly to Power BI, enabling:
-- Real-time dashboard updates
-- Interactive data exploration
-- Custom visualizations
-- Scenario comparison reports
 
-Connect using the Azure Data Explorer connector in Power BI Desktop with your cluster URL and database name.
+- Real-time dashboard updates.
+- Interactive data exploration.
+- Custom visualizations.
+- Scenario comparison reports.
+
+!!! note
+
+    Connect using the Azure Data Explorer connector in Power BI Desktop with your cluster URL and database name.
