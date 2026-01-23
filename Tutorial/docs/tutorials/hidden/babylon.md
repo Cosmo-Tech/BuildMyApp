@@ -1,57 +1,57 @@
 # Babylon
 
-Babylon is CosmoTech's proprietary command-line tool for deploying, configuring, and managing platform resources.
+Babylon is Cosmo Tech's proprietary command-line tool for deploying, configuring, and managing platform resources.
 
-## Overview
+It is a deployment orchestration tool developed by Cosmo Tech that simplifies the process of creating and managing solutions, workspaces, datasets, and other platform resources. It uses declarative YAML manifests to define infrastructure and configurations, similar to Kubernetes.
 
-Babylon is a deployment orchestration tool developed by CosmoTech that simplifies the process of creating and managing solutions, workspaces, datasets, and other platform resources. It uses declarative YAML manifests to define infrastructure and configurations, similar to Kubernetes.
+Its key features are:
 
-## Key Features
-
-- **Declarative Configuration** - Define resources in YAML manifests
-- **State Management** - Track and manage resource states across environments
-- **Idempotent Operations** - Apply configurations multiple times safely
-- **Multi-Environment Support** - Manage dev, staging, and production environments
-- **Version Control Friendly** - Store configurations in Git repositories
-- **Template Support** - Use variables and templates for reusable configurations
-- **Dependency Management** - Handle relationships between resources automatically
+- **Declarative configuration**: define resources in YAML manifests.
+- **State management**: track and manage resource states across environments.
+- **Idempotent operations**: apply configurations multiple times safely.
+- **Multi-environment support**: manage dev, staging, and production environments.
+- **Version control friendly**: store configurations in Git repositories.
+- **Template support**: use variables and templates for reusable configurations.
+- **Dependency management**: handle relationships between resources automatically.
 
 ## Why Babylon?
 
 ### Before Babylon
 
-Without Babylon, deploying CosmoTech resources required:
-- Manual API calls for each resource
-- Complex scripts to coordinate deployments
-- Difficult tracking of resource states
-- Error-prone configuration management
-- No easy way to replicate environments
+Without Babylon, deploying Cosmo Tech resources required:
+
+- Manual API calls for each resource,
+- Complex scripts to coordinate deployments,
+- Difficult tracking of resource states,
+- Error-prone configuration management,
+- No easy way to replicate environments.
 
 ### With Babylon
 
 Babylon provides:
-- Single command deployment of entire environments
-- Automatic handling of resource dependencies
-- Consistent configuration across environments
-- Easy rollback and version management
-- Template-based configuration for reusability
 
-## Core Concepts
+- Single command deployment of entire environments,
+- Automatic handling of resource dependencies,
+- Consistent configuration across environments,
+- Easy rollback and version management,
+- Template-based configuration for reusability.
+
+## Core concepts
 
 ### Namespaces
 
 Namespaces organize and isolate resources:
 
-- **`remote`** - Environment identifier (dev, staging, production)
-- **`state_id`** - Unique identifier for this deployment state
-- **`context`** - Logical grouping of related resources
-- **`platform`** - Target CosmoTech platform URL
+- **`remote`**: environment identifier (dev, staging, production).
+- **`state_id`**: unique identifier for this deployment state.
+- **`context`**: logical grouping of related resources.
+- **`platform`**: target CosmoTech platform URL.
 
 ### Payload
 
-The payload contains the actual resource configuration that will be sent to the CosmoTech API.
+The payload contains the actual resource configuration that will be sent to the Cosmo Tech API.
 
-## Resource Types
+## Resource types
 
 ### Solution
 
@@ -145,9 +145,9 @@ spec:
         AZURE_DIGITAL_TWINS_URL: https://myadt.api.weu.digitaltwins.azure.net
 ```
 
-## Using Templates and Variables
+## Using templates and variables
 
-### Variable Substitution
+### Variable substitution
 
 Babylon supports Jinja2-style variable substitution:
 
@@ -161,7 +161,7 @@ spec:
       solutionId: {{services['api.solution_id']}}
 ```
 
-### Variable Files
+### Variable files
 
 Define variables in separate files:
 
@@ -174,7 +174,7 @@ organization_id: o-a1b2c3d4e5f6g7
 powerbi_workspace_name: Analytics Workspace
 ```
 
-### Environment-Specific Variables
+### Environment-specific variables
 
 Organize variables by environment:
 
@@ -188,9 +188,9 @@ config/
 └── production/
     └── variables.yaml
 ```
-## State Management
+## State management
 
-### State Files
+### State files
 
 Babylon maintains state files to track deployed resources:
 
@@ -205,7 +205,7 @@ Babylon maintains state files to track deployed resources:
 │       └── workspace-dev.state
 ```
 
-### State Commands
+### State commands
 
 ```bash
 # List states
