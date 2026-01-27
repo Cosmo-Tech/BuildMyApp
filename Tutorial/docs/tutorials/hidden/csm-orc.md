@@ -67,6 +67,6 @@ The main elements of a JSON run template file are:
     ```
 
 ## References
-For more detailed information about CSM-ORC, please refer to the official documentation:
+For more detailed information on CSM-ORC, please refer to the official documentation:
 
 - [Run Template Orchestrator](https://cosmo-tech.github.io/run-orchestrator/latest/)
