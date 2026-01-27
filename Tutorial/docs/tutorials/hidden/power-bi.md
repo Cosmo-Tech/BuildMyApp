@@ -84,7 +84,7 @@ The workspace configuration includes settings for:
 - **Test Performance**: ensure reports load quickly even with large datasets.
 - **Document Calculations**: add descriptions to measures and calculated columns.
 
-## Dynamic Filtering
+## Dynamic filtering
 
 Power BI reports in the CosmoTech web application support dynamic filtering based on the current scenario context. This allows users to:
 
