@@ -75,3 +75,9 @@ When a scenario runs:
 5. Container is cleaned up after completion.
 
 Docker ensures your simulation runs consistently and reliably, regardless of where it is executed.
+
+## References
+
+For more detailed information on Docker, please refer to:
+
+- [Docker documentation](https://docs.docker.com/)
