@@ -2,8 +2,6 @@
 
 Azure Data Explorer (ADX) is a fast, fully managed data analytics service optimized for real-time analysis of large volumes of data.
 
-## Purpose in the Cosmo Tech Platform
-
 ADX serves as the **data warehouse** for Cosmo Tech simulation results, storing:
 
 - **ProbesMeasures**: time-series data from simulation probes.
@@ -11,7 +9,7 @@ ADX serves as the **data warehouse** for Cosmo Tech simulation results, storing:
 - **ScenarioMetadata**: scenario configurations and parameters.
 - **SimulationTotalFacts**: aggregated metrics and KPIs.
 
-## Key kenefits
+Using ADX offers several key benefits:
 
 - **High Performance**: query billions of records in seconds.
 - **Real-time Ingestion**: data flows from Event Hub to ADX automatically.
