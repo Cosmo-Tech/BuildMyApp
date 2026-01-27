@@ -285,6 +285,6 @@ sidecars:
 
 ## References
 
-For more detailed information on Docker, please refer to:
+For more detailed information on Babylon, please refer to:
 
 - [Babylon](https://cosmo-tech.github.io/Babylon-End-User-Doc/latest/)
