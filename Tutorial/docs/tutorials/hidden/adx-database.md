@@ -30,6 +30,8 @@ ADX serves as the **data warehouse** for Cosmo Tech simulation results, storing:
 
 ## Common use cases
 
+ADX can be used in several use cases, most commonly:
+
 1. **Analyze Simulation Results**: query and compare scenario outcomes.
 2. **Track Metrics Over Time**: monitor KPIs across multiple runs.
 3. **Generate Reports**: create custom analytics dashboards.
@@ -60,10 +62,10 @@ ADX databases are automatically created when a workspace is deployed with the fo
 
 Configuration includes:
 
-- **Retention policies**: Default 365 days.
-- **Permissions** - User access controls.
-- **Initialization scripts** - Table schemas and mappings.
-- **Event Hub connectors** - Automatic data ingestion.
+- **Retention policies**: default 365 days.
+- **Permissions**: user access controls.
+- **Initialization scripts**: table schemas and mappings.
+- **Event Hub connectors**: automatic data ingestion.
 
 ## Integration with Power BI
 
