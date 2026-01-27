@@ -112,6 +112,8 @@ Dynamic filters are configured in the workspace settings and can link Power BI r
 
 ## References
 
+For more detailed information on Power BI, please refer to:
+
 - [Power BI Documentation](https://docs.microsoft.com/power-bi/)
 - [Azure Data Explorer Documentation](https://docs.microsoft.com/azure/data-explorer/)
 - [KQL Query Language Reference](https://docs.microsoft.com/azure/data-explorer/kusto/query/)
