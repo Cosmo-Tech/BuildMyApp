@@ -83,6 +83,6 @@ ETLs can be integrated into the web application in two different ways:
 
 ## References
 
-For more detailed information about CSM-ORC, please refer to the official documentation:
+For more detailed information on ETLs, please refer to the official documentation:
 
 - [Chapter "ETL", in the Platform Doc](https://portal.cosmotech.com/docs//documentation/platform_help/3.3/Content/Platform%20Help/Data%20Integration/ETL/ETL.htm)
