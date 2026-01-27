@@ -282,3 +282,9 @@ sidecars:
           - email: user@company.com
             role: Admin
 ```
+
+## References
+
+For more detailed information on Docker, please refer to:
+
+-[Babylon](https://cosmo-tech.github.io/Babylon-End-User-Doc/latest/)
