@@ -2,8 +2,6 @@
 
 Docker is a containerization platform that packages your simulation code and dependencies into portable, self-contained units called containers.
 
-## Purpose in Cosmo Tech Platform
-
 Docker enables **consistent and isolated execution** of simulations across different environments by:
 
 - Packaging your solution code with all dependencies.
@@ -11,7 +9,7 @@ Docker enables **consistent and isolated execution** of simulations across diffe
 - Isolating each scenario run in its own container.
 - Managing different solution versions through image tags.
 
-## Key benefits
+Using Docker offers several key benefits:
 
 - **Reproducibility**: same container image always produces the same results.
 - **Portability**: run anywhere that supports Docker (local, cloud, Kubernetes).
