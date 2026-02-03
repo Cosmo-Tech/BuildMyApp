@@ -1258,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../yaml-files/" class="md-nav__link">
+      <a href="../../../yaml-files.md" class="md-nav__link">
         
   
   
@@ -1313,6 +1313,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Workspace
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1324,6 +1337,69 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workspace-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workspace elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workspace elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sidecars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sidecars
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1817,6 +1893,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workspace-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workspace elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workspace elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sidecars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sidecars
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1835,7 +1961,89 @@
 
 
 <h1 id="workspace">Workspace<a class="headerlink" href="#workspace" title="Permanent link">&para;</a></h1>
-<p>Workspaces and their management via the CosmoTech API.</p>
+<p>The <code>workspace.yaml</code> file declares the elements used to deploy a Cosmo Tech workspace and manages it through the Cosmo Tech API.</p>
+<h2 id="workspace-elements">Workspace elements<a class="headerlink" href="#workspace-elements" title="Permanent link">&para;</a></h2>
+<p>Several elements and parameters are to be declared in the <code>workspace.yaml</code> file, in order to configure the solution properly:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Workspace</span>
+<span class="nt">namespace</span><span class="p">:</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">remote</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">remote</span><span class="p p-Indicator">}}</span>
+<span class="w">  </span><span class="nt">state_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{state_id}}&quot;</span>
+<span class="w">  </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{context_id}}&quot;</span>
+<span class="w">  </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">platform</span><span class="p p-Indicator">}}</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">organization_id</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">organization_id</span><span class="p p-Indicator">}}</span>
+<span class="w">    </span><span class="nt">solution_id</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">services</span><span class="p p-Indicator">[</span><span class="s">&#39;api.solution_id&#39;</span><span class="p p-Indicator">]}}</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sidecars</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">payload</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">workspace_key</span><span class="p p-Indicator">}}</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">workspace_name</span><span class="p p-Indicator">}}</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">workspace_description</span><span class="p p-Indicator">}}</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">    </span><span class="nt">solution</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">solutionId</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">services</span><span class="p p-Indicator">[</span><span class="s">&#39;api.solution_id&#39;</span><span class="p p-Indicator">]}}</span>
+<span class="w">      </span><span class="nt">defaultRunTemplateDataset</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">    </span><span class="nt">webapp</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">      </span><span class="nt">iframes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">    </span><span class="nt">sendInputToDataWarehouse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">    </span><span class="nt">useDedicatedEventHubNamespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">    </span><span class="nt">dedicatedEventHubSasKeyName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">sendScenarioRunToEventHub</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">    </span><span class="nt">sendScenarioMetadataToEventHub</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">    </span><span class="nt">datasetCopy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
+<span class="w">    </span><span class="nt">webApp</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">    </span><span class="nt">security</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="nv">security</span><span class="p p-Indicator">}}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The elements in the <code>namespace</code> and <code>metadata</code> categories are configured in previous Babylon uses and are configured as such.</p>
+</div>
+<h3 id="sidecars">Sidecars<a class="headerlink" href="#sidecars" title="Permanent link">&para;</a></h3>
+<p><code>sidecars</code> enable the configuration of external services for the workspace, such as Event Hub, Power BI, etc.</p>
+<h3 id="payload">Payload<a class="headerlink" href="#payload" title="Permanent link">&para;</a></h3>
+<p>The following elements require user input:</p>
+<ul>
+<li><strong><code>key</code></strong>: the name the workspace will have in subprocesses such as Azure use.</li>
+<li><strong><code>name</code></strong>: the name the workspace will have displayed in the web application.</li>
+<li><strong><code>description</code></strong>: a description of the workspace.</li>
+<li><strong><code>version</code></strong>: the workspace version <code>MAJOR.MINOR.PATCH</code>.</li>
+<li><strong><code>tags</code></strong>: the list of tags.</li>
+<li><strong><code>solution</code></strong>: the solution has three parts:</li>
+<li><code>solutionId</code>: the ID of the linked solution,</li>
+<li><code>runTemplateFilter</code>: the list of solution's run template IDs to filter,</li>
+<li>
+<p><code>defaultRunTemplateDataset</code>: a map of RunTemplate/DatasetID to set a default dataset for a run template.</p>
+</li>
+<li>
+<p><strong><code>webapp</code></strong>: the web application has three parts:</p>
+</li>
+<li><code>url</code>: the URL of the web application,</li>
+<li><code>iframes</code>: a map of iframeKey/iframeURL,</li>
+<li>
+<p><code>options</code>: free-form options for the web application.</p>
+</li>
+<li>
+<p><strong><code>sendInputToDataWarehouse</code></strong>: whether or not the dataset values and the input parameter values are sent to the DataWarehouse prior to the ScenarioRun.</p>
+</li>
+<li><strong><code>useDedicatedEventHubNamespace</code></strong>: whether or not a dedicated Azure Event Hub Namespace is used. The name must be <code>&lt;organization_id&gt;-&lt;workspace_id&gt;</code> (in lowercase). The Namespace must contain two Event Hubs named <code>probesmeasures</code> and <code>scenariorun</code>.</li>
+<li><strong><code>dedicatedEventHubSasKeyName</code></strong>: the dedicated Event Hub SAS key name, defaults to <code>RootManageSharedAccessKey</code>.</li>
+<li><strong><code>dedicatedEventHubAuthenticationStrategy</code></strong>: the Event Hub authentication strategy: <code>SHARED_ACCESS_POLICY</code> or <code>TENANT_CLIENT_CREDENTIALS</code>.</li>
+<li><strong><code>sendScenarioRunToEventHub</code></strong>: whether or not the ScenarioRun is sent to the Event Hub.</li>
+<li><strong><code>sendScenarioMetadataToEventHub</code></strong>: whether or not the scenario metadata are sent to Azure Event Hub Namespace for this workspace. The Event Hub Namespace must be named <code>&lt;organization_id&gt;-&lt;workspace_id&gt;</code> (in lowercase). This Namespace must also contain two Event Hubs named <code>scenariometadata</code> and <code>scenariorunmetadata</code>.</li>
+<li><strong><code>datasetCopy</code></strong>: activate the copy of dataset on scenario creation, meaning that each scenario created in this workspace will create this copy.</li>
+<li><strong><code>security</code></strong>: Constituted of a default security role for non-specified users and a list of specified users with their relative security roles. If no security was provided at creation, the default role for the workspace will be <code>none</code> and the only user in the access control list (ACL) will be the user who created the workspace with the role <code>admin</code>.</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>For more detailed information about the <code>workspace.yaml</code> file, please refer to:</p>
+<ul>
+<li><a href="https://chocolatine.api.cosmotech.com/cosmotech-api/supplychain-demo/v3-2/swagger-ui/index.html">Cosmo Tech API 3.X</a></li>
+</ul>
 
 
 

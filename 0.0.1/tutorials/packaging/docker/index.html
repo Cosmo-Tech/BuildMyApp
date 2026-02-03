@@ -1256,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/yaml-files/" class="md-nav__link">
+      <a href="../../../yaml-files.md" class="md-nav__link">
         
   
   
@@ -1576,6 +1576,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1587,6 +1600,81 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image registry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#container-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container execution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1817,6 +1905,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image registry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#container-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container execution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1835,8 +1985,77 @@
 
 
 <h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
-<p>Containerize and deploy your solutions with Docker.</p>
-<p>We need to explain how docker is used in the solutions and the platform</p>
+<p>Docker is a containerization platform that packages your simulation code and dependencies into portable, self-contained units called containers.</p>
+<p>Docker enables <strong>consistent and isolated execution</strong> of simulations across different environments by:</p>
+<ul>
+<li>Packaging your solution code with all dependencies.</li>
+<li>Ensuring simulations run identically everywhere.</li>
+<li>Isolating each scenario run in its own container.</li>
+<li>Managing different solution versions through image tags.</li>
+</ul>
+<p>Using Docker offers several key benefits:</p>
+<ul>
+<li><strong>Reproducibility</strong>: same container image always produces the same results.</li>
+<li><strong>Portability</strong>: run anywhere that supports Docker (local, cloud, Kubernetes).</li>
+<li><strong>Dependency Management</strong>: all libraries and tools packaged together.</li>
+<li><strong>Version Control</strong>: different versions coexist using different tags.</li>
+<li><strong>Scalability</strong>: easily replicate containers for parallel execution.</li>
+<li><strong>Isolation</strong>: each simulation runs independently without conflicts.</li>
+</ul>
+<h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Build</strong>: create a Docker image containing your solution code.</li>
+<li><strong>Tag</strong>: version your image (e.g., <code>my-solution:1.0.0</code>).</li>
+<li><strong>Push</strong>: upload to Azure Container Registry.</li>
+<li><strong>Register</strong>: reference the image in your Cosmo Tech solution.</li>
+<li><strong>Execute</strong>: platform pulls and runs the container for each scenario.</li>
+</ol>
+<h2 id="example-dockerfile">Example Dockerfile<a class="headerlink" href="#example-dockerfile" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="c"># Install dependencies</span>
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c"># Copy solution code</span>
+<span class="k">COPY</span><span class="w"> </span>src/<span class="w"> </span>./src/
+
+<span class="c"># Run simulation</span>
+<span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;src/main.py&quot;</span><span class="p">]</span>
+</code></pre></div>
+<h2 id="image-registry">Image registry<a class="headerlink" href="#image-registry" title="Permanent link">&para;</a></h2>
+<p>Solutions reference Docker images stored in Azure Container Registry:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">payload</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myregistry.azurecr.io/my-solution</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span>
+<span class="w">    </span><span class="nt">alwaysPull</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Use semantic versioning</strong>: tag images as <code>MAJOR.MINOR.PATCH</code>.</li>
+<li><strong>Keep images small</strong>: use minimal base images (e.g., <code>-slim</code>, <code>-alpine</code>).</li>
+<li><strong>Don't hardcode secrets</strong>: use environment variables.</li>
+<li><strong>Test locally first</strong>: run containers locally before deploying.</li>
+<li><strong>Version alignment</strong>: solution version must match image tag.</li>
+</ul>
+<h2 id="container-execution">Container execution<a class="headerlink" href="#container-execution" title="Permanent link">&para;</a></h2>
+<p>When a scenario runs:</p>
+<ol>
+<li>Kubernetes pulls the Docker image from the registry.</li>
+<li>Container starts with scenario parameters as environment variables.</li>
+<li>Your simulation code executes inside the container.</li>
+<li>Results are sent to Event Hub and stored in ADX.</li>
+<li>Container is cleaned up after completion.</li>
+</ol>
+<p>Docker ensures your simulation runs consistently and reliably, regardless of where it is executed.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>For more detailed information on Docker, please refer to:</p>
+<ul>
+<li><a href="https://docs.docker.com/">Docker documentation</a></li>
+</ul>
 
 
 
