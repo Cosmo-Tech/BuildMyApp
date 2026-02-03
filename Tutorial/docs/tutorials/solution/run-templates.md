@@ -1,128 +1,66 @@
 # Run templates
 
-How to use and configure run templates for your solution.
+**Run templates** are JSON files that define and configure the workflow of your Cosmo Tech solution. More precisely, it can define which input parameters are available to the user and which steps in the run cycle are executed, and how. Each run template consists of a set of steps that can be activated or not, depending on the desired behavior. They orchestrate data processing, simulation execution, and result handling by defining a sequence of steps with dependencies.
 
-## Overview
-
-Run templates are JSON files that define the workflow for your CosmoTech solution. They orchestrate data processing, simulation execution, and result handling by defining a sequence of steps with dependencies.
-
-## What are Run Templates?
+## Basic structure
 
 Run templates define:
-- **Execution Steps**: Individual operations like data fetch, validation, simulation
-- **Step Order**: Using precedents to control execution sequence
-- **Environment**: Variables and parameters for configuration
-- **Commands**: What gets executed in each step
+- Execution steps: individual operations with commands and arguments (data fetch, validation, simulation, etc.).
+- Step order: defines which steps mut be completed before others start in the execution sequence.
 
-## Basic Structure
+!!! note
 
-A run template contains:
-- **Steps**: Named operations with commands and arguments
-- **Precedents**: Define which steps must complete before others start
-- **Environment Variables**: Configuration and data passing
-- **Templates**: Reusable command definitions
+    Steps can be either:
 
-*[Placeholder: Basic JSON structure with steps and precedents]*
+    - Sequential: steps run one after another using precedents.
+    - Parallel: steps with the same precedents are run simultaneoulsy.
+    - No cycles: circular dependencies are not allowed.
 
-## Key Concepts from the Meetings
+- Environment: variables and parameters used for the configuration (data paths and scenario information, API connection details, etc.)
+- Commands: what gets executed during each step (direct commands, templates, etc.)
 
-### Step Dependencies
-- **Sequential**: Steps run one after another using precedents
-- **Parallel**: Steps with same precedents run simultaneously
-- **No Cycles**: Circular dependencies are not allowed
+!!! example
 
-Example workflow: fetch data → validate → run simulation → post-process
+    ```
+    csm-orc run run.json
+    ```
+    ``` json title="run.json"
+    {
+     "steps": [
+      {
+        "id": "Run",
+        "description": "Simple Run of a Cosmo Tech Simulator",
+        "command": "main",
+        "arguments": ["-i","$CSM_SIMULATION"],
+          "environment": {
+            "CSM_SIMULATION": {
+              "description": "The simulation file that will be run"
+            }
+          }
+        }
+      ]
+    }
+    ```
 
-### Environment Variables
-Standard platform variables include:
-- Data paths and scenario information
-- API connection details
-- Workspace configuration
+## Types of run templates
 
-### Command Templates vs Direct Commands
-- **Direct Commands**: Full command definition in the template
-- **Command IDs**: Reference to predefined command templates
-- **Templates**: Reduce duplication and improve maintainability
+Different types of run templates are available:
 
-*[Placeholder: Example showing commandId vs full command definition]*
+- Simulation templates: to execute digital twin simulations.
+- ETL templates: to extract, transform and load data.
+- Validation templates: to perform data quality checks.
+- Processing templates: to create custom data workflows.
 
-## Types of Run Templates
+## Best practices
 
-Based on the meetings, there are different types:
-- **Simulation Templates**: Execute digital twin simulations
-- **ETL Templates**: Extract, transform, and load data
-- **Validation Templates**: Data quality checks
-- **Processing Templates**: Custom data workflows
+- Use clear, descriptive step names.
+- Minimize dependencies for better parallelization.
+- Use command templates for repeated operations.
+- Test locally before deploying.
+- Implement proper error handling with exit handlers.
 
-## Integration with Simulators
+## References
 
-Run templates integrate with CosmoTech simulators by:
-- Calling `csm simulate` command with simulation files
-- Using environment variables for configuration
-- Processing simulation outputs
+For more detailed information on run templates, please refer to:
 
-*[Placeholder: Example showing simulator integration step]*
-
-## Environment and Parameters
-
-### Standard Environment Variables
-The platform provides variables for:
-- Scenario/Runner identification
-- File paths (`/mnt/scenariorun-data`)
-- API connection information
-
-### Parameter Passing
-- **Environment Variables**: System-level configuration
-- **Command Arguments**: Direct parameter passing
-- **File-based**: Configuration files and data files
-
-## Local Development
-
-### Running Locally
-1. Set up the same environment variables as production
-2. Use `csm-orc run template.json` to execute
-3. Use `--dry-run` for validation without execution
-
-### Environment Files
-- Generate environment files from templates
-- Use for consistent local development
-- Match production environment setup
-
-## Advanced Features
-
-### Exit Handlers
-Steps that always execute at the end, regardless of success/failure. Useful for:
-- Cleanup operations
-- Sending notifications
-- Logging completion status
-
-### Data Transfer Between Steps
-Modern versions support passing data between steps:
-- **Outputs**: Data produced by a step
-- **Inputs**: Data consumed by a step
-- Replaces file-based data sharing
-
-*[Placeholder: JSON showing outputs/inputs configuration]*
-
-## Best Practices
-
-- Use clear, descriptive step names
-- Minimize dependencies for better parallelization
-- Use command templates for repeated operations
-- Test locally before deploying
-- Implement proper error handling with exit handlers
-
-## Integration with Platform
-
-### API Integration
-- Templates integrate with CosmoTech API
-- Use runner API for modern templates
-- Handle authentication automatically
-
-### Docker Deployment
-- Templates run in containerized environments
-- Same environment variables in local and production
-- Container serves as execution environment
-
-## Further Reading
-
+- [Run Template Orchestrator documentation](https://cosmo-tech.github.io/run-orchestrator/latest/)

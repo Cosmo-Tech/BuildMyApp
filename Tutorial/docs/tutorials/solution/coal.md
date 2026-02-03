@@ -1,144 +1,79 @@
 # CoAL
 
-Accelerate your solution development with the CosmoTech Acceleration Library (CoAL).
+The Cosmo Tech Acceleration Library (CoAL) provides a comprehensive set of tools and utilities to accelerate the development of solutions based on the Cosmo Tech platform. It offers a unified interface for interacting with Cosmo Tech APIs, managing data, and integrating with various cloud services.
 
-## Overview
+The main components of CoAL are:
 
-The CosmoTech Acceleration Library (CoAL) is a Python library that provides pre-built functions and CLI tools to accelerate solution development. It offers standardized interfaces for common operations like data handling, API interactions, and external service integrations.
+- `csm-data`: a powerful CLI tool designed to help Cosmo Tech solution modelers and integrators interact with multiple systems. It provides ready-to-use commands to send and retrieve data from various systems where a Cosmo Tech API could be integrated.
 
-## What is CoAL?
+``` title="Example of csm-data commands"
+# Get help on available commands
+csm-data --help
 
-CoAL provides four main components:
-- **Core Library**: Base functionality and utilities
-- **CSM Data CLI**: Command-line interface for data operations
-- **Orchestrator Plugins**: Templates and extensions for CSM-ORC
-- **Translation**: Internationalization support
+# Get help on specific command groups
+csm-data api --help
+```
 
-## CSM Data CLI
+- `datastore`: provides a way to maintain local data during simulations and comes with `csm-data` commands to easily send those data to target systems.
 
-### Available Commands
-The `csm-data` CLI provides commands for common operations:
-- **API Operations**: Interact with CosmoTech APIs
-- **Data Management**: Handle datasets and files
-- **Storage Operations**: Work with Azure, AWS, and other storage
-- **Database Operations**: PostgreSQL, ADX, SQLite operations
+``` sql title="Example of datastore commands"
+from cosmotech.coal.store.store import Store
+from cosmotech.coal.store.native_python import store_pylist
 
-*[Placeholder: List of main csm data commands]*
+# Initialize and reset the data store
+my_datastore = Store(reset=True)
 
-### Command Groups
-Based on the meetings, key command groups include:
-- **adx**: Azure Data Explorer operations
-- **azure-storage**: Azure Blob Storage operations
-- **s3**: AWS S3 operations (used for Dell ECS integration)
-- **postgresql**: Database operations
-- **API commands**: Direct platform API interactions
+# Create and store data
+my_data = [{"foo": "bar"}, {"foo": "barbar"}, {"foo": "world"}, {"foo": "bar"}]
+store_pylist("my_data", my_data)
 
-## Data Store
+# Query the data
+results = my_datastore.execute_query("SELECT foo, count(*) as line_count FROM my_data GROUP BY foo").to_pylist()
+print(results)
+# > [{'foo': 'bar', 'line_count': 2}, {'foo': 'barbar', 'line_count': 1}, {'foo': 'world', 'line_count': 1}]
+```
 
-### SQLite Integration
-CoAL provides a local SQLite database for:
-- **Temporary Data Storage**: Keep data between run template steps
-- **Data Processing**: SQL-based data manipulation
-- **Performance**: Fast local access vs. repeated file operations
-- **Export**: Dump to various target systems
+## Integration with run templates
 
-*[Placeholder: Example of data store usage in run template]*
+All CoAL commands can be used in the run templates, by replacing complex custom code with standardized commands:
 
-### Common Data Store Operations
-1. **Import**: Load CSV, JSON, database tables into SQLite
-2. **Transform**: Use SQL for data transformations
-3. **Export**: Output to PostgreSQL, ADX, files, etc.
-4. **Query**: Interactive SQL queries during development
+- Use `csm-data run-load-data` instead of custom data fetching.
+- Use the `datastore` commands for intermediate processing.
+- Use export commands for the final data output.
 
-## Integration with Run Templates
+CoAL commands can be used to provide shortcuts for common operations, such as:
 
-### Using CoAL Commands
-Replace complex custom code with standardized commands:
-- Use `csm data run-load-data` instead of custom data fetching
-- Use data store commands for intermediate processing
-- Use export commands for final data output
+| Command            | Description                                   |
+| ------------------ | --------------------------------------------- |
+| `fetch-data`       | Standard data download template               |
+| `send-to-adx`      | Export results to Azure Data Explorer (ADX)   |
+| `validate-data`    | Common validation patterns                    |
 
-*[Placeholder: Before/after example showing custom code vs CoAL commands]*
-
-### Template Acceleration
-CoAL templates provide shortcuts for common operations:
-- **fetch-data**: Standard data download template
-- **send-to-adx**: Export results to Azure Data Explorer
-- **validate-data**: Common validation patterns
-
-## Cloud Service Integration
-
-### Azure Services
-- **Blob Storage**: File storage and retrieval
-- **Data Explorer (ADX)**: Analytics database operations
-- **Functions**: Integration capabilities
-
-### AWS Services
-- **S3**: Object storage (including ECS compatibility for Dell)
-- **Authentication**: IAM and credential management
-
-### API Integration
-- **CosmoTech API**: Simplified platform API access
-- **Authentication**: Automatic token management
-- **Error Handling**: Robust error management and retry logic
-
-## Development Workflow
-
-### Fast CLI Loading
-CoAL uses lazy loading:
-- CLI loads quickly by importing modules only when needed
-- Individual commands load their dependencies at runtime
-- Improves responsiveness for frequent CLI usage
-
-### Local Development
-- Test CoAL operations locally with same environment as production
-- Use data store for iterative development
-- Validate with real data before deployment
-
-## Library Organization
-
-CoAL is organized into functional modules:
-- **AWS**: Amazon service integrations (S3)
-- **Azure**: Azure service integrations (ADX, Blob, Functions)
-- **CosmoTech API**: Platform API wrappers
-- **Data Store**: SQLite database operations
-- **PostgreSQL**: Database connectivity
-- **Utils**: Helper functions and utilities
-
-## Best Practices
+## Best practices
 
 ### Performance
-- Use data store for intermediate processing instead of files
-- Leverage SQL for data transformations
-- Use batch operations for large datasets
-- Cache frequently accessed data
+
+- Use `datastore` for intermediate processing instead of files.
+- Leverage SQL for data transformations.
+- Use batch operations for large datasets.
+- Cache frequently accessed data.
 
 ### Code Organization
-- Use CoAL commands instead of custom implementations
-- Standardize on CoAL patterns across projects
-- Document any custom extensions
-- Keep custom code minimal
+
+- Use CoAL commands instead of custom implementations.
+- Standardize on CoAL patterns across projects.
+- Document any custom extensions.
+- Keep custom code minimal.
 
 ### Error Handling
-- Leverage CoAL's built-in error handling
-- Use proper logging for debugging
-- Implement appropriate retry logic
-- Handle network timeouts gracefully
 
-## Migration from Custom Code
+- Leverage CoAL's built-in error handling.
+- Use proper logging for debugging.
+- Implement appropriate retry logic.
+- Handle network timeouts gracefully.
 
-When adopting CoAL:
-1. **Identify Patterns**: Find operations that match CoAL capabilities
-2. **Replace Gradually**: Migrate one operation at a time
-3. **Test Thoroughly**: Ensure equivalent functionality
-4. **Update Documentation**: Document CoAL usage patterns
+## References
 
-## Platform Evolution
+For more detailed information on CoAL, please refer to:
 
-CoAL evolves with the platform:
-- **API Changes**: CoAL adapts to new API versions
-- **New Services**: New integrations added over time
-- **Backward Compatibility**: Maintains compatibility across versions
-
-## Further Reading
-
+- [CoAL documentation](https://cosmo-tech.github.io/CosmoTech-Acceleration-Library/latest/)

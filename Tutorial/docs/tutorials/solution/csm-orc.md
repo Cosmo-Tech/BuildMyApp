@@ -1,84 +1,72 @@
 # CSM-ORC
 
-Learn about the CosmoTech Orchestrator and its integration in your solution.
+The **Cosmo Tech Orchestrator** (called **CSM-ORC** or **Run Orchestrator**) is a command line interface (CLI) used to execute run templates defined in JSON format. It enables the user to define commands and how they interact with each other (in which order they are executed, how they interact with the environment, etc.) in order to orchestrate the different steps in your solution workflow, from data fetching to simulation execution and result processing.
 
-## Overview
+Thus, with CSM-ORC, you can:
 
-The CosmoTech Orchestrator (CSM-ORC) is the tool that executes run templates defined in JSON format. It orchestrates the different steps in your solution workflow, from data fetching to simulation execution and result processing.
+* Define workflows through JSON-based run templates,
+* Execute steps in a controlled order with dependencies,
+* Use environment variables for configuration,
+* Create reusable command templates,
+* Run the same workflow locally and in production.
 
-## What is CSM-ORC?
+## CLI usage
+### Basic commands
 
-CSM-ORC allows you to:
+Two commands exist:
 
-- Define workflows through JSON-based run templates
-- Execute steps in a controlled order with dependencies
-- Use environment variables for configuration
-- Create reusable command templates
-- Run the same workflow locally and in production
+- `run`: used to run the given template file by reading said file, interpreting it and executing the associated contents. It is the main usage of CSM-ORC.
 
-## Basic Run Template Structure
+!!! note
 
-A run template is a JSON file that defines:
+    In case you are in a Python venv, the venv is activated before any command is run.
 
-- **Steps**: Individual operations to execute
-- **Precedents**: Dependencies between steps (which steps must complete before others)
-- **Environment Variables**: Configuration values
-- **Commands**: What to execute in each step
+- `list-templates`: used to show a list of pre-available command templates.
 
-*[Placeholder: Basic JSON example showing steps with precedents]*
+Hereinbelow is an table of the most commonly used commands:
 
-## Key Concepts from the Meetings
+| Command                                                                | Description                          |
+| ---------------------------------------------------------------------- | ------------------------------------ |
+| `csm-orc run <JSON file>`                                              | To execute a run template            |
+| `csm-orc run --dry-run <JSON file>`                                    | To validate without executing        |
+| `csm-orc run --display-env --gen-env-target <env file> <JSON file>`    | To generate an environment file      |
+| `csm-orc list-templates`                                               | To show available command templates  |
 
-### Step Dependencies
-- Steps with **precedents** wait for other steps to complete
-- Steps with the same precedents run **in parallel**
-- No circular dependencies allowed
+## Basic run template structure
 
-### Environment Variables
-The platform provides standard variables like:
+The main elements of a JSON run template file are:
 
-- `COSMOTECH_API_URL`
-- `CSM_ORGANIZATION_ID`
-- `CSM_WORKSPACE_ID`
-- `CSM_RUNNER_ID`
-- `CSM_SIMULATION_ID`
+- `commandTemplates`
+- `object`
+- `steps`
+- `identifier`
+- `argument`
+- `environment variables`
 
-### Command Templates
-Instead of repeating complex commands, use **command IDs** that reference predefined templates:
+!!! example
 
-*[Placeholder: JSON showing commandId usage vs full command]*
+    ```
+    csm-orc run run.json
+    ```
+    ``` json title="run.json"
+    {
+     "steps": [
+      {
+        "id": "Run",
+        "description": "Simple Run of a Cosmo Tech Simulator",
+        "command": "main",
+        "arguments": ["-i","$CSM_SIMULATION"],
+          "environment": {
+            "CSM_SIMULATION": {
+              "description": "The simulation file that will be run"
+            }
+          }
+        }
+      ]
+    }
+    ```
 
-## CLI Usage
+## References
+For more detailed information on CSM-ORC, please refer to the official documentation:
 
-### Basic Commands
-
-- `csm-orc run template.json` - Execute a run template
-- `csm-orc run --dry-run template.json` - Validate without executing
-- `csm-orc run --display-env --gen-env-target file.env template.json` - Generate environment file
-- `csm-orc list-templates` - Show available command templates
-
-### Local Development
-Use `csm exec` to set up environment variables, then run templates locally with the same environment as production.
-
-## Advanced Features
-
-### Exit Handlers
-Steps that always run at the end, regardless of success or failure. Useful for cleanup operations.
-
-### Data Transfer Between Steps
-Modern orchestrator versions support passing data between steps using outputs and inputs.
-
-*[Placeholder: JSON showing step outputs and inputs configuration]*
-
-## Integration with Docker
-
-When building Docker images, CSM-ORC serves as the entry point. The platform automatically provides environment variables when running containers.
-
-## Best Practices
-
-- Use meaningful step names
-- Use command templates for repeated operations
-- Test locally before deploying
-
-## Further Reading
-
+- [Run Template Orchestrator](https://cosmo-tech.github.io/run-orchestrator/latest/)
