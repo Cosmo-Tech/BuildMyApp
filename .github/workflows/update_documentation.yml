@@ -18,4 +18,4 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-      - run: cd Tutorial; mike deploy --push 0.0.1
+      - run: cd Tutorial; mike deploy --push 3.0.0
