@@ -1,5 +1,6 @@
 name: update_documentation
 on:
+  workflow_dispatch: 
   release:
     types: [published]
   push:
