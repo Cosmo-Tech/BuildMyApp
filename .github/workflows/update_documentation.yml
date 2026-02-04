@@ -1,5 +1,7 @@
 name: update_documentation
 on:
+  release:
+    types: [published]
   push:
     paths:
       - Tutorial/**
