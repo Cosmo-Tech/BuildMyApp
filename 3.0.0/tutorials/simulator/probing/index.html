@@ -1,0 +1,3890 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutorial for zero to hero Cosmo Tech Solution build and deployment">
+      
+      
+      
+        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/3.0.0/tutorials/simulator/probing/">
+      
+      
+        <link rel="prev" href="../input-data/">
+      
+      
+        <link rel="next" href="../../solution/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Probing - Build My App</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/templates.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Probing - Build My App" >
+      
+        <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
+      
+        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/3.0.0/assets/images/social/tutorials/simulator/probing.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/3.0.0/tutorials/simulator/probing/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Probing - Build My App" >
+      
+        <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
+      
+        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/3.0.0/assets/images/social/tutorials/simulator/probing.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#probing-and-data-collection" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Build My App" class="md-header__button md-logo" aria-label="Build My App" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Build My App
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Probing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Cosmo-Tech/BuildMyApp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cosmo-Tech/BuildMyApp
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../hands_on/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Hands On Session
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Build My App" class="md-nav__button md-logo" aria-label="Build My App" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Build My App
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Cosmo-Tech/BuildMyApp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Cosmo-Tech/BuildMyApp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../pre-requisites/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Pre-requisites
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pre-requisites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/cosmotech-sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cosmotech SDK
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/az-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/npm-node/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nvm / npm / Node.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/dotenv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dotenv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/jq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    jq
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/babylon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Babylon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/coal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CoAL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pre-requisites/power-bi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power BI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Simulator
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Simulator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Probing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probing
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probes-vs-consumers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probes vs Consumers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-probe-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Probe Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Probe Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stock-monitoring-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stock Monitoring Probe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probe-configuration-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probe Configuration Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-and-attribute-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity and Attribute Selection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-probe-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Probe Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Probe Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attributes-from-one-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Attributes from One Entity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-entity-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sub-Entity Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-sub-entity-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Sub-Entity Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling Probes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduling Probes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinating-with-simulation-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordinating with Simulation Schedule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consumer-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consumer Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-file-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV File Consumer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-consumer-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV Consumer Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-organization-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Organization Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Organization Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-data-in-one-file-filetypeall" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Data in One File (FileType="all")
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separate-files-per-entity-filetypeentity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Separate Files per Entity (FileType="entity")
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-chart-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Chart Consumer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chart-consumer-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Consumer Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-simulation-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Simulation Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Simulation Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulation-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation File Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-probing-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Probing Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Probing Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meso-state-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meso-State Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-probing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Probing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficiency-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efficiency Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-monitoring-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Monitoring Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-Time Monitoring Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debug-console-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug Console Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Live Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-export-and-post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Export and Post-Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Export and Post-Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprehensive-csv-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive CSV Export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selective-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selective Export
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-probing-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Probing Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Probing Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-system-state-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 1: System State Tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-individual-entity-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 2: Individual Entity Tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-network-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 3: Network Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probe-not-collecting-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probe Not Collecting Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-not-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Not Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-strategic-probe-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Strategic Probe Placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-meaningful-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Meaningful Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-organized-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Organized Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-complete-brewery-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise: Complete Brewery Monitoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Complete Brewery Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-system-overview-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. System Overview Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-customer-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Customer Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Performance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-network-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Network Effects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-external-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with External Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with External Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      R Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-topics-to-explore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topics to Explore
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solution/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Solution
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Solution
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solution/csm-orc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSM-ORC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solution/run-templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run templates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solution/etl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ETL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solution/coal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CoAL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solution/custom-library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solution/custom-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../yaml-files.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Yaml files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workspace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../web-app/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Web App
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Web App
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-app/frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-app/adx-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ADX database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-app/power-bi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power BI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../packaging/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Packaging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/babylon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Babylon
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../packaging/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../hands_on/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Hands On Session
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hands On Session
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hands_on/00_Objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objectives of the Build My App Hands On
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hands_on/01_Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up your environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hands_on/02_Discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploy a pre-packaged Solution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hands_on/03_Simulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customize an existing Solution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probes-vs-consumers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probes vs Consumers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-probe-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Probe Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Probe Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stock-monitoring-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stock Monitoring Probe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probe-configuration-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probe Configuration Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-and-attribute-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity and Attribute Selection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-probe-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Probe Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Probe Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-attributes-from-one-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Attributes from One Entity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-entity-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sub-Entity Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-sub-entity-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Sub-Entity Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduling Probes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduling Probes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinating-with-simulation-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordinating with Simulation Schedule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consumer-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consumer Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-file-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV File Consumer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-consumer-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV Consumer Properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-organization-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Organization Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Organization Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-data-in-one-file-filetypeall" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Data in One File (FileType="all")
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#separate-files-per-entity-filetypeentity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Separate Files per Entity (FileType="entity")
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-chart-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Chart Consumer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chart-consumer-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Consumer Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-simulation-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Simulation Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Simulation Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simulation-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation File Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-probing-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Probing Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Probing Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meso-state-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meso-State Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-probing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Probing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficiency-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efficiency Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-monitoring-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Monitoring Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-Time Monitoring Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debug-console-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug Console Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Live Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-export-and-post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Export and Post-Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Export and Post-Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprehensive-csv-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive CSV Export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selective-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selective Export
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-probing-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Probing Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Probing Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-system-state-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 1: System State Tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-individual-entity-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 2: Individual Entity Tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-network-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 3: Network Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probe-not-collecting-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probe Not Collecting Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-not-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Not Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-strategic-probe-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Strategic Probe Placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-meaningful-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Meaningful Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-organized-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Organized Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-complete-brewery-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise: Complete Brewery Monitoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise: Complete Brewery Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-system-overview-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. System Overview Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-customer-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Customer Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Performance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-network-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Network Effects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-external-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with External Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with External Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      R Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-topics-to-explore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topics to Explore
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="probing-and-data-collection">Probing and Data Collection<a class="headerlink" href="#probing-and-data-collection" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Tutorial Duration: 15-20 minutes</p>
+</div>
+<p>This tutorial covers how to collect, monitor, and analyze data from your simulations. You'll learn to configure probes for data collection and consumers for processing results using the Brewery simulation example.</p>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this tutorial, you will understand:</p>
+<ul>
+<li>The difference between probes and consumers</li>
+<li>How to configure probes to collect simulation data</li>
+<li>Setting up consumers for data processing and visualization</li>
+<li>Real-time monitoring and analysis techniques</li>
+<li>Export formats and post-simulation analysis</li>
+</ul>
+<h2 id="probes-vs-consumers">Probes vs Consumers<a class="headerlink" href="#probes-vs-consumers" title="Permanent link">&para;</a></h2>
+<p>The CoSMo data collection system separates <em>what</em> to observe from <em>how</em> to process it:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Probe</strong></td>
+<td>Defines <em>what</em> data to collect</td>
+<td>Monitor customer satisfaction</td>
+</tr>
+<tr>
+<td><strong>Consumer</strong></td>
+<td>Defines <em>how</em> to process data</td>
+<td>Export to CSV, display charts</td>
+</tr>
+</tbody>
+</table>
+<p>This separation allows you to:
+- Use one probe with multiple consumers (CSV + real-time chart)
+- Reuse consumers with different probes
+- Easily switch between analysis methods</p>
+<h2 id="basic-probe-configuration">Basic Probe Configuration<a class="headerlink" href="#basic-probe-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="stock-monitoring-probe">Stock Monitoring Probe<a class="headerlink" href="#stock-monitoring-probe" title="Permanent link">&para;</a></h3>
+<p>Let's start with monitoring the bar's stock level:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;StockProbe&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">type=</span><span class="s">&quot;GenericAttributesSender&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">location=</span><span class="s">&quot;Simulation&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">loader=</span><span class="s">&quot;GenericAttributes&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.5&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">active=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Name&gt;</span>Model::MyBar<span class="nt">&lt;/csmSon:Name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>Stock<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Entity&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h3 id="probe-configuration-elements">Probe Configuration Elements<a class="headerlink" href="#probe-configuration-elements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>name</strong>: Unique identifier for the probe</li>
+<li><strong>type</strong>: <code>GenericAttributesSender</code> for basic attribute monitoring</li>
+<li><strong>location</strong>: <code>Simulation</code> means it's scheduled in the simulation scheduler</li>
+<li><strong>tag</strong>: When in the simulation schedule to execute (more on this below)</li>
+<li><strong>active</strong>: <code>1</code> (enabled) or <code>0</code> (disabled)</li>
+</ul>
+<h3 id="entity-and-attribute-selection">Entity and Attribute Selection<a class="headerlink" href="#entity-and-attribute-selection" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:Entity&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Name&gt;</span>Model::MyBar<span class="nt">&lt;/csmSon:Name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>Stock<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="nt">&lt;/csmSon:Entity&gt;</span>
+</code></pre></div>
+<ul>
+<li><strong>Name</strong>: Path to the entity (<code>Model::EntityName</code>)</li>
+<li><strong>AttributeName</strong>: Which attribute to monitor</li>
+</ul>
+<h2 id="advanced-probe-configuration">Advanced Probe Configuration<a class="headerlink" href="#advanced-probe-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="multiple-attributes-from-one-entity">Multiple Attributes from One Entity<a class="headerlink" href="#multiple-attributes-from-one-entity" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BarProbe&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">type=</span><span class="s">&quot;GenericAttributesSender&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">location=</span><span class="s">&quot;Simulation&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">loader=</span><span class="s">&quot;GenericAttributes&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.7&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Name&gt;</span>Model::MyBar<span class="nt">&lt;/csmSon:Name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>Stock<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>NbWaiters<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>RestockQty<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Entity&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h3 id="sub-entity-monitoring">Sub-Entity Monitoring<a class="headerlink" href="#sub-entity-monitoring" title="Permanent link">&para;</a></h3>
+<p>Monitor attributes from all customers in the bar:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SatisfactionProbe&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">type=</span><span class="s">&quot;GenericAttributesSender&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">location=</span><span class="s">&quot;Simulation&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">loader=</span><span class="s">&quot;GenericAttributes&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.6&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Name&gt;</span>Model::MyBar<span class="nt">&lt;/csmSon:Name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:SubEntityTypeName&gt;</span>Customer<span class="nt">&lt;/csmSon:SubEntityTypeName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>Satisfaction<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>Thirsty<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>SurroundingSatisfaction<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Entity&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h3 id="key-sub-entity-features">Key Sub-Entity Features<a class="headerlink" href="#key-sub-entity-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SubEntityTypeName</strong>: Specifies which type of sub-entities to monitor</li>
+<li><strong>Multiple Attributes</strong>: Can monitor several attributes per sub-entity</li>
+<li><strong>Automatic Collection</strong>: Gathers data from all instances of that type</li>
+</ul>
+<h2 id="scheduling-probes">Scheduling Probes<a class="headerlink" href="#scheduling-probes" title="Permanent link">&para;</a></h2>
+<h3 id="understanding-tags">Understanding Tags<a class="headerlink" href="#understanding-tags" title="Permanent link">&para;</a></h3>
+<p>Tags control when probes execute in the simulation schedule:</p>
+<div class="highlight"><pre><span></span><code>tag=&quot;1::1::1::0.5&quot;
+     │  │  │   └── Position within the task block (0.5 = between 0 and 1)
+     │  │  └────── Task block level
+     │  └───────── Repeat block iteration
+     └──────────── Top level position
+</code></pre></div>
+<h3 id="coordinating-with-simulation-schedule">Coordinating with Simulation Schedule<a class="headerlink" href="#coordinating-with-simulation-schedule" title="Permanent link">&para;</a></h3>
+<p>Match probe timing to your simulation structure:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Simulation scheduler structure --&gt;</span>
+<span class="nt">&lt;csmSon:RepeatTaskBlock</span><span class="w"> </span><span class="na">repetitions=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span><span class="w">           </span><span class="cm">&lt;!-- tag: 1 --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:WhileTaskBlock&gt;</span><span class="w">                           </span><span class="cm">&lt;!-- tag: 1::1 --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:SequentialTaskBlock&gt;</span><span class="w">                    </span><span class="cm">&lt;!-- tag: 1::1::1 --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:ModelTask&gt;</span>Model<span class="nt">&lt;/csmSon:ModelTask&gt;</span><span class="w">    </span><span class="cm">&lt;!-- tag: 1::1::1::1 --&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- Probe here: tag=&quot;1::1::1::1.5&quot; --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:SimpleTask&gt;</span>...<span class="nt">&lt;/csmSon:SimpleTask&gt;</span><span class="w">    </span><span class="cm">&lt;!-- tag: 1::1::1::2 --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmSon:SequentialTaskBlock&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:WhileTaskBlock&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:SimpleTask&gt;</span>Restock<span class="nt">&lt;/csmSon:SimpleTask&gt;</span><span class="w">    </span><span class="cm">&lt;!-- tag: 1::2 --&gt;</span>
+<span class="nt">&lt;/csmSon:RepeatTaskBlock&gt;</span>
+</code></pre></div>
+<h2 id="consumer-configuration">Consumer Configuration<a class="headerlink" href="#consumer-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="csv-file-consumer">CSV File Consumer<a class="headerlink" href="#csv-file-consumer" title="Permanent link">&para;</a></h3>
+<p>Export data to CSV files for analysis:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;StockProbeCSV&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;CSVFileGenericConsumer&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Properties&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FileName&quot;</span><span class="nt">&gt;</span>Stock<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FileType&quot;</span><span class="nt">&gt;</span>all<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;RowType&quot;</span><span class="nt">&gt;</span>iteration<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ColumnType&quot;</span><span class="nt">&gt;</span>attribute<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Separator&quot;</span><span class="nt">&gt;</span>,<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;DesignateEntityByName&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;OutputDirectory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Properties&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:ProbeReferences&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>StockProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:ProbeReferences&gt;</span>
+<span class="nt">&lt;/csmSon:ConsumerInstance&gt;</span>
+</code></pre></div>
+<h3 id="csv-consumer-properties">CSV Consumer Properties<a class="headerlink" href="#csv-consumer-properties" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Values</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FileType</strong></td>
+<td><code>all</code>, <code>iteration</code>, <code>entity</code>, <code>attribute</code></td>
+<td>How to organize files</td>
+</tr>
+<tr>
+<td><strong>RowType</strong></td>
+<td><code>iteration</code>, <code>entity</code>, <code>attribute</code></td>
+<td>What varies between rows</td>
+</tr>
+<tr>
+<td><strong>ColumnType</strong></td>
+<td><code>iteration</code>, <code>entity</code>, <code>attribute</code></td>
+<td>What varies between columns</td>
+</tr>
+<tr>
+<td><strong>Separator</strong></td>
+<td><code>,</code>, <code>;</code>, <code>\t</code></td>
+<td>CSV delimiter</td>
+</tr>
+<tr>
+<td><strong>DesignateEntityByName</strong></td>
+<td><code>0</code>, <code>1</code></td>
+<td>Use names vs IDs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="file-organization-examples">File Organization Examples<a class="headerlink" href="#file-organization-examples" title="Permanent link">&para;</a></h3>
+<h4 id="all-data-in-one-file-filetypeall">All Data in One File (FileType="all")<a class="headerlink" href="#all-data-in-one-file-filetypeall" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>iteration,entity,attribute,value
+1,MyBar,Stock,10
+1,Customer1,Satisfaction,7
+1,Customer2,Satisfaction,3
+2,MyBar,Stock,9
+2,Customer1,Satisfaction,6
+</code></pre></div>
+<h4 id="separate-files-per-entity-filetypeentity">Separate Files per Entity (FileType="entity")<a class="headerlink" href="#separate-files-per-entity-filetypeentity" title="Permanent link">&para;</a></h4>
+<p><strong>Stock_MyBar.csv:</strong>
+<div class="highlight"><pre><span></span><code>iteration,Stock,NbWaiters
+1,10,2
+2,9,2
+3,8,2
+</code></pre></div></p>
+<p><strong>Satisfaction_Customer1.csv:</strong>
+<div class="highlight"><pre><span></span><code>iteration,Satisfaction,Thirsty
+1,7,false
+2,6,false
+3,7,true
+</code></pre></div></p>
+<h3 id="real-time-chart-consumer">Real-Time Chart Consumer<a class="headerlink" href="#real-time-chart-consumer" title="Permanent link">&para;</a></h3>
+<p>Display data in real-time during simulation:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SatisfactionChart&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;QtGenericChartViewerGL&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Properties&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SelectionMode&quot;</span><span class="nt">&gt;</span>AllEntities<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Layout&quot;</span><span class="nt">&gt;</span>GroupedByEntity<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PlottingType&quot;</span><span class="nt">&gt;</span>Curve<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PlottingDimension&quot;</span><span class="nt">&gt;</span>2D<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;XDataRepresents&quot;</span><span class="nt">&gt;</span>SimulationStep<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;YDataRepresents&quot;</span><span class="nt">&gt;</span>SimulationData<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;YAttributeReferenceType&quot;</span><span class="nt">&gt;</span>EveryAttributes<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Properties&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:ProbeReferences&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>SatisfactionProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:ProbeReferences&gt;</span>
+<span class="nt">&lt;/csmSon:ConsumerInstance&gt;</span>
+</code></pre></div>
+<h3 id="chart-consumer-properties">Chart Consumer Properties<a class="headerlink" href="#chart-consumer-properties" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Values</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PlottingType</strong></td>
+<td><code>Curve</code>, <code>Histogram</code>, <code>PointCloud</code></td>
+<td>Chart type</td>
+</tr>
+<tr>
+<td><strong>Layout</strong></td>
+<td><code>GroupedByEntity</code>, <code>GroupedByAttribute</code>, <code>MultiGraph</code></td>
+<td>Organization</td>
+</tr>
+<tr>
+<td><strong>XDataRepresents</strong></td>
+<td><code>SimulationStep</code>, <code>EntityID</code>, <code>SimulationData</code></td>
+<td>X-axis data</td>
+</tr>
+<tr>
+<td><strong>YDataRepresents</strong></td>
+<td><code>SimulationStep</code>, <code>EntityID</code>, <code>SimulationData</code></td>
+<td>Y-axis data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="complete-simulation-configuration">Complete Simulation Configuration<a class="headerlink" href="#complete-simulation-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="simulation-file-structure">Simulation File Structure<a class="headerlink" href="#simulation-file-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:Simulation</span><span class="w"> </span><span class="na">xmlns:csmSon=</span><span class="s">&quot;http://www.cosmotech.com/csm_simulation/11.3&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Model instance configuration --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:ModelInstance</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Brewery&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Model&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Loader</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;csmXMLInstantiation&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;File&quot;</span><span class="nt">&gt;</span>MyBrewery<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmSon:Loader&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:ModelInstance&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Simulation scheduler --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:SimulatorInstance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:SchedulerInstance&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- Main simulation loop --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmSon:SchedulerInstance&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Probe instances --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeInstances&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- Stock monitoring --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;StockProbe&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Configuration --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+
+<span class="w">      </span><span class="cm">&lt;!-- Customer satisfaction monitoring --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SatisfactionProbe&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Configuration --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmSon:ProbeInstances&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Consumer instances --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ConsumerInstances&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- CSV export --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;StockProbeCSV&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Configuration --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csmSon:ConsumerInstance&gt;</span>
+
+<span class="w">      </span><span class="cm">&lt;!-- Real-time chart --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SatisfactionChart&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Configuration --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/csmSon:ConsumerInstance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmSon:ConsumerInstances&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:SimulatorInstance&gt;</span>
+
+<span class="nt">&lt;/csmSon:Simulation&gt;</span>
+</code></pre></div>
+<h2 id="advanced-probing-techniques">Advanced Probing Techniques<a class="headerlink" href="#advanced-probing-techniques" title="Permanent link">&para;</a></h2>
+<h3 id="meso-state-monitoring">Meso-State Monitoring<a class="headerlink" href="#meso-state-monitoring" title="Permanent link">&para;</a></h3>
+<p>Monitor computed aggregate values:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BarMetricsProbe&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">type=</span><span class="s">&quot;GenericAttributesSender&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">location=</span><span class="s">&quot;Simulation&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">loader=</span><span class="s">&quot;GenericAttributes&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.8&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Name&gt;</span>Model::MyBar<span class="nt">&lt;/csmSon:Name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>AverageSatisfaction<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>NbThirstyCustomers<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Entity&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h3 id="conditional-probing">Conditional Probing<a class="headerlink" href="#conditional-probing" title="Permanent link">&para;</a></h3>
+<p>Use probe activation to monitor only when needed:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Active only during specific conditions --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ConditionalProbe&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">active=</span><span class="s">&quot;1&quot;</span>
+<span class="w">                      </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.5&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Can be activated/deactivated programmatically --&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h3 id="environment-monitoring">Environment Monitoring<a class="headerlink" href="#environment-monitoring" title="Permanent link">&para;</a></h3>
+<p>Monitor environment-specific data like network connections:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;NetworkProbe&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">type=</span><span class="s">&quot;GraphProbe&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">location=</span><span class="s">&quot;Model&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">entity=</span><span class="s">&quot;MyBar&quot;</span><span class="w"> </span>
+<span class="w">                      </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.3&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Graph</span><span class="w"> </span><span class="na">owner=</span><span class="s">&quot;MyBar&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Entity</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Customer&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:Attribute&gt;</span>Satisfaction<span class="nt">&lt;/csmSon:Attribute&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmSon:Entity&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Graph&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h2 id="analysis-workflows">Analysis Workflows<a class="headerlink" href="#analysis-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="performance-monitoring">Performance Monitoring<a class="headerlink" href="#performance-monitoring" title="Permanent link">&para;</a></h3>
+<p>Track key performance indicators:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- System health indicators --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SystemHealthProbe&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Name&gt;</span>Model::MyBar<span class="nt">&lt;/csmSon:Name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>Stock<span class="nt">&lt;/csmSon:AttributeName&gt;</span><span class="w">          </span><span class="cm">&lt;!-- Resource level --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>NbThirstyCustomers<span class="nt">&lt;/csmSon:AttributeName&gt;</span><span class="w">  </span><span class="cm">&lt;!-- Demand --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>AverageSatisfaction<span class="nt">&lt;/csmSon:AttributeName&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Quality --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Entity&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h3 id="efficiency-metrics">Efficiency Metrics<a class="headerlink" href="#efficiency-metrics" title="Permanent link">&para;</a></h3>
+<p>Calculate and monitor derived metrics:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Service efficiency calculation --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;EfficiencyProbe&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Name&gt;</span>Model::MyBar<span class="nt">&lt;/csmSon:Name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>NbWaiters<span class="nt">&lt;/csmSon:AttributeName&gt;</span><span class="w">      </span><span class="cm">&lt;!-- Capacity --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>NbThirstyCustomers<span class="nt">&lt;/csmSon:AttributeName&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Load --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Entity&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h2 id="real-time-monitoring-setup">Real-Time Monitoring Setup<a class="headerlink" href="#real-time-monitoring-setup" title="Permanent link">&para;</a></h2>
+<h3 id="debug-console-output">Debug Console Output<a class="headerlink" href="#debug-console-output" title="Permanent link">&para;</a></h3>
+<p>Quick text-based monitoring:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ConsoleOutput&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;ShellGenericTextViewer&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Properties&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ShowOnlyLastValue&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Properties&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:ProbeReferences&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>StockProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:ProbeReferences&gt;</span>
+<span class="nt">&lt;/csmSon:ConsumerInstance&gt;</span>
+</code></pre></div>
+<h3 id="live-dashboard">Live Dashboard<a class="headerlink" href="#live-dashboard" title="Permanent link">&para;</a></h3>
+<p>Multiple charts in a coordinated view:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Dashboard&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;QtGenericChartViewerGL&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Properties&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Layout&quot;</span><span class="nt">&gt;</span>MultiGraph<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;UpdateRate&quot;</span><span class="nt">&gt;</span>100<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;WindowTitle&quot;</span><span class="nt">&gt;</span>Brewery<span class="w"> </span>Monitoring<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Properties&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:ProbeReferences&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>StockProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>SatisfactionProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>BarMetricsProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:ProbeReferences&gt;</span>
+<span class="nt">&lt;/csmSon:ConsumerInstance&gt;</span>
+</code></pre></div>
+<h2 id="data-export-and-post-processing">Data Export and Post-Processing<a class="headerlink" href="#data-export-and-post-processing" title="Permanent link">&para;</a></h2>
+<h3 id="comprehensive-csv-export">Comprehensive CSV Export<a class="headerlink" href="#comprehensive-csv-export" title="Permanent link">&para;</a></h3>
+<p>Export all simulation data for external analysis:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ComprehensiveExport&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;CSVFileGenericConsumer&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Properties&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FileType&quot;</span><span class="nt">&gt;</span>all<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;RowType&quot;</span><span class="nt">&gt;</span>iteration<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ColumnType&quot;</span><span class="nt">&gt;</span>attribute<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;DesignateEntityByName&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SerializeAtEachIteration&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;OutputDirectory&quot;</span><span class="nt">&gt;</span>results/<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FileName&quot;</span><span class="nt">&gt;</span>brewery_simulation<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Properties&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:ProbeReferences&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>StockProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>SatisfactionProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>BarMetricsProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:ProbeReferences&gt;</span>
+<span class="nt">&lt;/csmSon:ConsumerInstance&gt;</span>
+</code></pre></div>
+<h3 id="selective-export">Selective Export<a class="headerlink" href="#selective-export" title="Permanent link">&para;</a></h3>
+<p>Export specific data subsets:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Export only final results --&gt;</span>
+<span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FinalResults&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;CSVFileGenericConsumer&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Properties&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FileType&quot;</span><span class="nt">&gt;</span>entity<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ExportLastIterationOnly&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Properties&gt;</span>
+<span class="nt">&lt;/csmSon:ConsumerInstance&gt;</span>
+
+<span class="cm">&lt;!-- Export aggregated data only --&gt;</span>
+<span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;AggregatedData&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;CSVFileGenericConsumer&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:ProbeReferences&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>BarMetricsProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:ProbeReferences&gt;</span>
+<span class="nt">&lt;/csmSon:ConsumerInstance&gt;</span>
+</code></pre></div>
+<h2 id="common-probing-patterns">Common Probing Patterns<a class="headerlink" href="#common-probing-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="pattern-1-system-state-tracking">Pattern 1: System State Tracking<a class="headerlink" href="#pattern-1-system-state-tracking" title="Permanent link">&para;</a></h3>
+<p>Monitor overall system health:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Resource levels --&gt;</span>
+<span class="nt">&lt;csmSon:AttributeName&gt;</span>Stock<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="nt">&lt;csmSon:AttributeName&gt;</span>NbWaiters<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+
+<span class="cm">&lt;!-- Demand indicators --&gt;</span>
+<span class="nt">&lt;csmSon:AttributeName&gt;</span>NbThirstyCustomers<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+
+<span class="cm">&lt;!-- Quality metrics --&gt;</span>
+<span class="nt">&lt;csmSon:AttributeName&gt;</span>AverageSatisfaction<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+</code></pre></div>
+<h3 id="pattern-2-individual-entity-tracking">Pattern 2: Individual Entity Tracking<a class="headerlink" href="#pattern-2-individual-entity-tracking" title="Permanent link">&para;</a></h3>
+<p>Monitor specific entities in detail:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Customer1DetailedProbe&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Name&gt;</span>Model::MyBar::Customer1<span class="nt">&lt;/csmSon:Name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>Satisfaction<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>Thirsty<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:AttributeName&gt;</span>SurroundingSatisfaction<span class="nt">&lt;/csmSon:AttributeName&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Entity&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h3 id="pattern-3-network-analysis">Pattern 3: Network Analysis<a class="headerlink" href="#pattern-3-network-analysis" title="Permanent link">&para;</a></h3>
+<p>Monitor relationship-dependent data:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SocialNetworkProbe&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;GraphProbe&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:Graph</span><span class="w"> </span><span class="na">owner=</span><span class="s">&quot;MyBar&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Entity</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;Customer&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:Attribute&gt;</span>Satisfaction<span class="nt">&lt;/csmSon:Attribute&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmSon:Entity&gt;</span>
+<span class="w">    </span><span class="nt">&lt;csmSon:Links&gt;</span>
+<span class="w">      </span><span class="nt">&lt;csmSon:LinkAttribute&gt;</span>SatisfactionFlow<span class="nt">&lt;/csmSon:LinkAttribute&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/csmSon:Links&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/csmSon:Graph&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeInstance&gt;</span>
+</code></pre></div>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues<a class="headerlink" href="#troubleshooting-common-issues" title="Permanent link">&para;</a></h2>
+<h3 id="probe-not-collecting-data">Probe Not Collecting Data<a class="headerlink" href="#probe-not-collecting-data" title="Permanent link">&para;</a></h3>
+<p>Check these common issues:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Ensure active=&quot;1&quot; --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">active=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+
+<span class="cm">&lt;!-- Verify correct entity path --&gt;</span>
+<span class="nt">&lt;csmSon:Name&gt;</span>Model::MyBar<span class="nt">&lt;/csmSon:Name&gt;</span><span class="w">  </span><span class="cm">&lt;!-- Not just &quot;MyBar&quot; --&gt;</span>
+
+<span class="cm">&lt;!-- Check attribute name spelling --&gt;</span>
+<span class="nt">&lt;csmSon:AttributeName&gt;</span>Satisfaction<span class="nt">&lt;/csmSon:AttributeName&gt;</span><span class="w">  </span><span class="cm">&lt;!-- Case sensitive --&gt;</span>
+
+<span class="cm">&lt;!-- Ensure probe timing is correct --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.5&quot;</span><span class="nt">&gt;</span><span class="w">  </span><span class="cm">&lt;!-- After entity updates --&gt;</span>
+</code></pre></div>
+<h3 id="consumer-not-processing">Consumer Not Processing<a class="headerlink" href="#consumer-not-processing" title="Permanent link">&para;</a></h3>
+<p>Verify consumer configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Check probe reference --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeReferences&gt;</span>
+<span class="w">  </span><span class="nt">&lt;csmSon:ProbeReference&gt;</span>StockProbe<span class="nt">&lt;/csmSon:ProbeReference&gt;</span><span class="w">  </span><span class="cm">&lt;!-- Must match probe name --&gt;</span>
+<span class="nt">&lt;/csmSon:ProbeReferences&gt;</span>
+
+<span class="cm">&lt;!-- Verify file permissions for CSV export --&gt;</span>
+<span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;OutputDirectory&quot;</span><span class="nt">&gt;</span>results/<span class="nt">&lt;/csmSon:Property&gt;</span>
+</code></pre></div>
+<h3 id="performance-issues">Performance Issues<a class="headerlink" href="#performance-issues" title="Permanent link">&para;</a></h3>
+<p>Optimize probe frequency:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Reduce frequency for heavy probes --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">tag=</span><span class="s">&quot;1::10::1::0.5&quot;</span><span class="nt">&gt;</span><span class="w">  </span><span class="cm">&lt;!-- Every 10th iteration --&gt;</span>
+
+<span class="cm">&lt;!-- Use selective attributes --&gt;</span>
+<span class="nt">&lt;csmSon:AttributeName&gt;</span>AverageSatisfaction<span class="nt">&lt;/csmSon:AttributeName&gt;</span><span class="w">  </span><span class="cm">&lt;!-- Not all individual satisfactions --&gt;</span>
+</code></pre></div>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="1-strategic-probe-placement">1. Strategic Probe Placement<a class="headerlink" href="#1-strategic-probe-placement" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Collect aggregate data frequently --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SystemMetrics&quot;</span><span class="w"> </span><span class="na">tag=</span><span class="s">&quot;1::1::1::0.9&quot;</span><span class="nt">&gt;</span>
+
+<span class="cm">&lt;!-- Collect detailed data less frequently --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;DetailedAnalysis&quot;</span><span class="w"> </span><span class="na">tag=</span><span class="s">&quot;1::5::1::0.9&quot;</span><span class="nt">&gt;</span>
+
+<span class="cm">&lt;!-- Collect expensive data rarely --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;NetworkAnalysis&quot;</span><span class="w"> </span><span class="na">tag=</span><span class="s">&quot;1::25::1::0.9&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<h3 id="2-meaningful-names">2. Meaningful Names<a class="headerlink" href="#2-meaningful-names" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Good: descriptive names --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CustomerSatisfactionTrends&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SatisfactionCSVExport&quot;</span><span class="nt">&gt;</span>
+
+<span class="cm">&lt;!-- Avoid: generic names --&gt;</span>
+<span class="nt">&lt;csmSon:ProbeInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Probe1&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;csmSon:ConsumerInstance</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Consumer1&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<h3 id="3-organized-output">3. Organized Output<a class="headerlink" href="#3-organized-output" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Organized directory structure --&gt;</span>
+<span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;OutputDirectory&quot;</span><span class="nt">&gt;</span>results/satisfaction/<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;OutputDirectory&quot;</span><span class="nt">&gt;</span>results/stock/<span class="nt">&lt;/csmSon:Property&gt;</span>
+<span class="nt">&lt;csmSon:Property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;OutputDirectory&quot;</span><span class="nt">&gt;</span>results/network/<span class="nt">&lt;/csmSon:Property&gt;</span>
+</code></pre></div>
+<h2 id="exercise-complete-brewery-monitoring">Exercise: Complete Brewery Monitoring<a class="headerlink" href="#exercise-complete-brewery-monitoring" title="Permanent link">&para;</a></h2>
+<p>Set up comprehensive monitoring for the brewery simulation:</p>
+<h3 id="1-system-overview-dashboard">1. System Overview Dashboard<a class="headerlink" href="#1-system-overview-dashboard" title="Permanent link">&para;</a></h3>
+<p>Create probes and consumers for:
+- Bar stock levels and waiter count
+- Total number of thirsty customers
+- Average customer satisfaction
+- Real-time chart display</p>
+<h3 id="2-customer-analysis">2. Customer Analysis<a class="headerlink" href="#2-customer-analysis" title="Permanent link">&para;</a></h3>
+<p>Monitor individual customer patterns:
+- Satisfaction evolution over time
+- Thirst patterns
+- Social influence effects
+- Export to separate CSV files</p>
+<h3 id="3-performance-metrics">3. Performance Metrics<a class="headerlink" href="#3-performance-metrics" title="Permanent link">&para;</a></h3>
+<p>Track efficiency indicators:
+- Service rate (customers served per time step)
+- Stock utilization rate
+- Customer satisfaction variance
+- Peak demand periods</p>
+<h3 id="4-network-effects">4. Network Effects<a class="headerlink" href="#4-network-effects" title="Permanent link">&para;</a></h3>
+<p>Analyze social influence:
+- Satisfaction propagation through the network
+- Influence strength between connected customers
+- Network stability metrics</p>
+<h2 id="integration-with-external-tools">Integration with External Tools<a class="headerlink" href="#integration-with-external-tools" title="Permanent link">&para;</a></h2>
+<h3 id="python-analysis">Python Analysis<a class="headerlink" href="#python-analysis" title="Permanent link">&para;</a></h3>
+<p>Export CSV data for Python analysis:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Load simulation results</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;results/brewery_simulation.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Analyze satisfaction trends</span>
+<span class="n">satisfaction_data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;attribute&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Satisfaction&#39;</span><span class="p">]</span>
+<span class="n">satisfaction_pivot</span> <span class="o">=</span> <span class="n">satisfaction_data</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;iteration&#39;</span><span class="p">,</span> 
+                                           <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;entity&#39;</span><span class="p">,</span> 
+                                           <span class="n">values</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot results</span>
+<span class="n">satisfaction_pivot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Customer Satisfaction Over Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="r-analysis">R Analysis<a class="headerlink" href="#r-analysis" title="Permanent link">&para;</a></h3>
+<p>Statistical analysis in R:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+
+<span class="c1"># Load data</span>
+<span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;results/brewery_simulation.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Analyze satisfaction distribution</span>
+<span class="n">satisfaction</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">attribute</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Satisfaction&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iteration</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entity</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_line</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Customer Satisfaction Trends&quot;</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">satisfaction</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>You've now completed the core simulator tutorials! You understand:</p>
+<ul>
+<li><strong>Model Structure</strong>: How to define entities and relationships</li>
+<li><strong>Behavior Implementation</strong>: Rules, processes, and entity interactions  </li>
+<li><strong>Instance Creation</strong>: Setting up specific simulation scenarios</li>
+<li><strong>Data Collection</strong>: Probing and monitoring simulation results</li>
+</ul>
+<h3 id="advanced-topics-to-explore">Advanced Topics to Explore<a class="headerlink" href="#advanced-topics-to-explore" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Optimization</strong>: Parameter tuning and scenario comparison</li>
+<li><strong>Validation</strong>: Model verification and sensitivity analysis</li>
+<li><strong>Scalability</strong>: Large-scale simulations and performance optimization</li>
+<li><strong>Integration</strong>: Connecting simulations to external data sources</li>
+<li><strong>Visualization</strong>: Advanced charting and interactive displays</li>
+</ol>
+<p>The foundation you've built with these tutorials prepares you for complex real-world modeling challenges using the CoSMo platform!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../input-data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Input data">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Input data
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../solution/" class="md-footer__link md-footer__link--next" aria-label="Next: Solution">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Solution
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+    
+    Made by
+    <a href="https://cosmotech.com/" target="_blank" rel="noopener">
+        Cosmotech
+    </a>
+    <br/>
+    <br/>
+    <a href="#__consent">Change cookie settings</a>
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "content.tooltips", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascript/tablesort.js"></script>
+      
+    
+  </body>
+</html>
