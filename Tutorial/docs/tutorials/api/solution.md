@@ -72,4 +72,4 @@ The following elements require user input:
 
 ## References
 For more detailed information about the `solution.yaml` file, please refer to:
-- [Cosmo Tech API 3.X](https://chocolatine.api.cosmotech.com/cosmotech-api/supplychain-demo/v3-2/swagger-ui/index.html)
+- [Cosmo Tech API 3.X](https://github.com/Cosmo-Tech/cosmotech-api/blob/release/v3.3/solution/src/main/openapi/solution.yaml)

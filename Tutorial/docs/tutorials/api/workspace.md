@@ -84,4 +84,4 @@ The following elements require user input:
 
 For more detailed information about the `workspace.yaml` file, please refer to:
 
-- [Cosmo Tech API 3.X](https://chocolatine.api.cosmotech.com/cosmotech-api/supplychain-demo/v3-2/swagger-ui/index.html)
+- [Cosmo Tech API 3.X](https://github.com/Cosmo-Tech/cosmotech-api/blob/release/v3.3/workspace/src/main/openapi/workspace.yaml)
