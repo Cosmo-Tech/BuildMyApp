@@ -16,7 +16,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../adx-database/">
+        <link rel="next" href="../power-bi/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -1673,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adx-database/" class="md-nav__link">
+      <a href="../../../adx-database.md" class="md-nav__link">
         
   
   
@@ -2290,7 +2290,7 @@
 - Creating and managing datasets.
 - Configuring and running scenarios.
 - Monitoring simulation execution.
-- Visualizing results through Power BI dashboards.</p>
+- Visualizing results through Superset and Power BI dashboards.</p>
 <p>This guide walks you through the essential steps to get started with your first simulation.</p>
 <h2 id="creating-a-dataset">Creating a dataset<a class="headerlink" href="#creating-a-dataset" title="Permanent link">&para;</a></h2>
 <p>Datasets contain the input data that your scenarios will use for simulations. Before running any scenario, you need to create at least one dataset.</p>
@@ -2350,19 +2350,19 @@
 <h3 id="view-results">View results<a class="headerlink" href="#view-results" title="Permanent link">&para;</a></h3>
 <p>Once the scenario has finished running successfully, you can:</p>
 <ul>
-<li>View results in the <strong>Dashboards</strong> tab (Power BI reports).</li>
-<li>Analyze data directly in <strong>Azure Data Explorer</strong>.</li>
+<li>View results in the <strong>Dashboards</strong> tab (Superset/Power BI reports).</li>
+<li>Analyze data directly in your DB.</li>
 <li>Compare results with other scenarios.</li>
 <li>Export data for further analysis.</li>
 </ul>
-<p>The simulation output data is automatically sent to Event Hub, ingested into ADX, and made available for visualization in Power BI dashboards.</p>
+<p>The simulation output data is automatically sent to Event Hub, ingested into your DB, and made available for visualization in Superset or Power BI dashboards.</p>
 <h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <p>After running your first scenario:</p>
 <ol>
-<li><strong>Explore Results</strong>: navigate to the Dashboards tab to view Power BI reports</li>
+<li><strong>Explore Results</strong>: navigate to the Dashboards tab to view Superset or Power BI reports</li>
 <li><strong>Create Variations</strong>: clone your scenario and adjust parameters to explore different outcomes</li>
 <li><strong>Compare Scenarios</strong>: use comparison features to analyze differences</li>
-<li><strong>Query Raw Data</strong>: access ADX directly for custom data analysis</li>
+<li><strong>Query Raw Data</strong>: access your DB directly for custom data analysis</li>
 <li><strong>Share Insights</strong>: export reports and share findings with your team</li>
 </ol>
 <h2 id="tips-and-best-practices">Tips and Best Practices<a class="headerlink" href="#tips-and-best-practices" title="Permanent link">&para;</a></h2>
@@ -2391,8 +2391,8 @@
 <h3 id="dashboard-not-loading">Dashboard Not Loading<a class="headerlink" href="#dashboard-not-loading" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Ensure the scenario has completed successfully.</li>
-<li>Verify Power BI workspace permissions.</li>
-<li>Check that ADX contains the expected data.</li>
+<li>Verify Superset or Power BI workspace permissions.</li>
+<li>Check that your DB contains the expected data.</li>
 <li>Refresh the dashboard view.</li>
 </ul>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
@@ -2456,13 +2456,13 @@
         
         
           
-          <a href="../adx-database/" class="md-footer__link md-footer__link--next" aria-label="Next: ADX database">
+          <a href="../power-bi/" class="md-footer__link md-footer__link--next" aria-label="Next: Power BI">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                ADX database
+                Power BI
               </div>
             </div>
             <div class="md-footer__button md-icon">
