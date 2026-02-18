@@ -24,12 +24,12 @@ Learn about the frontend architecture and customization.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __ADX database__
+:material-keyboard-return: __Superset__
 
 ---
-Integrate and manage the ADX database for your web app.
+Embed and use Superset dashboards in your web application.
 <footer markdown>
-[:octicons-arrow-right-24: ADX database](./adx-database.md)
+[:octicons-arrow-right-24: Superset](./superset.md)
 </footer>
 </div>
 </article>

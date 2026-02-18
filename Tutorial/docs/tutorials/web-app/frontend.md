@@ -6,7 +6,7 @@ The Cosmo Tech web application provides an intuitive interface for:
 - Creating and managing datasets.
 - Configuring and running scenarios.
 - Monitoring simulation execution.
-- Visualizing results through Power BI dashboards.
+- Visualizing results through Superset and Power BI dashboards.
 
 This guide walks you through the essential steps to get started with your first simulation.
 
@@ -97,21 +97,21 @@ The web application displays the execution status in real-time:
 
 Once the scenario has finished running successfully, you can:
 
-- View results in the **Dashboards** tab (Power BI reports).
-- Analyze data directly in **Azure Data Explorer**.
+- View results in the **Dashboards** tab (Superset/Power BI reports).
+- Analyze data directly in your DB.
 - Compare results with other scenarios.
 - Export data for further analysis.
 
-The simulation output data is automatically sent to Event Hub, ingested into ADX, and made available for visualization in Power BI dashboards.
+The simulation output data is automatically sent to Event Hub, ingested into your DB, and made available for visualization in Superset or Power BI dashboards.
 
 ## Next steps
 
 After running your first scenario:
 
-1. **Explore Results**: navigate to the Dashboards tab to view Power BI reports
+1. **Explore Results**: navigate to the Dashboards tab to view Superset or Power BI reports
 2. **Create Variations**: clone your scenario and adjust parameters to explore different outcomes
 3. **Compare Scenarios**: use comparison features to analyze differences
-4. **Query Raw Data**: access ADX directly for custom data analysis
+4. **Query Raw Data**: access your DB directly for custom data analysis
 5. **Share Insights**: export reports and share findings with your team
 
 ## Tips and Best Practices
@@ -140,8 +140,8 @@ After running your first scenario:
 
 ### Dashboard Not Loading
 - Ensure the scenario has completed successfully.
-- Verify Power BI workspace permissions.
-- Check that ADX contains the expected data.
+- Verify Superset or Power BI workspace permissions.
+- Check that your DB contains the expected data.
 - Refresh the dashboard view.
 
 ## References
