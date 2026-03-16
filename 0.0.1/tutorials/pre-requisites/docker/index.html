@@ -737,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../npm-node/" class="md-nav__link">
+      <a href="../../../npm-node.md" class="md-nav__link">
         
   
   
@@ -760,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dotenv/" class="md-nav__link">
+      <a href="../../../dotenv.md" class="md-nav__link">
         
   
   
@@ -783,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jq/" class="md-nav__link">
+      <a href="../../../jq.md" class="md-nav__link">
         
   
   
@@ -829,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../coal/" class="md-nav__link">
+      <a href="../../../coal.md" class="md-nav__link">
         
   
   
@@ -852,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../power-bi/" class="md-nav__link">
+      <a href="../../../power-bi.md" class="md-nav__link">
         
   
   
@@ -1979,13 +1979,9 @@
 <h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
 <p>Docker is required for containerized deployments and running many development environments.</p>
 <h2 id="install-docker-on-debian">Install Docker on Debian<a class="headerlink" href="#install-docker-on-debian" title="Permanent link">&para;</a></h2>
-<p>Docker can be installed using Debian's standard packages. For Debian 12 and earlier, install <code>docker.io</code>. For Debian 13 and onward, install both <code>docker.io</code> and <code>docker-cli</code>:</p>
+<p>Docker can be installed using Debian's standard packages.</p>
 <div class="highlight"><span class="filename">Install Docker (Debian standard packages)</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 
-<span class="c1"># For Debian 12 and earlier:</span>
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker.io
-
-<span class="c1"># For Debian 13 and onward:</span>
 sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker.io<span class="w"> </span>docker-cli
 </code></pre></div>
 <h2 id="add-docker-to-toolingbins">Add Docker to ToolingBins<a class="headerlink" href="#add-docker-to-toolingbins" title="Permanent link">&para;</a></h2>
@@ -1997,10 +1993,6 @@ ln<span class="w"> </span>-s<span class="w"> </span>/usr/bin/docker<span class="
 <p>To update Docker, run:</p>
 <div class="highlight"><span class="filename">Update Docker (Debian standard packages)</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 
-<span class="c1"># For Debian 12 and earlier:</span>
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>--only-upgrade<span class="w"> </span>docker.io
-
-<span class="c1"># For Debian 13 and onward:</span>
 sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>--only-upgrade<span class="w"> </span>docker.io<span class="w"> </span>docker-cli
 </code></pre></div>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
