@@ -17,7 +17,7 @@ cd ~/Tooling
 git clone git@github.com:Cosmo-Tech/Babylon.git Babylon
 
 cd Babylon
-git checkout 4.2.3
+git checkout 5.0.0
 
 python3 -m venv .venv
 
