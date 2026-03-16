@@ -90,48 +90,6 @@ You will be using it mostly to connect to azure image repository to send your so
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __nvm / npm / node__
-
----
-npm and Node.js are required for running JavaScript tools and building web applications.
-
-You will need those if you have to do customization of the webapps.
-<footer markdown>
-[:octicons-arrow-right-24: nvm / npm / Node.js](./npm-node.md)
-</footer>
-</div>
-</article>
-
-<article markdown>
-<div class="text" markdown>
-:material-keyboard-return: __Dotenv__
-
----
-Dotenv CLI is a command-line tool for loading environment variables from .env files.
-
-Essential for managing configuration and environment variables in development and deployment workflows.
-<footer markdown>
-[:octicons-arrow-right-24: Dotenv](./dotenv.md)
-</footer>
-</div>
-</article>
-
-<article markdown>
-<div class="text" markdown>
-:material-keyboard-return: __jq__
-
----
-jq is a lightweight and flexible command-line JSON processor.
-
-Essential for parsing, filtering, and manipulating JSON data in shell scripts and command-line workflows.
-<footer markdown>
-[:octicons-arrow-right-24: jq](./jq.md)
-</footer>
-</div>
-</article>
-
-<article markdown>
-<div class="text" markdown>
 :material-keyboard-return: __Babylon__
 
 ---
@@ -146,28 +104,28 @@ You will need it to update high level configuration of you application.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __CoAL__
+:material-keyboard-return: __kubectl__
 
 ---
-CoAL (CosmoTech Acceleration Library) provides a set of tools and utilities to accelerate CosmoTech solution development.
+kubectl is the command-line tool for interacting with Kubernetes clusters.
 
-Installing CoAL gives access to two CLIs: `csm-data` for data management and `csm-orc` for orchestration workflows.
+You will need it to manage and inspect deployed workloads and resources in your Kubernetes environment.
 <footer markdown>
-[:octicons-arrow-right-24: CoAL](./coal.md)
+[:octicons-arrow-right-24: kubectl](./kubectl.md)
 </footer>
 </div>
 </article>
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Power BI__
+:material-keyboard-return: __Terraform__
 
 ---
-Power BI is the tool used to create dashboards embedded in the Cosmo Tech Webapp.
+Terraform is an infrastructure-as-code tool for provisioning and managing cloud resources.
 
-Its installation requires you to have access to a Windows environment, either natively (if you are on Windows and used WSL for the rest of the installation) or using a Virtual Machine.
+You will use it to deploy and configure the infrastructure required by your solution.
 <footer markdown>
-[:octicons-arrow-right-24: Microsoft Power BI](./power-bi.md)
+[:octicons-arrow-right-24: Terraform](./terraform.md)
 </footer>
 </div>
 </article>
