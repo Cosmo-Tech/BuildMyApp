@@ -24,5 +24,5 @@ The installer does not allow for inplace updates, to make version change of your
 
 Those references are locked behind an account having access to the Cosmo Tech documentation Portal
 
-- [SDK User Guide](https://portal.cosmotech.com/docs//documentation/Studio_Guide_Portal/11.3/Content/WhatsNew.htm)
-- [Official installation guide](https://portal.cosmotech.com/docs//documentation/Studio_Guide_Portal/11.3/Content/SDK_OK/Studio%20Installation%20Guide.htm)
+- [SDK User Guide](https://portal.cosmotech.com/docs//documentation/Studio_Guide_Portal/12.0/Content/WhatsNew.htm)
+- [Official installation guide](https://portal.cosmotech.com/docs//documentation/Studio_Guide_Portal/12.0/Content/SDK_OK/Studio%20Installation%20Guide.htm)

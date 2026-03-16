@@ -6,7 +6,7 @@ hide:
 
 # Pre-requisites
 
-First as some tools are required for some elements I recommend you do separate install of those.
+First, assert that you are using an enviromnent under Debian 13. Then, as some tools are required for some elements I recommend you do separate install of those.
 
 ## System preparation
 
