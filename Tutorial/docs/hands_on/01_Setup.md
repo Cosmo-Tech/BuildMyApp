@@ -22,6 +22,7 @@ The Build My App tutorial requires specific tools depending on your operating sy
     - any IDE of your choice
 </div>
 1. Nice to have
+
 ## WSL Setup (Windows Only)
 
 If you're working on Windows, you'll need to set up Windows Subsystem for Linux with Debian 13 for the best development experience.
