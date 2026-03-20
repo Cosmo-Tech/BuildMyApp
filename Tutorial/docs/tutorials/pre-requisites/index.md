@@ -89,6 +89,20 @@ You will need it to manage and inspect deployed workloads and resources in your 
 
 <article markdown>
 <div class="text" markdown>
+:material-keyboard-return: __Superset__
+
+---
+Apache Superset is an open-source data visualization and business intelligence platform.
+
+You will use it to implement dashboards for the visualization of simulation results.
+<footer markdown>
+[:octicons-arrow-right-24: Superset](./superset.md)
+</footer>
+</div>
+</article>
+
+<article markdown>
+<div class="text" markdown>
 :material-keyboard-return: __Azure CLI__
 
 ---
