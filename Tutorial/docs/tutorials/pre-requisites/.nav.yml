@@ -1,9 +1,9 @@
 nav:
   - index.md
-  - Docker: docker.md
   - Git: git.md
-  - Cosmotech SDK: cosmotech-sdk.md
-  - Azure CLI: az-cli.md
+  - Docker: docker.md
   - Babylon: babylon.md
   - kubectl: kubectl.md
+  - Azure CLI: az-cli.md
   - Terraform: terraform.md
+  - Cosmotech SDK: cosmotech-sdk.md
