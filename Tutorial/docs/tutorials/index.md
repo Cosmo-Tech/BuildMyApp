@@ -18,7 +18,7 @@ All the tutorials you may need for becoming a Solution Integration Expert
 What do you need before even getting started ?
 Everything will be listed here :)
 <footer markdown>
-[:octicons-arrow-right-24: pre-requisites](./pre-requisites/index.md)
+[:octicons-arrow-right-24: Pre-requisites](./pre-requisites/index.md)
 </footer>
 </div>
 </article>

@@ -33,20 +33,6 @@ over multiple environment in `ToolingBins`
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __docker__
-
----
-Docker is required for containerized deployments and development environments.
-
-A working solution requires a docker image to be built and deployed, you will need this tool for that.
-<footer markdown>
-[:octicons-arrow-right-24: docker](./docker.md)
-</footer>
-</div>
-</article>
-
-<article markdown>
-<div class="text" markdown>
 :material-keyboard-return: __Git__
 
 ---
@@ -61,29 +47,14 @@ You will need Git to clone repositories, manage code versions, and collaborate w
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Cosmotech SDK__
+:material-keyboard-return: __docker__
 
 ---
-The Cosmo Tech SDK is the main tool you will use to build your simulator that will be the core of your solution.
+Docker is required for containerized deployments and development environments.
 
-It comes embedded with the CLI `csm-cli` that will allow you to quickly interract with your project and accelerate some
-operations.
+A working solution requires a docker image to be built and deployed, you will need this tool for that.
 <footer markdown>
-[:octicons-arrow-right-24: Cosmotech SDK](./cosmotech-sdk.md)
-</footer>
-</div>
-</article>
-
-<article markdown>
-<div class="text" markdown>
-:material-keyboard-return: __Azure CLI__
-
----
-Azure CLI is required for managing Azure resources from the command line.
-
-You will be using it mostly to connect to azure image repository to send your solutions there.
-<footer markdown>
-[:octicons-arrow-right-24: Azure CLI](./az-cli.md)
+[:octicons-arrow-right-24: docker](./docker.md)
 </footer>
 </div>
 </article>
@@ -118,6 +89,20 @@ You will need it to manage and inspect deployed workloads and resources in your 
 
 <article markdown>
 <div class="text" markdown>
+:material-keyboard-return: __Azure CLI__
+
+---
+Azure CLI is required for managing Azure resources from the command line.
+
+You will be using it mostly to connect to azure image repository to send your solutions there.
+<footer markdown>
+[:octicons-arrow-right-24: Azure CLI](./az-cli.md)
+</footer>
+</div>
+</article>
+
+<article markdown>
+<div class="text" markdown>
 :material-keyboard-return: __Terraform__
 
 ---
@@ -126,6 +111,21 @@ Terraform is an infrastructure-as-code tool for provisioning and managing cloud 
 You will use it to deploy and configure the infrastructure required by your solution.
 <footer markdown>
 [:octicons-arrow-right-24: Terraform](./terraform.md)
+</footer>
+</div>
+</article>
+
+<article markdown>
+<div class="text" markdown>
+:material-keyboard-return: __Cosmotech SDK__
+
+---
+The Cosmo Tech SDK is the main tool you will use to build your simulator that will be the core of your solution.
+
+It comes embedded with the CLI `csm-cli` that will allow you to quickly interract with your project and accelerate some
+operations.
+<footer markdown>
+[:octicons-arrow-right-24: Cosmotech SDK](./cosmotech-sdk.md)
 </footer>
 </div>
 </article>
