@@ -17,7 +17,7 @@ The Build My App tutorial requires specific tools depending on your operating sy
     - Babylon
     - Azure CLI
     - Superset
-    - *CoAL and Dotenv* (1)
+    - *CoAL* (1)
     - any IDE of your choice
 </div>
 1. Nice to have
@@ -260,32 +260,6 @@ csm-data --version
 csm-orc --version
 ```
 
-### Dotenv CLI
-
-Dotenv CLI is a command-line tool for loading environment variables from `.env` files. It's essential for managing configuration and environment variables in development and deployment workflows.
-
-```bash title="Portable dotenv-cli install"
-cd ~/Tooling
-
-# Create a dedicated directory for dotenv-cli
-mkdir dotenv-cli
-cd dotenv-cli
-
-# Create virtual environment
-python3 -m venv .venv
-
-# Activate virtual environment and install dotenv-cli
-source .venv/bin/activate
-pip install dotenv-cli
-deactivate
-
-cd ~/ToolingBins
-ln -s ~/Tooling/dotenv-cli/.venv/bin/dotenv dotenv
-
-# Verify installation
-dotenv --version
-```
-
 ## Environment Variables Setup
 
 During the hands-on session, you'll receive the following environment variables from your instructor:
@@ -322,7 +296,6 @@ Before proceeding to the next step, verify all tools are properly installed:
 - [ ] Azure CLI (`az --version`)
 - [ ] Babylon CLI (`babylon --version`)
 - [ ] CoAL installed (`csm-data --version`, `csm-orc --version`)
-- [ ] Dotenv CLI installed (`dotenv --version`)
 
 ## Troubleshooting
 
