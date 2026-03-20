@@ -497,6 +497,8 @@
       
         
       
+        
+      
     
     
     
@@ -549,29 +551,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/pre-requisites/docker/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Docker
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../tutorials/pre-requisites/git/" class="md-nav__link">
         
   
@@ -595,35 +574,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/pre-requisites/cosmotech-sdk/" class="md-nav__link">
+      <a href="../../tutorials/pre-requisites/docker/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Cosmotech SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tutorials/pre-requisites/az-cli/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Azure CLI
+    Docker
     
   </span>
   
@@ -687,12 +643,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../../tutorials/pre-requisites/superset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Superset
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/pre-requisites/az-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Azure CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../tutorials/pre-requisites/terraform/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Terraform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/pre-requisites/cosmotech-sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cosmotech SDK
     
   </span>
   
@@ -1723,15 +1748,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#environment-variables-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Environment Variables Setup
@@ -1952,15 +1968,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#environment-variables-setup" class="md-nav__link">
     <span class="md-ellipsis">
       Environment Variables Setup
@@ -2033,16 +2040,11 @@
 <li>Babylon</li>
 <li>Azure CLI</li>
 <li>Superset</li>
-<li>jq</li>
-<li><em>CoAL and Dotenv</em> (1)</li>
 <li>any IDE of your choice</li>
 </ul>
 </li>
 </ul>
 </div>
-<ol>
-<li>Nice to have</li>
-</ol>
 <h2 id="wsl-setup-windows-only">WSL Setup (Windows Only)<a class="headerlink" href="#wsl-setup-windows-only" title="Permanent link">&para;</a></h2>
 <p>If you're working on Windows, you'll need to set up Windows Subsystem for Linux with Debian 13 for the best development experience.</p>
 <h3 id="installing-wsl-with-debian-13">Installing WSL with Debian 13<a class="headerlink" href="#installing-wsl-with-debian-13" title="Permanent link">&para;</a></h3>
@@ -2206,54 +2208,6 @@ babylon<span class="w"> </span>--version
 <p class="admonition-title">Babylon Usage</p>
 <p>Babylon will be used to deploy solutions, workspaces, and manage platform resources through YAML configuration files.</p>
 </div>
-<h2 id="additional-tools">Additional Tools<a class="headerlink" href="#additional-tools" title="Permanent link">&para;</a></h2>
-<h3 id="jq">jq<a class="headerlink" href="#jq" title="Permanent link">&para;</a></h3>
-<p>jq is a lightweight and flexible command-line JSON processor. It's essential for parsing, filtering, and manipulating JSON data in shell scripts and command-line workflows.</p>
-<div class="highlight"><span class="filename">install jq</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>jq
-</code></pre></div>
-<h3 id="coal-cosmotech-acceleration-library">CoAL (CosmoTech Acceleration Library)<a class="headerlink" href="#coal-cosmotech-acceleration-library" title="Permanent link">&para;</a></h3>
-<div class="highlight"><span class="filename">Portable CoAL install</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/Tooling
-
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Cosmo-Tech/CosmoTech-Acceleration-Library.git<span class="w"> </span>CoAL
-
-<span class="nb">cd</span><span class="w"> </span>CoAL
-python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
-
-<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
-pip<span class="w"> </span>install<span class="w"> </span>.
-deactivate
-
-<span class="nb">cd</span><span class="w"> </span>~/ToolingBins
-ln<span class="w"> </span>-s<span class="w"> </span>~/Tooling/CoAL/.venv/bin/csm-data<span class="w"> </span>csm-data
-ln<span class="w"> </span>-s<span class="w"> </span>~/Tooling/CoAL/.venv/bin/csm-orc<span class="w"> </span>csm-orc
-
-<span class="c1"># Verify installation</span>
-csm-data<span class="w"> </span>--version
-csm-orc<span class="w"> </span>--version
-</code></pre></div>
-<h3 id="dotenv-cli">Dotenv CLI<a class="headerlink" href="#dotenv-cli" title="Permanent link">&para;</a></h3>
-<p>Dotenv CLI is a command-line tool for loading environment variables from <code>.env</code> files. It's essential for managing configuration and environment variables in development and deployment workflows.</p>
-<div class="highlight"><span class="filename">Portable dotenv-cli install</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/Tooling
-
-<span class="c1"># Create a dedicated directory for dotenv-cli</span>
-mkdir<span class="w"> </span>dotenv-cli
-<span class="nb">cd</span><span class="w"> </span>dotenv-cli
-
-<span class="c1"># Create virtual environment</span>
-python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
-
-<span class="c1"># Activate virtual environment and install dotenv-cli</span>
-<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
-pip<span class="w"> </span>install<span class="w"> </span>dotenv-cli
-deactivate
-
-<span class="nb">cd</span><span class="w"> </span>~/ToolingBins
-ln<span class="w"> </span>-s<span class="w"> </span>~/Tooling/dotenv-cli/.venv/bin/dotenv<span class="w"> </span>dotenv
-
-<span class="c1"># Verify installation</span>
-dotenv<span class="w"> </span>--version
-</code></pre></div>
 <h2 id="environment-variables-setup">Environment Variables Setup<a class="headerlink" href="#environment-variables-setup" title="Permanent link">&para;</a></h2>
 <p>During the hands-on session, you'll receive the following environment variables from your instructor:</p>
 <div class="highlight"><span class="filename">Required environment variables</span><pre><span></span><code><span class="c1"># Babylon connection</span>
@@ -2285,8 +2239,6 @@ Do not proceed without them.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> CosmoTech SDK (<code>csm --version</code>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Azure CLI (<code>az --version</code>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Babylon CLI (<code>babylon --version</code>)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> CoAL installed (<code>csm-data --version</code>, <code>csm-orc --version</code>)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Dotenv CLI installed (<code>dotenv --version</code>)</li>
 </ul>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>

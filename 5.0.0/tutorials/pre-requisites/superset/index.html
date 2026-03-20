@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/tutorials/solution/coal/">
+        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/tutorials/pre-requisites/superset/">
       
       
-        <link rel="prev" href="../etl/">
+        <link rel="prev" href="../kubectl/">
       
       
-        <link rel="next" href="../custom-library/">
+        <link rel="next" href="../az-cli/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>CoAL - Build My App</title>
+        <title>Superset - Build My App</title>
       
     
     
@@ -63,11 +63,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="CoAL - Build My App" >
+        <meta  property="og:title"  content="Superset - Build My App" >
       
         <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/tutorials/solution/coal.png" >
+        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/tutorials/pre-requisites/superset.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -75,15 +75,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/tutorials/solution/coal/" >
+        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/tutorials/pre-requisites/superset/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="CoAL - Build My App" >
+        <meta  name="twitter:title"  content="Superset - Build My App" >
       
         <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/tutorials/solution/coal.png" >
+        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/tutorials/pre-requisites/superset.png" >
       
     
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#coal" class="md-skip">
+        <a href="#superset" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CoAL
+              Superset
             
           </span>
         </div>
@@ -479,8 +479,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -516,15 +518,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../pre-requisites/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -543,7 +545,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Pre-requisites
@@ -559,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre-requisites/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         
   
   
@@ -582,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre-requisites/docker/" class="md-nav__link">
+      <a href="../docker/" class="md-nav__link">
         
   
   
@@ -605,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre-requisites/babylon/" class="md-nav__link">
+      <a href="../babylon/" class="md-nav__link">
         
   
   
@@ -628,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre-requisites/kubectl/" class="md-nav__link">
+      <a href="../kubectl/" class="md-nav__link">
         
   
   
@@ -648,10 +650,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../pre-requisites/superset/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Superset
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -662,6 +686,46 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -674,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre-requisites/az-cli/" class="md-nav__link">
+      <a href="../az-cli/" class="md-nav__link">
         
   
   
@@ -697,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre-requisites/terraform/" class="md-nav__link">
+      <a href="../terraform/" class="md-nav__link">
         
   
   
@@ -720,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre-requisites/cosmotech-sdk/" class="md-nav__link">
+      <a href="../cosmotech-sdk/" class="md-nav__link">
         
   
   
@@ -917,8 +981,6 @@
                 
   
   
-    
-  
   
   
     
@@ -952,15 +1014,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../solution/" class="md-nav__link ">
               
   
   
@@ -979,7 +1041,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Solution
@@ -995,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../csm-orc/" class="md-nav__link">
+      <a href="../../solution/csm-orc/" class="md-nav__link">
         
   
   
@@ -1018,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../run-templates/" class="md-nav__link">
+      <a href="../../solution/run-templates/" class="md-nav__link">
         
   
   
@@ -1041,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../etl/" class="md-nav__link">
+      <a href="../../solution/etl/" class="md-nav__link">
         
   
   
@@ -1061,32 +1123,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    CoAL
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../solution/coal/" class="md-nav__link">
         
   
   
@@ -1097,55 +1137,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#integration-with-run-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration with run templates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best practices
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1158,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom-library/" class="md-nav__link">
+      <a href="../../solution/custom-library/" class="md-nav__link">
         
   
   
@@ -1181,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom-commands/" class="md-nav__link">
+      <a href="../../solution/custom-commands/" class="md-nav__link">
         
   
   
@@ -1835,18 +1826,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#integration-with-run-templates" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Integration with run templates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best practices
+      Installation
     </span>
   </a>
   
@@ -1875,97 +1857,42 @@
                 
                   
 
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <a href="../../../tags/#tag:requirement" class="md-tag">Requirement</a>
+      
+    
+      
+      
+      
+        <a href="../../../tags/#tag:superset" class="md-tag">Superset</a>
+      
+    
+      
+      
+      
+        <a href="../../../tags/#tag:web-app" class="md-tag">Web App</a>
+      
+    
+  </nav>
+
 
   
   
 
 
-<h1 id="coal">CoAL<a class="headerlink" href="#coal" title="Permanent link">&para;</a></h1>
-<p>The Cosmo Tech Acceleration Library (CoAL) provides a comprehensive set of tools and utilities to accelerate the development of solutions based on the Cosmo Tech platform. It offers a unified interface for interacting with Cosmo Tech APIs, managing data, and integrating with various cloud services.</p>
-<p>The main components of CoAL are:</p>
-<ul>
-<li><code>csm-data</code>: a powerful CLI tool designed to help Cosmo Tech solution modelers and integrators interact with multiple systems. It provides ready-to-use commands to send and retrieve data from various systems where a Cosmo Tech API could be integrated.</li>
-</ul>
-<div class="highlight"><span class="filename">Example of csm-data commands</span><pre><span></span><code># Get help on available commands
-csm-data --help
-
-# Get help on specific command groups
-csm-data api --help
-</code></pre></div>
-<ul>
-<li><code>datastore</code>: provides a way to maintain local data during simulations and comes with <code>csm-data</code> commands to easily send those data to target systems.</li>
-</ul>
-<div class="highlight"><span class="filename">Example of datastore commands</span><pre><span></span><code><span class="k">from</span><span class="w"> </span><span class="n">cosmotech</span><span class="p">.</span><span class="n">coal</span><span class="p">.</span><span class="n">store</span><span class="p">.</span><span class="n">store</span><span class="w"> </span><span class="n">import</span><span class="w"> </span><span class="n">Store</span>
-<span class="k">from</span><span class="w"> </span><span class="n">cosmotech</span><span class="p">.</span><span class="n">coal</span><span class="p">.</span><span class="n">store</span><span class="p">.</span><span class="n">native_python</span><span class="w"> </span><span class="n">import</span><span class="w"> </span><span class="n">store_pylist</span>
-
-<span class="o">#</span><span class="w"> </span><span class="k">Initialize</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">reset</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">store</span>
-<span class="n">my_datastore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Store</span><span class="p">(</span><span class="k">reset</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
-
-<span class="o">#</span><span class="w"> </span><span class="k">Create</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="k">data</span>
-<span class="n">my_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="err">{</span><span class="ss">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;bar&quot;</span><span class="err">}</span><span class="p">,</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;barbar&quot;</span><span class="err">}</span><span class="p">,</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;world&quot;</span><span class="err">}</span><span class="p">,</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;bar&quot;</span><span class="err">}</span><span class="p">]</span>
-<span class="n">store_pylist</span><span class="p">(</span><span class="ss">&quot;my_data&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">my_data</span><span class="p">)</span>
-
-<span class="o">#</span><span class="w"> </span><span class="n">Query</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">data</span>
-<span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_datastore</span><span class="p">.</span><span class="n">execute_query</span><span class="p">(</span><span class="ss">&quot;SELECT foo, count(*) as line_count FROM my_data GROUP BY foo&quot;</span><span class="p">).</span><span class="n">to_pylist</span><span class="p">()</span>
-<span class="n">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
-<span class="o">#</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="err">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;line_count&#39;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="err">}</span><span class="p">,</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;barbar&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;line_count&#39;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="err">}</span><span class="p">,</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;world&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;line_count&#39;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="err">}</span><span class="p">]</span>
-</code></pre></div>
-<h2 id="integration-with-run-templates">Integration with run templates<a class="headerlink" href="#integration-with-run-templates" title="Permanent link">&para;</a></h2>
-<p>All CoAL commands can be used in the run templates, by replacing complex custom code with standardized commands:</p>
-<ul>
-<li>Use <code>csm-data run-load-data</code> instead of custom data fetching.</li>
-<li>Use the <code>datastore</code> commands for intermediate processing.</li>
-<li>Use export commands for the final data output.</li>
-</ul>
-<p>CoAL commands can be used to provide shortcuts for common operations, such as:</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>fetch-data</code></td>
-<td>Standard data download template</td>
-</tr>
-<tr>
-<td><code>send-to-adx</code></td>
-<td>Export results to Azure Data Explorer (ADX)</td>
-</tr>
-<tr>
-<td><code>validate-data</code></td>
-<td>Common validation patterns</td>
-</tr>
-</tbody>
-</table>
-<h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Use <code>datastore</code> for intermediate processing instead of files.</li>
-<li>Leverage SQL for data transformations.</li>
-<li>Use batch operations for large datasets.</li>
-<li>Cache frequently accessed data.</li>
-</ul>
-<h3 id="code-organization">Code Organization<a class="headerlink" href="#code-organization" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Use CoAL commands instead of custom implementations.</li>
-<li>Standardize on CoAL patterns across projects.</li>
-<li>Document any custom extensions.</li>
-<li>Keep custom code minimal.</li>
-</ul>
-<h3 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Leverage CoAL's built-in error handling.</li>
-<li>Use proper logging for debugging.</li>
-<li>Implement appropriate retry logic.</li>
-<li>Handle network timeouts gracefully.</li>
-</ul>
+<h1 id="superset">Superset<a class="headerlink" href="#superset" title="Permanent link">&para;</a></h1>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>There is no need for a local installation since Superset is deployed as a standalone service within the platform Kubernetes cluster.</p>
+<p>However, you should verify that you have access to the web interface accessible at the dedicated URL (e.g. https://superset-kubernetes.cosmotech.com/).</p>
+<p>Please check the Superset documentation here after for guidelines on Superset capabilities, dashboard configuration, filters, etc.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>For more detailed information on CoAL, please refer to:</p>
+<p>This reference needs access to the Cosmo Tech Documentation Portal</p>
 <ul>
-<li><a href="https://cosmo-tech.github.io/CosmoTech-Acceleration-Library/latest/">CoAL documentation</a></li>
+<li><a href="https://portal.cosmotech.com/docs//documentation/platform_help/5.0/Content/Platform%20Help/v5/DataStorageManagement/Superset%20Integration%20and%20Configuration.htm">Official BI - Superset Integration and Configuration guide</a></li>
 </ul>
 
 
@@ -2005,7 +1932,7 @@ csm-data api --help
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../etl/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ETL">
+          <a href="../kubectl/" class="md-footer__link md-footer__link--prev" aria-label="Previous: kubectl">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2015,20 +1942,20 @@ csm-data api --help
                 Previous
               </span>
               <div class="md-ellipsis">
-                ETL
+                kubectl
               </div>
             </div>
           </a>
         
         
           
-          <a href="../custom-library/" class="md-footer__link md-footer__link--next" aria-label="Next: Custom library">
+          <a href="../az-cli/" class="md-footer__link md-footer__link--next" aria-label="Next: Azure CLI">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Custom library
+                Azure CLI
               </div>
             </div>
             <div class="md-footer__button md-icon">
