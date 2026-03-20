@@ -17,7 +17,6 @@ The Build My App tutorial requires specific tools depending on your operating sy
     - Babylon
     - Azure CLI
     - Superset
-    - jq
     - *CoAL and Dotenv* (1)
     - any IDE of your choice
 </div>
@@ -237,15 +236,6 @@ babylon --version
     Babylon will be used to deploy solutions, workspaces, and manage platform resources through YAML configuration files.
 
 ## Additional Tools
-
-### jq
-
-jq is a lightweight and flexible command-line JSON processor. It's essential for parsing, filtering, and manipulating JSON data in shell scripts and command-line workflows.
-
-```bash title="install jq"
-sudo apt-get update
-sudo apt-get install -y jq
-```
 
 ### CoAL (CosmoTech Acceleration Library)
 
