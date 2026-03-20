@@ -17,10 +17,8 @@ The Build My App tutorial requires specific tools depending on your operating sy
     - Babylon
     - Azure CLI
     - Superset
-    - *CoAL* (1)
     - any IDE of your choice
 </div>
-1. Nice to have
 
 ## WSL Setup (Windows Only)
 
@@ -235,31 +233,6 @@ babylon --version
 !!! info "Babylon Usage"
     Babylon will be used to deploy solutions, workspaces, and manage platform resources through YAML configuration files.
 
-## Additional Tools
-
-### CoAL (CosmoTech Acceleration Library)
-
-```bash title="Portable CoAL install"
-cd ~/Tooling
-
-git clone https://github.com/Cosmo-Tech/CosmoTech-Acceleration-Library.git CoAL
-
-cd CoAL
-python -m venv .venv
-
-source .venv/bin/activate
-pip install .
-deactivate
-
-cd ~/ToolingBins
-ln -s ~/Tooling/CoAL/.venv/bin/csm-data csm-data
-ln -s ~/Tooling/CoAL/.venv/bin/csm-orc csm-orc
-
-# Verify installation
-csm-data --version
-csm-orc --version
-```
-
 ## Environment Variables Setup
 
 During the hands-on session, you'll receive the following environment variables from your instructor:
@@ -295,7 +268,6 @@ Before proceeding to the next step, verify all tools are properly installed:
 - [ ] CosmoTech SDK (`csm --version`)
 - [ ] Azure CLI (`az --version`)
 - [ ] Babylon CLI (`babylon --version`)
-- [ ] CoAL installed (`csm-data --version`, `csm-orc --version`)
 
 ## Troubleshooting
 
