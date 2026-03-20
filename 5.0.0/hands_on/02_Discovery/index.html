@@ -1851,15 +1851,13 @@ babylon<span class="w"> </span>namespace<span class="w"> </span>use<span class="
 <li><code>workspace_key</code>: A unique key for your workspace, it will be required for some resource creation</li>
 <li><code>workspace_name</code>: The name of your workspace</li>
 <li><code>workspace_description</code>: A description of your workspace</li>
-<li><code>powerbi_workspace_name</code>: A unique name for your powerbi workspace that will host your dashboards</li>
 <li><code>security.accessControlList</code>: Add your mail addresses as <code>Admin</code> to ensure that you will have access to your solution</li>
-<li><code>powerbi_permissions</code>: Add your mail addresses as <code>Admin</code> to ensure that you will be able to upload and configure your power bi dashboards</li>
 <li><code>adx_permissions</code>: You need to use the <code>gen_adx_permissions.sh</code> script to obtain your <code>principal_id</code>, then add yourself as an <code>Admin</code> to execute queries on ADX.</li>
 </ul>
 <p>Once all those changes are made you will be able to run your second babylon command</p>
 <div class="admonition warning">
 <p class="admonition-title">Checkpoint</p>
-<p>Make sure you have your rights for Power BI ready with a Pro subscription and an Azure Entra identity so that you can get your <code>principal_id</code></p>
+<p>Make sure you have an Azure Entra identity so that you can get your <code>principal_id</code></p>
 </div>
 <p>If all your permissions are ready you can run the following command</p>
 <div class="highlight"><span class="filename">My first babylon deployment</span><pre><span></span><code>babylon<span class="w"> </span>apply<span class="w"> </span>project<span class="w"> </span>--solution
