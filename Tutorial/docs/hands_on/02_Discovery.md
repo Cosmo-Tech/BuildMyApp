@@ -49,15 +49,13 @@ You will need to update the following values in `variables.yaml`:
 - `workspace_key`: A unique key for your workspace, it will be required for some resource creation
 - `workspace_name`: The name of your workspace
 - `workspace_description`: A description of your workspace
-- `powerbi_workspace_name`: A unique name for your powerbi workspace that will host your dashboards
 - `security.accessControlList`: Add your mail addresses as `Admin` to ensure that you will have access to your solution
-- `powerbi_permissions`: Add your mail addresses as `Admin` to ensure that you will be able to upload and configure your power bi dashboards
 - `adx_permissions`: You need to use the `gen_adx_permissions.sh` script to obtain your `principal_id`, then add yourself as an `Admin` to execute queries on ADX.
 
 Once all those changes are made you will be able to run your second babylon command
 
 !!! warning "Checkpoint"
-    Make sure you have your rights for Power BI ready with a Pro subscription and an Azure Entra identity so that you can get your `principal_id`
+    Make sure you have an Azure Entra identity so that you can get your `principal_id`
 
 If all your permissions are ready you can run the following command
 

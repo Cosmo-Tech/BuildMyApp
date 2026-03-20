@@ -50,7 +50,7 @@ spec:
 
 ### Sidecars
 
-`sidecars` enable the configuration of external services for the workspace, such as Event Hub, Power BI, etc.
+`sidecars` enable the configuration of external services for the workspace, such as Event Hub, etc.
 
 ### Payload
 

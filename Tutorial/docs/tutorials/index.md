@@ -64,7 +64,7 @@ Work with the CosmoTech API and manage resources.
 :material-keyboard-return: __Web App__
 
 ---
-Frontend, ADX database, and Power BI integration.
+Frontend, ADX database, and Superset integration.
 <footer markdown>
 [:octicons-arrow-right-24: Web App](./web-app/index.md)
 </footer>

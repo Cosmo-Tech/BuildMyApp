@@ -6,11 +6,11 @@ During this Hands On we hope to get you to go through a comprehensive set of obj
 
 - **End-to-End Deployment**: Go from a Simulator to a working deployed Solution in a single day
 - **Complete Development Environment**: Every participant should end with a fully working environment to work on Solutions
-- **Technical Mastery**: Get every participant to have global knowledge on tools and technologies required for Solutions (CoSML, Azure, Power BI, CosmoTech APIs, React, Docker, etc.)
+- **Technical Mastery**: Get every participant to have global knowledge on tools and technologies required for Solutions (CoSML, Azure, Superset, CosmoTech APIs, React, Docker, etc.)
 - **Platform Understanding**: Offer an insight on how the different components of the Solutions and Platform work together
 - **Documentation Navigation**: Give every participant the means to find their way through all documentations when they need in-depth answers
 - **Team Collaboration**: Make participants work as a team throughout the learning process
-- **Practical Skills**: Deploy and configure the complete brewery solution with all components (simulator, web app, Power BI dashboards, ADX database)
+- **Practical Skills**: Deploy and configure the complete brewery solution with all components (simulator, web app, Superset dashboards, ADX database)
 - **Self-Sufficiency**: Build confidence to independently develop and deploy new solutions
 
 ---
@@ -25,7 +25,7 @@ During this Hands On we hope to get you to go through a comprehensive set of obj
 ### Technical Environment Mastery
 - Every participant should end with a fully working environment to work on Solutions
 - Establish a complete development environment with all necessary tools and dependencies
-- Configure and validate connections to Azure services, Power BI, and CosmoTech APIs
+- Configure and validate connections to Azure services, Superset, and CosmoTech APIs
 - Set up local development environment with proper toolchains (Node.js, Docker, Azure CLI, etc.)
 
 ## Technical Skills Development
@@ -52,20 +52,20 @@ During this Hands On we hope to get you to go through a comprehensive set of obj
 - Configure and customize the provided React-based web application
 - Integrate frontend applications with CosmoTech backend services
 - Set up and configure Azure Data Explorer (ADX) databases for data storage
-- Implement Power BI dashboards and reports for data visualization
+- Implement Superset dashboards for data visualization
 - Understand the data flow from simulation results to user interfaces
 
 ### Data Management and Analytics
 - Configure ETL processes for data transformation and loading
 - Work with CSV datasets and understand data modeling requirements
 - Set up ADX database schemas and queries using KQL (Kusto Query Language)
-- Create meaningful visualizations and dashboards in Power BI
+- Create meaningful visualizations and dashboards in Superset
 
 ## Practical Implementation Goals
 
 ### Brewery Solution Mastery
 - Successfully deploy the complete brewery solution end-to-end
-- Configure all components: simulator, solution, workspace, web app, and Power BI
+- Configure all components: simulator, solution, workspace, web app, and data visualization
 - Run successful simulations and view results through the web interface
 - Understand how the brewery business model is represented in the system
 
@@ -81,7 +81,7 @@ During this Hands On we hope to get you to go through a comprehensive set of obj
   - **Development Tools**: Git, Node.js, npm, Docker, VS Code
   - **Cloud Platform**: Azure services, Azure CLI, Azure Data Explorer
   - **CosmoTech Stack**: babylon CLI, CosmoTech API, Solution templates
-  - **Data and Analytics**: Power BI, KQL, CSV data processing
+  - **Data and Analytics**: Superset, KQL, CSV data processing
   - **Web Technologies**: React, JavaScript, REST APIs
 
 ## Integration and System Understanding
@@ -118,7 +118,7 @@ By the end of this hands-on session, each participant will have:
 
 ### Working Deployments
 - A fully deployed brewery solution accessible via web interface
-- Functional Power BI dashboards displaying simulation results
+- Functional Superset dashboards displaying simulation results
 - Configured ADX database with proper data schemas
 - Working development environment for future solution development
 
@@ -126,7 +126,7 @@ By the end of this hands-on session, each participant will have:
 - Customized solution and workspace configuration files
 - Deployed run templates and simulation configurations
 - Functional web application with proper API integrations
-- Power BI reports and dashboards tailored to the brewery use case
+- Superset dashboards tailored to the brewery use case
 
 ### Knowledge and Skills
 - Comprehensive understanding of the CosmoTech platform architecture

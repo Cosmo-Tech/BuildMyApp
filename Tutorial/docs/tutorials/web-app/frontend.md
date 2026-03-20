@@ -6,7 +6,7 @@ The Cosmo Tech web application provides an intuitive interface for:
 - Creating and managing datasets.
 - Configuring and running scenarios.
 - Monitoring simulation execution.
-- Visualizing results through Superset and Power BI dashboards.
+- Visualizing results through Superset dashboards.
 
 This guide walks you through the essential steps to get started with your first simulation.
 
@@ -97,18 +97,18 @@ The web application displays the execution status in real-time:
 
 Once the scenario has finished running successfully, you can:
 
-- View results in the **Dashboards** tab (Superset/Power BI reports).
+- View results in the **Dashboards** tab (Superset visualizations).
 - Analyze data directly in your DB.
 - Compare results with other scenarios.
 - Export data for further analysis.
 
-The simulation output data is automatically sent to Event Hub, ingested into your DB, and made available for visualization in Superset or Power BI dashboards.
+The simulation output data is automatically sent to Event Hub, ingested into your DB, and made available for visualization in Supersetdashboards.
 
 ## Next steps
 
 After running your first scenario:
 
-1. **Explore Results**: navigate to the Dashboards tab to view Superset or Power BI reports
+1. **Explore Results**: navigate to the Dashboards tab to view Superset visualizations
 2. **Create Variations**: clone your scenario and adjust parameters to explore different outcomes
 3. **Compare Scenarios**: use comparison features to analyze differences
 4. **Query Raw Data**: access your DB directly for custom data analysis
@@ -140,7 +140,7 @@ After running your first scenario:
 
 ### Dashboard Not Loading
 - Ensure the scenario has completed successfully.
-- Verify Superset or Power BI workspace permissions.
+- Verify Superset service permissions.
 - Check that your DB contains the expected data.
 - Refresh the dashboard view.
 

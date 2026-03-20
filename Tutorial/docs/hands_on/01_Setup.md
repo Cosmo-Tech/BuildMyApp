@@ -10,13 +10,13 @@ The Build My App tutorial requires specific tools depending on your operating sy
 - **Windows users only**: 
     - WSL (Windows Subsystem for Linux) with Debian 13
     - Docker Desktop
-    - Power BI Desktop
 - **All users**: 
     - Git
     - Docker
     - CosmoTech SDK
     - Babylon
     - Azure CLI
+    - Superset
     - jq
     - *CoAL and Dotenv* (1)
     - any IDE of your choice
@@ -198,6 +198,16 @@ sudo apt install -y azure-cli
 az --version
 ```
 
+## Apache Superset Installation
+
+Apache Superset is an embedded BI tool option for visualizing simulation results in the Cosmo Tech Platform.
+
+### On Debian 13/WSL
+
+There is no need for a local installation since Superset is deployed as a standalone service within the platform Kubernetes cluster.
+
+However, you should verify that you have access to the web interface accessible at the dedicated URL (e.g. https://superset-kubernetes.cosmotech.com/).
+
 ## Babylon CLI Installation
 
 Babylon is the deployment tool for managing CosmoTech platform resources.
@@ -225,21 +235,6 @@ babylon --version
 
 !!! info "Babylon Usage"
     Babylon will be used to deploy solutions, workspaces, and manage platform resources through YAML configuration files.
-
-## Power BI Desktop (Windows Only)
-
-Power BI Desktop is required for creating and editing dashboards that will be embedded in the web application.
-
-### Installing Power BI Desktop
-
-1. Download Power BI Desktop from the [Microsoft Store](https://aka.ms/pbidesktopstore) or [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
-2. Install following the setup wizard
-3. Sign in with your Microsoft account that has Power BI Pro licensing
-
-!!! warning "Power BI Requirements"
-    - Power BI Desktop requires Windows (cannot be installed in WSL)
-    - You need a Power BI Pro license for the hands-on session
-    - Ensure you have access to the Azure tenant used for training
 
 ## Additional Tools
 
@@ -336,7 +331,6 @@ Before proceeding to the next step, verify all tools are properly installed:
 - [ ] CosmoTech SDK (`csm --version`)
 - [ ] Azure CLI (`az --version`)
 - [ ] Babylon CLI (`babylon --version`)
-- [ ] Power BI Desktop installed (Windows users only)
 - [ ] CoAL installed (`csm-data --version`, `csm-orc --version`)
 - [ ] Dotenv CLI installed (`dotenv --version`)
 
@@ -363,7 +357,7 @@ Before going further you can check with your instructor that all permissions nee
 
 - [ ] `OrganizationUser` into the Cosmo Tech API
 - [ ] Member of `BuildMyApp` team in Github
-- [ ] Have a licence for the Power BI service
+- [ ] Have access to the Superset service
 - [ ] Be part of a BuildMyApp channel in Slack (created for your training session)
 
 Once all tools are installed and verified, and you have all the required access, 

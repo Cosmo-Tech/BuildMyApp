@@ -24,7 +24,6 @@ You will be given the following elements by the person in charge of the session 
             - `solution.yaml` a consolidated solution file compatible with the `babylon` cli to deploy resources
             - `workspace.yaml` a consolidated workspace file also compatible with `babylon`
             - `adx/scripts/00-Initialization.kql` a kusto script that will initialize the ADX database tied to the project
-            - `powerbi/Example.pbix` a simple PowerBi dashboard used for example data display configurated for using connection parameters
 - A set of environment variables allowing you to connect to the resources :
     - `BABYLON_ORG_NAME` / `BABYLON_TOKEN` / `BABYLON_SERVICE` the variables used to connect to the Babylon source of truth
     - `AZURE_TENANT_ID` / `AZURE_CLIENT_ID` / `AZURE_CLIENT_SECRET` a triplet of Azure environment variables used to ensure connection to the Cosmo Tech API
@@ -37,7 +36,7 @@ You will be given the following elements by the person in charge of the session 
 
 The person in charge of your session should make sure you have the following accesses ready :
 
-- A Power BI App Licence
+- Access to the Superset service
 - A User right to the API you will be using during the session
 - An azure entra identity on the tenant used for the training
 
