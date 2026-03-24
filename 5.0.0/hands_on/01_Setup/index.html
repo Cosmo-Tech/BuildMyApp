@@ -24,7 +24,7 @@
     
     
       
-        <title>Setting up your environment - Build My App</title>
+        <title>Set up - Build My App</title>
       
     
     
@@ -63,7 +63,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Setting up your environment - Build My App" >
+        <meta  property="og:title"  content="Set up - Build My App" >
       
         <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Setting up your environment - Build My App" >
+        <meta  name="twitter:title"  content="Set up - Build My App" >
       
         <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-your-environment" class="md-skip">
+        <a href="#set-up" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setting up your environment
+              Set up
             
           </span>
         </div>
@@ -301,7 +301,7 @@
   
     
   
-  Hands On Session
+  Hands-On Training
 
         </a>
       </li>
@@ -1571,7 +1571,7 @@
   
   
   <span class="md-ellipsis">
-    Hands On Session
+    Hands-On Training
     
   </span>
   
@@ -1588,7 +1588,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Hands On Session
+            Hands-On Training
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1606,7 +1606,7 @@
   
   
   <span class="md-ellipsis">
-    Objectives of the Build My App Hands On
+    Objectives
     
   </span>
   
@@ -1638,7 +1638,7 @@
   
   
   <span class="md-ellipsis">
-    Setting up your environment
+    Set up
     
   </span>
   
@@ -1651,7 +1651,7 @@
   
   
   <span class="md-ellipsis">
-    Setting up your environment
+    Set up
     
   </span>
   
@@ -1674,6 +1674,15 @@
       In this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ressources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ressources
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#system-requirements" class="md-nav__link">
@@ -1896,6 +1905,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ressources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ressources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#system-requirements" class="md-nav__link">
     <span class="md-ellipsis">
       System Requirements
@@ -2022,15 +2040,65 @@
   
 
 
-<h1 id="setting-up-your-environment">Setting up your environment<a class="headerlink" href="#setting-up-your-environment" title="Permanent link">&para;</a></h1>
-<p>Before you can begin working with the Build My App hands-on session, you need to set up your development environment with the required tools and dependencies. This guide will walk you through installing all necessary components for both Windows and Debian 13/WSL environments.</p>
+<h1 id="set-up">Set up<a class="headerlink" href="#set-up" title="Permanent link">&para;</a></h1>
+<p>During this Hands-On training you will be working with a minimal Cosmo Tech simulator project and will get it to be a fully deployed Solution.</p>
+<p>Before you can begin working with the Build-My-App Hands-On training, you need to set up your development environment with the required tools and dependencies. Once all those are ready you will be able to move on to the full Build-My-App Hands-On training.</p>
+<h2 id="ressources">Ressources<a class="headerlink" href="#ressources" title="Permanent link">&para;</a></h2>
+<p>You will be given the following elements by the person in charge of the Hands-On training:</p>
+<ul>
+<li>A new local project deployment directory:<ul>
+<li>This directory will contain an example deployable project compatible with the example Simulator with which you will be provided</li>
+<li>It contains the following elements :<ul>
+<li>a <code>variables.yaml</code> file that will contain most of the data you will need to update before doing your deployments</li>
+<li>a <code>project/</code> folder containing the configuration for your project deployment<ul>
+<li><code>solution.yaml</code> a consolidated solution file compatible with the <code>babylon</code> CLI to deploy resources</li>
+<li><code>workspace.yaml</code> a consolidated workspace file also compatible with <code>babylon</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A Simulator repository hosted on <a href="https://github.com/Cosmo-Tech/onboarding-brewery-solution">GitHub</a> (on the branch <code>BuildMyApp/Simulator</code>) &lt;--main branch instead !!!!<ul>
+<li>This repository contains a minimal project that is "Deployment Ready" but has no real configuration</li>
+<li>You have the full Conceptual Model of the "Brewery" which is the example project used for Modeling tutorials</li>
+<li>It contains a working Simulator that will simulate the Conceptual Model</li>
+<li>There is 2 minimal run templates :<ul>
+<li>Example : a simple run that will copy a fixed dataset and simulate it</li>
+<li>ETL : an empty run template that just shows logs some environment variables</li>
+</ul>
+</li>
+<li>You have a single Simulation set-up : <code>BusinessApp_Simulation</code><ul>
+<li>It takes a list of CSVs as inputs as found in <code>Simulation/Resource/default_dataset</code> and simulate it</li>
+<li>With no specific configuration of the simulation it will output results in <code>Simulation/Output</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A set of environment variables allowing Babylon to handle the Solution deployment:<ul>
+<li><code>simulator_repository</code>: the solution simulator source repository</li>
+<li><code>cluster_name</code> / <code>cluster_domain</code>: the name and domain of the Kubernetes cloud cluster used for the database</li>
+<li><code>tenant</code>: the tenant id used to host the platform</li>
+</ul>
+</li>
+<li>Access rights ready for the Hands-On training's cloud resources:<ul>
+<li>The Kubernetes cluster (depend de l'ajout dans le groupe Azure BuildMyApp)</li>
+<li>The Superset service (avec Okta)</li>
+<li>The tenant (ensemble avec le cluster)</li>
+<li>an accès "share" l'access à Harbor</li>
+</ul>
+</li>
+</ul>
 <h2 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
-<p>The Build My App tutorial requires specific tools depending on your operating system:</p>
+<p>This guide will walk you through installing all necessary components for both Windows and Debian 13/WSL environments.</p>
+<p>You will need most of the requirements listed on <a href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/tutorials/pre-requisites/">this address</a>.
+Make sure all are ready to use before the start of the Hands-On training.</p>
+<p>The Build-My-App tutorial requires specific tools depending on your operating system:</p>
 <div class="annotate">
 <ul>
 <li><strong>Windows users only</strong>: <ul>
 <li>WSL (Windows Subsystem for Linux) with Debian 13</li>
-<li>Docker Desktop</li>
+<li>Docker Desktop (juste pour la commande docker run)</li>
 </ul>
 </li>
 <li><strong>All users</strong>: <ul>
@@ -2209,7 +2277,7 @@ babylon<span class="w"> </span>--version
 <p>Babylon will be used to deploy solutions, workspaces, and manage platform resources through YAML configuration files.</p>
 </div>
 <h2 id="environment-variables-setup">Environment Variables Setup<a class="headerlink" href="#environment-variables-setup" title="Permanent link">&para;</a></h2>
-<p>During the hands-on session, you'll receive the following environment variables from your instructor:</p>
+<p>During the Hands-On training, you'll receive the following environment variables from your instructor:</p>
 <div class="highlight"><span class="filename">Required environment variables</span><pre><span></span><code><span class="c1"># Babylon connection</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">BABYLON_ORG_NAME</span><span class="o">=</span>&lt;provided_value&gt;
 <span class="nb">export</span><span class="w"> </span><span class="nv">BABYLON_TOKEN</span><span class="o">=</span>&lt;provided_value&gt;
@@ -2226,7 +2294,7 @@ babylon<span class="w"> </span>--version
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Environment Variables</p>
-<p>These variables will be provided by your instructor at the beginning of the hands-on session. 
+<p>These variables will be provided by your instructor at the beginning of the Hands-On training. 
 Do not proceed without them.</p>
 </div>
 <h2 id="verification-checklist">Verification Checklist<a class="headerlink" href="#verification-checklist" title="Permanent link">&para;</a></h2>
@@ -2247,7 +2315,7 @@ Do not proceed without them.</p>
 <p><strong>Azure CLI Authentication</strong>: Run <code>az login</code> to authenticate before using Azure resources.</p>
 <div class="admonition info">
 <p class="admonition-title">Getting Help</p>
-<p>If you encounter issues during setup, document the error messages and ask for assistance during the hands-on session.</p>
+<p>If you encounter issues during setup, document the error messages and ask for assistance during the Hands-On training.</p>
 </div>
 <p>This completes the environment setup.</p>
 <p>Now we need to check that all permission and access needed for the formation are ready for you</p>
@@ -2257,7 +2325,7 @@ Do not proceed without them.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>OrganizationUser</code> into the Cosmo Tech API</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Member of <code>BuildMyApp</code> team in Github</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Have access to the Superset service</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Be part of a BuildMyApp channel in Slack (created for your training session)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Be part of a BuildMyApp channel in Slack (created for your Hands-On training)</li>
 </ul>
 <p>Once all tools are installed and verified, and you have all the required access, 
 you'll be ready to proceed with deploying your first pre-packaged solution in the next section.</p>
@@ -2299,7 +2367,7 @@ you'll be ready to proceed with deploying your first pre-packaged solution in th
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../00_Objectives/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Objectives of the Build My App Hands On">
+          <a href="../00_Objectives/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Objectives">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2309,7 +2377,7 @@ you'll be ready to proceed with deploying your first pre-packaged solution in th
                 Previous
               </span>
               <div class="md-ellipsis">
-                Objectives of the Build My App Hands On
+                Objectives
               </div>
             </div>
           </a>
