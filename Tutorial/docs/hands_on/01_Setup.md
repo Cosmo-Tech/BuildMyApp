@@ -235,7 +235,7 @@ babylon --version
 
 ## Environment Variables Setup
 
-During the hands-on session, you'll receive the following environment variables from your instructor:
+During the Hands-On training, you'll receive the following environment variables from your instructor:
 
 ```bash title="Required environment variables"
 # Babylon connection
@@ -254,7 +254,7 @@ export CSM_API_SCOPE=<provided_value>
 ```
 
 !!! warning "Environment Variables"
-    These variables will be provided by your instructor at the beginning of the hands-on session. 
+    These variables will be provided by your instructor at the beginning of the Hands-On training.
     Do not proceed without them.
 
 ## Verification Checklist
@@ -280,7 +280,7 @@ Before proceeding to the next step, verify all tools are properly installed:
 **Azure CLI Authentication**: Run `az login` to authenticate before using Azure resources.
 
 !!! info "Getting Help"
-    If you encounter issues during setup, document the error messages and ask for assistance during the hands-on session.
+    If you encounter issues during setup, document the error messages and ask for assistance during the Hands-On training.
 
 This completes the environment setup.
 
@@ -293,7 +293,7 @@ Before going further you can check with your instructor that all permissions nee
 - [ ] `OrganizationUser` into the Cosmo Tech API
 - [ ] Member of `BuildMyApp` team in Github
 - [ ] Have access to the Superset service
-- [ ] Be part of a BuildMyApp channel in Slack (created for your training session)
+- [ ] Be part of a Build-My-App channel in Slack (created for your Hands-On training)
 
 Once all tools are installed and verified, and you have all the required access, 
 you'll be ready to proceed with deploying your first pre-packaged solution in the next section.

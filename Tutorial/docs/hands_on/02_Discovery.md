@@ -10,7 +10,7 @@ The babylon state ensures that when you apply changes to your solution and works
 
 So for now we will work on the `build-my-app-training-workspace` repository.
 
-In that repository, you have a file named `variables.yaml` that contains most of the elements you will update during the hands-on session.
+In that repository, you have a file named `variables.yaml` that contains most of the elements you will update during the Hands-On training.
 
 You also have other files that we will come back to later.
 
@@ -64,7 +64,7 @@ babylon apply project --solution
 babylon apply project --workspace
 ```
 
-And once those commands are finished you can go to [the Build My App Web App](https://build-my-app.app.cosmotech.com) and see your workspace ready for you.
+And once those commands are finished you can go to [the Build-My-App Web App](https://build-my-app.app.cosmotech.com) and see your workspace ready for you.
 
 This concludes the first section on deploying a pre-packaged solution. You can explore and experiment with it if you wish.
 

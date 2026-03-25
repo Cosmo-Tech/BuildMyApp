@@ -72,7 +72,7 @@ Any change here will be reflected in the `Simulator/` directory and the `Simulat
 
 !!! warning "Checkpoint"
     By now you have reviewed the model. Any changes you made will be applied in further steps.
-    However, for the rest of this session, we will assume no changes were made.
+    However, for the rest of the Hands-On training, we will assume no changes were made.
 
 ## Building your simulator
 

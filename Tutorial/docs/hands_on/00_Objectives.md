@@ -1,6 +1,6 @@
-# Objectives of the Build My App Hands On
+# Objectives
 
-During this Hands On we hope to get you to go through a comprehensive set of objectives that will transform you from a beginner to a proficient Solution Integration Expert.
+During this Build-My-App Hands-On training you will go through a comprehensive set of objectives from strating with a minimal Cosmo Tech simulator project to accomplishing a fully deployed Solution.
 
 ## Quick Objectives Overview
 
@@ -101,7 +101,7 @@ During this Hands On we hope to get you to go through a comprehensive set of obj
 ## Collaboration and Knowledge Sharing
 
 ### Team-Based Learning
-- Make participants work as a team throughout the hands-on session
+- Make participants work as a team throughout the Hands-On training
 - Collaborate on troubleshooting and problem-solving activities
 - Share knowledge and insights between team members
 - Practice peer review and collaborative development approaches
@@ -110,11 +110,11 @@ During this Hands On we hope to get you to go through a comprehensive set of obj
 - Document learnings and create knowledge base for future reference
 - Share best practices and lessons learned with the group
 - Establish mentoring relationships between more and less experienced participants
-- Create a foundation for ongoing collaboration beyond the training session
+- Create a foundation for ongoing collaboration beyond the Hands-On training
 
 ## Deliverables and Outcomes
 
-By the end of this hands-on session, each participant will have:
+By the end of this Hands-On training, each participant will have:
 
 ### Working Deployments
 - A fully deployed brewery solution accessible via web interface
