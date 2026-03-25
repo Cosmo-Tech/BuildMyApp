@@ -1,10 +1,15 @@
-# Setting up your environment
+# Set up
 
-Before you can begin working with the Build My App hands-on session, you need to set up your development environment with the required tools and dependencies. This guide will walk you through installing all necessary components for both Windows and Debian 13/WSL environments.
+Before following the actual training session, you need to set up your development environment with the required tools and resources.
 
 ## System Requirements
 
-The Build My App tutorial requires specific tools depending on your operating system:
+This guide will walk you through installing all necessary components for both Windows and Debian 13/WSL environments.
+
+You will need most of the requirements listed on [this address](https://cosmo-tech.github.io/BuildMyApp/5.0.0/tutorials/pre-requisites/).
+Make sure all are ready to use before the start of the Hands-On training.
+
+The Build-My-App Hands-On training requires specific tools depending on your operating system:
 
 <div class="annotate" markdown>
 - **Windows users only**: 
@@ -297,3 +302,34 @@ Before going further you can check with your instructor that all permissions nee
 
 Once all tools are installed and verified, and you have all the required access, 
 you'll be ready to proceed with deploying your first pre-packaged solution in the next section.
+
+## Ressources
+
+You will be given the following elements by the person in charge of the Hands-On training:
+
+- A new local project deployment directory:
+    - This directory will contain an example deployable project compatible with the example Simulator with which you will be provided
+    - It contains the following elements :
+        - a `variables.yaml` file that will contain most of the data you will need to update before doing your deployments
+        - a `project/` folder containing the configuration for your project deployment
+            - `solution.yaml` a consolidated solution file compatible with the `babylon` CLI to deploy resources
+            - `workspace.yaml` a consolidated workspace file also compatible with `babylon`
+- A Simulator repository, [onboarding-brewery-solution](https://github.com/Cosmo-Tech/onboarding-brewery-solution), hosted on GitHub.
+    - This repository contains a minimal project that is "Deployment Ready" but has no real configuration
+    - You have the full Conceptual Model of the "Brewery" which is the example project used for Modeling tutorials
+    - It contains a working Simulator that will simulate the Conceptual Model
+    - There are two minimal run templates :
+        - Example: a simple run that will copy a fixed dataset and simulate it
+        - ETL: an empty run template that just shows logs some environment variables
+    - You have a single Simulation set-up : `BusinessApp_Simulation`
+        - It takes a list of CSVs as inputs as found in `Simulation/Resource/default_dataset` and simulate it
+        - With no specific configuration of the simulation it will output results in `Simulation/Output`
+- A set of environment variables allowing Babylon to handle the Solution deployment:
+    - `simulator_repository`: the solution simulator source repository
+    - `cluster_name` / `cluster_domain`: the name and domain of the Kubernetes cloud cluster used for the database
+    - `tenant`: the tenant id used to host the platform
+- Access rights ready for the Hands-On training's cloud resources:
+    - The Kubernetes cluster (added to the BuildMyApp Azure group)
+    - The Superset service (Okta login)
+    - The tenant (together with the access to the cluster)
+    - The Harbor platform (secret shared during the training session)
