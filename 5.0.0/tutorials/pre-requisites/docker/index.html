@@ -295,7 +295,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../hands_on/" class="md-tabs__link">
+        <a href="../../../hands_on/00_Objectives/" class="md-tabs__link">
           
   
   
@@ -1638,10 +1638,6 @@
     
       
         
-          
-        
-      
-        
       
         
       
@@ -1665,9 +1661,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../hands_on/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1676,14 +1671,8 @@
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
@@ -1691,8 +1680,6 @@
             Hands-On Training
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
             
               
                 
@@ -1729,7 +1716,7 @@
   
   
   <span class="md-ellipsis">
-    Set up
+    Setup
     
   </span>
   
@@ -1932,8 +1919,12 @@
 <p>Docker can be installed using Debian's standard packages.</p>
 <div class="highlight"><span class="filename">Install Docker (Debian standard packages)</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker.io<span class="w"> </span>docker-cli
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker.io<span class="w"> </span>docker-cli<span class="w"> </span>-y
+
+<span class="c1"># Add your user to the docker group</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
 </code></pre></div>
+<p>After installation, log out and back in for group changes to take effect.</p>
 <h2 id="add-docker-to-toolingbins">Add Docker to ToolingBins<a class="headerlink" href="#add-docker-to-toolingbins" title="Permanent link">&para;</a></h2>
 <p>Docker is installed system-wide, so no symlink is needed. You can add a symlink for convenience:</p>
 <div class="highlight"><span class="filename">Symlink docker</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/ToolingBins

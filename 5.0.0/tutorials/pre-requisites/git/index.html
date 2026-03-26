@@ -295,7 +295,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../hands_on/" class="md-tabs__link">
+        <a href="../../../hands_on/00_Objectives/" class="md-tabs__link">
           
   
   
@@ -1647,10 +1647,6 @@
     
       
         
-          
-        
-      
-        
       
         
       
@@ -1674,9 +1670,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../hands_on/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -1685,14 +1680,8 @@
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
@@ -1700,8 +1689,6 @@
             Hands-On Training
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
             
               
                 
@@ -1738,7 +1725,7 @@
   
   
   <span class="md-ellipsis">
-    Set up
+    Setup
     
   </span>
   
@@ -1941,8 +1928,15 @@
 <h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
 <p>Git is a distributed version control system widely used for source code management.</p>
 <h2 id="install-git-on-debian">Install Git on Debian<a class="headerlink" href="#install-git-on-debian" title="Permanent link">&para;</a></h2>
-<div class="highlight"><span class="filename">Install Git</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git
+<div class="highlight"><span class="filename">Install Git</span><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git
+
+<span class="c1"># Verify installation</span>
+git<span class="w"> </span>--version
+
+<span class="c1"># Configure Git with your information</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span>
 </code></pre></div>
 <h2 id="add-git-to-toolingbins">Add Git to ToolingBins<a class="headerlink" href="#add-git-to-toolingbins" title="Permanent link">&para;</a></h2>
 <div class="highlight"><span class="filename">Symlink git</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/ToolingBins
@@ -1965,7 +1959,7 @@ ln<span class="w"> </span>-s<span class="w"> </span>/usr/bin/git<span class="w">
 </ul>
 <p>The public key will be saved as <code>~/.ssh/id_ed25519.pub</code>.<br />
 Add this public key to your Git service (GitHub, GitLab, etc.) under SSH keys to enable SSH-based authentication.</p>
-<p>Then to allow your system to use that ssh key to connect to your services you need to add it to your <code>ssh-agent</code></p>
+<p>Then to allow your system to use that ssh key to connect to your services you need to add it to your <code>ssh-agent</code>:</p>
 <div class="highlight"><span class="filename">Add SSH key to ssh-agent</span><pre><span></span><code><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
 ssh-add<span class="w"> </span>~/.ssh/id_ed25519
 </code></pre></div>
