@@ -7,9 +7,13 @@ tags:
 ---
 # Babylon
 
-You will need a working installation of `babylon` further in the tutorials
+Babylon is the deployment tool for managing CosmoTech platform resources.
 
-One easy way to make a portable instalation of it is to execute the following script
+You will need a working installation of `babylon` further in the tutorials.
+
+## Install Babylon on Debian
+
+One easy way to make a portable instalation of it is to execute the following script:
 
 ```bash title="Portable babylon install"
 cd ~/Tooling
@@ -27,6 +31,9 @@ deactivate
 
 cd ~/ToolingBins
 ln -s ~/Tooling/Babylon/.venv/bin/babylon babylon
+
+# Verify installation
+babylon --version
 ```
 
 And know your `babylon` installation is ready and will be made available over multiple environments while not interacting with any other dependency you may have

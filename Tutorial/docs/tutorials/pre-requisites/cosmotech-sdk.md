@@ -6,6 +6,8 @@ tags:
 ---
 # Cosmotech SDK
 
+The CosmoTech SDK is the main tool for building simulators and includes the `csm` CLI.
+
 ## Installation 
 
 As this is the main tool of the Cosmo Tech IP, the installation guide won't be made public here, you can follow the references for the full installation information.

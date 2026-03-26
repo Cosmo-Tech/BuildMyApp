@@ -67,6 +67,8 @@ markdown_extensions:
       permalink: true
       toc_depth: 2
   - def_list
+  - markdown_include.include:
+      base_path: docs
   - mkdocs-click
   - pymdownx.details
   - pymdownx.snippets:
