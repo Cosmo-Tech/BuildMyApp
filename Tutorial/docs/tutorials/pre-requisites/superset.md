@@ -6,7 +6,9 @@ tags:
 ---
 # Superset
 
-## Installation 
+Apache Superset is an embedded BI tool option for visualizing simulation results in the Cosmo Tech Platform.
+
+## Installation
 
 There is no need for a local installation since Superset is deployed as a standalone service within the platform Kubernetes cluster.
 

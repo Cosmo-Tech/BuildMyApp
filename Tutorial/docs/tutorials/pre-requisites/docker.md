@@ -16,8 +16,13 @@ Docker can be installed using Debian's standard packages.
 ```bash title="Install Docker (Debian standard packages)"
 sudo apt-get update
 
-sudo apt-get install docker.io docker-cli
+sudo apt-get install docker.io docker-cli -y
+
+# Add your user to the docker group
+sudo usermod -aG docker $USER
 ```
+
+After installation, log out and back in for group changes to take effect.
 
 ## Add Docker to ToolingBins
 

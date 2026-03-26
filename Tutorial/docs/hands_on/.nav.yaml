@@ -1,2 +1,5 @@
 nav:
-  - "*"
+  - 00_Objectives.md
+  - 01_Setup.md
+  - 02_Discovery.md
+  - 03_Simulator.md
