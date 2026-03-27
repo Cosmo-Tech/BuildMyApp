@@ -1,4 +1,5 @@
 nav:
   - index.md
   - Frontend: frontend.md
+  - Superset: superset.md
   - Power BI: power-bi.md
