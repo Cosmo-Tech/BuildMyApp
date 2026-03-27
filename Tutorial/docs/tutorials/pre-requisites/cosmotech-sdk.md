@@ -12,7 +12,7 @@ The CosmoTech SDK is the main tool for building simulators and includes the `csm
 
 As this is the main tool of the Cosmo Tech IP, the installation guide won't be made public here, you can follow the references for the full installation information.
 
-But the main elements are :
+But the main elements are:
 
 - Install the dependencies
 - Download the installer
