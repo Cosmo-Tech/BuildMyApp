@@ -1,4 +1,4 @@
-# Deploy a pre-packaged Solution
+# Deploy a Solution
 
 During this Hands-On training, you will start from a minimal simulator and progressively transform it into a fully deployed Solution.  
 You will learn to configure environments, work with CosmoTech run templates, build and publish Docker images, and connect everything to ADX and Power BI for visualization.
@@ -90,73 +90,22 @@ You will need to update the following values in `variables.yaml`:
 
 ## 6: Obtaining a simulator
 
-At this point, there is 2 possibilities:
+At this point, there are two possibilities:
 
-1. Using the brewery sample Solution -> https://github.com/Cosmo-Tech/brewery_sample_solution
-2. Creating and using our own simulator
+<h4>1. Using a pre-packaged simulator</h4>
 
+&emsp;Following the instructions of the person in charge of the Hands-On training, go directly to:
 
----
+&emsp;[7: Setting up the Solution - Part 2](./02_Discovery.md/#7-setting-up-the-solution-part-2)
 
-## 7: Making a simulator image
+<h4>2. Building a simulator of your own</h4>
 
-First, let's validate the project flow configuration. Head to your simulator folder and run.
-
-```bash
-csm flow
-```
-
-Now build the image of the simulator
-
-```bash
-csm docker build
-```
-
-Then, we'll tag our image
-
-```bash
-docker tag <SIMULATOR_IMAGE_NAME>:<VERSION_NAME> <CLUSTER_NAME>/<TENANT_NAME>/<IMAGE_NAME>:<VERSION_NAME>
-```
-
-In our case (with brewery), the command will look something like this:
-
-```bash
-docker tag cosmotech/brewerysamplesolution_simulator:latest aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/cosmotech/brewerysamplesolution_simulator:<MY_NAME>
-```
-
-In case of doubt, you can check your images with
-
-```bash
-docker images
-```
+&emsp;Customize an existing Simulator based on the brewery sample Solution:
+[<h4>&emsp;:octicons-arrow-right-24: Customize an existing Simulator</h4>](./Discovery/02_07.2_Simulator.md)
 
 ---
 
-## 8: Pushing to Harbor
-
-Now that our image is nice and ready, we can push it to the cluster container registry, Harbor.
-
-First, login using (for now) the admin access.
-
-```bash
-docker login aks-qa-campaign.azure.platform.cosmotech.com -u tenant-e2e
-```
-
-And push your image.
-
-```bash
-docker push <IMAGE_NAME>:<IMAGE_VERSION>
-```
-
-You can assert that your image is correctly uploaded on this link:
-
-```
-aks-qa-campaign.azure.platform.cosmotech.com
-```
-
----
-
-## 9: Setting up the Solution - Part 2
+## 7: Setting up the Solution - Part 2
 
 Now that we have a usable simulator image, we are able to finish preparing our Solution.
 
@@ -164,7 +113,7 @@ The simulator repository will be our image name and our simulator version will b
 
 ---
 
-## 10: Setting up the WebApp
+## 8: Setting up the WebApp
 
 Setting up the WebApp will be easier than setting up the Solution
 
@@ -186,7 +135,7 @@ You can use your favorite words for the webapp name
 
 ---
 
-## 11: Setting up the security
+## 9: Setting up the security
 
 For this we'll just need to input our email adress as Id and give ourself the admin role:
 
@@ -202,7 +151,7 @@ At the time of writing this guide, the keycloak group system has been implemente
 
 ---
 
-## 12: Running Babylon
+## 10: Running Babylon
 
 Before giving Babylon all the informations we entered and putting it to work. We're going to need to tell it where it should work.
 
@@ -221,7 +170,7 @@ babylon apply project/
 
 ---
 
-## 13: Update info
+## 11: Update info
 
 Now that we have created our desired Cosmotech objects and deployed our personnal webapp, before looking at the detail, we can see how to easily modify the configuration of our objects.
 
@@ -235,7 +184,7 @@ Babylon will automatically compare our local configuration to the existing objec
 
 ---
 
-## 14: Accessing the webapp
+## 12: Accessing the webapp
 
 In the logs of our previous command, babylon provides us with the link to our deployed webapp.
 It should look something like this:
@@ -250,11 +199,11 @@ https://aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/webapp-<WEBAPP_N
 
 > **< < < < < < < < < < < < < < < < < < < < Work in Progress > > > > > > > > > > > > > > > > > > > >**
 > 
-> ## 15: Creating a dataset
+> ## 13: Creating a dataset
 > 
-> ## 16: Creating a Scenario and running it
+> ## 14: Creating a Scenario and running it
 > 
-> ## 17: A brief look at Superset
+> ## 15: A brief look at Superset
 > <br />
 > **< < < < < < < < < < < < < < < < < < < < Work in Progress > > > > > > > > > > > > > > > > > > > >**
 
@@ -262,7 +211,7 @@ https://aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/webapp-<WEBAPP_N
 
 ---
 
-## 18: Cleaning up after yourself
+## 16: Cleaning up after yourself
 
 Once we are done with working on this workshop, we can clean up for the next person and those working on this tenant by running a simple command.
 
