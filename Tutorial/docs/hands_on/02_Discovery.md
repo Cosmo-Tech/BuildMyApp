@@ -90,9 +90,7 @@ You will need to update the following values in `variables.yaml`:
 
 ## Step 7: Obtaining a simulator
 
-WIP: Get the pre-packaged simulator from Harbor...
-
-At this point, there is 2 possibilities :
+At this point, there is 2 possibilities:
 
 1. Using the brewery sample Solution -> https://github.com/Cosmo-Tech/brewery_sample_solution
 2. Creating and using our own simulator
@@ -120,7 +118,7 @@ Then, we'll tag our image
 docker tag <SIMULATOR_IMAGE_NAME>:<VERSION_NAME> <CLUSTER_NAME>/<TENANT_NAME>/<IMAGE_NAME>:<VERSION_NAME>
 ```
 
-In our case (with brewery), the command will look something like this
+In our case (with brewery), the command will look something like this:
 
 ```bash
 docker tag cosmotech/brewerysamplesolution_simulator:latest aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/cosmotech/brewerysamplesolution_simulator:<MY_NAME>
@@ -150,7 +148,7 @@ And push your image.
 docker push <IMAGE_NAME>:<IMAGE_VERSION>
 ```
 
-You can assert that your image is correctly uploaded on this link
+You can assert that your image is correctly uploaded on this link:
 
 ```
 aks-qa-campaign.azure.platform.cosmotech.com
@@ -170,13 +168,13 @@ The simulator repository will be our image name and our simulator version will b
 
 Setting up the WebApp will be easier than setting up the Solution
 
-The variables we'll be touching are :
+The variables we'll be touching are:
 - The cluster name
 - The cluster domain
 - The tenant (with the `tenant-` truncated)
 - The webapp name
 
-We'll be using those variables :
+We'll be using those variables:
 
 ```yaml
 cluster_name: aks-qa-campaign
@@ -190,7 +188,7 @@ You can use your favorite words for the webapp name
 
 ## Step 12: Setting up the security
 
-For this we'll just need to input our email adress as Id and give ourself the admin role
+For this we'll just need to input our email adress as Id and give ourself the admin role:
 
 ```yaml
 security:
@@ -208,7 +206,7 @@ At the time of writing this guide, the keycloak group system has been implemente
 
 Before giving Babylon all the informations we entered and putting it to work. We're going to need to tell it where it should work.
 
-For this, run this command :
+For this, run this command:
 
 ```bash
 babylon namespace use -c <CONTEXT_NAME> -t <TENANT_NAME> -s <STATE_NAME>
@@ -227,7 +225,7 @@ babylon apply project/
 
 Now that we have created our desired Cosmotech objects and deployed our personnal webapp, before looking at the detail, we can see how to easily modify the configuration of our objects.
 
-If we modify any informations in our organization, workspace or Solution, and run again the same command.
+If we modify any informations in our organization, workspace or Solution, and run again the same command:
 
 ```bash
 babylon apply project/
@@ -240,7 +238,7 @@ Babylon will automatically compare our local configuration to the existing objec
 ## Step 15: Accessing the webapp
 
 In the logs of our previous command, babylon provides us with the link to our deployed webapp.
-It should look something like this :
+It should look something like this:
 
 ```
 https://aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/webapp-<WEBAPP_NAME>

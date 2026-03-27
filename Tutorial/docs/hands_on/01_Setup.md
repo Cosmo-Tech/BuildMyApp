@@ -16,7 +16,7 @@ The Build-My-App Hands-On training requires specific tools depending on your ope
 - **Windows users only**: 
     - WSL (Windows Subsystem for Linux) with Debian 13
     - Docker Desktop
-- **All users**: 
+- **All users**:
     - Git
     - Docker
     - CosmoTech SDK
@@ -207,7 +207,7 @@ Before proceeding to the next step, verify all tools are properly installed:
 
 This completes the environment setup.
 
-Now we need to check that all permission and access needed for the formation are ready for you
+Now we need to check that all permission and access needed for the formation are ready for you.
 
 ## Permission check
 
@@ -227,7 +227,7 @@ You will be given the following elements by the person in charge of the Hands-On
 
 - A new local project deployment directory:
     - This directory will contain an example deployable project compatible with the example Simulator with which you will be provided
-    - It contains the following elements :
+    - It contains the following elements:
         - a `variables.yaml` file that will contain most of the data you will need to update before doing your deployments
         - a `project/` folder containing the configuration for your project deployment
             - `solution.yaml` a consolidated solution file compatible with the `babylon` CLI to deploy resources
@@ -236,10 +236,10 @@ You will be given the following elements by the person in charge of the Hands-On
     - This repository contains a minimal project that is "Deployment Ready" but has no real configuration
     - You have the full Conceptual Model of the "Brewery" which is the example project used for Modeling tutorials
     - It contains a working Simulator that will simulate the Conceptual Model
-    - There are two minimal run templates :
+    - There are two minimal run templates:
         - Example: a simple run that will copy a fixed dataset and simulate it
         - ETL: an empty run template that just shows logs some environment variables
-    - You have a single Simulation set-up : `BusinessApp_Simulation`
+    - You have a single Simulation set-up: `BusinessApp_Simulation`
         - It takes a list of CSVs as inputs as found in `Simulation/Resource/default_dataset` and simulate it
         - With no specific configuration of the simulation it will output results in `Simulation/Output`
 - A set of environment variables allowing Babylon to handle the Solution deployment:
