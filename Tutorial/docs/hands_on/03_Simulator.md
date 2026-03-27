@@ -1,8 +1,8 @@
-# Customize an existing Solution
+# Customize an existing Simulator
 
-Now that you have learned how to deploy a Solution, it's time to create your own version.
+Here, we will be using the brewery sample Solution:
 
-You will now switch from working in the `build-my-app-training-workspace` repository to the `onboarding-brewery-solution` repository.
+[https://github.com/Cosmo-Tech/brewery_sample_solution](https://github.com/Cosmo-Tech/brewery_sample_solution)
 
 ## First look at the Simulator
 
@@ -53,7 +53,7 @@ By opening the project in the studio, you can examine the model more closely. If
 The first view you will encounter is the Conceptual Model Editor:
 
 !!! info "Conceptual Model Editor"
-    ![CME-View](../assets/hands_on/03_Simulator/CME.png)
+    ![CME-View](/BuildMyApp/assets/hands_on/03_Simulator/CME.png)
 
 In this view, you can navigate through your model and examine every element that composes it. Since the model is already built in this case, we won't go into detail here.
 
@@ -62,7 +62,7 @@ But remember, any change in this view will be reflected in the `ConceptualModel/
 The second view is the Simulator Editor
 
 !!! info "Simulator Editor"
-    ![SE-View](../assets/hands_on/03_Simulator/SE.png)
+    ![SE-View](/BuildMyApp/assets/hands_on/03_Simulator/SE.png)
 
 In this view, you define how your model can be executed by giving it a name and configuring probes.
 
@@ -74,14 +74,14 @@ Any change here will be reflected in the `Simulator/` directory and the `Simulat
     By now you have reviewed the model. Any changes you made will be applied in further steps.
     However, for the rest of the Hands-On training, we will assume no changes were made.
 
-## Building your simulator
+## Building your simulator in the Studio
 
 We will continue using the Studio for the following steps. However, you can also use equivalent commands with the `csm` CLI that is installed alongside the studio. You'll find the useful commands at the end of this page.
 
 Now let's move to the third view, which is the most important one for today's work: the Solution Builder.
 
 !!! info "Solution Builder"
-    ![SB-View](../assets/hands_on/03_Simulator/SB.png)
+    ![SB-View](/BuildMyApp/assets/hands_on/03_Simulator/SB.png)
 
 In this view, you will configure the build process for the Simulator defined in the previous views.
 
@@ -102,7 +102,7 @@ To define a simulation, you need to complete 2 steps: instantiate a model, then 
 The 4th view will help you instantiate a model: the Instantiated Model Editor.
 
 !!! info "Instantiated Model Editor"
-    ![IME-View](../assets/hands_on/03_Simulator/IME.png)
+    ![IME-View](/BuildMyApp/assets/hands_on/03_Simulator/IME.png)
 
 Here you will define your model instance.
 In the current state any change will be reflected in `Simulation/Resource/CSV_Brewery.ist.xml`
@@ -115,7 +115,7 @@ The CSV_Brewery requires CSV files in a specific folder: `Simulation/Resource/sc
 Now that you have a model, you can simulate it. The 5th and final view of the Studio will help you with this.
 
 !!! info "Simulation Manager"
-    ![SM-View](../assets/hands_on/03_Simulator/SM.png)
+    ![SM-View](/BuildMyApp/assets/hands_on/03_Simulator/SM.png)
 
 In this view, you will define the simulation schedule, specify which instance to use, and configure the consumers that will process the probe data.
 
@@ -143,4 +143,56 @@ csm simulate <Simulation_name>
 csm simulate BusinessApp_Simulation
 ```
 
-The next step will be to use your newly built simulator to integrate and work with external data.
+## Building your simulator in the Studio on the Terminal
+
+First, head to your simulator folder and run.
+
+```bash
+csm flow
+```
+
+Now build the image of the simulator
+
+```bash
+csm docker build
+```
+
+Then, we'll tag our image
+
+```bash
+docker tag <SIMULATOR_IMAGE_NAME>:<VERSION_NAME> <CLUSTER_NAME>/<TENANT_NAME>/<IMAGE_NAME>:<VERSION_NAME>
+```
+
+In our case (with brewery), the command will look something like this:
+
+```bash
+docker tag cosmotech/brewerysamplesolution_simulator:latest aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/cosmotech/brewerysamplesolution_simulator:<MY_NAME>
+```
+
+In case of doubt, you can check your images with
+
+```bash
+docker images
+```
+
+## Pushing to Harbor
+
+Now that our image is nice and ready, we can push it to the cluster container registry, Harbor.
+
+First, login using (for now) the admin access.
+
+```bash
+docker login aks-qa-campaign.azure.platform.cosmotech.com -u tenant-e2e
+```
+
+And push your image.
+
+```bash
+docker push <IMAGE_NAME>:<IMAGE_VERSION>
+```
+
+You can assert that your image is correctly uploaded here:
+
+```
+aks-qa-campaign.azure.platform.cosmotech.com
+```
