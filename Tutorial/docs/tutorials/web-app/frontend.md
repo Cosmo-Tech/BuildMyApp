@@ -10,6 +10,8 @@ The Cosmo Tech web application provides an intuitive interface for:
 
 This guide walks you through the essential steps to get started with your first simulation.
 
+<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_13_FE_Dataset.md -->
+<!-- Should this be modified, 02_13_FE_Dataset.md might need updating too -->
 ## Creating a dataset
 
 Datasets contain the input data that your scenarios will use for simulations. Before running any scenario, you need to create at least one dataset.
@@ -48,6 +50,8 @@ The web application will begin importing your data. Depending on the data size, 
 
 Once the import is complete, your dataset will be ready to use in scenarios.
 
+<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_14_FE_Scenario.md -->
+<!-- Should this be modified, 02_14_FE_Scenario.md might need updating too -->
 ## Creating a scenario
 
 Scenarios define the simulation parameters and execution settings. Each scenario is linked to a dataset and a run template.

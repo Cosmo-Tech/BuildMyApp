@@ -195,19 +195,24 @@ https://aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/webapp-<WEBAPP_N
 
 ---
 
----
+## 13: Creating a dataset
 
-> **< < < < < < < < < < < < < < < < < < < < Work in Progress > > > > > > > > > > > > > > > > > > > >**
-> 
-> ## 13: Creating a dataset
-> 
-> ## 14: Creating a Scenario and running it
-> 
-> ## 15: A brief look at Superset
-> <br />
-> **< < < < < < < < < < < < < < < < < < < < Work in Progress > > > > > > > > > > > > > > > > > > > >**
+&emsp;Create a dataset on the Web App:
+[<h4>&emsp;:octicons-arrow-right-24: Creating a dataset</h4>](./Discovery/02_13_FE_Dataset.md)
 
 ---
+
+## 14: Creating a Scenario and running it
+
+&emsp;Create a scenario and run it on the Web App:
+[<h4>&emsp;:octicons-arrow-right-24: Creating and running a scenario</h4>](./Discovery/02_14_FE_Scenario.md)
+
+---
+
+## 15: Visualizing results
+
+&emsp;Visualize results on the Web App:
+[<h4>&emsp;:octicons-arrow-right-24: A brief look at Superset</h4>](./Discovery/02_15_FE_Superset.md)
 
 ---
 
