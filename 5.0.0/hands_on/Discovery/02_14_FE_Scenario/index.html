@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_7.2_Simulator/">
+        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_14_FE_Scenario/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>02 7.2 Simulator - Build My App</title>
+        <title>Deploy a Solution - Build My App</title>
       
     
     
@@ -59,11 +59,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="02 7.2 Simulator - Build My App" >
+        <meta  property="og:title"  content="Deploy a Solution - Build My App" >
       
         <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_7.2_Simulator.png" >
+        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_14_FE_Scenario.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -71,15 +71,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_7.2_Simulator/" >
+        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_14_FE_Scenario/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="02 7.2 Simulator - Build My App" >
+        <meta  name="twitter:title"  content="Deploy a Solution - Build My App" >
       
         <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_7.2_Simulator.png" >
+        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_14_FE_Scenario.png" >
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#customize-an-existing-simulator" class="md-skip">
+        <a href="#creating-a-scenario" class="md-skip">
           Skip to content
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02 7.2 Simulator
+              Deploy a Solution
             
           </span>
         </div>
@@ -1685,8 +1685,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1695,72 +1693,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-look-at-the-simulator" class="md-nav__link">
+  <a href="#creating-a-scenario" class="md-nav__link">
     <span class="md-ellipsis">
-      First look at the Simulator
+      Creating a scenario
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#look-up-using-the-studio" class="md-nav__link">
+  <a href="#running-a-scenario" class="md-nav__link">
     <span class="md-ellipsis">
-      Look up using the Studio
+      Running a scenario
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-your-simulator-in-the-studio" class="md-nav__link">
+  <a href="#back" class="md-nav__link">
     <span class="md-ellipsis">
-      Building your simulator in the Studio
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#defining-and-running-simulations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defining and running simulations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-csm-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Useful csm commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-your-simulator-in-the-studio-on-the-terminal" class="md-nav__link">
-    <span class="md-ellipsis">
-      Building your simulator in the Studio on the Terminal
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pushing-to-harbor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pushing to Harbor
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next
+      Back
     </span>
   </a>
   
@@ -1785,158 +1738,55 @@
   
 
 
+  <h1>Deploy a Solution</h1>
+
 <!-- Insert the instructions from the tutorials section -->
-<h1 id="customize-an-existing-simulator">Customize an existing Simulator<a class="headerlink" href="#customize-an-existing-simulator" title="Permanent link">&para;</a></h1>
-<p>Here, we will be using the brewery sample Solution:</p>
-<p><a href="https://github.com/Cosmo-Tech/brewery_sample_solution">https://github.com/Cosmo-Tech/brewery_sample_solution</a></p>
-<h2 id="first-look-at-the-simulator">First look at the Simulator<a class="headerlink" href="#first-look-at-the-simulator" title="Permanent link">&para;</a></h2>
-<p>Let's start by examining the simulator and reviewing the main files used to define a Simulation.</p>
-<div class="highlight"><span class="filename">Project content</span><pre><span></span><code>.
-├── code
-│   └── run_templates
-│       ├── ETL
-│       │   └── run.json
-│       ├── Example
-│       │   └── run.json
-│       └── scripts
-│           ├── display_csm_env.py
-│           ├── get_logger.py
-│           ├── __init__.py
-│           ├── run_simulator.py
-│           └── use_default_dataset.py
-├── ConceptualModel
-│   └── MyBrewery.csm.xml
-├── LICENSE
-├── project.csm
-├── README.md
-├── Simulation
-│   ├── BusinessApp_Simulation.sml.xml
-│   └── Resource
-│       ├── CSV_Brewery.ist.xml
-│       └── default_dataset
-│           ├── arc_to_Customer.csv
-│           ├── Bar.csv
-│           └── Customer.csv
-└── Simulator
-    └── Simulator.sor.xml
-</code></pre></div>
-<p>In this project, 4 files are of primary importance:</p>
+<h2 id="creating-a-scenario">Creating a scenario<a class="headerlink" href="#creating-a-scenario" title="Permanent link">&para;</a></h2>
+<p>Scenarios define the simulation parameters and execution settings. Each scenario is linked to a dataset and a run template.</p>
+<h3 id="step-1-navigate-to-the-scenario-view">Step 1: Navigate to the Scenario view<a class="headerlink" href="#step-1-navigate-to-the-scenario-view" title="Permanent link">&para;</a></h3>
+<p>When you first access a workspace with no scenarios, you'll see an empty scenario view.</p>
+<p><img alt="No Scenario" src="../../../assets/webapp/empty_scenario.png" /></p>
+<h3 id="step-2-configure-scenario-details">Step 2: Configure scenario details<a class="headerlink" href="#step-2-configure-scenario-details" title="Permanent link">&para;</a></h3>
+<p>Click the <strong>Create Scenario</strong> button and provide the configuration:</p>
 <ul>
-<li><code>ConceptualModel/MyBrewery.csm.xml</code>: This contains the actual model of the simulation, with all the model and logic of the Simulation</li>
-<li><code>Simulator/Simulator.sor.xml</code>: This defines the Simulator itself which is a combination of a Conceptual Model and probes that will be able to export data during a simulation</li>
-<li><code>Simulation/BusinessApp_Simulation.sml.xml</code>: This is the description of a simulation, that will instantiate entities and then define how the simulation runs, accompanied by the definition of Consumers that will consume the data from the probes and export them in different formats</li>
-<li><code>Simulation/Resource/CSV_Brewery.ist.xml</code>: This is an instance of a simulation that will make use of CSV files to generate entities and add them to the simulation</li>
+<li><strong>Name</strong>: a descriptive name for your scenario.</li>
+<li><strong>Description</strong>: optional details about what this scenario simulates.</li>
+<li><strong>Run Template</strong>: select the type of simulation to execute.</li>
+<li><strong>Dataset</strong>: choose the dataset created in the previous steps.</li>
+<li><strong>Parameters</strong>: configure scenario-specific parameters based on the selected run template.</li>
 </ul>
-<h2 id="look-up-using-the-studio">Look up using the Studio<a class="headerlink" href="#look-up-using-the-studio" title="Permanent link">&para;</a></h2>
-<p>By opening the project in the studio, you can examine the model more closely. If you completed the Brewery modeling tutorial, you will already be familiar with this model.</p>
-<p>The first view you will encounter is the Conceptual Model Editor:</p>
-<div class="admonition info">
-<p class="admonition-title">Conceptual Model Editor</p>
-<p><img alt="CME-View" src="/BuildMyApp/assets/hands_on/03_Simulator/CME.png" /></p>
-</div>
-<p>In this view, you can navigate through your model and examine every element that composes it. Since the model is already built in this case, we won't go into detail here.</p>
-<p>But remember, any change in this view will be reflected in the <code>ConceptualModel/MyBrewery.csm.xml</code> file.</p>
-<p>The second view is the Simulator Editor</p>
-<div class="admonition info">
-<p class="admonition-title">Simulator Editor</p>
-<p><img alt="SE-View" src="/BuildMyApp/assets/hands_on/03_Simulator/SE.png" /></p>
-</div>
-<p>In this view, you define how your model can be executed by giving it a name and configuring probes.</p>
-<p>Probes are the primary method for accessing data outside your simulator, enabling you to retrieve results and utilize the probe data.</p>
-<p>Any change here will be reflected in the <code>Simulator/</code> directory and the <code>Simulator.sor.xml</code> file</p>
-<div class="admonition warning">
-<p class="admonition-title">Checkpoint</p>
-<p>By now you have reviewed the model. Any changes you made will be applied in further steps.
-However, for the rest of the Hands-On training, we will assume no changes were made.</p>
-</div>
-<h2 id="building-your-simulator-in-the-studio">Building your simulator in the Studio<a class="headerlink" href="#building-your-simulator-in-the-studio" title="Permanent link">&para;</a></h2>
-<p>We will continue using the Studio for the following steps. However, you can also use equivalent commands with the <code>csm</code> CLI that is installed alongside the studio. You'll find the useful commands at the end of this page.</p>
-<p>Now let's move to the third view, which is the most important one for today's work: the Solution Builder.</p>
-<div class="admonition info">
-<p class="admonition-title">Solution Builder</p>
-<p><img alt="SB-View" src="/BuildMyApp/assets/hands_on/03_Simulator/SB.png" /></p>
-</div>
-<p>In this view, you will configure the build process for the Simulator defined in the previous views.</p>
-<p>Once the build is successful, you must restart the Studio for the changes to take effect.</p>
-<p>The content generated by the build process will be placed in a <code>Generated</code> folder by default.</p>
-<div class="admonition warning">
-<p class="admonition-title">Checkpoint</p>
-<p>By now you should have a built simulator, you can check if it is working by running <code>Generated/Build/Bin/csm-simulator --version</code>.
-This command will return you the info it has on the simulator you built.</p>
-</div>
-<h2 id="defining-and-running-simulations">Defining and running simulations<a class="headerlink" href="#defining-and-running-simulations" title="Permanent link">&para;</a></h2>
-<p>Now that you have a working simulator, it's time to define and run some simulations.</p>
-<p>To define a simulation, you need to complete 2 steps: instantiate a model, then simulate it.</p>
-<p>The 4th view will help you instantiate a model: the Instantiated Model Editor.</p>
-<div class="admonition info">
-<p class="admonition-title">Instantiated Model Editor</p>
-<p><img alt="IME-View" src="/BuildMyApp/assets/hands_on/03_Simulator/IME.png" /></p>
-</div>
-<p>Here you will define your model instance.
-In the current state any change will be reflected in <code>Simulation/Resource/CSV_Brewery.ist.xml</code></p>
-<p>The CSV_Brewery requires CSV files in a specific folder: <code>Simulation/Resource/scenariorun-data</code>. This folder doesn't exist yet, but you can create it by copying <code>Simulation/Resource/default_dataset</code> for now.</p>
-<div class="admonition warning">
-<p class="admonition-title">Checkpoint</p>
-<p>Make sure to have created the <code>scenariorun-data</code> folder or the next step won't work.</p>
-</div>
-<p>Now that you have a model, you can simulate it. The 5th and final view of the Studio will help you with this.</p>
-<div class="admonition info">
-<p class="admonition-title">Simulation Manager</p>
-<p><img alt="SM-View" src="/BuildMyApp/assets/hands_on/03_Simulator/SM.png" /></p>
-</div>
-<p>In this view, you will define the simulation schedule, specify which instance to use, and configure the consumers that will process the probe data.</p>
-<p>Changes in this view will be reflected in <code>Simulation/BusinessApp_Simulation.sml.xml</code></p>
-<p>If everything has worked correctly up to this point, you can run the simulation and output data should be generated in the <code>Simulation/Output</code> folder.</p>
-<p>This concludes our exploration of the model.</p>
-<h2 id="useful-csm-commands">Useful <code>csm</code> commands<a class="headerlink" href="#useful-csm-commands" title="Permanent link">&para;</a></h2>
-<div class="highlight"><span class="filename">csm commands</span><pre><span></span><code><span class="c1"># To quickly build a simulator</span>
-csm<span class="w"> </span>flow
-
-<span class="c1"># The previous command is equivalent to running the following ones</span>
-csm<span class="w"> </span>generate<span class="w">       </span><span class="c1"># Generate the code base</span>
-csm<span class="w"> </span>configure<span class="w">      </span><span class="c1"># Configure the build process</span>
-csm<span class="w"> </span>build<span class="w">          </span><span class="c1"># Run the build</span>
-
-<span class="c1"># Once you have build a simulator you can easily run it</span>
-csm<span class="w"> </span>simulate<span class="w"> </span>&lt;Simulation_name&gt;
-<span class="c1"># Simulation_name is the base name of any .sml.xml file you created, so here you could run the following command</span>
-
-csm<span class="w"> </span>simulate<span class="w"> </span>BusinessApp_Simulation
-</code></pre></div>
-<h2 id="building-your-simulator-in-the-studio-on-the-terminal">Building your simulator in the Studio on the Terminal<a class="headerlink" href="#building-your-simulator-in-the-studio-on-the-terminal" title="Permanent link">&para;</a></h2>
-<p>First, head to your simulator folder and run.</p>
-<div class="highlight"><pre><span></span><code>csm<span class="w"> </span>flow
-</code></pre></div>
-<p>Now build the image of the simulator</p>
-<div class="highlight"><pre><span></span><code>csm<span class="w"> </span>docker<span class="w"> </span>build
-</code></pre></div>
-<p>Then, we'll tag our image</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>&lt;SIMULATOR_IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;<span class="w"> </span>&lt;CLUSTER_NAME&gt;/&lt;TENANT_NAME&gt;/&lt;IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;
-</code></pre></div>
-<p>In our case (with brewery), the command will look something like this:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>cosmotech/brewerysamplesolution_simulator:latest<span class="w"> </span>aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/cosmotech/brewerysamplesolution_simulator:&lt;MY_NAME&gt;
-</code></pre></div>
-<p>In case of doubt, you can check your images with</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images
-</code></pre></div>
-<h2 id="pushing-to-harbor">Pushing to Harbor<a class="headerlink" href="#pushing-to-harbor" title="Permanent link">&para;</a></h2>
-<p>Now that our image is nice and ready, we can push it to the cluster container registry, Harbor.</p>
-<p>First, login using (for now) the admin access.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>aks-qa-campaign.azure.platform.cosmotech.com<span class="w"> </span>-u<span class="w"> </span>tenant-e2e
-</code></pre></div>
-<p>And push your image.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>push<span class="w"> </span>&lt;IMAGE_NAME&gt;:&lt;IMAGE_VERSION&gt;
-</code></pre></div>
-<p>You can assert that your image is correctly uploaded here:</p>
-<div class="highlight"><pre><span></span><code>aks-qa-campaign.azure.platform.cosmotech.com
-</code></pre></div>
+<p><img alt="Create Scenario" src="../../../assets/webapp/create_scenario.png" /></p>
+<h3 id="step-3-scenario-created">Step 3: Scenario created<a class="headerlink" href="#step-3-scenario-created" title="Permanent link">&para;</a></h3>
+<p>Once created, your scenario is ready to run. You can modify parameters or execute the simulation.</p>
+<p><img alt="Created Scenario" src="../../../assets/webapp/created_scenario.png" /></p>
+<h2 id="running-a-scenario">Running a scenario<a class="headerlink" href="#running-a-scenario" title="Permanent link">&para;</a></h2>
+<h3 id="execute-the-simulation">Execute the simulation<a class="headerlink" href="#execute-the-simulation" title="Permanent link">&para;</a></h3>
+<p>Click the <strong>Run</strong> button to start the simulation. The scenario will be submitted to the execution queue.</p>
+<h3 id="monitor-progress">Monitor progress<a class="headerlink" href="#monitor-progress" title="Permanent link">&para;</a></h3>
+<p>The web application displays the execution status in real-time:</p>
+<ul>
+<li><strong>Pending</strong>: waiting for resources.</li>
+<li><strong>Running</strong>: simulation in progress.</li>
+<li><strong>Successful</strong>: completed successfully.</li>
+<li><strong>Failed</strong>: execution encountered an error.</li>
+</ul>
+<p><img alt="Running Scenario" src="../../../assets/webapp/running_scenario.png" /></p>
+<h3 id="view-results">View results<a class="headerlink" href="#view-results" title="Permanent link">&para;</a></h3>
+<p>Once the scenario has finished running successfully, you can:</p>
+<ul>
+<li>View results in the <strong>Dashboards</strong> tab (Superset visualizations).</li>
+<li>Analyze data directly in your DB.</li>
+<li>Compare results with other scenarios.</li>
+<li>Export data for further analysis.</li>
+</ul>
+<p>The simulation output data is automatically sent to Event Hub, ingested into your DB, and made available for visualization in Supersetdashboards.</p>
 <main class="grid">
 <div align="right" class="text">
-<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<h2 id="back">Back<a class="headerlink" href="#back" title="Permanent link">&para;</a></h2>
 <p>To continue, go back to:&emsp;
   </p>
 <footer>
-<p><a href="../../02_Discovery/#step-8-setting-up-the-solution-part-2"><h3>Deploy a solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
+<p><a href="../../02_Discovery/#15-visualizing-results"><h3>Deploy a solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
   </p>
 </footer>
 </div>

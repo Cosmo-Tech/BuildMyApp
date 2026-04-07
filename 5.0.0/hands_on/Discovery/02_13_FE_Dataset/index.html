@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Setup/docker/">
+        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_13_FE_Dataset/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Docker - Build My App</title>
+        <title>Deploy a Solution - Build My App</title>
       
     
     
@@ -59,11 +59,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Docker - Build My App" >
+        <meta  property="og:title"  content="Deploy a Solution - Build My App" >
       
         <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Setup/docker.png" >
+        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_13_FE_Dataset.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -71,15 +71,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Setup/docker/" >
+        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_13_FE_Dataset/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Docker - Build My App" >
+        <meta  name="twitter:title"  content="Deploy a Solution - Build My App" >
       
         <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Setup/docker.png" >
+        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_13_FE_Dataset.png" >
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker" class="md-skip">
+        <a href="#creating-a-dataset" class="md-skip">
           Skip to content
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker
+              Deploy a Solution
             
           </span>
         </div>
@@ -1685,8 +1685,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1695,54 +1693,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-docker-on-debian" class="md-nav__link">
+  <a href="#creating-a-dataset" class="md-nav__link">
     <span class="md-ellipsis">
-      Install Docker on Debian
+      Creating a dataset
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-docker-to-toolingbins" class="md-nav__link">
+  <a href="#back" class="md-nav__link">
     <span class="md-ellipsis">
-      Add Docker to ToolingBins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#update-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update Docker
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#previous" class="md-nav__link">
-    <span class="md-ellipsis">
-      Previous
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next
+      Back
     </span>
   </a>
   
@@ -1767,52 +1729,41 @@
   
 
 
+  <h1>Deploy a Solution</h1>
+
 <!-- Insert the instructions from the tutorials section -->
-<h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
-<p>Docker is required for containerized deployments and running many development environments.</p>
-<h2 id="install-docker-on-debian">Install Docker on Debian<a class="headerlink" href="#install-docker-on-debian" title="Permanent link">&para;</a></h2>
-<p>Docker can be installed using Debian's standard packages.</p>
-<div class="highlight"><span class="filename">Install Docker (Debian standard packages)</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker.io<span class="w"> </span>docker-cli<span class="w"> </span>-y
-
-<span class="c1"># Add your user to the docker group</span>
-sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
-</code></pre></div>
-<p>After installation, log out and back in for group changes to take effect.</p>
-<p>Verify the installation:</p>
-<div class="highlight"><span class="filename">Check the Docker version</span><pre><span></span><code>docker<span class="w"> </span>version
-</code></pre></div>
-<h2 id="add-docker-to-toolingbins">Add Docker to ToolingBins<a class="headerlink" href="#add-docker-to-toolingbins" title="Permanent link">&para;</a></h2>
-<p>Docker is installed system-wide, so no symlink is needed. You can add a symlink for convenience:</p>
-<div class="highlight"><span class="filename">Symlink docker</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/ToolingBins
-ln<span class="w"> </span>-s<span class="w"> </span>/usr/bin/docker<span class="w"> </span>docker
-</code></pre></div>
-<h2 id="update-docker">Update Docker<a class="headerlink" href="#update-docker" title="Permanent link">&para;</a></h2>
-<p>To update Docker, run:</p>
-<div class="highlight"><span class="filename">Update Docker (Debian standard packages)</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>--only-upgrade<span class="w"> </span>docker.io<span class="w"> </span>docker-cli
-</code></pre></div>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="creating-a-dataset">Creating a dataset<a class="headerlink" href="#creating-a-dataset" title="Permanent link">&para;</a></h2>
+<p>Datasets contain the input data that your scenarios will use for simulations. Before running any scenario, you need to create at least one dataset.</p>
+<h3 id="step-1-navigate-to-the-dataset-view">Step 1: Navigate to the Dataset view<a class="headerlink" href="#step-1-navigate-to-the-dataset-view" title="Permanent link">&para;</a></h3>
+<p>When you first access a workspace with no datasets, you'll see an empty dataset view.</p>
+<p><img alt="No Dataset" src="../../../assets/webapp/empty_dataset.png" /></p>
+<h3 id="step-2-enter-dataset-information">Step 2: Enter dataset information<a class="headerlink" href="#step-2-enter-dataset-information" title="Permanent link">&para;</a></h3>
+<p>Click the <strong>Create Dataset</strong> button and provide the basic information:</p>
 <ul>
-<li><a href="https://docs.docker.com/">Docker Official Documentation</a></li>
-<li><a href="https://docs.docker.com/get-started/">Docker Getting Started Guide</a></li>
-<li><a href="https://docs.docker.com/engine/reference/commandline/docker/">Docker CLI Reference</a></li>
-<li><a href="https://docs.docker.com/compose/">Docker Compose Documentation</a></li>
+<li><strong>Name</strong>: a descriptive name for your dataset.</li>
+<li><strong>Description</strong>: optional details about the dataset contents.</li>
+<li><strong>Tags</strong>: optional labels for organization.</li>
 </ul>
+<p><img alt="Creating Dataset - Basic Information" src="../../../assets/webapp/create_dataset.png" /></p>
+<h3 id="step-3-configure-data-source">Step 3: Configure data source<a class="headerlink" href="#step-3-configure-data-source" title="Permanent link">&para;</a></h3>
+<p>Select your data source type and configure the connection parameters:</p>
+<ul>
+<li><strong>Source type</strong>: choose from available connectors (ADT, Azure Storage, Local File, etc.).</li>
+<li><strong>Connection parameters</strong>: provide authentication and location details.</li>
+<li><strong>Data mapping</strong>: configure how data should be imported.</li>
+</ul>
+<p><img alt="Creating Dataset - Source Configuration" src="../../../assets/webapp/create_dataset_2.png" /></p>
+<h3 id="step-4-dataset-import">Step 4: Dataset import<a class="headerlink" href="#step-4-dataset-import" title="Permanent link">&para;</a></h3>
+<p>The web application will begin importing your data. Depending on the data size, this may take a few moments.</p>
+<p><img alt="Dataset Created Successfully" src="../../../assets/webapp/created_dataset.png" /></p>
+<p>Once the import is complete, your dataset will be ready to use in scenarios.</p>
 <main class="grid">
-<div class="text">
-<h2 id="previous">Previous<a class="headerlink" href="#previous" title="Permanent link">&para;</a></h2>
-<footer>
-<p><a href="../git/"><h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.78 19.03a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06l6.25-6.25a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L5.81 11.5h14.44a.75.75 0 0 1 0 1.5H5.81l4.97 4.97a.75.75 0 0 1 0 1.06"/></svg></span> Git</h3></a>
-  </p>
-</footer>
-</div>
 <div align="right" class="text">
-<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<h2 id="back">Back<a class="headerlink" href="#back" title="Permanent link">&para;</a></h2>
+<p>To continue, go back to:&emsp;
+  </p>
 <footer>
-<p><a href="../babylon/"><h3>Babylon <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
+<p><a href="../../02_Discovery/#14-creating-a-scenario-and-running-it"><h3>Deploy a solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
   </p>
 </footer>
 </div>

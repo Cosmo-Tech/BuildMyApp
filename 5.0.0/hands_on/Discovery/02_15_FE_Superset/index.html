@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Setup/docker/">
+        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_15_FE_Superset/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Docker - Build My App</title>
+        <title>02 15 FE Superset - Build My App</title>
       
     
     
@@ -59,11 +59,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Docker - Build My App" >
+        <meta  property="og:title"  content="02 15 FE Superset - Build My App" >
       
         <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Setup/docker.png" >
+        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_15_FE_Superset.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -71,15 +71,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Setup/docker/" >
+        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_15_FE_Superset/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Docker - Build My App" >
+        <meta  name="twitter:title"  content="02 15 FE Superset - Build My App" >
       
         <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Setup/docker.png" >
+        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_15_FE_Superset.png" >
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker" class="md-skip">
+        <a href="#superset" class="md-skip">
           Skip to content
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker
+              02 15 FE Superset
             
           </span>
         </div>
@@ -1695,27 +1695,72 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-docker-on-debian" class="md-nav__link">
+  <a href="#why-use-superset" class="md-nav__link">
     <span class="md-ellipsis">
-      Install Docker on Debian
+      Why use Superset?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-docker-to-toolingbins" class="md-nav__link">
+  <a href="#common-data-tables" class="md-nav__link">
     <span class="md-ellipsis">
-      Add Docker to ToolingBins
+      Common data tables
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-docker" class="md-nav__link">
+  <a href="#creating-visualizations" class="md-nav__link">
     <span class="md-ellipsis">
-      Update Docker
+      Creating visualizations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-sql-in-superset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SQL in Superset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedding-dashboards-in-the-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embedding dashboards in the web application
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic filtering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
     </span>
   </a>
   
@@ -1731,18 +1776,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#previous" class="md-nav__link">
+  <a href="#back" class="md-nav__link">
     <span class="md-ellipsis">
-      Previous
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next
+      Back
     </span>
   </a>
   
@@ -1768,51 +1804,128 @@
 
 
 <!-- Insert the instructions from the tutorials section -->
-<h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
-<p>Docker is required for containerized deployments and running many development environments.</p>
-<h2 id="install-docker-on-debian">Install Docker on Debian<a class="headerlink" href="#install-docker-on-debian" title="Permanent link">&para;</a></h2>
-<p>Docker can be installed using Debian's standard packages.</p>
-<div class="highlight"><span class="filename">Install Docker (Debian standard packages)</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker.io<span class="w"> </span>docker-cli<span class="w"> </span>-y
-
-<span class="c1"># Add your user to the docker group</span>
-sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
-</code></pre></div>
-<p>After installation, log out and back in for group changes to take effect.</p>
-<p>Verify the installation:</p>
-<div class="highlight"><span class="filename">Check the Docker version</span><pre><span></span><code>docker<span class="w"> </span>version
-</code></pre></div>
-<h2 id="add-docker-to-toolingbins">Add Docker to ToolingBins<a class="headerlink" href="#add-docker-to-toolingbins" title="Permanent link">&para;</a></h2>
-<p>Docker is installed system-wide, so no symlink is needed. You can add a symlink for convenience:</p>
-<div class="highlight"><span class="filename">Symlink docker</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/ToolingBins
-ln<span class="w"> </span>-s<span class="w"> </span>/usr/bin/docker<span class="w"> </span>docker
-</code></pre></div>
-<h2 id="update-docker">Update Docker<a class="headerlink" href="#update-docker" title="Permanent link">&para;</a></h2>
-<p>To update Docker, run:</p>
-<div class="highlight"><span class="filename">Update Docker (Debian standard packages)</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>--only-upgrade<span class="w"> </span>docker.io<span class="w"> </span>docker-cli
-</code></pre></div>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h1 id="superset">Superset<a class="headerlink" href="#superset" title="Permanent link">&para;</a></h1>
+<p>Embed and use Apache Superset dashboards in your web application to visualize and analyze simulation data stored in your database.</p>
+<p>Apache Superset is an open-source data exploration and visualization platform that enables you to create interactive dashboards and charts from your data. When integrated with your database, Superset provides a flexible and powerful solution for understanding and representing large volumes of simulation data generated by the CosmoTech platform.</p>
+<h2 id="why-use-superset">Why use Superset?<a class="headerlink" href="#why-use-superset" title="Permanent link">&para;</a></h2>
+<p>Superset offers several advantages for data visualization:</p>
 <ul>
-<li><a href="https://docs.docker.com/">Docker Official Documentation</a></li>
-<li><a href="https://docs.docker.com/get-started/">Docker Getting Started Guide</a></li>
-<li><a href="https://docs.docker.com/engine/reference/commandline/docker/">Docker CLI Reference</a></li>
-<li><a href="https://docs.docker.com/compose/">Docker Compose Documentation</a></li>
+<li><strong>Open Source</strong>: free to use with an active community and regular updates.</li>
+<li><strong>Database Agnostic</strong>: connect to PostgreSQL, MySQL, SQLite, and many other databases.</li>
+<li><strong>Interactive Dashboards</strong>: create dynamic, interactive reports with filtering and drill-down capabilities.</li>
+<li><strong>SQL-based</strong>: write SQL queries directly to explore and transform your data.</li>
+<li><strong>Custom Visualizations</strong>: build tailored charts, graphs, and KPIs specific to your simulation scenarios.</li>
+<li><strong>Embedded Dashboards</strong>: seamlessly integrate Superset dashboards directly into your web application.</li>
+</ul>
+<h2 id="common-data-tables">Common data tables<a class="headerlink" href="#common-data-tables" title="Permanent link">&para;</a></h2>
+<p>The CosmoTech platform typically stores the following data in your database:</p>
+<ul>
+<li><strong>ProbesMeasures</strong>: time-series data from simulation probes and measurements.</li>
+<li><strong>ScenarioMetadata</strong>: information about scenarios (name, description, parameters).</li>
+<li><strong>ScenarioRun</strong>: execution details and results of scenario runs.</li>
+<li><strong>ScenarioRunMetadata</strong>: metadata associated with each scenario run.</li>
+<li><strong>SimulationTotalFacts</strong>: aggregated facts and metrics from simulations.</li>
+</ul>
+<h2 id="creating-visualizations">Creating visualizations<a class="headerlink" href="#creating-visualizations" title="Permanent link">&para;</a></h2>
+<h3 id="basic-steps">Basic steps<a class="headerlink" href="#basic-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Connect to Database</strong>: configure your database connection in Superset.</li>
+<li><strong>Create Dataset</strong>: register your database tables as Superset datasets.</li>
+<li><strong>Build Charts</strong>: create visualizations using the chart builder or SQL Lab.</li>
+<li><strong>Assemble Dashboard</strong>: combine multiple charts into a cohesive dashboard.</li>
+<li><strong>Add Interactivity</strong>: configure filters, cross-filtering, and drill-down actions.</li>
+<li><strong>Publish</strong>: save and share your dashboard for embedding.</li>
+</ol>
+<p>Several different visualizations are available, for example:</p>
+<ul>
+<li><strong>Line Charts</strong>: display time-series trends from ProbesMeasures.</li>
+<li><strong>Bar Charts</strong>: compare metrics across different scenarios.</li>
+<li><strong>Big Number</strong>: show key performance indicators at a glance.</li>
+<li><strong>Tables</strong>: present detailed scenario parameters and results.</li>
+<li><strong>Pivot Tables</strong>: analyze multidimensional data with flexible grouping.</li>
+<li><strong>Area Charts</strong>: visualize cumulative trends over time.</li>
+</ul>
+<h2 id="using-sql-in-superset">Using SQL in Superset<a class="headerlink" href="#using-sql-in-superset" title="Permanent link">&para;</a></h2>
+<p>You can write SQL queries directly in Superset's SQL Lab to:</p>
+<ul>
+<li>Explore and filter data before creating visualizations.</li>
+<li>Perform complex calculations and transformations.</li>
+<li>Join multiple tables for comprehensive analysis.</li>
+<li>Create virtual datasets from custom queries.</li>
+</ul>
+<p>Example SQL query:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span>
+<span class="w">    </span><span class="n">DATE_TRUNC</span><span class="p">(</span><span class="s1">&#39;hour&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">timestamp</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">hour</span><span class="p">,</span>
+<span class="w">    </span><span class="n">probe_name</span><span class="p">,</span>
+<span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_value</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">probes_measures</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">simulation_run</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;run-123&#39;</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">DATE_TRUNC</span><span class="p">(</span><span class="s1">&#39;hour&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">timestamp</span><span class="p">),</span><span class="w"> </span><span class="n">probe_name</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">hour</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="embedding-dashboards-in-the-web-application">Embedding dashboards in the web application<a class="headerlink" href="#embedding-dashboards-in-the-web-application" title="Permanent link">&para;</a></h2>
+<p>Superset dashboards can be embedded directly into the CosmoTech web application:</p>
+<ol>
+<li><strong>Create Dashboard</strong>: design your dashboard with relevant charts and filters.</li>
+<li><strong>Enable Embedding</strong>: configure the dashboard for embedded use in Superset settings.</li>
+<li><strong>Configure Workspace</strong>: set up the Superset connection in your CosmoTech configuration.</li>
+<li><strong>Define Dashboard Settings</strong>: specify display options and filter configurations.</li>
+<li><strong>Apply Dynamic Filters</strong>: link dashboard filters to scenario data for context-aware visualizations.</li>
+</ol>
+<p>The workspace configuration includes settings for:</p>
+<ul>
+<li>Dashboard ID and display name.</li>
+<li>Filter visibility and default values.</li>
+<li>Refresh intervals.</li>
+<li>Dynamic filters based on scenario context.</li>
+</ul>
+<h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Optimize Queries</strong>: use aggregations and filters to reduce data volume.</li>
+<li><strong>Cache Results</strong>: configure caching for frequently accessed dashboards.</li>
+<li><strong>Limit Chart Complexity</strong>: keep dashboards focused with a reasonable number of visualizations.</li>
+<li><strong>Use Dashboard Filters</strong>: create global filters that apply across multiple charts.</li>
+<li><strong>Test Performance</strong>: ensure dashboards load quickly even with large datasets.</li>
+<li><strong>Document Charts</strong>: add descriptions to charts and datasets for clarity.</li>
+</ul>
+<h2 id="dynamic-filtering">Dynamic filtering<a class="headerlink" href="#dynamic-filtering" title="Permanent link">&para;</a></h2>
+<p>Superset dashboards in the CosmoTech web application support dynamic filtering based on the current scenario context. This allows users to:</p>
+<ul>
+<li>Automatically view data relevant to the selected scenario.</li>
+<li>Compare results across different scenario runs.</li>
+<li>Filter by specific parameters or time ranges.</li>
+</ul>
+<p>Dynamic filters are configured in the workspace settings and can link Superset dashboard filters to scenario metadata stored in the database.</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="common-issues">Common issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Connection Errors</strong>: verify database host, port, and credentials are correct.</li>
+<li><strong>Authentication Failures</strong>: ensure proper database permissions are configured.</li>
+<li><strong>Slow Performance</strong>: optimize SQL queries and consider adding database indexes.</li>
+<li><strong>Empty Charts</strong>: check that data exists in the tables and queries return results.</li>
+</ul>
+<h3 id="performance-tips">Performance tips<a class="headerlink" href="#performance-tips" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use database views or materialized views for complex queries.</li>
+<li>Create indexes on frequently filtered columns.</li>
+<li>Limit the date range of data being queried.</li>
+<li>Enable Superset caching for frequently accessed dashboards.</li>
+<li>Use asynchronous query execution for large datasets.</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>For more detailed information on Superset, please refer to:</p>
+<ul>
+<li><a href="https://superset.apache.org/docs/intro">Apache Superset Documentation</a></li>
+<li><a href="https://github.com/apache/superset">Superset GitHub Repository</a></li>
+<li><a href="https://superset.apache.org/docs/using-superset/sql-lab">SQL Lab Documentation</a></li>
 </ul>
 <main class="grid">
-<div class="text">
-<h2 id="previous">Previous<a class="headerlink" href="#previous" title="Permanent link">&para;</a></h2>
-<footer>
-<p><a href="../git/"><h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.78 19.03a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06l6.25-6.25a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L5.81 11.5h14.44a.75.75 0 0 1 0 1.5H5.81l4.97 4.97a.75.75 0 0 1 0 1.06"/></svg></span> Git</h3></a>
-  </p>
-</footer>
-</div>
 <div align="right" class="text">
-<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<h2 id="back">Back<a class="headerlink" href="#back" title="Permanent link">&para;</a></h2>
+<p>To continue, go back to:&emsp;
+  </p>
 <footer>
-<p><a href="../babylon/"><h3>Babylon <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
+<p><a href="../../02_Discovery/#16-cleaning-up-after-yourself"><h3>Deploy a solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
   </p>
 </footer>
 </div>

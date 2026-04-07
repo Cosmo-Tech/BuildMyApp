@@ -1656,6 +1656,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tools-to-install-all-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools to Install (All Users)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#verification-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       Verification Checklist
@@ -1822,6 +1831,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tools-to-install-all-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools to Install (All Users)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#verification-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       Verification Checklist
@@ -1900,6 +1918,31 @@
 </li>
 </ul>
 </div>
+<h2 id="wsl-setup-windows-only">WSL Setup (Windows Only)<a class="headerlink" href="#wsl-setup-windows-only" title="Permanent link">&para;</a></h2>
+<p>If you're working on Windows, you'll need to set up Windows Subsystem for Linux with Debian 13 for the best development experience.</p>
+<h3 id="installing-wsl-with-debian-13">Installing WSL with Debian 13<a class="headerlink" href="#installing-wsl-with-debian-13" title="Permanent link">&para;</a></h3>
+<p>First, enable WSL and install Debian 13:</p>
+<div class="highlight"><span class="filename">Install WSL with Debian 13</span><pre><span></span><code><span class="c1"># Open PowerShell as Administrator and run:</span>
+wsl<span class="w"> </span>--install<span class="w"> </span>-d<span class="w"> </span>debian
+
+<span class="c1"># After installation, restart your computer</span>
+<span class="c1"># Open Debian from the Start menu and complete the initial setup</span>
+</code></pre></div>
+<h3 id="configure-your-wsl-environment">Configure your WSL environment<a class="headerlink" href="#configure-your-wsl-environment" title="Permanent link">&para;</a></h3>
+<p>Once Debian is installed, set up your development directories:</p>
+<div class="highlight"><span class="filename">Set up tooling directories</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~
+
+mkdir<span class="w"> </span>Tooling
+mkdir<span class="w"> </span>ToolingBins
+
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=~/ToolingBins:$PATH&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">WSL Configuration</p>
+<p>The tooling directories will help organize your development tools. Most installation commands in this guide assume you're using a bash-based terminal (either native Linux or WSL).</p>
+</div>
+<h2 id="tools-to-install-all-users">Tools to Install (All Users)<a class="headerlink" href="#tools-to-install-all-users" title="Permanent link">&para;</a></h2>
 <main class="grid">
 <article>
 <div class="text">
@@ -1991,40 +2034,17 @@ operations.</p>
 </div>
 </article>
 </main>
-<h2 id="wsl-setup-windows-only">WSL Setup (Windows Only)<a class="headerlink" href="#wsl-setup-windows-only" title="Permanent link">&para;</a></h2>
-<p>If you're working on Windows, you'll need to set up Windows Subsystem for Linux with Debian 13 for the best development experience.</p>
-<h3 id="installing-wsl-with-debian-13">Installing WSL with Debian 13<a class="headerlink" href="#installing-wsl-with-debian-13" title="Permanent link">&para;</a></h3>
-<p>First, enable WSL and install Debian 13:</p>
-<div class="highlight"><span class="filename">Install WSL with Debian 13</span><pre><span></span><code><span class="c1"># Open PowerShell as Administrator and run:</span>
-wsl<span class="w"> </span>--install<span class="w"> </span>-d<span class="w"> </span>debian
-
-<span class="c1"># After installation, restart your computer</span>
-<span class="c1"># Open Debian from the Start menu and complete the initial setup</span>
-</code></pre></div>
-<h3 id="configure-your-wsl-environment">Configure your WSL environment<a class="headerlink" href="#configure-your-wsl-environment" title="Permanent link">&para;</a></h3>
-<p>Once Debian is installed, set up your development directories:</p>
-<div class="highlight"><span class="filename">Set up tooling directories</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~
-
-mkdir<span class="w"> </span>Tooling
-mkdir<span class="w"> </span>ToolingBins
-
-<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=~/ToolingBins:$PATH&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
-<span class="nb">source</span><span class="w"> </span>~/.bashrc
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">WSL Configuration</p>
-<p>The tooling directories will help organize your development tools. Most installation commands in this guide assume you're using a bash-based terminal (either native Linux or WSL).</p>
-</div>
 <h2 id="verification-checklist">Verification Checklist<a class="headerlink" href="#verification-checklist" title="Permanent link">&para;</a></h2>
 <p>Before proceeding to the next step, verify all tools are properly installed:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> WSL with Debian 13 (Windows users only)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Git configured with your credentials</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Docker running and accessible</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Docker Desktop running (Windows users only)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> CosmoTech SDK (<code>csm --version</code>)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Azure CLI (<code>az --version</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Git (<code>git version</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Docker (<code>docker version</code>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Babylon CLI (<code>babylon --version</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> kubectl (<code>kubectl version --client</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Azure CLI (<code>az --version</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Terraform (<code>terraform version</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> CosmoTech SDK (<code>csm --version</code>) [In a Cosmo Tech SDK command-line environment]</li>
 </ul>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
