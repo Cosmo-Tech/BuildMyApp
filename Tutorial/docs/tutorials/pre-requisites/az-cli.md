@@ -30,8 +30,11 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/microso
 
 sudo apt update
 sudo apt install -y azure-cli
+```
 
-# Verify installation
+Verify the installation:
+
+```bash title="Check the Azure CLI version"
 az --version
 ```
 

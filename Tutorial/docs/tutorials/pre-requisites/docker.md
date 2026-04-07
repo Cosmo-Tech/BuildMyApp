@@ -24,6 +24,12 @@ sudo usermod -aG docker $USER
 
 After installation, log out and back in for group changes to take effect.
 
+Verify the installation:
+
+```bash title="Check the Docker version"
+docker version
+```
+
 ## Add Docker to ToolingBins
 
 Docker is installed system-wide, so no symlink is needed. You can add a symlink for convenience:

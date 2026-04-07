@@ -26,7 +26,7 @@ sudo apt-get install -y kubectl
 
 Verify the installation:
 
-```bash title="Check kubectl version"
+```bash title="Check the kubectl version"
 kubectl version --client
 ```
 

@@ -31,8 +31,11 @@ deactivate
 
 cd ~/ToolingBins
 ln -s ~/Tooling/Babylon/.venv/bin/babylon babylon
+```
 
-# Verify installation
+Verify the installation:
+
+```bash title="Check the Babylon version"
 babylon --version
 ```
 

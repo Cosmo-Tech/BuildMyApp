@@ -189,12 +189,13 @@ operations.
 Before proceeding to the next step, verify all tools are properly installed:
 
 - [ ] WSL with Debian 13 (Windows users only)
-- [ ] Git configured with your credentials
-- [ ] Docker running and accessible
-- [ ] Docker Desktop running (Windows users only)
-- [ ] CosmoTech SDK (`csm --version`)
-- [ ] Azure CLI (`az --version`)
+- [ ] Git (`git version`)
+- [ ] Docker (`docker version`)
 - [ ] Babylon CLI (`babylon --version`)
+- [ ] kubectl (`kubectl version --client`)
+- [ ] Azure CLI (`az --version`)
+- [ ] Terraform (`terraform version`)
+- [ ] CosmoTech SDK (`csm --version`) [In a Cosmo Tech SDK command-line environment]
 
 ## Troubleshooting
 

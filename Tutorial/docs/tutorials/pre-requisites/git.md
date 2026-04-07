@@ -22,6 +22,12 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
+Verify the installation:
+
+```bash title="Check the Git version"
+git version
+```
+
 ## Add Git to ToolingBins
 
 ```bash title="Symlink git"

@@ -26,7 +26,7 @@ sudo apt-get install -y terraform
 
 Verify the installation:
 
-```bash title="Check Terraform version"
+```bash title="Check the Terraform version"
 terraform version
 ```
 
