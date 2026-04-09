@@ -64,7 +64,7 @@ Then we can customize our workspace name, key and description.
 
 ---
 
-## 5: Setting up the Solution - Part 1
+## 5: Setting up the Solution - First Part
 
 Setting up the Solution will require a bit more work now.
 
@@ -92,20 +92,20 @@ You will need to update the following values in `variables.yaml`:
 
 At this point, there are two possibilities:
 
-<h4>1. Using a pre-packaged simulator</h4>
+<h4>a. Using a pre-packaged simulator</h4>
 
 &emsp;Following the instructions of the person in charge of the Hands-On training, go directly to:
 
-&emsp;[7: Setting up the Solution - Part 2](./02_Discovery.md/#7-setting-up-the-solution-part-2)
+&emsp;[7: Setting up the Solution - Second Part](./02_Discovery.md/#7-setting-up-the-solution-second-part)
 
-<h4>2. Building a simulator of your own</h4>
+<h4>b. Building a simulator of your own</h4>
 
 &emsp;Customize an existing Simulator based on the brewery sample Solution:
-[<h4>&emsp;:octicons-arrow-right-24: Customize an existing Simulator</h4>](./Discovery/02_07.2_Simulator.md)
+[<h4>&emsp;:octicons-arrow-right-24: Customize an existing Simulator</h4>](./Discovery/02_07.b_Simulator.md)
 
 ---
 
-## 7: Setting up the Solution - Part 2
+## 7: Setting up the Solution - Second Part
 
 Now that we have a usable simulator image, we are able to finish preparing our Solution.
 
