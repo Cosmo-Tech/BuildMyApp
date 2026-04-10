@@ -166,7 +166,7 @@ docker tag <SIMULATOR_IMAGE_NAME>:<VERSION_NAME> <CLUSTER_NAME>/<TENANT_NAME>/<I
 In our case (with brewery), the command will look something like this:
 
 ```bash
-docker tag cosmotech/brewerysamplesolution_simulator:latest aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/cosmotech/brewerysamplesolution_simulator:<MY_NAME>
+docker tag cosmotech/brewerysamplesolution_simulator:latest aks-dev-pmu.azure.platform.cosmotech.com/tenant-hue-dia/cosmotech/brewerysamplesolution_simulator:<MY_NAME>
 ```
 
 In case of doubt, you can check your images with
@@ -182,7 +182,7 @@ Now that our image is nice and ready, we can push it to the cluster container re
 First, login using (for now) the admin access.
 
 ```bash
-docker login aks-qa-campaign.azure.platform.cosmotech.com -u tenant-e2e
+docker login aks-dev-pmu.azure.platform.cosmotech.com -u tenant-hue-dia
 ```
 
 And push your image.
@@ -194,5 +194,5 @@ docker push <IMAGE_NAME>:<IMAGE_VERSION>
 You can assert that your image is correctly uploaded here:
 
 ```
-aks-qa-campaign.azure.platform.cosmotech.com
+aks-dev-pmu.azure.platform.cosmotech.com
 ```

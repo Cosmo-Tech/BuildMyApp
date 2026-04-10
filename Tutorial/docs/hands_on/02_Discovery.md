@@ -10,7 +10,7 @@ In this discovery part, we will go through the steps to deploy a pre-packaged So
 ## 1: Connect to the cluster
 
 For this, we will need to access the kubernetes service stored on Azure.
-Today we are going to use the following cluster: `aks-qa-campaign`
+Today we are going to use the following cluster: `aks-dev-pmu.azure`
 
 Once you're logged into the azure portal, go to kubernetes service. In here, select the cluster specified above.
 On the new page, you will find a connect button at the top. Upon clicking it, a pop up will appear on the right side of the window. Select the "Azure-cli" tab and run the first three commands.
@@ -190,7 +190,7 @@ In the logs of our previous command, babylon provides us with the link to our de
 It should look something like this:
 
 ```
-https://aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/webapp-<WEBAPP_NAME>
+https://aks-dev-pmu.azure.azure.platform.cosmotech.com/tenant-e2e/webapp-<WEBAPP_NAME>
 ```
 
 ---
