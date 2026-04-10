@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_07.2_Simulator/">
+        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_07.b_Simulator/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>02 07.2 Simulator - Build My App</title>
+        <title>02 07.b Simulator - Build My App</title>
       
     
     
@@ -59,11 +59,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="02 07.2 Simulator - Build My App" >
+        <meta  property="og:title"  content="02 07.b Simulator - Build My App" >
       
         <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_07.2_Simulator.png" >
+        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_07.b_Simulator.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -71,15 +71,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_07.2_Simulator/" >
+        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_07.b_Simulator/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="02 07.2 Simulator - Build My App" >
+        <meta  name="twitter:title"  content="02 07.b Simulator - Build My App" >
       
         <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_07.2_Simulator.png" >
+        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_07.b_Simulator.png" >
       
     
     
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02 07.2 Simulator
+              02 07.b Simulator
             
           </span>
         </div>
@@ -1914,7 +1914,7 @@ csm<span class="w"> </span>simulate<span class="w"> </span>BusinessApp_Simulatio
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>&lt;SIMULATOR_IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;<span class="w"> </span>&lt;CLUSTER_NAME&gt;/&lt;TENANT_NAME&gt;/&lt;IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;
 </code></pre></div>
 <p>In our case (with brewery), the command will look something like this:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>cosmotech/brewerysamplesolution_simulator:latest<span class="w"> </span>aks-qa-campaign.azure.platform.cosmotech.com/tenant-e2e/cosmotech/brewerysamplesolution_simulator:&lt;MY_NAME&gt;
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>cosmotech/brewerysamplesolution_simulator:latest<span class="w"> </span>aks-dev-pmu.azure.platform.cosmotech.com/tenant-hue-dia/cosmotech/brewerysamplesolution_simulator:&lt;MY_NAME&gt;
 </code></pre></div>
 <p>In case of doubt, you can check your images with</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images
@@ -1922,13 +1922,13 @@ csm<span class="w"> </span>simulate<span class="w"> </span>BusinessApp_Simulatio
 <h2 id="pushing-to-harbor">Pushing to Harbor<a class="headerlink" href="#pushing-to-harbor" title="Permanent link">&para;</a></h2>
 <p>Now that our image is nice and ready, we can push it to the cluster container registry, Harbor.</p>
 <p>First, login using (for now) the admin access.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>aks-qa-campaign.azure.platform.cosmotech.com<span class="w"> </span>-u<span class="w"> </span>tenant-e2e
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>aks-dev-pmu.azure.platform.cosmotech.com<span class="w"> </span>-u<span class="w"> </span>tenant-hue-dia
 </code></pre></div>
 <p>And push your image.</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>push<span class="w"> </span>&lt;IMAGE_NAME&gt;:&lt;IMAGE_VERSION&gt;
 </code></pre></div>
 <p>You can assert that your image is correctly uploaded here:</p>
-<div class="highlight"><pre><span></span><code>aks-qa-campaign.azure.platform.cosmotech.com
+<div class="highlight"><pre><span></span><code>aks-dev-pmu.azure.platform.cosmotech.com
 </code></pre></div>
 <main class="grid">
 <div align="right" class="text">
@@ -1936,7 +1936,7 @@ csm<span class="w"> </span>simulate<span class="w"> </span>BusinessApp_Simulatio
 <p>To continue, go back to:&emsp;
   </p>
 <footer>
-<p><a href="../../02_Discovery/#7-setting-up-the-solution-part-2"><h3>Deploy a solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
+<p><a href="../../02_Discovery/#7-setting-up-the-solution-second-part"><h3>Deploy a solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
   </p>
 </footer>
 </div>
