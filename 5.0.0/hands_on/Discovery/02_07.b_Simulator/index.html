@@ -1740,9 +1740,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-your-simulator-in-the-studio-on-the-terminal" class="md-nav__link">
+  <a href="#building-your-simulator-on-the-terminal" class="md-nav__link">
     <span class="md-ellipsis">
-      Building your simulator in the Studio on the Terminal
+      Building your simulator on the Terminal
     </span>
   </a>
   
@@ -1849,6 +1849,8 @@
 <p>By now you have reviewed the model. Any changes you made will be applied in further steps.
 However, for the rest of the Hands-On training, we will assume no changes were made.</p>
 </div>
+<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_16.a.i_Solution_Run-template_Build_Studio.md -->
+<!-- Should this be modified, 02_16.a.i_Solution_Run-template_Build_Studio.md might need updating too -->
 <h2 id="building-your-simulator-in-the-studio">Building your simulator in the Studio<a class="headerlink" href="#building-your-simulator-in-the-studio" title="Permanent link">&para;</a></h2>
 <p>We will continue using the Studio for the following steps. However, you can also use equivalent commands with the <code>csm</code> CLI that is installed alongside the studio. You'll find the useful commands at the end of this page.</p>
 <p>Now let's move to the third view, which is the most important one for today's work: the Solution Builder.</p>
@@ -1903,7 +1905,9 @@ csm<span class="w"> </span>simulate<span class="w"> </span>&lt;Simulation_name&g
 
 csm<span class="w"> </span>simulate<span class="w"> </span>BusinessApp_Simulation
 </code></pre></div>
-<h2 id="building-your-simulator-in-the-studio-on-the-terminal">Building your simulator in the Studio on the Terminal<a class="headerlink" href="#building-your-simulator-in-the-studio-on-the-terminal" title="Permanent link">&para;</a></h2>
+<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_16.a.ii_Solution_Run-template_Build_Terminal.md -->
+<!-- Should this be modified, 02_16.a.ii_Solution_Run-template_Build_Terminal.md might need updating too -->
+<h2 id="building-your-simulator-on-the-terminal">Building your simulator on the Terminal<a class="headerlink" href="#building-your-simulator-on-the-terminal" title="Permanent link">&para;</a></h2>
 <p>First, head to your simulator folder and run.</p>
 <div class="highlight"><pre><span></span><code>csm<span class="w"> </span>flow
 </code></pre></div>
@@ -1914,11 +1918,13 @@ csm<span class="w"> </span>simulate<span class="w"> </span>BusinessApp_Simulatio
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>&lt;SIMULATOR_IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;<span class="w"> </span>&lt;CLUSTER_NAME&gt;/&lt;TENANT_NAME&gt;/&lt;IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;
 </code></pre></div>
 <p>In our case (with brewery), the command will look something like this:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>cosmotech/brewerysamplesolution_simulator:latest<span class="w"> </span>aks-dev-pmu.azure.platform.cosmotech.com/tenant-hue-dia/cosmotech/brewerysamplesolution_simulator:&lt;MY_NAME&gt;
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>cosmotech/brewerysamplesolution_simulator:latest<span class="w"> </span>aks-dev-pmu.azure.platform.cosmotech.com/tenant-hue-dia/cosmotech/brewerysamplesolution_simulator:&lt;MY_TAG_NAME&gt;
 </code></pre></div>
 <p>In case of doubt, you can check your images with</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images
 </code></pre></div>
+<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_16.a.iii_Solution_Run-template_Push_Harbor.md -->
+<!-- Should this be modified, 02_16.a.iii_Solution_Run-template_Push_Harbor.md might need updating too -->
 <h2 id="pushing-to-harbor">Pushing to Harbor<a class="headerlink" href="#pushing-to-harbor" title="Permanent link">&para;</a></h2>
 <p>Now that our image is nice and ready, we can push it to the cluster container registry, Harbor.</p>
 <p>First, login using (for now) the admin access.</p>
