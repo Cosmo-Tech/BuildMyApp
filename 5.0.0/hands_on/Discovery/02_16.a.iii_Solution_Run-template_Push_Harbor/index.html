@@ -1732,17 +1732,16 @@
   <h1>Deploy a Solution</h1>
 
 <!-- Insert the instructions from the tutorials section -->
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images
-</code></pre></div>
-<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_16.a.iii_Solution_Run-template_Push_Harbor.md -->
-<!-- Should this be modified, 02_16.a.iii_Solution_Run-template_Push_Harbor.md might need updating too -->
 <h2 id="pushing-to-harbor">Pushing to Harbor<a class="headerlink" href="#pushing-to-harbor" title="Permanent link">&para;</a></h2>
 <p>Now that our image is nice and ready, we can push it to the cluster container registry, Harbor.</p>
 <p>First, login using (for now) the admin access.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>aks-dev-pmu.azure.platform.cosmotech.com<span class="w"> </span>-u<span class="w"> </span>tenant-hue-dia
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>&lt;HARBOR_URL&gt;<span class="w"> </span>-u<span class="w"> </span>&lt;USER_NAME&gt;
 </code></pre></div>
 <p>And push your image.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>push<span class="w"> </span>&lt;IMAGE_NAME&gt;:&lt;IMAGE_VERSION&gt;
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>push<span class="w"> </span>&lt;HARBOR_URL&gt;/&lt;IMAGE_NAME&gt;:&lt;VERSION_TAG&gt;
+</code></pre></div>
+<p>You can assert that your image is correctly uploaded here:</p>
+<div class="highlight"><pre><span></span><code>aks-dev-pmu.azure.platform.cosmotech.com
 </code></pre></div>
 <main class="grid">
 <div align="right" class="text">

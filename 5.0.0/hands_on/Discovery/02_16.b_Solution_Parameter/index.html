@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_16.a.ii_Solution_Run-template_Build_Terminal/">
+        <link rel="canonical" href="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_16.b_Solution_Parameter/">
       
       
       
@@ -63,7 +63,7 @@
       
         <meta  property="og:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_16.a.ii_Solution_Run-template_Build_Terminal.png" >
+        <meta  property="og:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_16.b_Solution_Parameter.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -71,7 +71,7 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_16.a.ii_Solution_Run-template_Build_Terminal/" >
+        <meta  property="og:url"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/hands_on/Discovery/02_16.b_Solution_Parameter/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:description"  content="Tutorial for zero to hero Cosmo Tech Solution build and deployment" >
       
-        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_16.a.ii_Solution_Run-template_Build_Terminal.png" >
+        <meta  name="twitter:image"  content="https://cosmo-tech.github.io/BuildMyApp/5.0.0/assets/images/social/hands_on/Discovery/02_16.b_Solution_Parameter.png" >
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#back" class="md-skip">
+        <a href="#run-template" class="md-skip">
           Skip to content
         </a>
       
@@ -1693,6 +1693,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#run-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run-template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      New content
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#back" class="md-nav__link">
     <span class="md-ellipsis">
       Back
@@ -1722,35 +1758,47 @@
 
   <h1>Deploy a Solution</h1>
 
-<!-- Insert the instructions from the tutorials section -->
-<div class="highlight"><pre><span></span><code>&lt;!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_16.a.ii_Solution_Run-template_Build_Terminal.md --&gt;
-&lt;!-- Should this be modified, 02_16.a.ii_Solution_Run-template_Build_Terminal.md might need updating too --&gt;
-## Building your simulator on the Terminal
-
-First, head to your simulator folder and run.
-
-```bash
-csm flow
+<p>Here, we will make a basic modification of a run-template.</p>
+<p>bar_parameters
+https://portal.cosmotech.com/docs//documentation/platform_help/5.0/Content/Platform%20Help/v5/DataStorageManagement/ETL.htm</p>
+<h2 id="run-template">Run-template<a class="headerlink" href="#run-template" title="Permanent link">&para;</a></h2>
+<p>Open your local copy of the example run-template of the <a href="https://github.com/Cosmo-Tech/onboarding-brewery-solution/">onboarding-brewery-solution</a> repository:
+<a href="https://github.com/Cosmo-Tech/onboarding-brewery-solution/blob/BuildMyApp/Simulator/code/run_templates/Example/run.json">code/run_templates/Example/run.json</a></p>
+<h2 id="new-content">New content<a class="headerlink" href="#new-content" title="Permanent link">&para;</a></h2>
+<p>To add a new run-step, replace its contents with:
+<div class="highlight"><span class="filename">run.json</span><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;steps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DisplayEnv&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;python code/run_templates/scripts/display_csm_env.py&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;useSystemEnvironment&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;csm_orc_version&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;csm-orc&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;arguments&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;--version&quot;</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;precedents&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;DisplayEnv&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">&para;</a></h2>
+<p>Run again the updating command:</p>
+<div class="highlight"><pre><span></span><code>babylon<span class="w"> </span>apply<span class="w"> </span>project/
 </code></pre></div>
-<p>Now build the image of the simulator</p>
-<div class="highlight"><pre><span></span><code>csm<span class="w"> </span>docker<span class="w"> </span>build
-</code></pre></div>
-<p>Then, we'll tag our image</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>&lt;SIMULATOR_IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;<span class="w"> </span>&lt;CLUSTER_NAME&gt;/&lt;TENANT_NAME&gt;/&lt;IMAGE_NAME&gt;:&lt;VERSION_TAG&gt;
-</code></pre></div>
-<p>In case of doubt, you can check your images with</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images
-</code></pre></div>
-<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_16.a.iii_Solution_Run-template_Push_Harbor.md -->
-<!-- Should this be modified, 02_16.a.iii_Solution_Run-template_Push_Harbor.md might need updating too -->
-
+<h2 id="checking">Checking<a class="headerlink" href="#checking" title="Permanent link">&para;</a></h2>
+<p>Verify that the csm-orc version information appears now in the run logs.</p>
 <main class="grid">
 <div align="right" class="text">
 <h2 id="back">Back<a class="headerlink" href="#back" title="Permanent link">&para;</a></h2>
 <p>To continue, go back to:&emsp;
   </p>
 <footer>
-<p><a href="../02_16.a_Solution_Run-template/#updating"><h3>Solution Run-Template <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
+<p><a href="../../02_Discovery/#16-modifying-the-solution"><h3>Deploy a solution <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span>&emsp;</h3></a>
   </p>
 </footer>
 </div>

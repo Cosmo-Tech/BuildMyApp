@@ -2112,20 +2112,19 @@ On the new page, you will find a connect button at the top. Upon clicking it, a 
 <h2 id="5-setting-up-the-solution-first-part">5: Setting up the Solution - First Part<a class="headerlink" href="#5-setting-up-the-solution-first-part" title="Permanent link">&para;</a></h2>
 <p>Setting up the Solution will require a bit more work now.</p>
 <p>Just as for the Workspace, we can customize the name, key and description.</p>
-<p>You will need to update the following values in <code>variables.yaml</code>:</p>
+<p>Update the following values in <code>variables.yaml</code>:</p>
 <ul>
-<li><code>solution_key</code>: A unique key for your Solution</li>
 <li><code>solution_name</code>: The name of your Solution</li>
 <li><code>solution_description</code>: A description for your Solution</li>
-<li><code>workspace_key</code>: A unique key for your workspace, it will be required for some resource creation</li>
 <li><code>workspace_name</code>: The name of your workspace</li>
 <li><code>workspace_description</code>: A description of your workspace</li>
-<li><code>security.accessControlList</code>: Add your mail addresses as <code>Admin</code> to ensure that you will have access to your Solution</li>
-<li><code>cluster_name</code>: The name of the Kubernetes cloud cluster</li>
-<li><code>cluster_domain</code>: The full domain name of the Kubernetes cloud cluster</li>
-<li><code>tenant</code>: The id of the tenant used to host the platform</li>
-<li><code>webapp_name</code>: A unique name for your Web App</li>
 </ul>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="nt">solution_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Babylon v5 Solution</span>
+<span class="nt">solution_description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Brewery Testing babylon v5 Solution PLT</span>
+<span class="nt">workspace_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Babylon v5 workspace</span>
+<span class="nt">workspace_description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Testing workspace for the brewery web application</span>
+</code></pre></div></p>
 <!-- But, we are also going to use a simulator image, this will take a few steps. -->
 
 <hr />
@@ -2142,47 +2141,74 @@ On the new page, you will find a connect button at the top. Upon clicking it, a 
 <hr />
 <h2 id="7-setting-up-the-solution-second-part">7: Setting up the Solution - Second Part<a class="headerlink" href="#7-setting-up-the-solution-second-part" title="Permanent link">&para;</a></h2>
 <p>Now that we have a usable simulator image, we are able to finish preparing our Solution.</p>
-<p>The simulator repository will be our image name and our simulator version will be the simulator version.</p>
+<p>Update the following values in <code>variables.yaml</code>:</p>
+<ul>
+<li><code>simulator_repository</code>: The path to the simulator image repository</li>
+<li><code>simulator_version</code>: The tag of the simulator image</li>
+</ul>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="nt">simulator_repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tenant-sphinx/brewerysamplesolution_simulator</span>
+<span class="nt">simulator_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.0.0</span>
+</code></pre></div></p>
 <hr />
 <h2 id="8-setting-up-the-webapp">8: Setting up the WebApp<a class="headerlink" href="#8-setting-up-the-webapp" title="Permanent link">&para;</a></h2>
 <p>Setting up the WebApp will be easier than setting up the Solution</p>
-<p>The variables we'll be touching are:
-- The cluster name
-- The cluster domain
-- The tenant (with the <code>tenant-</code> truncated)
-- The webapp name</p>
-<p>We'll be using those variables:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">cluster_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aks-qa-campaign</span>
-<span class="nt">cluster_domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aks-qa-campaign.azure.platform.cosmotech.com</span>
-<span class="nt">tenant</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">e2e</span>
-</code></pre></div>
-<p>You can use your favorite words for the webapp name</p>
+<p>Update the following values in <code>variables.yaml</code>:</p>
+<ul>
+<li><code>cluster_name</code>: The name of the Kubernetes cloud cluster</li>
+<li><code>domain_zone</code>: The domain of the Kubernetes cloud cluster</li>
+<li><code>tenant</code>: The id of the tenant used to host the platform (without the <code>tenant-</code> prefix)</li>
+<li><code>webapp_name</code>: A unique name of your choosing for your own Web App</li>
+</ul>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="nt">cluster_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aks-dev-luxor</span>
+<span class="nt">domain_zone</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure.platform.cosmotech.com</span>
+<span class="nt">tenant</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sphinx</span>
+<span class="nt">webapp_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">business</span>
+</code></pre></div></p>
 <hr />
 <h2 id="9-setting-up-the-security">9: Setting up the security<a class="headerlink" href="#9-setting-up-the-security" title="Permanent link">&para;</a></h2>
 <p>For this we'll just need to input our email adress as Id and give ourself the admin role:</p>
+<ul>
+<li><code>id</code>: The mail address of the user</li>
+<li><code>role</code>: A role among (admin, editor, viewer)</li>
+</ul>
+<p>Example:
 <div class="highlight"><pre><span></span><code><span class="nt">security</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
 <span class="w">  </span><span class="nt">accessControlList</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;YOUR_MAIL&gt;</span>
 <span class="w">      </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admin</span>
-</code></pre></div>
+</code></pre></div></p>
 <p>At the time of writing this guide, the keycloak group system has been implemented in the Cosmotech API but is still undergoing compatibility work with the WebApp.</p>
 <hr />
 <h2 id="10-running-babylon">10: Running Babylon<a class="headerlink" href="#10-running-babylon" title="Permanent link">&para;</a></h2>
 <p>Before giving Babylon all the informations we entered and putting it to work. We're going to need to tell it where it should work.</p>
-<p>For this, run this command:</p>
+<p>For this, run the command:
 <div class="highlight"><pre><span></span><code>babylon<span class="w"> </span>namespace<span class="w"> </span>use<span class="w"> </span>-c<span class="w"> </span>&lt;CONTEXT_NAME&gt;<span class="w"> </span>-t<span class="w"> </span>&lt;TENANT_NAME&gt;<span class="w"> </span>-s<span class="w"> </span>&lt;STATE_NAME&gt;
 </code></pre></div>
-<p>And now that Babylon has everything it needs to now, let's run it.</p>
+where you can chose freely the name you want to give to your local context and state.</p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>babylon<span class="w"> </span>namespace<span class="w"> </span>use<span class="w"> </span>-c<span class="w"> </span>bmactx<span class="w"> </span>-t<span class="w"> </span>tenant-sphinx<span class="w"> </span>-s<span class="w"> </span>bmast
+</code></pre></div></p>
+<p>And now that Babylon has everything it needs to now, let's run it:
 <div class="highlight"><pre><span></span><code>babylon<span class="w"> </span>apply<span class="w"> </span>project/
-</code></pre></div>
+</code></pre></div></p>
 <hr />
 <h2 id="11-update-info">11: Update info<a class="headerlink" href="#11-update-info" title="Permanent link">&para;</a></h2>
 <p>Now that we have created our desired Cosmotech objects and deployed our personnal webapp, before looking at the detail, we can see how to easily modify the configuration of our objects.</p>
-<p>If we modify any informations in our organization, workspace or Solution, and run again the same command:</p>
+<p>If we modify any informations in our organization, workspace or Solution, and run again the same command:
 <div class="highlight"><pre><span></span><code>babylon<span class="w"> </span>apply<span class="w"> </span>project/
-</code></pre></div>
+</code></pre></div></p>
 <p>Babylon will automatically compare our local configuration to the existing objects and make the necessary changes by itself.</p>
+<div class="admonition info">
+<p class="admonition-title">Partial update</p>
+<p>In order to apply changes to specific resources among (organization, solution, workspace, webapp), use the options <code>--include</code> and <code>--exclude</code>.</p>
+<p>Example 1. Include only the solution in the update (exclude all other resources):<br>
+<code>babylon apply --include solution project/</code></p>
+<p>Example 2. Exclude the Web App from the update (include all other resources):<br>
+<code>babylon apply --exclude webapp project/</code></p>
+</div>
 <hr />
 <h2 id="12-accessing-the-webapp">12: Accessing the webapp<a class="headerlink" href="#12-accessing-the-webapp" title="Permanent link">&para;</a></h2>
 <p>In the logs of our previous command, babylon provides us with the link to our deployed webapp.

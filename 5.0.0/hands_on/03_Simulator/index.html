@@ -2023,10 +2023,7 @@ csm<span class="w"> </span>simulate<span class="w"> </span>BusinessApp_Simulatio
 <div class="highlight"><pre><span></span><code>csm<span class="w"> </span>docker<span class="w"> </span>build
 </code></pre></div>
 <p>Then, we'll tag our image</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>&lt;SIMULATOR_IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;<span class="w"> </span>&lt;CLUSTER_NAME&gt;/&lt;TENANT_NAME&gt;/&lt;IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;
-</code></pre></div>
-<p>In our case (with brewery), the command will look something like this:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>cosmotech/brewerysamplesolution_simulator:latest<span class="w"> </span>aks-dev-pmu.azure.platform.cosmotech.com/tenant-hue-dia/cosmotech/brewerysamplesolution_simulator:&lt;MY_TAG_NAME&gt;
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>&lt;SIMULATOR_IMAGE_NAME&gt;:&lt;VERSION_NAME&gt;<span class="w"> </span>&lt;CLUSTER_NAME&gt;/&lt;TENANT_NAME&gt;/&lt;IMAGE_NAME&gt;:&lt;VERSION_TAG&gt;
 </code></pre></div>
 <p>In case of doubt, you can check your images with</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>images
@@ -2036,10 +2033,10 @@ csm<span class="w"> </span>simulate<span class="w"> </span>BusinessApp_Simulatio
 <h2 id="pushing-to-harbor">Pushing to Harbor<a class="headerlink" href="#pushing-to-harbor" title="Permanent link">&para;</a></h2>
 <p>Now that our image is nice and ready, we can push it to the cluster container registry, Harbor.</p>
 <p>First, login using (for now) the admin access.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>aks-dev-pmu.azure.platform.cosmotech.com<span class="w"> </span>-u<span class="w"> </span>tenant-hue-dia
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>&lt;HARBOR_URL&gt;<span class="w"> </span>-u<span class="w"> </span>&lt;USER_NAME&gt;
 </code></pre></div>
 <p>And push your image.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>push<span class="w"> </span>&lt;IMAGE_NAME&gt;:&lt;IMAGE_VERSION&gt;
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>push<span class="w"> </span>&lt;HARBOR_URL&gt;/&lt;IMAGE_NAME&gt;:&lt;VERSION_TAG&gt;
 </code></pre></div>
 <p>You can assert that your image is correctly uploaded here:</p>
 <div class="highlight"><pre><span></span><code>aks-dev-pmu.azure.platform.cosmotech.com
