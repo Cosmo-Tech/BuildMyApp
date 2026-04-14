@@ -237,7 +237,7 @@ You will be given the following elements by the person in charge of the Hands-On
         - a `project/` folder containing the configuration for your project deployment
             - `solution.yaml` a consolidated solution file compatible with the `babylon` CLI to deploy resources
             - `workspace.yaml` a consolidated workspace file also compatible with `babylon`
-- A Simulator repository, [onboarding-brewery-solution](https://github.com/Cosmo-Tech/onboarding-brewery-solution), hosted on GitHub.
+- A Simulator repository, [brewery_sample_solution](https://github.com/Cosmo-Tech/brewery_sample_solution), hosted on GitHub.
     - This repository contains a minimal project that is "Deployment Ready" but has no real configuration
     - You have the full Conceptual Model of the "Brewery" which is the example project used for Modeling tutorials
     - It contains a working Simulator that will simulate the Conceptual Model

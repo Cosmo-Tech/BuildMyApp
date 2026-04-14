@@ -241,7 +241,14 @@ https://aks-dev-pmu.azure.azure.platform.cosmotech.com/tenant-e2e/webapp-<WEBAPP
 
 ---
 
-## 16: Cleaning up after yourself
+## 16: Modifying the solution
+
+&emsp;Update a run-template:
+[<h4>&emsp;:octicons-arrow-right-24: Solution Run-Template</h4>](./Discovery/02_16.a_Solution_Run-template.md)
+
+---
+
+## 17: Cleaning up after yourself
 
 Once we are done with working on this workshop, we can clean up for the next person and those working on this tenant by running a simple command.
 

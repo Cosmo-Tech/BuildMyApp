@@ -74,6 +74,8 @@ Any change here will be reflected in the `Simulator/` directory and the `Simulat
     By now you have reviewed the model. Any changes you made will be applied in further steps.
     However, for the rest of the Hands-On training, we will assume no changes were made.
 
+<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_16.a.i_Solution_Run-template_Build_Studio.md -->
+<!-- Should this be modified, 02_16.a.i_Solution_Run-template_Build_Studio.md might need updating too -->
 ## Building your simulator in the Studio
 
 We will continue using the Studio for the following steps. However, you can also use equivalent commands with the `csm` CLI that is installed alongside the studio. You'll find the useful commands at the end of this page.
@@ -143,6 +145,8 @@ csm simulate <Simulation_name>
 csm simulate BusinessApp_Simulation
 ```
 
+<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_16.a.ii_Solution_Run-template_Build_Terminal.md -->
+<!-- Should this be modified, 02_16.a.ii_Solution_Run-template_Build_Terminal.md might need updating too -->
 ## Building your simulator on the Terminal
 
 First, head to your simulator folder and run.
@@ -169,6 +173,8 @@ In case of doubt, you can check your images with
 docker images
 ```
 
+<!-- Note: This section is used by Tutorial/docs/hands_on/Discovery/02_16.a.iii_Solution_Run-template_Push_Harbor.md -->
+<!-- Should this be modified, 02_16.a.iii_Solution_Run-template_Push_Harbor.md might need updating too -->
 ## Pushing to Harbor
 
 Now that our image is nice and ready, we can push it to the cluster container registry, Harbor.
