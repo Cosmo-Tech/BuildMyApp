@@ -198,6 +198,15 @@ babylon apply project/
 
 Babylon will automatically compare our local configuration to the existing objects and make the necessary changes by itself.
 
+!!! info "Partial update"
+    In order to apply changes to specific resources among (organization, solution, workspace, webapp), use the options `--include` and `--exclude`.
+
+    Example 1. Include only the solution in the update (exclude all other resources):<br>
+    `babylon apply --include solution project/`
+
+    Example 2. Exclude the Web App from the update (include all other resources):<br>
+    `babylon apply --exclude webapp project/`
+
 ---
 
 ## 12: Accessing the webapp
