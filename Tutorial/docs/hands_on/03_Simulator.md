@@ -160,13 +160,7 @@ csm docker build
 Then, we'll tag our image
 
 ```bash
-docker tag <SIMULATOR_IMAGE_NAME>:<VERSION_NAME> <CLUSTER_NAME>/<TENANT_NAME>/<IMAGE_NAME>:<VERSION_NAME>
-```
-
-In our case (with brewery), the command will look something like this:
-
-```bash
-docker tag cosmotech/brewerysamplesolution_simulator:latest aks-dev-pmu.azure.platform.cosmotech.com/tenant-hue-dia/cosmotech/brewerysamplesolution_simulator:<MY_NAME>
+docker tag <SIMULATOR_IMAGE_NAME>:<VERSION_NAME> <CLUSTER_NAME>/<TENANT_NAME>/<IMAGE_NAME>:<VERSION_TAG>
 ```
 
 In case of doubt, you can check your images with
@@ -182,13 +176,13 @@ Now that our image is nice and ready, we can push it to the cluster container re
 First, login using (for now) the admin access.
 
 ```bash
-docker login aks-dev-pmu.azure.platform.cosmotech.com -u tenant-hue-dia
+docker login <HARBOR_URL> -u <USER_NAME>
 ```
 
 And push your image.
 
 ```bash
-docker push <IMAGE_NAME>:<IMAGE_VERSION>
+docker push <HARBOR_URL>/<IMAGE_NAME>:<VERSION_TAG>
 ```
 
 You can assert that your image is correctly uploaded here:
