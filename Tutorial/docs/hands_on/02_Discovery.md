@@ -70,19 +70,20 @@ Setting up the Solution will require a bit more work now.
 
 Just as for the Workspace, we can customize the name, key and description.
 
-You will need to update the following values in `variables.yaml`:
+Update the following values in `variables.yaml`:
 
-- `solution_key`: A unique key for your Solution
 - `solution_name`: The name of your Solution
 - `solution_description`: A description for your Solution
-- `workspace_key`: A unique key for your workspace, it will be required for some resource creation
 - `workspace_name`: The name of your workspace
 - `workspace_description`: A description of your workspace
-- `security.accessControlList`: Add your mail addresses as `Admin` to ensure that you will have access to your Solution
-- `cluster_name`: The name of the Kubernetes cloud cluster
-- `cluster_domain`: The full domain name of the Kubernetes cloud cluster
-- `tenant`: The id of the tenant used to host the platform
-- `webapp_name`: A unique name for your Web App
+
+Example:
+```yaml
+solution_name: Babylon v5 Solution
+solution_description: Brewery Testing babylon v5 Solution PLT
+workspace_name: Babylon v5 workspace
+workspace_description: Testing workspace for the brewery web application
+```
 
 <!-- But, we are also going to use a simulator image, this will take a few steps. -->
 
@@ -109,7 +110,16 @@ At this point, there are two possibilities:
 
 Now that we have a usable simulator image, we are able to finish preparing our Solution.
 
-The simulator repository will be our image name and our simulator version will be the simulator version.
+Update the following values in `variables.yaml`:
+
+- `simulator_repository`: The path to the simulator image repository
+- `simulator_version`: The tag of the simulator image
+
+Example:
+```yaml
+simulator_repository: tenant-sphinx/brewerysamplesolution_simulator
+simulator_version: 3.0.0
+```
 
 ---
 
@@ -117,21 +127,20 @@ The simulator repository will be our image name and our simulator version will b
 
 Setting up the WebApp will be easier than setting up the Solution
 
-The variables we'll be touching are:
-- The cluster name
-- The cluster domain
-- The tenant (with the `tenant-` truncated)
-- The webapp name
+Update the following values in `variables.yaml`:
 
-We'll be using those variables:
+- `cluster_name`: The name of the Kubernetes cloud cluster
+- `domain_zone`: The domain of the Kubernetes cloud cluster
+- `tenant`: The id of the tenant used to host the platform (without the `tenant-` prefix)
+- `webapp_name`: A unique name of your choosing for your own Web App
 
+Example:
 ```yaml
-cluster_name: aks-qa-campaign
-cluster_domain: aks-qa-campaign.azure.platform.cosmotech.com
-tenant: e2e
+cluster_name: aks-dev-luxor
+domain_zone: azure.platform.cosmotech.com
+tenant: sphinx
+webapp_name: business
 ```
-
-You can use your favorite words for the webapp name
 
 ---
 
@@ -139,6 +148,10 @@ You can use your favorite words for the webapp name
 
 For this we'll just need to input our email adress as Id and give ourself the admin role:
 
+- `id`: The mail address of the user
+- `role`: A role among (admin, editor, viewer)
+
+Example:
 ```yaml
 security:
   default: none
@@ -155,14 +168,18 @@ At the time of writing this guide, the keycloak group system has been implemente
 
 Before giving Babylon all the informations we entered and putting it to work. We're going to need to tell it where it should work.
 
-For this, run this command:
-
+For this, run the command:
 ```bash
 babylon namespace use -c <CONTEXT_NAME> -t <TENANT_NAME> -s <STATE_NAME>
 ```
+where you can chose freely the name you want to give to your local context and state.
 
-And now that Babylon has everything it needs to now, let's run it.
+Example:
+```bash
+babylon namespace use -c bmactx -t tenant-sphinx -s bmast
+```
 
+And now that Babylon has everything it needs to now, let's run it:
 ```bash
 babylon apply project/
 ```
@@ -175,7 +192,6 @@ babylon apply project/
 Now that we have created our desired Cosmotech objects and deployed our personnal webapp, before looking at the detail, we can see how to easily modify the configuration of our objects.
 
 If we modify any informations in our organization, workspace or Solution, and run again the same command:
-
 ```bash
 babylon apply project/
 ```
