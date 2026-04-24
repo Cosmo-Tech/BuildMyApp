@@ -1,6 +1,6 @@
 # Objectives
 
-During this Build-My-App Hands-On training you will go through a comprehensive set of objectives from strating with a minimal Cosmo Tech simulator project to accomplishing a fully deployed Solution.
+During this Build-My-App Hands-On training you will go through a comprehensive set of objectives from compiling with a minimal Cosmo Tech simulator project to configuring a fully deployed Solution.
 
 ## Quick Objectives Overview
 

@@ -1,7 +1,3 @@
----
-title: Setup
----
-
 # Set up
 
 Before following the actual training session, you need to set up your development environment with the required tools and resources.

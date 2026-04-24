@@ -6,7 +6,7 @@ hide:
 ---
 # Tutorials
 
-All the tutorials you may need for becoming a Solution Integration Expert
+All the tutorials you may need for building a fully-functional cloud-deployed Solution.
 
 <main class="grid" markdown>
 
@@ -18,7 +18,7 @@ All the tutorials you may need for becoming a Solution Integration Expert
 What do you need before even getting started ?
 Everything will be listed here :)
 <footer markdown>
-[:octicons-arrow-right-24: Pre-requisites](./pre-requisites/index.md)
+<b>:octicons-triangle-right-24: Start here: </b>[:octicons-arrow-right-24: Pre-requisites](./pre-requisites/index.md)
 </footer>
 </div>
 </article>
