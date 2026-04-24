@@ -15,7 +15,7 @@ The Build-My-App Hands-On training requires specific tools depending on your ope
 - **All users**:
     - Git
     - Docker
-    - CosmoTech SDK
+    - Cosmo Tech SDK
     - Babylon
     - Azure CLI
     - Superset
@@ -163,7 +163,7 @@ You will use it to deploy and configure the infrastructure required by your solu
 
 <article markdown>
 <div class="text" markdown>
-:octicons-rocket-24: __Cosmotech SDK__
+:octicons-rocket-24: __Cosmo Tech SDK__
 
 ---
 The Cosmo Tech SDK is the main tool you will use to build your simulator that will be the core of your solution.
@@ -171,7 +171,7 @@ The Cosmo Tech SDK is the main tool you will use to build your simulator that wi
 It comes embedded with the CLI `csm-cli` that will allow you to quickly interract with your project and accelerate some
 operations.
 <footer markdown>
-[:octicons-arrow-right-24: Cosmotech SDK](./Setup/cosmotech-sdk.md)
+[:octicons-arrow-right-24: Cosmo Tech SDK](./Setup/cosmotech-sdk.md)
 </footer>
 </div>
 </article>
@@ -191,7 +191,7 @@ Before proceeding to the next step, verify all tools are properly installed:
 - [ ] kubectl (`kubectl version --client`)
 - [ ] Azure CLI (`az --version`)
 - [ ] Terraform (`terraform version`)
-- [ ] CosmoTech SDK (`csm --version`) [In a Cosmo Tech SDK command-line environment]
+- [ ] Cosmo Tech SDK (`csm --version`) [In a Cosmo Tech SDK command-line environment]
 
 ## Troubleshooting
 

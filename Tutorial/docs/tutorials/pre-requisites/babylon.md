@@ -7,7 +7,7 @@ tags:
 ---
 # Babylon
 
-Babylon is the deployment tool for managing CosmoTech platform resources.
+Babylon is the deployment tool for managing Cosmo Tech platform resources.
 
 You will need a working installation of `babylon` further in the tutorials.
 

@@ -6,7 +6,7 @@ hide:
 
 # Web App
 
-This section covers all aspects of working with the CosmoTech Web Application.
+This section covers all aspects of working with the Cosmo Tech Web Application.
 
 <main class="grid" markdown>
 

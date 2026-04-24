@@ -1,7 +1,7 @@
 # Deploy a Solution
 
 During this Hands-On training, you will start from a minimal simulator and progressively transform it into a fully deployed Solution.  
-You will learn to configure environments, work with CosmoTech run templates, build and publish Docker images, and connect everything to ADX and Power BI for visualization.
+You will learn to configure environments, work with Cosmo Tech run templates, build and publish Docker images, and connect everything to ADX and Power BI for visualization.
 
 In this discovery part, we will go through the steps to deploy a pre-packaged Solution, using templated content and babylon.
 
@@ -160,7 +160,7 @@ security:
       role: admin
 ```
 
-At the time of writing this guide, the keycloak group system has been implemented in the Cosmotech API but is still undergoing compatibility work with the WebApp.
+At the time of writing this guide, the keycloak group system has been implemented in the Cosmo Tech API but is still undergoing compatibility work with the WebApp.
 
 ---
 
@@ -189,7 +189,7 @@ babylon apply project/
 
 ## 11: Update info
 
-Now that we have created our desired Cosmotech objects and deployed our personnal webapp, before looking at the detail, we can see how to easily modify the configuration of our objects.
+Now that we have created our desired Cosmo Tech objects and deployed our personnal webapp, before looking at the detail, we can see how to easily modify the configuration of our objects.
 
 If we modify any informations in our organization, workspace or Solution, and run again the same command:
 ```bash

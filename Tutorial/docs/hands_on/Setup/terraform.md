@@ -15,7 +15,7 @@
   <div align="right" class="text" markdown>
   <h2>Next</h2>
   <footer markdown>
-  [<h3>Cosmotech SDK :octicons-arrow-right-24:&emsp;</h3>](./cosmotech-sdk.md)
+  [<h3>Cosmo Tech SDK :octicons-arrow-right-24:&emsp;</h3>](./cosmotech-sdk.md)
   </footer>
   </div>
 

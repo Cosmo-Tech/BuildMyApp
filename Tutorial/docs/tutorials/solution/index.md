@@ -6,7 +6,7 @@ hide:
 
 # Solution
 
-This section covers all aspects of building and configuring a CosmoTech Solution.
+This section covers all aspects of building and configuring a Cosmo Tech Solution.
 
 <main class="grid" markdown>
 
@@ -15,7 +15,7 @@ This section covers all aspects of building and configuring a CosmoTech Solution
 :octicons-rocket-24: __CSM-ORC__
 
 ---
-Learn about the CosmoTech Orchestrator and its integration.
+Learn about the Cosmo Tech Orchestrator and its integration.
 <footer markdown>
 [:octicons-arrow-right-24: CSM-ORC](./csm-orc.md)
 </footer>

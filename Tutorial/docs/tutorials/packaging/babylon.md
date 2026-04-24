@@ -45,7 +45,7 @@ Namespaces organize and isolate resources:
 - **`remote`**: environment identifier (dev, staging, production).
 - **`state_id`**: unique identifier for this deployment state.
 - **`context`**: logical grouping of related resources.
-- **`platform`**: target CosmoTech platform URL.
+- **`platform`**: target Cosmo Tech platform URL.
 
 ### Payload
 

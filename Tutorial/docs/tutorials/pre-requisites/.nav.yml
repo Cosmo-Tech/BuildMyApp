@@ -7,4 +7,4 @@ nav:
   - Superset: superset.md
   - Azure CLI: az-cli.md
   - Terraform: terraform.md
-  - Cosmotech SDK: cosmotech-sdk.md
+  - Cosmo Tech SDK: cosmotech-sdk.md

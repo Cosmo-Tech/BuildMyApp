@@ -6,7 +6,7 @@ During this Build-My-App Hands-On training you will go through a comprehensive s
 
 - **End-to-End Deployment**: Go from a Simulator to a working deployed Solution in a single day
 - **Complete Development Environment**: Every participant should end with a fully working environment to work on Solutions
-- **Technical Mastery**: Get every participant to have global knowledge on tools and technologies required for Solutions (CoSML, Azure, Superset, CosmoTech APIs, React, Docker, etc.)
+- **Technical Mastery**: Get every participant to have global knowledge on tools and technologies required for Solutions (CoSML, Azure, Superset, Cosmo Tech APIs, React, Docker, etc.)
 - **Platform Understanding**: Offer an insight on how the different components of the Solutions and Platform work together
 - **Documentation Navigation**: Give every participant the means to find their way through all documentations when they need in-depth answers
 - **Team Collaboration**: Make participants work as a team throughout the learning process
@@ -25,7 +25,7 @@ During this Build-My-App Hands-On training you will go through a comprehensive s
 ### Technical Environment Mastery
 - Every participant should end with a fully working environment to work on Solutions
 - Establish a complete development environment with all necessary tools and dependencies
-- Configure and validate connections to Azure services, Superset, and CosmoTech APIs
+- Configure and validate connections to Azure services, Superset, and Cosmo Tech APIs
 - Set up local development environment with proper toolchains (Node.js, Docker, Azure CLI, etc.)
 
 ## Technical Skills Development
@@ -37,20 +37,20 @@ During this Build-My-App Hands-On training you will go through a comprehensive s
 - Work with simulation inputs, outputs, and data processing workflows
 
 ### Solution Architecture and Deployment
-- Master the CosmoTech Solution architecture and components
+- Master the Cosmo Tech Solution architecture and components
 - Configure solution deployment using YAML files and babylon CLI
 - Understand the relationship between simulators, solutions, and workspaces
-- Deploy solutions to the CosmoTech cloud platform using proper DevOps practices
+- Deploy solutions to the Cosmo Tech cloud platform using proper DevOps practices
 
 ### API Integration and Management
-- Get proficiency with the CosmoTech API for resource management
+- Get proficiency with the Cosmo Tech API for resource management
 - Use both babylon CLI and direct API calls for solution operations
 - Understand authentication and authorization mechanisms (Azure AD integration)
 - Practice CRUD operations on solutions, workspaces, and related resources
 
 ### Web Application Development
 - Configure and customize the provided React-based web application
-- Integrate frontend applications with CosmoTech backend services
+- Integrate frontend applications with Cosmo Tech backend services
 - Set up and configure Azure Data Explorer (ADX) databases for data storage
 - Implement Superset dashboards for data visualization
 - Understand the data flow from simulation results to user interfaces
@@ -71,7 +71,7 @@ During this Build-My-App Hands-On training you will go through a comprehensive s
 
 ### Platform Navigation and Documentation
 - Give every participant the means to find their way through all documentations when they need in-depth answers
-- Master navigation of the CosmoTech documentation ecosystem
+- Master navigation of the Cosmo Tech documentation ecosystem
 - Understand how to troubleshoot issues using available resources
 - Learn to effectively use API documentation, tutorials, and reference materials
 
@@ -80,7 +80,7 @@ During this Build-My-App Hands-On training you will go through a comprehensive s
 - Gain hands-on experience with:
   - **Development Tools**: Git, Node.js, npm, Docker, VS Code
   - **Cloud Platform**: Azure services, Azure CLI, Azure Data Explorer
-  - **CosmoTech Stack**: babylon CLI, CosmoTech API, Solution templates
+  - **Cosmo Tech Stack**: babylon CLI, Cosmo Tech API, Solution templates
   - **Data and Analytics**: Superset, KQL, CSV data processing
   - **Web Technologies**: React, JavaScript, REST APIs
 
@@ -129,9 +129,9 @@ By the end of this Hands-On training, each participant will have:
 - Superset dashboards tailored to the brewery use case
 
 ### Knowledge and Skills
-- Comprehensive understanding of the CosmoTech platform architecture
+- Comprehensive understanding of the Cosmo Tech platform architecture
 - Ability to independently develop and deploy new solutions
-- Proficiency with all major tools and technologies in the CosmoTech ecosystem
+- Proficiency with all major tools and technologies in the Cosmo Tech ecosystem
 - Confidence to navigate documentation and resolve issues independently
 - Foundation for becoming a Solution Integration Expert
 

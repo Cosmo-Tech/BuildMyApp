@@ -28,7 +28,7 @@ Everything will be listed here :)
 :octicons-rocket-24: __Simulator__
 
 ---
-Build and configure your CosmoTech Simulator.
+Build and configure your Cosmo Tech Simulator.
 <footer markdown>
 [:octicons-arrow-right-24: Simulator](./simulator/index.md)
 </footer>
@@ -40,7 +40,7 @@ Build and configure your CosmoTech Simulator.
 :octicons-rocket-24: __Solution__
 
 ---
-All aspects of building and configuring a CosmoTech Solution.
+All aspects of building and configuring a Cosmo Tech Solution.
 <footer markdown>
 [:octicons-arrow-right-24: Solution](./solution/index.md)
 </footer>
@@ -52,7 +52,7 @@ All aspects of building and configuring a CosmoTech Solution.
 :octicons-rocket-24: __API__
 
 ---
-Work with the CosmoTech API and manage resources.
+Work with the Cosmo Tech API and manage resources.
 <footer markdown>
 [:octicons-arrow-right-24: API](./api/index.md)
 </footer>

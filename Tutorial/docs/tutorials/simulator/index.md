@@ -6,7 +6,7 @@ hide:
 
 # Simulator
 
-This section covers all aspects of building and configuring a CosmoTech Simulator using the CoSMo Platform. These tutorials provide hands-on guidance for complex system modeling, from basic concepts to advanced techniques.
+This section covers all aspects of building and configuring a Cosmo Tech Simulator using the CoSMo Platform. These tutorials provide hands-on guidance for complex system modeling, from basic concepts to advanced techniques.
 
 <main class="grid" markdown>
 

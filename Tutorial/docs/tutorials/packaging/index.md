@@ -6,7 +6,7 @@ hide:
 
 # Packaging
 
-This section covers packaging, automation, and deployment tools for CosmoTech solutions.
+This section covers packaging, automation, and deployment tools for Cosmo Tech solutions.
 
 <main class="grid" markdown>
 

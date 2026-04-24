@@ -6,7 +6,7 @@ hide:
 
 # API
 
-This section covers all aspects of working with the CosmoTech API.
+This section covers all aspects of working with the Cosmo Tech API.
 
 <main class="grid" markdown>
 

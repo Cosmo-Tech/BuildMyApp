@@ -1,10 +1,10 @@
 # Custom library
 
-Integrate and use custom libraries in your CosmoTech solution.
+Integrate and use custom libraries in your Cosmo Tech solution.
 
 ## Overview
 
-Custom libraries allow you to create reusable code components for your CosmoTech solutions. They help avoid code duplication, encapsulate domain-specific logic, and create shared functionality across run templates and projects.
+Custom libraries allow you to create reusable code components for your Cosmo Tech solutions. They help avoid code duplication, encapsulate domain-specific logic, and create shared functionality across run templates and projects.
 
 ## What are Custom Libraries?
 

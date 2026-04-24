@@ -4,9 +4,9 @@ tags:
   - Simulator
   - Requirement
 ---
-# Cosmotech SDK
+# Cosmo Tech SDK
 
-The CosmoTech SDK is the main tool for building simulators and includes the `csm` CLI.
+The Cosmo Tech SDK is the main tool for building simulators and includes the `csm` CLI.
 
 ## Installation 
 
