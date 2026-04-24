@@ -4,9 +4,9 @@ hide:
   - toc
   - navigation
 ---
-# BuildMyApp
+# Build-My-App
 
-The BuildMyApp initiative is here to help you complete the comprehensive journey of building a fully-functional cloud-deployed Solution from an existing copy of the minimal [brewery_sample_solution](https://github.com/Cosmo-Tech/brewery_sample_solution) Simulator in a single afternoon!
+The Build-My-App initiative is here to help you complete the comprehensive journey of building a fully-functional cloud-deployed Solution from an existing copy of the minimal [brewery_sample_solution](https://github.com/Cosmo-Tech/brewery_sample_solution) Simulator in a single afternoon!
 
 <main class="grid" markdown>
 
