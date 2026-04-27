@@ -12,7 +12,7 @@ All the tutorials you may need for building a fully-functional cloud-deployed So
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Pre-requisites__
+:octicons-rocket-24: __Pre-requisites__
 
 ---
 What do you need before even getting started ?
@@ -25,7 +25,7 @@ Everything will be listed here :)
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Simulator__
+:octicons-rocket-24: __Simulator__
 
 ---
 Build and configure your CosmoTech Simulator.
@@ -37,7 +37,7 @@ Build and configure your CosmoTech Simulator.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Solution__
+:octicons-rocket-24: __Solution__
 
 ---
 All aspects of building and configuring a CosmoTech Solution.
@@ -49,7 +49,7 @@ All aspects of building and configuring a CosmoTech Solution.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __API__
+:octicons-rocket-24: __API__
 
 ---
 Work with the CosmoTech API and manage resources.
@@ -61,7 +61,7 @@ Work with the CosmoTech API and manage resources.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Web App__
+:octicons-rocket-24: __Web App__
 
 ---
 Frontend, ADX database, and Superset integration.
@@ -73,7 +73,7 @@ Frontend, ADX database, and Superset integration.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Packaging__
+:octicons-rocket-24: __Packaging__
 
 ---
 Packaging, automation, and deployment tools.

@@ -12,7 +12,7 @@ This section covers all aspects of working with the CosmoTech Web Application.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Frontend__
+:octicons-rocket-24: __Frontend__
 
 ---
 Learn about the frontend architecture and customization.
@@ -24,7 +24,7 @@ Learn about the frontend architecture and customization.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Superset__
+:octicons-rocket-24: __Superset__
 
 ---
 Embed and use Superset dashboards in your web application.
@@ -36,7 +36,7 @@ Embed and use Superset dashboards in your web application.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Power BI__
+:octicons-rocket-24: __Power BI__
 
 ---
 Embed and use Power BI dashboards in your web application.

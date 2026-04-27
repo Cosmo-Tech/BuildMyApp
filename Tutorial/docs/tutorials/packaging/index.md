@@ -12,7 +12,7 @@ This section covers packaging, automation, and deployment tools for CosmoTech so
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Babylon__
+:octicons-rocket-24: __Babylon__
 
 ---
 Use Babylon for deployment operations and configuration.
@@ -24,7 +24,7 @@ Use Babylon for deployment operations and configuration.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Docker__
+:octicons-rocket-24: __Docker__
 
 ---
 Containerize and deploy your solutions with Docker.

@@ -12,7 +12,7 @@ This section covers all aspects of working with the CosmoTech API.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Solution__
+:octicons-rocket-24: __Solution__
 
 ---
 Manage solutions through the API.
@@ -24,7 +24,7 @@ Manage solutions through the API.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Workspace__
+:octicons-rocket-24: __Workspace__
 
 ---
 Workspaces and their management via API.

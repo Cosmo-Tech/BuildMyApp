@@ -65,7 +65,7 @@ source ~/.bashrc
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Git__
+:octicons-rocket-24: __Git__
 
 ---
 Git is a distributed version control system essential for managing source code and collaboration.
@@ -79,7 +79,7 @@ You will need Git to clone repositories, manage code versions, and collaborate w
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __docker__
+:octicons-rocket-24: __docker__
 
 ---
 Docker is required for containerized deployments and development environments.
@@ -93,7 +93,7 @@ A working solution requires a docker image to be built and deployed, you will ne
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Babylon__
+:octicons-rocket-24: __Babylon__
 
 ---
 Babylon is the tool made by our DevOps team to do most of the deployment operations on APIs.
@@ -107,7 +107,7 @@ You will need it to update high level configuration of you application.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __kubectl__
+:octicons-rocket-24: __kubectl__
 
 ---
 kubectl is the command-line tool for interacting with Kubernetes clusters.
@@ -121,7 +121,7 @@ You will need it to manage and inspect deployed workloads and resources in your 
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Superset__
+:octicons-rocket-24: __Superset__
 
 ---
 Apache Superset is an open-source data visualization and business intelligence platform.
@@ -135,7 +135,7 @@ You will use it to implement dashboards for the visualization of simulation resu
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Azure CLI__
+:octicons-rocket-24: __Azure CLI__
 
 ---
 Azure CLI is required for managing Azure resources from the command line.
@@ -149,7 +149,7 @@ You will be using it mostly to connect to azure image repository to send your so
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Terraform__
+:octicons-rocket-24: __Terraform__
 
 ---
 Terraform is an infrastructure-as-code tool for provisioning and managing cloud resources.
@@ -163,7 +163,7 @@ You will use it to deploy and configure the infrastructure required by your solu
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Cosmotech SDK__
+:octicons-rocket-24: __Cosmotech SDK__
 
 ---
 The Cosmo Tech SDK is the main tool you will use to build your simulator that will be the core of your solution.

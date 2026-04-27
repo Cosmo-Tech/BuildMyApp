@@ -12,7 +12,7 @@ The BuildMyApp initiative is here to help you complete the comprehensive journey
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Hands-On Training__
+:octicons-rocket-24: __Hands-On Training__
 
 ---
 A comprehensive set of objectives to go from a minimal Cosmo Tech simulator to a fully deployed Solution.
@@ -24,7 +24,7 @@ A comprehensive set of objectives to go from a minimal Cosmo Tech simulator to a
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Tutorials__
+:octicons-rocket-24: __Tutorials__
 
 ---
 All the tutorials you may need for a fully-functional cloud-deployed Solution.

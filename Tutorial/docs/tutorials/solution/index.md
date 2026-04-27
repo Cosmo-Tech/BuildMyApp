@@ -12,7 +12,7 @@ This section covers all aspects of building and configuring a CosmoTech Solution
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __CSM-ORC__
+:octicons-rocket-24: __CSM-ORC__
 
 ---
 Learn about the CosmoTech Orchestrator and its integration.
@@ -24,7 +24,7 @@ Learn about the CosmoTech Orchestrator and its integration.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Run templates__
+:octicons-rocket-24: __Run templates__
 
 ---
 How to use and configure run templates for your solution.
@@ -36,7 +36,7 @@ How to use and configure run templates for your solution.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __ETL__
+:octicons-rocket-24: __ETL__
 
 ---
 ETL processes for data transformation and loading.
@@ -48,7 +48,7 @@ ETL processes for data transformation and loading.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __CoAL__
+:octicons-rocket-24: __CoAL__
 
 ---
 Accelerate your solution development with CoAL.
@@ -60,7 +60,7 @@ Accelerate your solution development with CoAL.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Custom library__
+:octicons-rocket-24: __Custom library__
 
 ---
 Integrate and use custom libraries in your solution.
@@ -72,7 +72,7 @@ Integrate and use custom libraries in your solution.
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Custom commands__
+:octicons-rocket-24: __Custom commands__
 
 ---
 Define and use custom commands for advanced operations.

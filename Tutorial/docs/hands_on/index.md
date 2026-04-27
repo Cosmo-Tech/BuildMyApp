@@ -12,7 +12,7 @@ A comprehensive set of objectives to go from a minimal Cosmo Tech simulator to a
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Objectives__
+:octicons-rocket-24: __Objectives__
 
 ---
 During this Build-My-App Hands-On training you will go through a comprehensive set of objectives from compiling with a minimal Cosmo Tech simulator project to configuring a fully deployed Solution.
@@ -24,7 +24,7 @@ During this Build-My-App Hands-On training you will go through a comprehensive s
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Setup__
+:octicons-rocket-24: __Setup__
 
 ---
 Before following the actual training session, you need to set up your development environment with the required tools and resources.
@@ -36,7 +36,7 @@ Before following the actual training session, you need to set up your developmen
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Deploy a Solution__
+:octicons-rocket-24: __Deploy a Solution__
 
 ---
 In this discovery part, we will go through the steps to deploy a pre-packaged Solution, using templated content and babylon.
@@ -48,7 +48,7 @@ In this discovery part, we will go through the steps to deploy a pre-packaged So
 
 <article markdown>
 <div class="text" markdown>
-:material-keyboard-return: __Customize an existing Simulator__
+:octicons-rocket-24: __Customize an existing Simulator__
 
 ---
 Customize an existing copy of the minimal [brewery_sample_solution](https://github.com/Cosmo-Tech/brewery_sample_solution) Simulator.
